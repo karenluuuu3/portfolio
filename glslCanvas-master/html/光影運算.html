@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光影運算 | 演算美學實驗室 | Computing Aesthetics Lab</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!--js-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+	<!--font awesome-->
+	<script src="https://kit.fontawesome.com/bade478ead.js" crossorigin="anonymous"></script>
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+<!---->
+<header>
+    <!--<h1><i class="fas fa-book-open ficon"></i></h1>-->
+    <div class="menu"><i class="fas fa-bars"></i></div>
+    <div class="totop page"><a href="#top"><i class="fas fa-angle-double-up page"></i></a></div>
+</header>
+
+<!--nav-->
+<nav>
+    <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="美學運算.html">美學運算</a></li>
+        <li><a href="光影運算.html"><span style="color:rgba(207, 181, 59, 1)">光影運算</span></a></li>
+        <li><a href="量體運算.html">量體運算</a></li>
+        <li><a href="projects.html">SHOWCASE</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+    </ul>
+</nav>
+
+
+
+<!--section-->
+<section>
+<div class="page" id="top">   
+<br><br>
+<h1>光影運算</h1>
+Topics on Shading and Lighting
+<br>
+<div style="text-align: left; margin:10%;">
+「如此說來羊羹的顏色不也同樣充滿冥想的色彩嗎？半帶透明晶瑩如玉的肌理，彷彿連最深處都吸收了日光，蘊含如夢似幻的微光，那種色調之深奧、之複雜，是西式點心絕對見不到的。奶油與之相比是何等膚淺、單純。」...摘自《陰翳禮讚》。
+文學家谷崎潤一朗以語言文字描述羊羹半通透的色彩，與其說是色彩，更是對於光及幽暗的體現感知。承襲對於光及幽暗的感知及傾心描繪，光影運算關注一種當代、演算的數位描繪技法，藉以捕捉內在、靜謐的感受。
+</div>
+<br><br>
+
+<div class="page" id="top" >
+    <div class="col-m-6 col-6">
+        <ol class="list" style="margin: 10%; font: 14px; text-align: left;">
+            <li class="list-item one"><span>Raymarching</span></li>
+                <p style="padding-left: 100px;">- map functions & raymarching<br></p>
+                <p style="padding-left: 100px;">- usually used functions<br></p>
+                <p style="padding-left: 100px;">- Show Normal<br></p>
+                <p style="padding-left: 100px;">- Show Reflection<br></p>
+            <li class="list-item three"><span>Add noise</span></li>
+                <p style="padding-left: 100px;">- Make Bumping<br></p>
+                <p style="padding-left: 100px;">- Toon Edge<br></p>
+                <p style="padding-left: 100px;">- Ambient Occlusion<br></p>
+            <li class="list-item four"><span>Phong Shading</span></li>
+                <p style="padding-left: 100px;">- common functions<br></p>
+                <p style="padding-left: 100px;">- Add Lights & Tracing Model<br></p>
+                <p style="padding-left: 100px;">- Multiple Models<br></p>
+                <p style="padding-left: 180px;">- Subsurface<br></p>
+                <p style="padding-left: 180px;">- Style<br></p>
+                    <p style="padding-left: 180px;">- Warp Color<br></p>
+                    <p style="padding-left: 180px;">- Minecraft<br></p>
+                    <p style="padding-left: 180px;">- Unstable distance(play distance and time)<br></p>
+                    <p style="padding-left: 180px;">- Hatching<br></p>
+                    <p style="padding-left: 180px;">- Raymarching field<br></p>
+            <li class="list-item five"><span>Distance Functions</span></li>
+        </ol>
+    </div>
+
+    <div class="col-m-6 col-6">
+        <img src="images/光影運算/cover.png" style="margin-top:10%; width:80%;">
+    </div>
+
+    <a href="光影運算_EDU.html" target="_self"><button class="button-59" role="button" style="margin-top: 10%;">Play Shader ( •̀ ω •́ )✧</button>
+</div> 
+</div>
+</section>
+
+<!--footer-->
+<footer>
+&copy;2022 演算美學實驗室 | The Computing Aesthetics Lab
+</footer>
+
+</body>
+</html>

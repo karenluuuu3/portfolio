@@ -1,0 +1,738 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>量體運算 | 演算美學實驗室 | Computing Aesthetics Lab</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!--js-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+	<!--font awesome-->
+	<script src="https://kit.fontawesome.com/bade478ead.js" crossorigin="anonymous"></script>
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+<!---->
+<header>
+    <!--<h1><i class="fas fa-book-open ficon"></i></h1>-->
+    <div class="menu"><i class="fas fa-bars"></i></div>
+    <div class="totop page"><a href="#top"><i class="fas fa-angle-double-up page"></i></a></div>
+</header>
+
+<!--nav-->
+<nav>
+    <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="美學運算.html">美學運算</a></li>
+        <li><a href="光影運算.html">光影運算</a></li>
+        <li><a href="量體運算.html"><span style="color:rgba(207, 181, 59, 1)">量體運算</span></a></li>
+        <li><a href="projects.html">SHOWCASE</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+    </ul>
+</nav>
+
+
+
+<!--section-->
+<section>
+<div class="page" id="top">   
+<br><br>
+<h1>量體運算 教學</h1>
+Topics on Shading and Lighting
+<br><br><br>
+
+<span style="font-size: 14px;">*本頁建議使用pc觀看喔!*</span>
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <p style="font-size: 24px; margin-top: 5%; font-style: italic; text-align: left;">I. Map functions & Raytracing</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <pre style="font-size: 16px; text-align: left;"><code>
+        //=== distance functions ===
+        float sdSphere( vec3 p, float s )
+        {
+            return length(p)-s;
+        }
+        float sdBox( vec3 p, vec3 b )
+        {
+            vec3 d = abs(p) - b;
+            return min(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
+        }
+        float sdBox( vec3 p)
+        {
+            vec3 b=vec3(0.4);
+            vec3 d = abs(p) - b;
+            return min(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
+        }
+        float sdTorus( vec3 p, vec2 t )
+        {
+            vec2 q = vec2(length(p.xy)-t.x,p.z);
+            return length(q)-t.y;
+        }
+        
+        float map(in vec3 p)
+        {
+            float bump=0.002 * (noise_3(p*60.0)*2.0-1.0);
+            mat3 rot=fromEuler(vec3(0.0,0.0,u_time*0.5));
+            vec3 p1=(p+vec3(0.0,-0.0,1.5))*rot;
+            vec3 p2=(p+vec3(1.5,-0.5,0.0))*-rot;
+            vec3 p3=(p+vec3(-1.5,-0.8,0.0))*-rot;
+            vec3 p4=(p+vec3(0.0,-0.3,-1.5))*rot;
+            //return sdSphere(p1+vec3(0.,0.,0.0), 0.5)+bump;
+            //return sdTorus(p+vec3(0.,0.,1.5),vec2(0.4,0.2))+bump;
+            //return sdBox(p+vec3(0.,0.,1.5),vec3(0.5));
+            return sdBox(p1,vec3(0.4));
+            //return min(min(min(sdBox(p1),sdBox(p2)),sdBox(p3)),sdBox(p4));
+        }
+
+        //=== gradient functions ===
+        vec3 gradient( in vec3 p ) 
+        {
+            const float d = 0.001;
+            vec3 grad = vec3(map(p+vec3(d,0,0))-map(p-vec3(d,0,0)),
+                            map(p+vec3(0,d,0))-map(p-vec3(0,d,0)),
+                            map(p+vec3(0,0,d))-map(p-vec3(0,0,d)));
+            return grad;
+        }
+
+        // === raytrace functions===
+        float trace(vec3 o, vec3 r, out vec3 p)
+        {
+            float d=0.0, t=0.0;
+            for (int i=0; i<32; ++i)
+            {
+                p= o+r*t;
+                d=map(p);
+                if(d<0.0) break;
+                t += d*0.8; //
+                }
+            return t;
+        }
+        </code></pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> VolumetricRaymarch</p>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    float density(vec3 p){
+        return (1.0-smoothstep(0.,0.1,map(p)))*2.0;
+        //return (smoothstep(0.,0.1,map(p)))*0.5;
+    }
+    
+    vec4 VolumetricRaymarch(vec3 samplePosition, vec3 marchDirection, int stepCount, float stepSize) {
+        float ambientLight=9.;
+        float directLight=15.0;
+        vec3 l=vec3(0.5,0.3,-0.8)*fromEuler(vec3(0.0,0.0,u_time*0.2));
+        float absorptionCoef=0.01;
+        float scatteringCoef=0.04;
+        float extinctionCoef = absorptionCoef + scatteringCoef;
+        float transmittance = 1.0;
+        vec3 illumination = vec3(0.0);
+    
+        for (int i = 0; i < 32; i++) {
+            samplePosition += marchDirection * stepSize;
+            float currentDensity = density(1.0*samplePosition);
+            transmittance *= exp(-currentDensity * extinctionCoef * stepSize);        
+            float inScattering= ambientLight + 
+                directLight * HenyeyGreenstein(0.6,dot(-marchDirection,-l));  //directLight * phase(marchDirection, -l)
+            float outScattering = scatteringCoef * currentDensity;
+            vec3 currentLight = vec3(inScattering * outScattering);
+            illumination += transmittance * currentLight * stepSize;
+        }
+        return vec4(illumination, transmittance);
+    }
+
+    
+        </code></pre>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> Set Camera</p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    //=== camera functions ===
+    mat3 setCamera( in vec3 ro, in vec3 ta, float cr )
+    {
+        vec3 cw = normalize(ta-ro);
+        vec3 cp = vec3(sin(cr), cos(cr),0.0);
+        vec3 cu = normalize( cross(cw,cp) );
+        vec3 cv = normalize( cross(cu,cw) );
+        return mat3( cu, cv, cw );
+    }
+
+    // math
+    mat3 fromEuler(vec3 ang) {
+        vec2 a1 = vec2(sin(ang.x),cos(ang.x));
+        vec2 a2 = vec2(sin(ang.y),cos(ang.y));
+        vec2 a3 = vec2(sin(ang.z),cos(ang.z));
+        vec3 m0 = vec3(a1.y*a3.y+a1.x*a2.x*a3.x,a1.y*a2.x*a3.x+a3.y*a1.x,-a2.y*a3.x);
+        vec3 m1 = vec3(-a2.y*a1.x,a1.y*a2.y,a2.x);
+        vec3 m2 = vec3(a3.y*a1.x*a2.x+a1.y*a3.x,a1.x*a3.x-a1.y*a3.y*a2.x,a2.y*a3.y);
+        return mat3(m0, m1, m2);
+    }
+
+        </code></pre>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> main function</p>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    void main()
+    {
+        vec2 uv = gl_FragCoord.xy/u_resolution.xy;
+        uv = uv*2.0-1.0;
+        uv.x*= u_resolution.x/u_resolution.y;
+        uv.y*=-1.0;//校正 預設值uv v軸朝下，轉成v軸朝上相同於y軸朝上為正
+        //vec2 mouse=(u_mouse.xy/u_resolution.xy)*2.0-1.0;
+        vec2 mouse=(u_mouse.xy/u_resolution.xy)*2.0-1.0;
+        
+        // camera option1  (模型應在原點，適用於物件)
+        //vec3 CameraRot=vec3(0.0, mouse.y*1.0, -mouse.x*1.0);
+        vec3 CameraRot=vec3(0.0, 0.0, 0.0);
+        vec3 ro= vec3(0.0, 0.0, 0.0);//CameraPos;
+        vec3 ta =vec3(0.0, 0.0, -1.0)*fromEuler(CameraRot); //TargetPos; 
+            //vec3 ta =float3(CameraDir.x, CameraDir.z, CameraDir.y);//UE座標Z軸在上
+        mat3 ca = setCamera( ro, ta, 0.0 );
+        vec3 RayDir = ca*normalize(vec3(uv, 2.0));//z值越大，zoom in! 可替換成iMouse.z
+        vec3 RayOri = ro;
+    
+        vec3 col = render(RayOri,RayDir);
+        gl_FragColor = vec4( col, 1.0 );	
+    }
+        </code></pre>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> Example 01.</p>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-8">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    vec3 render( in vec3 RayOri, in vec3 RayDir ){	
+        //First Ray
+        vec3 p,n;
+        float t = trace(RayOri, RayDir, p);
+        n=normalize(gradient(p));
+        
+        //Second Ray
+        float IOR=1.33;
+        vec3 Rd_2=refract(RayDir,n,1.0/IOR);
+            
+        //SHADING
+        vec3 result;
+        result= VolumetricRaymarch(RayOri, RayDir,32,0.1).xyz;
+        //result= VolumetricRaymarch(p, RayDir,32,0.1).xyz;;
+        //result= FlameColour(clamp(result.x*1.0,0.0,1.0));
+        //result= viridis_quintic(result.x);
+        return result;
+    }            
+    </code></pre>
+
+    </div>
+    <div class="col-m-12 col-4">
+        <img src="images/量體運算/1.png">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> Example 02.</p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-m-12 col-8">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    vec3 render( in vec3 RayOri, in vec3 RayDir ){	
+        /*
+        //First Ray
+        vec3 p,n;
+        float t = trace(RayOri, RayDir, p);
+        n=normalize(gradient(p))
+        //Second Ray
+        float IOR=1.33;
+        vec3 Rd_2=refract(RayDir,n,1.0/IOR);
+        */	
+        //SHADING
+        vec3 result;
+        result= VolumetricRaymarch(RayOri, RayDir,32,0.1).xyz;
+        //result= VolumetricRaymarch(p, Rd_2,32,0.1).xyz;;
+        result= FlameColour(clamp(result.x*1.0,0.0,1.0));
+        //result= viridis_quintic(result.x);
+        return result;
+    }
+            
+        </code></pre>
+    </div>
+
+    <div class="col-m-12 col-4">
+        <img src="images/量體運算/2.png">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-m-12 col-12"><p style="font-size: 20px; margin-top: 5%; font-style: italic; text-align: left;">> Example 03.</p>
+</div>
+
+
+
+<div class="row">
+    <div class="col-m-12 col-8">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    //=======Fur texture========
+    const float uvScale = 10.0;	//from 1.0->12.0
+    //const float colorUvScale = 0.1;
+    const float furDepth = 0.2;
+    //const int furLayers = 64;
+    //const float rayStep = furDepth*2.0 / float(furLayers);
+    const float furThreshold = 0.15;  //from 0.4->0.6
+
+
+    vec2 cartesianToSpherical(vec3 p)
+    {		
+        float r = length(p);
+        float t = (r - (0.5 - furDepth)) / furDepth;//1.0->0.5
+        p /= r;	//normalize
+        vec2 uv = vec2(atan(p.y, p.x), acos(p.z));
+
+        //uv.x += cos(u_time*1.5)*t*t*0.4;// curl
+        //uv.y += sin(u_time*1.7)*t*t*0.2;
+        uv.y -= t*t*0.1;// curl down
+        return uv;
+    }
+
+    // returns fur density at given position
+    float furDensity(vec3 pos)
+    {
+        vec2 uv = cartesianToSpherical(pos.xzy);	
+        vec3 tex=vec3(gnoise(uv*uvScale)*0.5+0.5);
+
+        // thin out hair
+        float density = smoothstep(furThreshold, 1.0, tex.x);
+        float r1=map(pos);
+        density *= clamp(smoothstep(-furDepth, 0., r1),0.0,1.0);
+        return density;	
+    }
+    float density(vec3 p){
+        p+=0.05*curlNoise(10.0*p);
+        //p=pixel(p,30.0);
+        float weight=1.0;
+        weight=furDensity(p)*1.5;
+        //weight=noise_3(10.0*p);
+        //weight=smoothstep(0.3, 1.0, cellular(12.0*p).y);
+        return (1.0-smoothstep(0.,0.1,map(p)))*3.0*weight;
+        //return (smoothstep(0.,0.1,map(p)))*0.5;
+	}
+
+    vec3 render( in vec3 RayOri, in vec3 RayDir ){	
+
+        //First Ray
+        vec3 p,n;
+        float t = trace(RayOri, RayDir, p);
+        //n=normalize(gradient(p))
+        //Second Ray
+        float IOR=1.33;
+        vec3 Rd_2=refract(RayDir,n,1.0/IOR);
+            
+        //SHADING
+        vec3 result;
+        vec4 resultA;
+        result= VolumetricRaymarch(RayOri, RayDir,32,0.1).xyz;
+        //result= VolumetricRaymarch(p, Rd_2,32,0.1).xyz;;
+        //result= FlameColour(clamp(result.x*1.0,0.0,1.0));
+        //result= BeerColor(result.x);
+        //result= viridis_quintic(result.x);
+        return result+vec3(0.108,0.164,0.210);
+    }
+            
+        </code></pre>
+    </div>
+
+    <div class="col-m-12 col-4">
+        <img src="images/量體運算/3.png">
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <p style="font-size: 24px; margin-top: 5%; font-style: italic; text-align: left;">II. Useful Functions</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-m-12 col-12">
+        <pre style="font-size: 16px; text-align: left;"><code>
+    //=== 3d noise functions ===
+    float hash11(float p) {
+        return fract(sin(p * 727.1)*43758.5453123);
+    }
+    float hash12(vec2 p) {
+        float h = dot(p,vec2(127.1,311.7));	
+        return fract(sin(h)*43758.5453123);
+    }
+    vec3 hash31(float p) {
+        vec3 h = vec3(1275.231,4461.7,7182.423) * p;	
+        return fract(sin(h)*43758.543123);
+    }
+    
+    // 3d noise
+    float noise_3(in vec3 p) {
+        vec3 i = floor(p);
+        vec3 f = fract(p);	
+        vec3 u = f*f*(3.0-2.0*f);
+        
+        vec2 ii = i.xy + i.z * vec2(5.0);
+        float a = hash12( ii + vec2(0.0,0.0) );
+        float b = hash12( ii + vec2(1.0,0.0) );    
+        float c = hash12( ii + vec2(0.0,1.0) );
+        float d = hash12( ii + vec2(1.0,1.0) ); 
+        float v1 = mix(mix(a,b,u.x), mix(c,d,u.x), u.y);
+        
+        ii += vec2(5.0);
+        a = hash12( ii + vec2(0.0,0.0) );
+        b = hash12( ii + vec2(1.0,0.0) );    
+        c = hash12( ii + vec2(0.0,1.0) );
+        d = hash12( ii + vec2(1.0,1.0) );
+        float v2 = mix(mix(a,b,u.x), mix(c,d,u.x), u.y);
+            
+        return max(mix(v1,v2,u.z),0.0);
+    }
+    
+    //=== 2d noise functions ===
+    vec2 hash2( vec2 x )//亂數範圍 [-1,1]
+    {
+        const vec2 k = vec2( 0.3183099, 0.3678794 );
+        x = x*k + k.yx;
+        return -1.0 + 2.0*fract( 16.0 * k*fract( x.x*x.y*(x.x+x.y)) );
+    }
+    float gnoise( in vec2 p )//亂數範圍 [-1,1]
+    {
+        vec2 i = floor( p );
+        vec2 f = fract( p );
+        
+        vec2 u = f*f*(3.0-2.0*f);
+    
+        return mix( mix( dot( hash2( i + vec2(0.0,0.0) ), f - vec2(0.0,0.0) ), 
+            dot( hash2( i + vec2(1.0,0.0) ), f - vec2(1.0,0.0) ), u.x),
+            mix( dot( hash2( i + vec2(0.0,1.0) ), f - vec2(0.0,1.0) ), 
+            dot( hash2( i + vec2(1.0,1.0) ), f - vec2(1.0,1.0) ), u.x), u.y);
+    }
+    float fbm(in vec2 uv)//亂數範圍 [-1,1]
+    {
+        float f;//fbm - fractal noise (4 octaves)
+        mat2 m = mat2( 1.6,  1.2, -1.2,  1.6 );
+        f   = 0.5000*gnoise( uv ); uv = m*uv;		  
+        f += 0.2500*gnoise( uv ); uv = m*uv;
+        f += 0.1250*gnoise( uv ); uv = m*uv;
+        f += 0.0625*gnoise( uv ); uv = m*uv;
+        return f;
+    }
+    
+    //=== curl noise ===
+    #define  snoise(p) noise_3(p)	//input vec3 output float
+    vec3 snoiseVec3( vec3 x ){
+        float s  = snoise(vec3( x ));
+        float s1 = snoise(vec3( x.y - 19.1 , x.z + 33.4 , x.x + 47.2 ));
+        float s2 = snoise(vec3( x.z + 74.2 , x.x - 124.5 , x.y + 99.4 ));
+        vec3 c = vec3( s , s1 , s2 );
+        return c;}
+    
+    vec3 curlNoise( vec3 p ){ 
+        const float e = .1;
+        vec3 dx = vec3( e   , 0.0 , 0.0 );
+        vec3 dy = vec3( 0.0 , e   , 0.0 );
+        vec3 dz = vec3( 0.0 , 0.0 , e   );
+        vec3 p_x0 = snoiseVec3( p - dx );
+        vec3 p_x1 = snoiseVec3( p + dx );
+        vec3 p_y0 = snoiseVec3( p - dy );
+        vec3 p_y1 = snoiseVec3( p + dy );
+        vec3 p_z0 = snoiseVec3( p - dz );
+        vec3 p_z1 = snoiseVec3( p + dz );
+        float x = p_y1.z - p_y0.z - p_z1.y + p_z0.y;
+        float y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;
+        float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
+        const float divisor = 1.0 / ( 2.0 * e );
+        return normalize( vec3( x , y , z ) * divisor );
+    }
+
+    //======
+    // Cellular noise ("Worley noise") in 3D in GLSL.
+    // Copyright (c) Stefan Gustavson 2011-04-19. All rights reserved.
+    // This code is released under the conditions of the MIT license.
+    // See LICENSE file for details.
+    
+    // Permutation polynomial: (34x^2 + x) mod 289
+    vec3 permute(vec3 x) {
+        return mod((34.0 * x + 1.0) * x, 289.0);
+    }
+    
+    // Cellular noise, returning F1 and F2 in a vec2.
+    // 3x3x3 search region for good F2 everywhere, but a lot
+    // slower than the 2x2x2 version.
+    // The code below is a bit scary even to its author,
+    // but it has at least half decent performance on a
+    // modern GPU. In any case, it beats any software
+    // implementation of Worley noise hands down.
+    
+    vec2 cellular(vec3 P) {
+        #define K 0.142857142857 // 1/7
+        #define Ko 0.428571428571 // 1/2-K/2
+        #define K2 0.020408163265306 // 1/(7*7)
+        #define Kz 0.166666666667 // 1/6
+        #define Kzo 0.416666666667 // 1/2-1/6*2
+        #define jitter 1.0 // smaller jitter gives more regular pattern
+    
+        vec3 Pi = mod(floor(P), 289.0);
+            vec3 Pf = fract(P) - 0.5;
+    
+        vec3 Pfx = Pf.x + vec3(1.0, 0.0, -1.0);
+        vec3 Pfy = Pf.y + vec3(1.0, 0.0, -1.0);
+        vec3 Pfz = Pf.z + vec3(1.0, 0.0, -1.0);
+    
+        vec3 p = permute(Pi.x + vec3(-1.0, 0.0, 1.0));
+        vec3 p1 = permute(p + Pi.y - 1.0);
+        vec3 p2 = permute(p + Pi.y);
+        vec3 p3 = permute(p + Pi.y + 1.0);
+    
+        vec3 p11 = permute(p1 + Pi.z - 1.0);
+        vec3 p12 = permute(p1 + Pi.z);
+        vec3 p13 = permute(p1 + Pi.z + 1.0);
+    
+        vec3 p21 = permute(p2 + Pi.z - 1.0);
+        vec3 p22 = permute(p2 + Pi.z);
+        vec3 p23 = permute(p2 + Pi.z + 1.0);
+    
+        vec3 p31 = permute(p3 + Pi.z - 1.0);
+        vec3 p32 = permute(p3 + Pi.z);
+        vec3 p33 = permute(p3 + Pi.z + 1.0);
+    
+        vec3 ox11 = fract(p11*K) - Ko;
+        vec3 oy11 = mod(floor(p11*K), 7.0)*K - Ko;
+        vec3 oz11 = floor(p11*K2)*Kz - Kzo; // p11 < 289 guaranteed
+    
+        vec3 ox12 = fract(p12*K) - Ko;
+        vec3 oy12 = mod(floor(p12*K), 7.0)*K - Ko;
+        vec3 oz12 = floor(p12*K2)*Kz - Kzo;
+    
+        vec3 ox13 = fract(p13*K) - Ko;
+        vec3 oy13 = mod(floor(p13*K), 7.0)*K - Ko;
+        vec3 oz13 = floor(p13*K2)*Kz - Kzo;
+    
+        vec3 ox21 = fract(p21*K) - Ko;
+        vec3 oy21 = mod(floor(p21*K), 7.0)*K - Ko;
+        vec3 oz21 = floor(p21*K2)*Kz - Kzo;
+    
+        vec3 ox22 = fract(p22*K) - Ko;
+        vec3 oy22 = mod(floor(p22*K), 7.0)*K - Ko;
+        vec3 oz22 = floor(p22*K2)*Kz - Kzo;
+    
+        vec3 ox23 = fract(p23*K) - Ko;
+        vec3 oy23 = mod(floor(p23*K), 7.0)*K - Ko;
+        vec3 oz23 = floor(p23*K2)*Kz - Kzo;
+    
+        vec3 ox31 = fract(p31*K) - Ko;
+        vec3 oy31 = mod(floor(p31*K), 7.0)*K - Ko;
+        vec3 oz31 = floor(p31*K2)*Kz - Kzo;
+    
+        vec3 ox32 = fract(p32*K) - Ko;
+        vec3 oy32 = mod(floor(p32*K), 7.0)*K - Ko;
+        vec3 oz32 = floor(p32*K2)*Kz - Kzo;
+    
+        vec3 ox33 = fract(p33*K) - Ko;
+        vec3 oy33 = mod(floor(p33*K), 7.0)*K - Ko;
+        vec3 oz33 = floor(p33*K2)*Kz - Kzo;
+    
+        vec3 dx11 = Pfx + jitter*ox11;
+        vec3 dy11 = Pfy.x + jitter*oy11;
+        vec3 dz11 = Pfz.x + jitter*oz11;
+    
+        vec3 dx12 = Pfx + jitter*ox12;
+        vec3 dy12 = Pfy.x + jitter*oy12;
+        vec3 dz12 = Pfz.y + jitter*oz12;
+    
+        vec3 dx13 = Pfx + jitter*ox13;
+        vec3 dy13 = Pfy.x + jitter*oy13;
+        vec3 dz13 = Pfz.z + jitter*oz13;
+    
+        vec3 dx21 = Pfx + jitter*ox21;
+        vec3 dy21 = Pfy.y + jitter*oy21;
+        vec3 dz21 = Pfz.x + jitter*oz21;
+    
+        vec3 dx22 = Pfx + jitter*ox22;
+        vec3 dy22 = Pfy.y + jitter*oy22;
+        vec3 dz22 = Pfz.y + jitter*oz22;
+    
+        vec3 dx23 = Pfx + jitter*ox23;
+        vec3 dy23 = Pfy.y + jitter*oy23;
+        vec3 dz23 = Pfz.z + jitter*oz23;
+    
+        vec3 dx31 = Pfx + jitter*ox31;
+        vec3 dy31 = Pfy.z + jitter*oy31;
+        vec3 dz31 = Pfz.x + jitter*oz31;
+    
+        vec3 dx32 = Pfx + jitter*ox32;
+        vec3 dy32 = Pfy.z + jitter*oy32;
+        vec3 dz32 = Pfz.y + jitter*oz32;
+    
+        vec3 dx33 = Pfx + jitter*ox33;
+        vec3 dy33 = Pfy.z + jitter*oy33;
+        vec3 dz33 = Pfz.z + jitter*oz33;
+    
+        vec3 d11 = dx11 * dx11 + dy11 * dy11 + dz11 * dz11;
+        vec3 d12 = dx12 * dx12 + dy12 * dy12 + dz12 * dz12;
+        vec3 d13 = dx13 * dx13 + dy13 * dy13 + dz13 * dz13;
+        vec3 d21 = dx21 * dx21 + dy21 * dy21 + dz21 * dz21;
+        vec3 d22 = dx22 * dx22 + dy22 * dy22 + dz22 * dz22;
+        vec3 d23 = dx23 * dx23 + dy23 * dy23 + dz23 * dz23;
+        vec3 d31 = dx31 * dx31 + dy31 * dy31 + dz31 * dz31;
+        vec3 d32 = dx32 * dx32 + dy32 * dy32 + dz32 * dz32;
+        vec3 d33 = dx33 * dx33 + dy33 * dy33 + dz33 * dz33;
+    
+        // Sort out the two smallest distances (F1, F2)
+        #if 0
+            // Cheat and sort out only F1
+            vec3 d1 = min(min(d11,d12), d13);
+            vec3 d2 = min(min(d21,d22), d23);
+            vec3 d3 = min(min(d31,d32), d33);
+            vec3 d = min(min(d1,d2), d3);
+            d.x = min(min(d.x,d.y),d.z);
+            return sqrt(d.xx); // F1 duplicated, no F2 computed
+        #else
+            // Do it right and sort out both F1 and F2
+            vec3 d1a = min(d11, d12);
+            d12 = max(d11, d12);
+            d11 = min(d1a, d13); // Smallest now not in d12 or d13
+            d13 = max(d1a, d13);
+            d12 = min(d12, d13); // 2nd smallest now not in d13
+            vec3 d2a = min(d21, d22);
+            d22 = max(d21, d22);
+            d21 = min(d2a, d23); // Smallest now not in d22 or d23
+            d23 = max(d2a, d23);
+            d22 = min(d22, d23); // 2nd smallest now not in d23
+            vec3 d3a = min(d31, d32);
+            d32 = max(d31, d32);
+            d31 = min(d3a, d33); // Smallest now not in d32 or d33
+            d33 = max(d3a, d33);
+            d32 = min(d32, d33); // 2nd smallest now not in d33
+            vec3 da = min(d11, d21);
+            d21 = max(d11, d21);
+            d11 = min(da, d31); // Smallest now in d11
+            d31 = max(da, d31); // 2nd smallest now not in d31
+            d11.xy = (d11.x < d11.y) ? d11.xy : d11.yx;
+            d11.xz = (d11.x < d11.z) ? d11.xz : d11.zx; // d11.x now smallest
+            d12 = min(d12, d21); // 2nd smallest now not in d21
+            d12 = min(d12, d22); // nor in d22
+            d12 = min(d12, d31); // nor in d31
+            d12 = min(d12, d32); // nor in d32
+            d11.yz = min(d11.yz,d12.xy); // nor in d12.yz
+            d11.y = min(d11.y,d12.z); // Only two more to go
+            d11.y = min(d11.y,d11.z); // Done! (Phew!)
+            return sqrt(d11.xy); // F1, F2
+        #endif
+    }
+    
+    //=== flame color ===
+    //thanks iq..
+    // Smooth HSV to RGB conversion 
+    vec3 hsv2rgb_smooth( in vec3 c )
+    {
+        vec3 rgb = clamp( abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0, 0.0, 1.0 );
+        rgb = rgb*rgb*(3.0-2.0*rgb); // cubic smoothing	
+        return c.z * mix( vec3(1.0), rgb, c.y);
+    }
+    
+    vec3 hsv2rgb_trigonometric( in vec3 c )
+    {
+        vec3 rgb = 0.5 + 0.5*cos((c.x*6.0+vec3(0.0,4.0,2.0))*3.14159/3.0);
+        return c.z * mix( vec3(1.0), rgb, c.y);
+    }
+    
+    vec3 FlameColour(float f)
+    {
+        return hsv2rgb_smooth(vec3((f-(2.25/6.))*(1.25/6.),f*1.25+.2,f*.95));
+    }
+    
+    float saturate( float x ) { return clamp( x, 0.0, 1.0 ); }
+    vec3 viridis_quintic( float x )
+    {
+        x = saturate( x );
+        vec4 x1 = vec4( 1.0, x, x * x, x * x * x ); // 1 x x2 x3
+        vec4 x2 = x1 * x1.w * x; // x4 x5 x6 x7
+        return vec3(
+            dot( x1.xyzw, vec4( +0.280268003, -0.143510503, +2.225793877, -14.815088879 ) ) + dot( x2.xy, vec2( +25.212752309, -11.772589584 ) ),
+            dot( x1.xyzw, vec4( -0.002117546, +1.617109353, -1.909305070, +2.701152864 ) ) + dot( x2.xy, vec2( -1.685288385, +0.178738871 ) ),
+            dot( x1.xyzw, vec4( +0.300805501, +2.614650302, -12.019139090, +28.933559110 ) ) + dot( x2.xy, vec2( -33.491294770, +13.762053843 ) ) );
+    }
+    
+    vec3 BeerColor(float x){
+        vec3 col=vec3(0.050,0.002,0.900);
+        return vec3(exp(-x*(vec3(1.0)-col)));
+    }
+                
+        </code></pre>
+    </div>
+</div>
+
+
+
+</div> 
+</section>
+
+<!--footer-->
+<footer>
+&copy;2022 演算美學實驗室 | The Computing Aesthetics Lab
+</footer>
+
+</body>
+</html>
