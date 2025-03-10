@@ -1,69 +1,55 @@
-.kanit-medium {
+/*font*/
+.estonia-regular {
+    font-family: "Estonia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+.montserrat{/*title*/
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.kanit-medium {/*menu*/
     font-family: "Kanit", sans-serif;
     font-weight: 500;
-    font-style: normal;
-}
-
-.josefin-sans{
-    font-family: "Josefin-Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.noto-sans-jp{
-    font-family: "Noto Sans JP", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.noto-serif-jp{
-    font-family: "Noto Serif JP", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.vollkorn{
-    font-family: "Vollkorn", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
     font-style: normal;
 }
 
 /* 使用 ::selection 改變選取文字的顏色 */
 ::selection {
     background-color: #A4F364;  /* 文字被選取時的背景顏色 */
-    color: #0D0D0D;  /* 文字顏色 */
+    color: #F6633F;  /* 文字顏色 */
 }
 
 /* 支援不同瀏覽器的選取效果 */
 ::-moz-selection {
     background-color: #A4F364;
-    color: #0D0D0D;
+    color: #F6633F;
 }
 
 ::-webkit-selection {
     background-color: #A4F364;
-    color: #0D0D0D;
+    color: #F6633F;
 }
 
 
-/* 設定全域樣式 */
 body {
     font-family: Noto Sans JP;
-    color: #D9D9D9; /* 文字顏色 */
+    color: #0D0D0D; 
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-      justify-content: center; /* 區塊水平置中 */
-      align-items: center;    /* 區塊垂直置中 */
-      min-height: 100vh;      /* 全螢幕高度 */
-    flex-direction: column;  /* 垂直排列 */
-    background-color: #0D0D0D;
-    white-space: pre-line;/*文字換行*/
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff;
+    white-space: pre-line;
 
     /*換頁*/
     opacity: 0;
@@ -75,138 +61,279 @@ body.fade-in {
     opacity: 1;
 }
 
-h1 {
-    font-size: 10vw; /* 設定字型大小相對於視口寬度 */
-    text-align: center; /* 文字居中 */
-    margin: 0; /* 去掉外邊距 */
-    position: absolute;
-    top: 45%; /* 垂直居中 */
-    left: 50%; /* 水平居中 */
-    transform: translate(-50%, -50%); /* 精確居中 */
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* 保證文字居中 */
-    align-items: center; /* 保證文字居中 */
-    color: #D9D9D9; /* 文字顏色 */
-    letter-spacing: .2em; /* 設定字母間距，調整加寬效果 */
-    word-spacing: 0.3em; /* 設定英文單字間的距離 */
+.frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid #A4F364;
+    pointer-events: none; /* 確保框架不會干擾到頁面上的其他元素 */
+    z-index: 10000;
 }
 
-h2{
-    font-size: 1vw; 
-    text-align: center; /* 文字居中 */
-    margin: 0; /* 去掉外邊距 */
-    position: absolute;
-    top: 80%; /* 垂直居中 */
-    left: 50%; /* 水平居中 */
-    transform: translate(-50%, -50%); /* 精確居中 */
-    justify-content: center; /* 保證文字居中 */
-    width: 100vw; 
-    height: 100vh;
-    display: flex;
-    align-items: center; /* 保證文字居中 */
-    color: #D9D9D9; /* 文字顏色 */
-    letter-spacing: .2em; /* 設定字母間距，調整加寬效果 */
-    word-spacing: 0.3em; /* 設定英文單字間的距離 */
+header{
+    width:100%;
+	height: 100px;
+	box-sizing: border-box;
+	margin: auto;
+	
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 2000;
 }
 
-
-
-.content_2{
-    display: flex;
-    flex-direction: column; /* 使內容從上到下排列 */
-    margin: 5% 10% 0 10%;
-    
+h1{
+    margin-top: 3%;
+    margin-left: 3%;
+    font-family: "Estonia", cursive;
+    font-size: 50px;
+    font-weight: 200;
+    color: #A4F364;
+    display: inline;
 }
 
-.content_2 p{
-    font-size: 18px;
-    line-height: 1.5em;
-    text-align: left;
-}
-
-.content_2 img{
-    width: 100%;
-    max-width: 800px; /* 限制圖片的最大寬度 */
-    height: auto;     /* 保持圖片比例 */
-    display: block;   /* 確保圖片不會產生多餘間隙 */
-    
-}
-
-.video-container {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    width: 100%; /* 使容器高度等於視窗高度 */
-}
-
-video {
-    max-width: 100%; /* 確保影片在小視窗下不會溢出 */
-    max-height: 100%; /* 確保影片高度不會溢出視窗 */
-}
-  
-.container4 {
-    display: flex;
-    margin: 5% 10% 5% 10%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px; /* 可調整間距 */
-    /*align-items: center;*/ /* 使內容垂直置中 */
+a{
+    text-decoration:none;
 }
 
 
-.container4 p{
-    text-align: left;
-    font-weight: 800; 
-    font-size: 30px; 
-    margin-left: 5%;
+.text-box p{
+    display: block;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: "Montserrat";
 }
 
-.container4 .item {
-    flex: 1 1 30%;
-    text-align: center;
-    background-color: #262626;
-    padding: -3% 2% -3% 2%;
-}
-
-  .outer-container {
+.about-img{
+    width: 25vw;
+    height: auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 根據需求調整高度 */
-    margin: 0 20% 5% 20%;
+    margin-top: 2%;
 }
-  
-  
 
-  
+.about-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.descriptions{
+    display: block;
+    width: 80vw;
+}
 
 
-img {
-    width: 100%; /* 圖片自適應容器大小 */
+.descriptions p{
+    line-height: 1.8rem;    
+    text-align: left;       
+    font-size: 1rem;        
+    color: #727272;         
+    word-wrap: break-word; 
+    margin: 0 20% 0 20%;              
+}
+
+.descriptions p a{ 
+    color: #727272;
+    font-weight: 800;
+    transition: color 0.5s ease;
+}
+
+.descriptions p a:hover{ 
+    color: #F6633F;
+}
+
+
+.container-link {
+    display: block;
+}
+
+.container1 {
+    width: 80vw;
+    max-width: 1200px;
+    height: 45vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    transition: all 0.5s ease; /* 用來平滑過渡效果 */
+}
+
+.container1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 半透明黑色遮罩 */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    font-family: "Montserrat";
+    color: white;
+    font-size: 1.8rem;
+    text-align: left;
+    z-index: 1; 
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+}
+
+.container1:hover::after {
+    opacity: 1;
+}
+
+.container1:hover .overlay-text {
+    opacity: 1;
+}
+
+.container1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inset(0 round 20px); 
+}
+
+.container1-1 {
+    width: 65vw;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
+
+.container1-1 img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container2 {
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding-top: 10px;
+}
+
+.container2 img {
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container3 .item {
+    flex: 1 1 calc(32% - 20px); /* 控制方塊大小，讓它更大 */
+    max-width: 320px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.container3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container3 .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+.container3 .mask p{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.container3 .item:hover .mask {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.swiper-container {
+    width: 70vw;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+
 
   
-p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color:#D9D9D9;
-    text-align: center;
+.swiper-button-next,
+.swiper-button-prev {
+    color: #0D0D0D !important;
+    transition: color 0.8s ease;
 }
 
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #F6633F !important;
+}
+
+.swiper-pagination-bullet{
+    background-color: #0D0D0D !important;
+}
 
 .menu-icon {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 3%;
+    right: 3%;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1000;
-    color: #A4F364;
-    transition: opacity 0.4s ease-in-out; /* 添加過渡效果 */
-    transition: color 0.4s ease; /* 漸進的顏色變化 */
+    color: #0D0D0D;
+    transition: opacity 0.4s ease-in-out; 
+    transition: color 0.4s ease;
 }
 
 .menu-icon:hover {
@@ -220,8 +347,8 @@ p {
 
 .dropdown-menu {
     position: fixed; /* 固定在畫面右上角 */
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 2rem;
     width: 25vw; /* 25% 視窗寬度 */
     height: 50vh; /* 高度設置為視窗的一半 */
     background-color: #333;
@@ -246,20 +373,19 @@ p {
     padding: 0;
     margin: 0;
     text-align: left;
-    height: 100%; /* 確保選單內部高度充滿 */
     display: flex;
-    flex-direction: column; /* 垂直排列項目 */
-    justify-content: space-evenly; /* 項目均勻分佈 */
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .dropdown-menu ul li {
-    /*margin: 1rem 0;*/ /* 增加項目間距 */
+    margin-bottom: 5%;
 }
 
 .dropdown-menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 2em;
     transition: color 0.4s ease; /* 漸進的顏色變化 */
 }
 
@@ -329,11 +455,28 @@ p {
     transition: background-color 0.4s ease-in-out; /* 顏色過渡 */
 }
 
+.social-icons {
+    display: flex;
+    gap: 15px;
+
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #A4F364; /* 滑鼠移上去變黑色 */
+}
+
+
 .to-top {
     display: none; /* 初始不顯示 */
     position: fixed;
-    bottom: 5px;
-    right: 5px;
+    bottom: 1rem;
+    right: 1rem;
     z-index: 100;
     background-color: transparent;
     border: none;
@@ -352,30 +495,6 @@ p {
   }
   
 
-  /*view more*/
-  .svg-text-container {
-    display: flex;
-    align-items: center; /* 垂直居中對齊 */
-    gap: 10px; /* SVG 和文字之間的間距 */
-  }
-
-  .svg-button {
-    display: inline-block;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-  }
-
-  .svg-button:hover {
-    transform: translateY(5px);
-    cursor: pointer;
-  }
-  
-  .svg_text {
-    font-size: 20px;
-    color: #D9D9D9;
-    font-family: Kanit;
-  }
-
 footer {
     font-size: 12px;
     position: relative;
@@ -385,25 +504,11 @@ footer {
     margin-top: 1%;
 }
 
-/* 設定banner圖片 */
-.footer-banner {
-    width: 100%;
-    height: 200px; /* 根據需求調整高度 */
-    bottom: 0;
-    left: 0;
-}
-
-/* 自動縮放圖片來適應整個banner */
-.footer-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 使圖片覆蓋整個區域，保持比例 */
-}
 
 .cursor {
     position: fixed; /* 使用 fixed 保證它不會受頁面滾動影響 */
     pointer-events: none; /* 讓游標不會干擾到其他元素的點擊事件 */
-    z-index: 1;
+    z-index: 100000;
     width: 35px; 
     height: 35px; 
     border-radius: 50%; 
@@ -435,7 +540,7 @@ footer {
   }
   
   
-  /* 文字樣式 */
+  /* scroll down */
   .text {
     display: block;
     font-size: 18px;
@@ -446,7 +551,7 @@ footer {
     opacity: 0;
     animation: fadeInText 1s ease-in-out 1s forwards, textPulse 2s ease-in-out infinite;
     font-family: Vollkorn;
-    transform: rotate(90deg); /* 旋轉文字使其垂直 */
+    transform: rotate(90deg); 
   }
   
   
@@ -486,39 +591,82 @@ footer {
  /* RWD 調整 */
 /* 手機尺寸 */
 @media screen and (max-width: 600px) {
-    h2{
-        font-size: 2.5vw; /* 設定字型大小相對於視口寬度 */
-        top: 65vh; /* 垂直居中 */
+    .frame {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: none;
+        pointer-events: none;
+        z-index: 10000;
     }
 
-    .content_2 p{
-        margin: 5%;
+    h1{
+        margin-left: 5%;
+        font-family: "Estonia", cursive;
+        font-size: 35px;
+    
     }
 
-    .content_2 img{
-        width: 100vw; 
-        height: auto;
+    .text-box p{
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: left;
+        margin-left: 10%;
     }
 
+    .about-img{
+        width: 60vw;
+    }
+
+    .descriptions p {
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .container1 {
+        margin: 0;
+        margin-bottom: -5%;
+    }
+
+    .overlay-text {
+        font-size: 1.2rem;
+        margin: 0 5% 0 5%;
+    }
+
+    .container1-1 {
+        width: 100vw;
+    }
 
     .container2 {
-        flex-direction: column; /* 改為上下排列 */
+        width: 100vw;
     }
 
-    .container4 .item {
+    .container3 .item {
+        flex: 1 1 calc(50% - 10px); /* 兩個並排 */
+        max-width: 48%; /* 讓兩個方塊填滿畫面 */
+    }
+  
+    
+    .container3 {
+        gap: 5px;
+    }
+
+    .container3 .item {
         flex: 1 1 100%;
     }
     
 
     .dropdown-menu {
-        position: fixed; /* 固定在畫面右上角 */
+        position: fixed;
         top: 1rem;
         right: 1rem;
 
         width: 90vw; 
         height: 50vh; 
 
-        padding: 5rem 0 10rem 0; /* 上下有更多的內邊距 */
+        padding: 5rem 0 10rem 0;
     }
 
     .dropdown-menu ul li a {
@@ -529,23 +677,19 @@ footer {
         text-align: center;
     }
     
+    .social-icons {
+        justify-content: center;  
+        align-items: center;      
     
-    .scroll-indicator {
-        margin-top: 100%;
     }
-
-   
+    
+    
     
 
 }
 
 /* 平板尺寸 */
 @media screen and (min-width: 601px) and (max-width: 900px) {
-    header {
-        font-size: 1.8em;
-        padding: 15px;
-    }
-
     .dropdown-menu {
         top: 1rem;
         right: 1rem;
@@ -561,11 +705,6 @@ footer {
 
 /* 桌面尺寸 */
 @media screen and (min-width: 901px) {
-    header {
-        font-size: 2em;
-        padding: 20px;
-    }
-
     nav ul {
         justify-content: space-evenly;
     }
