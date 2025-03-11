@@ -52,7 +52,18 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
 
-
+  let lastScrollY = window.scrollY; // 記錄最後的滾動位置
+  const navbar = document.getElementById("navbar");
+  
+  window.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY) {
+          navbar.classList.add("nav-hide"); // 下滑時隱藏
+      } else {
+          navbar.classList.remove("nav-hide"); // 上滑時顯示
+      }
+      lastScrollY = window.scrollY; // 更新最後的滾動位置
+  });
+  
 
 });
 
@@ -110,6 +121,7 @@ video.addEventListener('mouseover', () => {
   video.currentTime = 0; // 將影片重設到起始位置
   video.play(); // 播放影片
 });
+
 
 
 

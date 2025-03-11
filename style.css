@@ -48,7 +48,7 @@ body {
     align-items: center; 
     min-height: 100vh;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #e2e2e2;
     white-space: pre-line;
 
     /*換頁*/
@@ -61,16 +61,7 @@ body.fade-in {
     opacity: 1;
 }
 
-.frame {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 20px solid #A4F364;
-    pointer-events: none; /* 確保框架不會干擾到頁面上的其他元素 */
-    z-index: 10000;
-}
+
 
 header{
     width:100%;
@@ -84,18 +75,64 @@ header{
 	z-index: 2000;
 }
 
-h1{
-    margin-top: 3%;
-    margin-left: 3%;
-    font-family: "Estonia", cursive;
-    font-size: 50px;
-    font-weight: 200;
-    color: #A4F364;
-    display: inline;
-}
 
 a{
     text-decoration:none;
+    color: #0D0D0D;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:right;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 100; 
+    font-family: Kanit;
+    font-size: 1.2rem;
+
+}
+
+#navbar ul {
+    display: flex; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a{
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover{
+    cursor: pointer;
+    color: #F6633F;
+}
+
+.nav-hide {
+    transform: translateY(-100%); 
+}
+
+h1{
+    position:absolute;
+    top: -2rem;
+    left: 2rem;
+    font-family: "Estonia", cursive;
+    font-size: 50px;
+    font-weight: 800;
+    color: #0D0D0D;
+    
+}
+
+.nav-pages{
+    margin-right: 6rem;
 }
 
 
@@ -162,7 +199,6 @@ a{
     justify-content: center;
     align-items: center;
     margin-top: 2%;
-    transition: all 0.5s ease; /* 用來平滑過渡效果 */
 }
 
 .container1::after {
@@ -172,13 +208,13 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 半透明黑色遮罩 */
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.overlay-text {
+.container1 .overlay-text {
     position: absolute;
     font-family: "Montserrat";
     color: white;
@@ -201,7 +237,7 @@ a{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: inset(0 round 20px); 
+    clip-path: inset(0 round 10px); 
 }
 
 .container1-1 {
@@ -232,55 +268,75 @@ a{
     object-fit: cover;
 }
 
-
 .container3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 每列最多 3 個 */
+    /*
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 1200px;
+    */
+    gap: 10px;
+    justify-content: center; 
+    align-items: center;
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
+
 .container3 .item {
-    flex: 1 1 calc(32% - 20px); /* 控制方塊大小，讓它更大 */
+    flex: 1 1 calc(33.33% - 10px);
     max-width: 320px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
-}
+    overflow: hidden;
+    margin-bottom: -15%;
 
-.container3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
-
-.container3 .mask {
+   
+.container3 .item::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.container3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container3 .overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-60%, -60%);
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: left;
     opacity: 0;
     transition: opacity 0.5s ease; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    
+    z-index: 2;
 }
 
-.container3 .mask p{
-    font-size: 25px;
-    text-align: left;
-    margin-left: 10%;
-}
-
-.container3 .item:hover .mask {
+.container3 .item:hover::after {
     opacity: 1;
     cursor: pointer;
+}
+
+.container3 .item:hover .overlay-text {
+    opacity: 1;
 }
 
 
@@ -325,10 +381,9 @@ a{
 }
 
 .menu-icon {
-    position: fixed;
-    top: 3%;
-    right: 3%;
-    font-size: 2rem;
+    position:absolute;
+    right: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
     z-index: 1000;
     color: #0D0D0D;
@@ -385,17 +440,14 @@ a{
 .dropdown-menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.8em;
     transition: color 0.4s ease; /* 漸進的顏色變化 */
 }
 
-/* Hover effect for menu item text */
 .dropdown-menu ul li a:hover {
     color: #A4F364; 
 }
 
-
-/* 關閉按鈕樣式，位於選單右上角 */
 .close-btn {
     position: absolute;
     top: 1.5rem;
@@ -590,30 +642,24 @@ footer {
 
  /* RWD 調整 */
 /* 手機尺寸 */
-@media screen and (max-width: 600px) {
-    .frame {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: none;
-        pointer-events: none;
-        z-index: 10000;
-    }
+@media screen and (max-width: 768px) {
 
     h1{
-        margin-left: 5%;
-        font-family: "Estonia", cursive;
+        top: -0.9rem;
+        left: 1rem;
         font-size: 35px;
-    
+    }
+
+    .nav-pages{
+        display: none;
     }
 
     .text-box p{
         font-size: 1.8rem;
+        line-height: 2.5rem;
         font-weight: 500;
         text-align: left;
-        margin-left: 10%;
+        margin: 0 10% 0 10%;
     }
 
     .about-img{
@@ -643,20 +689,27 @@ footer {
         width: 100vw;
     }
 
-    .container3 .item {
-        flex: 1 1 calc(50% - 10px); /* 兩個並排 */
-        max-width: 48%; /* 讓兩個方塊填滿畫面 */
-    }
-  
-    
-    .container3 {
-        gap: 5px;
+    .container3{
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .container3 .item {
-        flex: 1 1 100%;
+        flex: 1 1 calc(50% - 10px);
+        max-width: 100%;
+        margin-bottom: -20%;
     }
-    
+        
+    .container3 .overlay-text {
+        top: 40%;
+        left: 40%;
+        transform: translate(-70%, -70%);
+        font-size: 1.1rem;
+    }
+   
+    .menu-icon {
+        right: 2rem;
+        font-size: 2.5rem;
+    }
 
     .dropdown-menu {
         position: fixed;
@@ -705,11 +758,5 @@ footer {
 
 /* 桌面尺寸 */
 @media screen and (min-width: 901px) {
-    nav ul {
-        justify-content: space-evenly;
-    }
 
-    footer {
-        position: relative;
-    }
 }
