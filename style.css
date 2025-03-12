@@ -21,19 +21,19 @@
 
 /* 使用 ::selection 改變選取文字的顏色 */
 ::selection {
-    background-color: #A4F364;  /* 文字被選取時的背景顏色 */
-    color: #F6633F;  /* 文字顏色 */
+    background-color: #0D0D0D;  /* 文字被選取時的背景顏色 */
+    color: #E5BD54;  /* 文字顏色 */
 }
 
 /* 支援不同瀏覽器的選取效果 */
 ::-moz-selection {
-    background-color: #A4F364;
-    color: #F6633F;
+    background-color: #0D0D0D;
+    color: #E5BD54;
 }
 
 ::-webkit-selection {
-    background-color: #A4F364;
-    color: #F6633F;
+    background-color: #0D0D0D;
+    color: #E5BD54;
 }
 
 
@@ -113,7 +113,7 @@ a{
 
 #navbar a:hover{
     cursor: pointer;
-    color: #F6633F;
+    color: #E5BD54;
 }
 
 .nav-hide {
@@ -170,7 +170,7 @@ h1{
     font-size: 1rem;        
     color: #727272;         
     word-wrap: break-word; 
-    margin: 0 20% 0 20%;              
+    margin: 0 20% 0 20%;
 }
 
 .descriptions p a{ 
@@ -180,7 +180,7 @@ h1{
 }
 
 .descriptions p a:hover{ 
-    color: #F6633F;
+    color: #E5BD54;
 }
 
 
@@ -271,10 +271,6 @@ h1{
 .container3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 每列最多 3 個 */
-    /*
-    display: flex;
-    flex-wrap: wrap;
-    */
     gap: 10px;
     justify-content: center; 
     align-items: center;
@@ -373,7 +369,7 @@ h1{
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    color: #F6633F !important;
+    color: #E5BD54 !important;
 }
 
 .swiper-pagination-bullet{
@@ -392,7 +388,7 @@ h1{
 }
 
 .menu-icon:hover {
-    color: #F6633F; 
+    color: #E5BD54; 
 }
 
 
@@ -445,7 +441,7 @@ h1{
 }
 
 .dropdown-menu ul li a:hover {
-    color: #A4F364; 
+    color: #E5BD54; 
 }
 
 .close-btn {
@@ -503,7 +499,7 @@ h1{
 
 .close-btn:hover::before,
 .close-btn:hover::after {
-    background-color: #A4F364; /* 改變筆畫顏色 */
+    background-color: #E5BD54; /* 改變筆畫顏色 */
     transition: background-color 0.4s ease-in-out; /* 顏色過渡 */
 }
 
@@ -520,7 +516,7 @@ h1{
 }
 
 .social-icons a:hover {
-    color: #A4F364; /* 滑鼠移上去變黑色 */
+    color: #E5BD54; /* 滑鼠移上去變黑色 */
 }
 
 
@@ -539,11 +535,11 @@ h1{
   
   .to-top:hover .arrow-circle-up circle,
   .to-top:hover .arrow-circle-up line{
-    stroke: #F6633F;
+    stroke: #E5BD54;
   }
 
   .to-top:hover .arrow-circle-up path{
-    fill: #F6633F;
+    fill: #E5BD54;
   }
   
 
@@ -564,80 +560,10 @@ footer {
     width: 35px; 
     height: 35px; 
     border-radius: 50%; 
-    background: linear-gradient(45deg, #F6633F, #A4F364);
+    background: linear-gradient(45deg, #E5BD54, #333);
     transform: translate(-50%, -50%); /* 確保游標位於鼠標位置的中心 */
     transition: transform 0.3s ease-out; /* 添加平滑過渡效果 */
-}
-
-.scroll-indicator {
-    margin-top: 40%;
-    text-align: center;
-    pointer-events: none; /* 防止遮擋到其他元素的點擊 */
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards, bounce 2s ease-in-out infinite;
-  }
-
-.styled-line {
-    border: 0;
-    border-top: 2px solid #A4F364;
-    width: 5%;
-    margin: 20px auto;
-    opacity: 0.7; /* 讓橫線有點透明感 */
-    transition: all 0.3s ease; /* 加入過渡效果 */
-  }
-  
-  .styled-line:hover {
-    width: 100%; /* 滑鼠懸停時，橫線會變得更寬 */
-    opacity: 1; /* 滑鼠懸停時不再透明 */
-  }
-  
-  
-  /* scroll down */
-  .text {
-    display: block;
-    font-size: 18px;
-    color: #A4F364;
-    margin-top: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    opacity: 0;
-    animation: fadeInText 1s ease-in-out 1s forwards, textPulse 2s ease-in-out infinite;
-    font-family: Vollkorn;
-    transform: rotate(90deg); 
-  }
-  
-  
-/* 文字淡入 */
-@keyframes fadeInText {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* 文字顏色變化動畫，呼吸感 */
-  @keyframes textPulse {
-    0%, 100% {
-      color: #fff;
-    }
-    50% {
-      color: #A4F364;
-    }
-  }
-  
-  /* 整體淡入動畫 */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }  
-  
-  
+}  
 
 
  /* RWD 調整 */
