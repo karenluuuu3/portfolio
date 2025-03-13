@@ -175,6 +175,7 @@ h1{
 
 .descriptions p a{ 
     color: #727272;
+    font-style: italic;
     font-weight: 800;
     transition: color 0.5s ease;
 }
@@ -263,7 +264,7 @@ h1{
 }
 
 .container2 img {
-    width: 48%;
+    width: 47%;
     height: auto;
     object-fit: cover;
 }
@@ -314,9 +315,10 @@ h1{
 
 .container3 .overlay-text {
     position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-60%, -60%);
+
+    top: 20%;
+    left: 10%;
+    
     font-family: "Montserrat";
     color: #fff;
     font-size: 1.5rem;
@@ -626,10 +628,7 @@ footer {
     }
         
     .container3 .overlay-text {
-        top: 40%;
-        left: 40%;
-        transform: translate(-70%, -70%);
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
    
     .menu-icon {
