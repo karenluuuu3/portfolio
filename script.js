@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
       lastScrollY = window.scrollY; // 更新最後的滾動位置
   });
   
+  // 避免回上一頁空白
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
 
 });
 
