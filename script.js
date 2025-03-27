@@ -35,16 +35,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // 獲取按鈕元素
-  const toTopBtn = document.getElementById('toTopBtn');
-
-  // 當使用者滾動時顯示按鈕
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      toTopBtn.style.display = "block";
-    } else {
-      toTopBtn.style.display = "none";
-    }
+    window.onload = function () {
+    const toTopBtn = document.getElementById('toTopBtn');
+  
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        toTopBtn.style.display = "block";
+      } else {
+        toTopBtn.style.display = "none";
+      }
+    };
+  
+    // 點擊後滾動到頂部
+    toTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
   };
+  
 
   
   let lastScrollY = window.scrollY; // 記錄最後的滾動位置
@@ -99,7 +106,6 @@ function updateCursor() {
 
 // 開始更新游標位置
 updateCursor();
-
 
 
 

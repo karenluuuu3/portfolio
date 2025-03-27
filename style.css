@@ -78,7 +78,7 @@ header{
 .header-image {
     top: -2rem;
     width: 100%;
-    height: 60vh; /* 滿版高度 */
+    height: 70vh; /* 滿版高度 */
     overflow: hidden;
     position: relative; /* 相對定位（可選）*/
   }
@@ -108,7 +108,7 @@ a{
     z-index: 100; 
     font-family: Kanit;
     font-size: 1.2rem;
-
+    background-color: rgba(226, 226, 226, 0.3);
 }
 
 #navbar ul {
