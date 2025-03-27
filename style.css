@@ -509,6 +509,11 @@ h1{
 
 }
 
+.social-icons-footer {
+    display: flex;
+    gap: 15px;
+}
+
 .social-icons a {
     font-size: 30px;
     color: #fff;
@@ -516,9 +521,41 @@ h1{
 }
 
 .social-icons a:hover {
-    color: #E5BD54; /* 滑鼠移上去變黑色 */
+    color: #E5BD54;
 }
 
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1rem;
+}
+
+.footer .left {
+    text-align: left;
+}
+
+.footer .right {
+    text-align: right;
+    margin-right: 10%;
+}
+
+.footer .right a {
+    margin-left: 20px; /* IG和Behance間距調整 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 2rem;
+    font-size: 25px;
+    color:#727272;
+}
+
+.footer .right a:hover {
+    color: #E5BD54;
+}
 
 .to-top {
     display: none; /* 初始不顯示 */
@@ -541,16 +578,6 @@ h1{
   .to-top:hover .arrow-circle-up path{
     fill: #E5BD54;
   }
-  
-
-footer {
-    font-size: 12px;
-    position: relative;
-    text-align: center;
-    padding: 10px;
-    min-height: 60px;
-    margin-top: 1%;
-}
 
 
 .cursor {
@@ -659,7 +686,21 @@ footer {
     
     }
     
-    
+    .footer {
+        flex-direction: column; /* 改為垂直排列 */
+        align-items: flex-start; /* 全部置左 */
+    }
+
+    .footer .right {
+        text-align: left; /* IG和Behance也置左 */
+        margin-top: 10px; /* 上方間距 */
+    }
+
+    .footer .right a {
+        margin-left: 0; /* 移除左邊間距 */
+        margin-right: 15px; /* 改為右邊間距 */
+        font-size: 20px;
+    }
     
 
 }
