@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const dropdownMenu = document.querySelector(".dropdown-menu");
   const closeBtn = document.querySelector(".close-btn");
 
-
+  
 
   // 打開選單
   menuIcon.addEventListener('click', function(event) {
@@ -46,12 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  // 點擊按鈕時返回頁面頂部
-  toTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-
+  
   let lastScrollY = window.scrollY; // 記錄最後的滾動位置
   const navbar = document.getElementById("navbar");
   
@@ -127,7 +122,4 @@ video.addEventListener('mouseover', () => {
   video.currentTime = 0; // 將影片重設到起始位置
   video.play(); // 播放影片
 });
-
-
-
 
