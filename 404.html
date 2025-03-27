@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-      sessionStorage.redirect = location.href;
-      location.replace("/");
+      sessionStorage.redirect = location.pathname + location.search;
+      // 加入一個獨特的參數避免瀏覽器 cache
+      location.replace("/?redirect=" + Date.now());
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>

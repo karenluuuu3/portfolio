@@ -181,12 +181,14 @@
     <script src="script.js"></script>
 
     <script>
-        const redirect = sessionStorage.redirect;
+        const redirectPath = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
+        
+        if (redirectPath && redirectPath !== location.pathname) {
+          history.replaceState(null, "", redirectPath);
         }
     </script>
+      
 
 
 </body>
