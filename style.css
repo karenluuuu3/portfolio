@@ -151,6 +151,7 @@ h1{
 
 
 .text-box p{
+    margin-top: 30%;
     display: block;
     font-size: 35px;
     font-weight: 500;
@@ -188,7 +189,8 @@ h1{
 }
 
 .descriptions p a{ 
-    font-weight: 600;
+    font-style: italic;
+    font-weight: 500;
     transition: color 0.5s ease;
 }
 
@@ -628,11 +630,11 @@ h1{
     }
 
     .text-box p{
+        margin-top: 40%;
         font-size: 1.8rem;
         line-height: 2.5rem;
         font-weight: 500;
         text-align: left;
-        margin: 0 5% 0 5%;
     }
 
     .about-img{
