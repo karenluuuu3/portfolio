@@ -1,0 +1,201 @@
+/* 作品詳細頁 */
+.work-detail {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8rem 2rem 5rem;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.work-detail-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.5rem;
+    font-weight: 300; /* 輕量化 */
+    margin-bottom: 0.8rem;
+    color: #2c2c2c;
+    letter-spacing: 0.05em;
+}
+
+.work-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.work-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #999;
+    letter-spacing: 0.05em;
+}
+
+.work-meta span {
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.work-hero-image {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.work-hero-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.work-info-section {
+    margin-bottom: 5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.info-left h3,
+.work-section h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    font-weight: 400; /* 從粗體改為 regular */
+    margin-bottom: 1.5rem;
+    color: #2c2c2c;
+    letter-spacing: 0.03em;
+}
+
+.info-left p,
+.work-section p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #666;
+}
+
+.info-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.info-item {
+    padding: 0;
+    background: transparent;
+    border-left: none;
+}
+
+.info-item h4 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #999;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+.work-section {
+    margin-bottom: 5rem;
+}
+
+.work-gallery {
+    margin-bottom: 5rem;
+}
+
+.gallery-row {
+    margin-bottom: 1.5rem;
+}
+
+.gallery-row.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.gallery-row img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.work-video {
+    margin-bottom: 5rem;
+}
+
+.work-video video {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.work-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-btn {
+    color: #2c2c2c;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.nav-btn:hover {
+    background: #2c2c2c;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .work-detail {
+        padding: 6rem 1.5rem 3rem;
+    }
+    
+    .work-detail-title {
+        font-size: 2rem;
+    }
+    
+    .work-subtitle {
+        font-size: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .gallery-row.two-col {
+        grid-template-columns: 1fr;
+    }
+    
+    .work-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
