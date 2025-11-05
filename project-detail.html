@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project details">
+    <title>Project | karenlu3</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <div id="loading"><div class="loader"></div></div>
+    <div class="scroll-indicator"></div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Hero Section -->
+    <section class="project-hero" id="overview">
+        <div class="hero-media">
+            <!-- 動態載入：video 或 image -->
+        </div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <span class="hero-category"><!-- 動態 --></span>
+                <h1 class="hero-title"><!-- 動態 --></h1>
+                <p class="hero-subtitle"><!-- 動態 --></p>
+            </div>
+        </div>
+        <div class="scroll-indicator-arrow" aria-hidden="true">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- 墨水流淌效果 SVG -->
+    <div class="ink-transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="inkFlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(18, 18, 18);stop-opacity:1" />
+                    <stop offset="40%" style="stop-color:rgb(18, 18, 18);stop-opacity:0.8" />
+                    <stop offset="70%" style="stop-color:rgb(18, 18, 18);stop-opacity:0.4" />
+                    <stop offset="100%" style="stop-color:rgb(18, 18, 18);stop-opacity:0" />
+                </linearGradient>
+            </defs>
+            <path class="ink-wave" 
+                  d="M0,50 C150,30 300,70 450,50 C600,30 750,60 900,45 C1050,30 1200,55 1350,40 L1440,35 L1440,0 L0,0 Z" 
+                  fill="url(#inkFlow)"/>
+        </svg>
+    </div>
+
+    <!-- Floating Info Card -->
+    <aside class="project-info-card" aria-label="Project information">
+        <div class="info-group">
+            <h4>Year</h4>
+            <p><!-- 動態 --></p>
+        </div>
+        <div class="info-group">
+            <h4>Category</h4>
+            <p><!-- 動態 --></p>
+        </div>
+        <div class="info-group">
+            <h4>Tools</h4>
+            <div class="info-tags">
+                <!-- 動態載入 tags -->
+            </div>
+        </div>
+        <div class="info-group">
+            <h4>Links</h4>
+            <div class="info-links">
+                <!-- 動態載入 links -->
+            </div>
+        </div>
+    </aside>
+
+    <!-- About Section -->
+    <section class="project-section" id="about">
+        <div class="section-container">
+            <div class="section-header-inline">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About the Project</h2>
+            </div>
+            <div class="section-content-split">
+                <div class="content-text">
+                    <p class="lead-text"><!-- 動態 --></p>
+                    <!-- 其他段落動態生成 -->
+                </div>
+                <div class="content-highlights">
+                    <!-- 動態生成 highlight items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="project-section section-dark" id="gallery">
+        <div class="section-container-wide">
+            <div class="section-header-center">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Visual Gallery</h2>
+                <p class="section-subtitle">Explore the installation through different perspectives</p>
+            </div>
+            <!-- Gallery 內容動態生成 -->
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="project-section" id="technical">
+        <div class="section-container">
+            <div class="section-header-inline">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Technical Details</h2>
+            </div>
+
+            <div class="technical-grid">
+                <!-- Technical cards 動態生成 -->
+            </div>
+
+          
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="project-section section-dark" id="process">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Development Process</h2>
+                <p class="section-subtitle">From concept to installation</p>
+            </div>
+
+            <div class="process-timeline">
+                <!-- Process items 動態生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="project-section">
+        <div class="section-container-wide">
+            <div class="section-header-center">
+                <h2 class="section-title">Related Projects</h2>
+            </div>
+
+            <div class="related-projects">
+                <!-- Related project cards 動態生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Projects -->
+    <div class="back-to-projects">
+        <a href="projects.html" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back to All Projects</span>
+        </a>
+    </div>
+
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/project-loader.js"></script>
+    <script src="js/project-detail.js"></script>
+</body>
+</html>

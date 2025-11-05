@@ -1,0 +1,1611 @@
+{
+  "projects": [
+    {
+      "id": "echo-me",
+      "title": "洄鄉 | Echo-me",
+      "category": "Interactive Installation",
+      "year": 2025,
+      "featured": true,
+      "thumbnail": "works/15/images/15.png",
+      "description": "An interactive installation exploring species fusion and migration, interweaving human and fish silhouettes to create a symbiotic network of life.",
+      "tags": ["Interactive", "Installation", "Migration", "Species Fusion"],
+      "hero": {
+        "video": "",
+        "poster": "works/15/images/15.png",
+        "subtitle": "Exploring species fusion and the journey of migration and return"
+      },
+      "info": {
+        "tools": ["TouchDesigner", "Interactive Sensors", "Projection Mapping"],
+        "links": [
+          { "name": "Exhibition Info", "url": "https://thesixfuelfactorydocumenta2025.web.nycu.edu.tw/2025/04/26/%e9%81%8b%e7%ae%97%e6%b2%b3%e6%b5%81/", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Echo-me interweaves the silhouettes of humans and fish, creating a fusion of species that symbolizes the invisible force flowing through all life, forming a network of co-existence.",
+        "paragraphs": [
+          "The work depicts 'homeward migration' as species slowly traverse urban landscapes and shimmering waters, with visuals extending in a rippling effect that symbolizes the force of returning to origins.",
+          "When viewers stand before the work, they become part of this discussion—the installation detects their presence and generates new on-screen characters that join the procession of species.",
+          "This symbolizes the integration and continuity of human history with nature, exploring the idea that migration and return reflect humanity's search for and return to its origins."
+        ],
+        "highlights": [
+          {
+            "title": "Concept",
+            "description": "Exploring species fusion through the interweaving of human and animal forms in a migration journey."
+          },
+          {
+            "title": "Interaction",
+            "description": "Real-time audience detection creates new characters that join the migration procession."
+          },
+          {
+            "title": "Exhibition",
+            "description": "Exhibited at 2025 The Sixth Fuel Factory Documenta, NYCU."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/15/images/15.png", "caption": "Installation view" }
+        ],
+        "grid2": [
+          { "src": "works/15/images/15-5.png", "caption": "Detail view 1" },
+          { "src": "works/15/images/15-6.png", "caption": "Detail view 2" }
+        ],
+        "grid3": [
+          { "src": "works/15/images/15-7.png", "caption": "" },
+          { "src": "works/15/images/15-2.png", "caption": "" },
+          { "src": "works/15/images/15-3.png", "caption": "" }
+        ],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Interactive Sensing",
+          "description": "Real-time detection of audience presence to generate new on-screen characters."
+        },
+        {
+          "icon": "layers",
+          "title": "Visual Design",
+          "description": "Abstract contours depicting species migration through urban and aquatic landscapes."
+        },
+        {
+          "icon": "zap",
+          "title": "Projection Mapping",
+          "description": "Rippling visual effects symbolizing the return to origins."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Development",
+          "description": "Exploring themes of species fusion and migration patterns.",
+          "date": "2025.02-03",
+          "image": "works/15/images/15-4.jpg",
+          "reverse": false
+        },
+        {
+          "title": "Visual Design",
+          "description": "Creating abstract species contours and migration animations.",
+          "date": "2025.04",
+          "image": "works/15/images/15-2.png",
+          "reverse": true
+        },
+        {
+          "title": "Exhibition",
+          "description": "Installed at The Sixth Fuel Factory Documenta 2025.",
+          "date": "2025.06",
+          "image": "works/15/images/15.png",
+          "reverse": false
+        }
+      ],
+      "related": ["traces", "existence-observation"]
+    },
+    
+    {
+      "id": "traces",
+      "title": "痕跡 | Traces",
+      "category": "Digital Art",
+      "year": 2024,
+      "featured": false,
+      "thumbnail": "works/12/images/12-1.jpg",
+      "description": "Drawing inspiration from ceramic crazing to investigate the aesthetic interplay between temporality and human intervention through quadtree structures.",
+      "tags": ["Digital Art", "Quadtree", "Generative", "GLSL"],
+      "hero": {
+        "video": "",
+        "poster": "works/12/images/12-1.jpg",
+        "subtitle": "Exploring temporal dynamics through ceramic crazing patterns"
+      },
+      "info": {
+        "tools": ["GLSL", "Quadtree Algorithm", "Generative Design"],
+        "links": []
+      },
+      "about": {
+        "leadText": "Traces reinterprets the temporality and aesthetic qualities of ceramic crack patterns through digitalization, focusing on traces left by the passage of time and human intervention.",
+        "paragraphs": [
+          "This work views cracks as a tangible representation of time, simulating the accumulation of natural patterns over time while incorporating the uniqueness introduced by human intervention.",
+          "The work extends crack expression by creating diverse visual forms, including crystal engraving, ripples, and skin meridians, liberating cracks from traditional ceramic frameworks.",
+          "This contemporary interpretation combines digital media and procedural generation, expanding the expressive possibilities of cracks as symbols of time and culture."
+        ],
+        "highlights": [
+          {
+            "title": "Concept",
+            "description": "Digital interpretation of ceramic crazing as a manifestation of time and cultural symbolism."
+          },
+          {
+            "title": "Technology",
+            "description": "Custom quadtree algorithms for procedural crack pattern generation."
+          },
+          {
+            "title": "Exhibition",
+            "description": "Exhibited at GDAP#13 LIMINAL in Taipei, 2024."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/12/images/IMG_5987.jpg", "caption": "Exhibition view" }
+        ],
+        "grid2": [
+          { "src": "works/12/images/IMG_5846.jpg", "caption": "Installation detail" },
+          { "src": "works/12/images/IMG_6012.jpg", "caption": "Visitor interaction" }
+        ],
+        "grid3": [
+          { "src": "works/12/images/12-3.png", "caption": "" },
+          { "src": "works/12/images/12-4.png", "caption": "" },
+          { "src": "works/12/images/12-5.PNG", "caption": "" }
+        ],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Quadtree Algorithm",
+          "description": "Procedural generation of crack patterns using quadtree spatial subdivision."
+        },
+        {
+          "icon": "layers",
+          "title": "GLSL Shaders",
+          "description": "Real-time visual effects and pattern generation through custom shaders."
+        },
+        {
+          "icon": "activity",
+          "title": "Multiple Media",
+          "description": "Extension of crack patterns across crystal, water, and skin visualizations."
+        }
+      ],
+      "process": [
+        {
+          "title": "Research",
+          "description": "Study of ceramic crazing techniques and their cultural significance.",
+          "date": "2024.01-03",
+          "image": "works/12/images/12-2.png",
+          "reverse": false
+        },
+        {
+          "title": "Algorithm Development",
+          "description": "Implementation of quadtree-based crack generation system.",
+          "date": "2024.04-05",
+          "image": "works/12/images/12-6.png",
+          "reverse": true
+        },
+        {
+          "title": "Exhibition",
+          "description": "Presented at GDAP#13 LIMINAL exhibition in Taipei.",
+          "date": "2024.07",
+          "image": "works/12/images/IMG_6023.JPG",
+          "reverse": false
+        }
+      ],
+
+      "related": ["smudge-of-dawn", "computing-aesthetics"]
+    },
+
+    {
+      "id": "garbage-truck-game",
+      "title": "垃圾車等等我 | Garbage Truck, Wait for Me",
+      "category": "AR Game",
+      "year": 2022,
+      "featured": false,
+      "thumbnail": "works/14/images/14.png",
+      "description": "A home fitness AR game app using image recognition and motion sensing, designed for accessible exercise during the pandemic.",
+      "tags": ["AR", "Unity", "AIoT", "Motion Sensing", "Gamification"],
+      "hero": {
+        "video": "",
+        "poster": "works/14/images/14.png",
+        "subtitle": "Home fitness game combining AR and motion sensing"
+      },
+      "info": {
+        "tools": ["Unity", "AR Foundation", "Image Recognition", "AIoT"],
+        "links": [
+          { "name": "Demo Video", "url": "https://youtu.be/C6i9WdZ-_eE", "icon": "link" },
+          { "name": "Testing Video", "url": "https://youtu.be/nZCknoQdh40", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "A home fitness game app developed in collaboration with Field Technology Ltd., using AR mixed image recognition and AIoT technologies to create an accessible exercise experience.",
+        "paragraphs": [
+          "During the pandemic, maintaining health became important, but many couldn't go outdoors or to gyms. This game allows users to exercise at home using only their smartphones.",
+          "The game uses image recognition to detect body movements, combined with gamification to create an engaging fitness experience inspired by Taiwan's iconic garbage truck culture.",
+          "Designed for all ages with accessible movements, the game requires no additional equipment—just a smartphone camera and space to move."
+        ],
+        "highlights": [
+          {
+            "title": "Accessibility",
+            "description": "No additional equipment needed—works with any smartphone camera."
+          },
+          {
+            "title": "Technology",
+            "description": "AR image recognition and motion sensing for full-body interaction."
+          },
+          {
+            "title": "Cultural Context",
+            "description": "Inspired by Taiwan's garbage truck culture for local engagement."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/14/images/14-39.jpg", "caption": "Game interface" }
+        ],
+        "grid2": [
+          { "src": "works/14/images/14-1.jpg", "caption": "Project planning" },
+          { "src": "works/14/images/14-8.jpg", "caption": "Development process" }
+        ],
+        "grid3": [
+          { "src": "works/14/images/14-15.jpg", "caption": "" },
+          { "src": "works/14/images/14-20.jpg", "caption": "" },
+          { "src": "works/14/images/14-25.jpg", "caption": "" }
+        ],
+        "video": {
+          "url": "https://www.youtube.com/embed/C6i9WdZ-_eE",
+          "caption": "Game demo video"
+        }
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Motion Detection",
+          "description": "Real-time body movement recognition using smartphone camera."
+        },
+        {
+          "icon": "layers",
+          "title": "AR Integration",
+          "description": "Mixed reality elements for immersive gameplay experience."
+        },
+        {
+          "icon": "zap",
+          "title": "AIoT Framework",
+          "description": "Rapid game module construction using AIoT technologies."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Development",
+          "description": "Market research and gameplay design focused on accessibility.",
+          "date": "2022.08-09",
+          "image": "works/14/images/14-3.jpg",
+          "reverse": false
+        },
+        {
+          "title": "Technical Implementation",
+          "description": "Integration of AR image recognition and motion sensing systems.",
+          "date": "2022.10-11",
+          "image": "works/14/images/14-12.jpg",
+          "reverse": true
+        },
+        {
+          "title": "Launch",
+          "description": "OB version released and industry-school collaboration completed.",
+          "date": "2022.11",
+          "image": "works/14/images/14.png",
+          "reverse": false
+        }
+      ],
+      "related": ["aquaverse", "deep-in-sea"]
+    },
+
+    {
+      "id": "aquaverse",
+      "title": "水族魚生 | AquaVerse",
+      "category": "AR Experience",
+      "year": 2022,
+      "featured": false,
+      "thumbnail": "works/13/images/13.png",
+      "description": "An AR educational app allowing users to explore an underwater world and learn about different fish species through smartphone interaction.",
+      "tags": ["AR", "Unity", "Education", "Mobile"],
+      "hero": {
+        "video": "",
+        "poster": "works/13/images/13.png",
+        "subtitle": "Immersive AR learning experience for marine education"
+      },
+      "info": {
+        "tools": ["Unity", "AR Foundation", "3D Modeling"],
+        "links": [
+          { "name": "Demo", "url": "https://youtube.com/shorts/u1-DQfZunAA?feature=share", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "An augmented reality software that allows viewers to use their smartphones to explore an underwater world and interact with fish to gain knowledge about different species.",
+        "paragraphs": [
+          "With advancements in technologies like 5G networks and the metaverse, dynamic content such as videos and animations tend to capture viewers' attention and facilitate learning more effectively.",
+          "The app integrates technology into daily life to enhance educational experiences, making marine biology accessible and engaging through AR interaction.",
+          "Users can select fish in the AR environment to view detailed information panels, creating an immersive and educational experience."
+        ],
+        "highlights": [
+          {
+            "title": "Educational Value",
+            "description": "Interactive learning about marine species through AR visualization."
+          },
+          {
+            "title": "Accessibility",
+            "description": "No additional equipment needed—works with smartphone cameras."
+          },
+          {
+            "title": "Engagement",
+            "description": "Dynamic AR content enhances learning effectiveness."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/13/images/13.png", "caption": "AR interface" }
+        ],
+        "grid2": [
+          { "src": "works/13/images/13-1.png", "caption": "Fish selection" },
+          { "src": "works/13/images/13-2.png", "caption": "Information panel" }
+        ],
+        "grid3": [],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "AR Environment",
+          "description": "Real-time underwater world rendering on mobile devices."
+        },
+        {
+          "icon": "layers",
+          "title": "Interactive UI",
+          "description": "Touch-based fish selection and information display system."
+        },
+        {
+          "icon": "grid",
+          "title": "3D Models",
+          "description": "Detailed marine life models with educational information."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept & Planning",
+          "description": "Research on educational AR applications and marine biology content.",
+          "date": "2022.06",
+          "image": "works/13/images/13.png",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Implementation of AR tracking and interactive information system.",
+          "date": "2022.07-08",
+          "image": "works/13/images/13-1.png",
+          "reverse": true
+        },
+        {
+          "title": "Testing & Launch",
+          "description": "User testing and app refinement for educational use.",
+          "date": "2022.08",
+          "image": "works/13/images/13-2.png",
+          "reverse": false
+        }
+      ],
+      "related": ["garbage-truck-game", "deep-in-sea"]
+    },
+
+    {
+      "id": "existence-observation",
+      "title": "存在觀察 | Existence Observation",
+      "category": "Mixed Reality Installation",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/11/images/11-7.png",
+      "description": "A multimedia installation exploring consciousness, energy, and existence through mixed reality and point cloud visualization.",
+      "tags": ["MR", "Unreal Engine", "Arduino", "Point Cloud", "Installation"],
+      "hero": {
+        "video": "",
+        "poster": "works/11/images/11-7.png",
+        "subtitle": "Exploring invisible existence through mixed reality"
+      },
+      "info": {
+        "tools": ["Unreal Engine 5", "Arduino", "Point Cloud", "Niagara"],
+        "links": []
+      },
+      "about": {
+        "leadText": "A work exploring the invisible particles that constitute reality—data, consciousness, imagination, and wishes—existing and changing in imperceptible ways to construct human experience.",
+        "paragraphs": [
+          "The installation uses a 'window' (door) as a symbolic visual medium, with the exhibition space 'Art Space' as the basis for a point cloud model, recreated using Unreal Engine.",
+          "When observers pause and stay, they can glimpse existence that was once imperceptible to the naked eye through the 'window' and resonate with it.",
+          "The work consists of four stages of imagery, progressing from door/theater opening, to energy/existence, to consciousness and emotion, creating a journey through invisible dimensions."
+        ],
+        "highlights": [
+          {
+            "title": "Concept",
+            "description": "Visualizing invisible particles of existence—data, consciousness, and energy."
+          },
+          {
+            "title": "Technology",
+            "description": "Mixed reality combining point cloud scanning with real-time generation."
+          },
+          {
+            "title": "Exhibition",
+            "description": "Presented at The Pledge: Materiality Algorithmic Aesthetics Exhibition, NYCU."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/11/images/11-7.png", "caption": "Installation view" }
+        ],
+        "grid2": [
+          { "src": "works/11/images/11-3.jpg", "caption": "Exhibition space" },
+          { "src": "works/11/images/11-4.jpg", "caption": "Visitor interaction" }
+        ],
+        "grid3": [
+          { "src": "works/11/images/11-5.png", "caption": "" },
+          { "src": "works/11/images/11-6.png", "caption": "" },
+          { "src": "works/11/images/11-1.jpg", "caption": "" }
+        ],
+        "video": {
+          "url": "https://www.instagram.com/p/CzGz9iTyKnR",
+          "caption": "Installation documentation"
+        }
+      },
+      "technical": [
+        {
+          "icon": "layers",
+          "title": "Point Cloud",
+          "description": "3D scanning and reconstruction of exhibition space using point cloud technology."
+        },
+        {
+          "icon": "activity",
+          "title": "Mixed Reality",
+          "description": "Integration of physical space with digital visualization through projection."
+        },
+        {
+          "icon": "zap",
+          "title": "Arduino Integration",
+          "description": "Sensor-based interaction detecting visitor presence for responsive visuals."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Development",
+          "description": "Exploring themes of invisible existence and consciousness.",
+          "date": "2023.08",
+          "image": "works/11/images/11-6.png",
+          "reverse": false
+        },
+        {
+          "title": "Technical Development",
+          "description": "Point cloud scanning and Unreal Engine implementation.",
+          "date": "2023.09",
+          "image": "works/11/images/11-5.png",
+          "reverse": true
+        },
+        {
+          "title": "Exhibition",
+          "description": "Installed at The Pledge exhibition, NYCU.",
+          "date": "2023.10",
+          "image": "works/11/images/11-3.jpg",
+          "reverse": false
+        }
+      ],
+      "related": ["threads-of-thought", "the-tunnel"]
+    },
+
+    {
+      "id": "threads-of-thought",
+      "title": "緣絡 | Threads of Thought",
+      "category": "Mixed Reality Installation",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/10/images/10-1.png",
+      "description": "A mixed reality installation visualizing brain consciousness space, connecting rational neural transmission with emotional imaginative spaces.",
+      "tags": ["MR", "Unreal Engine", "Arduino", "Niagara", "Consciousness"],
+      "hero": {
+        "video": "",
+        "poster": "works/10/images/10-1.png",
+        "subtitle": "Visualizing consciousness and emotional spaces"
+      },
+      "info": {
+        "tools": ["Unreal Engine 5", "Arduino", "Niagara", "Sensors"],
+        "links": [
+          { "name": "Video", "url": "https://youtu.be/diqtChicvnQ", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "A work centering around the visualization of brain consciousness space, connecting Arduino with UE5 to create visual effects modeling rational chemical molecular movements and emotional imaginative spaces.",
+        "paragraphs": [
+          "With the rise of the metaverse and XR technologies, this work questions: Is it not the three-dimensional reality that is being absorbed into the two-dimensional world of computers, with human consciousness gradually influenced by the virtual world?",
+          "The installation uses simple sensors as interactive devices to realize human stimuli in this brain consciousness space as a medium.",
+          "Visual effects model biological neural transmission alongside abstract emotional spaces, creating a dialogue between rationality and imagination."
+        ],
+        "highlights": [
+          {
+            "title": "Concept",
+            "description": "Exploring the intersection of virtual and physical consciousness spaces."
+          },
+          {
+            "title": "Technology",
+            "description": "Arduino-UE5 integration for responsive consciousness visualization."
+          },
+          {
+            "title": "Visualization",
+            "description": "Neural transmission and emotional spaces rendered through Niagara systems."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/10/images/10-1.png", "caption": "Installation view" }
+        ],
+        "grid2": [
+          { "src": "works/10/images/10-2.png", "caption": "Consciousness visualization" },
+          { "src": "works/10/images/10-1.png", "caption": "Interactive detail" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/diqtChicvnQ",
+          "caption": "Installation demonstration"
+        }
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Neural Visualization",
+          "description": "Modeling biological neural transmission through particle systems."
+        },
+        {
+          "icon": "layers",
+          "title": "Emotional Spaces",
+          "description": "Abstract visualization of imaginative and emotional consciousness."
+        },
+        {
+          "icon": "zap",
+          "title": "Sensor Integration",
+          "description": "Arduino sensors for real-time human stimulus detection and response."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Research",
+          "description": "Exploring consciousness visualization and XR technology implications.",
+          "date": "2023.04",
+          "image": "works/10/images/10-2.png",
+          "reverse": false
+        },
+        {
+          "title": "Technical Development",
+          "description": "Arduino-UE5 integration and Niagara particle system creation.",
+          "date": "2023.05",
+          "image": "works/10/images/10-1.png",
+          "reverse": true
+        },
+        {
+          "title": "Exhibition",
+          "description": "Installation and testing of consciousness visualization system.",
+          "date": "2023.06",
+          "image": "works/10/images/10-2.png",
+          "reverse": false
+        }
+      ],
+      "related": ["existence-observation", "planted-for-planting"]
+    },
+
+    {
+      "id": "planted-for-planting",
+      "title": "植•栽 | Planted for Planting",
+      "category": "Interactive Game",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/9/images/9-1.png",
+      "description": "An immersive puzzle game combining maze exploration with environmental interaction, culminating in the birth of the World Tree.",
+      "tags": ["Unreal Engine", "Game Design", "Niagara", "Procedural Generation"],
+      "hero": {
+        "video": "",
+        "poster": "works/9/images/9-1.png",
+        "subtitle": "Puzzle exploration and World Tree growth"
+      },
+      "info": {
+        "tools": ["Unreal Engine 5", "Niagara System", "Procedural Generation"],
+        "links": []
+      },
+      "about": {
+        "leadText": "An immersive experience combining exploration and puzzle-solving where players navigate between two scene layers, overcome challenges, and ultimately witness the birth of the World Tree.",
+        "paragraphs": [
+          "Players start in a complex maze and must find an exit, with the maze including mechanisms, hidden passages, and interactive environmental elements.",
+          "After escaping, players enter an open puzzle-solving area where they must locate suitable planting spots, with hints related to the number of leaves.",
+          "Once all suitable planting areas are correctly cultivated, the World Tree gradually grows, symbolizing the player's exploration journey and environmental restoration."
+        ],
+        "highlights": [
+          {
+            "title": "Level Design",
+            "description": "Combining maze structures with open areas for spatial planning and storytelling."
+          },
+          {
+            "title": "Procedural Art",
+            "description": "Using Niagara System for dynamic plant growth visual effects."
+          },
+          {
+            "title": "Environmental Theme",
+            "description": "Symbolizing environmental restoration and the continuation of life."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/9/images/9-1.png", "caption": "Game environment" }
+        ],
+        "grid2": [
+          { "src": "works/9/images/9.png", "caption": "Maze exploration" },
+          { "src": "works/9/images/9-1.png", "caption": "World Tree growth" }
+        ],
+        "grid3": [],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Level Design",
+          "description": "Multi-layered maze and puzzle-solving area with interactive elements."
+        },
+        {
+          "icon": "layers",
+          "title": "Niagara Trees",
+          "description": "Procedural tree growth using Niagara particle system."
+        },
+        {
+          "icon": "activity",
+          "title": "Interaction Design",
+          "description": "Environmental interactions and planting mechanics."
+        }
+      ],
+      "process": [
+        {
+          "title": "Game Design",
+          "description": "Conceptualizing maze structure and puzzle mechanics.",
+          "date": "2023.03",
+          "image": "works/9/images/9.png",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Implementation of procedural growth and interactive systems.",
+          "date": "2023.04",
+          "image": "works/9/images/9-1.png",
+          "reverse": true
+        },
+        {
+          "title": "Testing",
+          "description": "Gameplay testing and visual refinement.",
+          "date": "2023.05",
+          "image": "works/9/images/9-1.png",
+          "reverse": false
+        }
+      ],
+      "related": ["haru", "threads-of-thought"]
+    },
+
+    {
+      "id": "haru",
+      "title": "はる | haru",
+      "category": "Animation",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/8/images/8.jpg",
+      "description": "A cinematic exploration of sakura and spring, using Unreal Engine 5's Niagara system for atmospheric particle effects.",
+      "tags": ["Unreal Engine", "Animation", "Niagara", "Cinematic"],
+      "hero": {
+        "video": "",
+        "poster": "works/8/images/8.jpg",
+        "subtitle": "Through the pulse of sakura"
+      },
+      "info": {
+        "tools": ["Unreal Engine 5", "Niagara System", "Shader"],
+        "links": [
+          { "name": "Video", "url": "https://youtu.be/8Ehx9uAEzy0", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Who is calling? While Haru has withered away, through the pulse of sakura.",
+        "paragraphs": [
+          "A cinematic piece exploring the ephemeral nature of spring and sakura through atmospheric visual storytelling.",
+          "Utilizing Unreal Engine 5's advanced particle systems and shader programming to create evocative seasonal imagery.",
+          "The work captures the transient beauty of cherry blossoms and the passing of time through visual poetry."
+        ],
+        "highlights": [
+          {
+            "title": "Visual Poetry",
+            "description": "Atmospheric exploration of sakura and the ephemeral nature of spring."
+          },
+          {
+            "title": "Technical Excellence",
+            "description": "Advanced use of Niagara particle systems and custom shaders."
+          },
+          {
+            "title": "Cinematic Quality",
+            "description": "Film-like visual storytelling through real-time rendering."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/8/images/8.jpg", "caption": "Sakura scene" }
+        ],
+        "grid2": [
+          { "src": "works/8/images/8-2.png", "caption": "Atmospheric detail" },
+          { "src": "works/8/images/8.jpg", "caption": "Cherry blossom particles" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/8Ehx9uAEzy0",
+          "caption": "Haru cinematic video"
+        }
+      },
+      "technical": [
+        {
+          "icon": "layers",
+          "title": "Niagara Particles",
+          "description": "Advanced particle systems for cherry blossom petals and atmospheric effects."
+        },
+        {
+          "icon": "activity",
+          "title": "Custom Shaders",
+          "description": "Material shaders for sakura petals and seasonal lighting."
+        },
+        {
+          "icon": "zap",
+          "title": "Cinematic Rendering",
+          "description": "Real-time cinematic quality rendering in Unreal Engine 5."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept",
+          "description": "Visual exploration of sakura and spring themes.",
+          "date": "2023.02",
+          "image": "works/8/images/8.jpg",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Niagara particle systems and shader implementation.",
+          "date": "2023.03",
+          "image": "works/8/images/8-2.png",
+          "reverse": true
+        },
+        {
+          "title": "Rendering",
+          "description": "Final cinematic output and post-processing.",
+          "date": "2023.03",
+          "image": "works/8/images/8.jpg",
+          "reverse": false
+        }
+      ],
+      "related": ["the-tunnel", "ue4-workshop"]
+    },
+
+    {
+      "id": "the-tunnel",
+      "title": "隧歲 | The Tunnel",
+      "category": "Point Cloud Animation",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/7/images/7.png",
+      "description": "A point cloud animation exploring time and space through LiDAR-scanned night market scenes with atmospheric VFX.",
+      "tags": ["Unreal Engine", "Point Cloud", "LiDAR", "Animation"],
+      "hero": {
+        "video": "",
+        "poster": "works/7/images/7.png",
+        "subtitle": "Vast spaces, time focused on a single day"
+      },
+      "info": {
+        "tools": ["Unreal Engine 4", "Point Cloud", "LiDAR", "VFX"],
+        "links": [
+          { "name": "Day Scene Video", "url": "https://youtu.be/aIC0xbeB45c", "icon": "link" },
+          { "name": "Exhibition Info", "url": "https://ict-openlabs-2023.act.nycu.edu.tw", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Using Zhongzheng Road Night Market as the main scene, scanned into a point cloud model with atmospheric effects for day and night, offering an audiovisual experience traversing time and space.",
+        "paragraphs": [
+          "History lingers in certain corners of Hsinchu. The old town stands on the periphery of the modern city, having witnessed both prosperity and decline.",
+          "The old town remains—watching people come and go, bidding farewell to the past while welcoming the new, nurturing this land and its people.",
+          "The work creates distinct atmospheres for daytime and nighttime through fog, lighting variations, color shifts, particle dynamics, and post-processing, combined with field-recorded sounds."
+        ],
+        "highlights": [
+          {
+            "title": "Cultural Heritage",
+            "description": "Documenting and reimagining Hsinchu's historic Zhongzheng Road Night Market."
+          },
+          {
+            "title": "Technical Innovation",
+            "description": "Point cloud scanning combined with real-time atmospheric VFX."
+          },
+          {
+            "title": "Exhibition",
+            "description": "Exhibited at 2023 Open LABs, NYCU."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/7/images/7.png", "caption": "Day scene" }
+        ],
+        "grid2": [
+          { "src": "works/7/images/7-2.png", "caption": "Night scene" },
+          { "src": "works/7/images/7-3.png", "caption": "Atmospheric detail" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/aIC0xbeB45c",
+          "caption": "Day scene walkthrough"
+        }
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "LiDAR Scanning",
+          "description": "3D scanning of night market into detailed point cloud model."
+        },
+        {
+          "icon": "layers",
+          "title": "Atmospheric VFX",
+          "description": "Fog, lighting, particles, and post-processing for day/night ambiance."
+        },
+        {
+          "icon": "activity",
+          "title": "Audio Design",
+          "description": "Field-recorded sounds integrated with visual atmosphere."
+        }
+      ],
+      "process": [
+        {
+          "title": "Scanning",
+          "description": "LiDAR scanning of Zhongzheng Road Night Market.",
+          "date": "2022.11",
+          "image": "works/7/images/7-3.png",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Point cloud processing and atmospheric effect creation.",
+          "date": "2022.12",
+          "image": "works/7/images/7-2.png",
+          "reverse": true
+        },
+        {
+          "title": "Exhibition",
+          "description": "Presented at 2023 Open LABs exhibition.",
+          "date": "2023.01",
+          "image": "works/7/images/7.png",
+          "reverse": false
+        }
+      ],
+      "related": ["ue4-workshop", "convergence-of-longing"]
+    },
+
+    {
+      "id": "convergence-of-longing",
+      "title": "匯聚的思念 | The Convergence of Longing",
+      "category": "Generative Art",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/6/images/6.png",
+      "description": "Using Vermeer's 'Girl with a Pearl Earring' as foundation, visualizing convergence through Brownian motion and random walk algorithms.",
+      "tags": ["GLSL", "Generative Art", "Shader", "Algorithm"],
+      "hero": {
+        "video": "",
+        "poster": "works/6/images/6.png",
+        "subtitle": "An irregular approach to visualizing convergence"
+      },
+      "info": {
+        "tools": ["GLSL", "Shader Programming", "Generative Algorithms"],
+        "links": [
+          { "name": "Video", "url": "https://www.youtube.com/watch?v=lGqnS0nqCEk", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Using Vermeer's painting 'Girl with a Pearl Earring' as the foundation, this work explores an irregular approach to visualizing the convergence of longing and remembrance.",
+        "paragraphs": [
+          "The work employs Brownian motion and random walk algorithms to create organic, unpredictable patterns of convergence.",
+          "Through GLSL shader programming, the iconic painting is deconstructed and reconstructed through particle movements.",
+          "The result is a meditation on memory, longing, and the non-linear nature of emotional connections."
+        ],
+        "highlights": [
+          {
+            "title": "Concept",
+            "description": "Visualizing abstract emotions through algorithmic particle behavior."
+          },
+          {
+            "title": "Algorithm",
+            "description": "Brownian motion and random walk for organic convergence patterns."
+          },
+          {
+            "title": "Artistic Reference",
+            "description": "Reimagining Vermeer's masterpiece through computational aesthetics."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/6/images/6.png", "caption": "Convergence visualization" }
+        ],
+        "grid2": [
+          { "src": "works/6/images/6-5.png", "caption": "Particle detail" },
+          { "src": "works/6/images/6.png", "caption": "Final composition" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/lGqnS0nqCEk",
+          "caption": "Convergence animation"
+        }
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Brownian Motion",
+          "description": "Random particle movement simulating natural convergence patterns."
+        },
+        {
+          "icon": "layers",
+          "title": "GLSL Shaders",
+          "description": "Custom fragment shaders for particle rendering and composition."
+        },
+        {
+          "icon": "grid",
+          "title": "Image Processing",
+          "description": "Algorithmic decomposition and reconstruction of source image."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Development",
+          "description": "Exploring convergence themes through Vermeer's painting.",
+          "date": "2023.01",
+          "image": "works/6/images/6.png",
+          "reverse": false
+        },
+        {
+          "title": "Algorithm Implementation",
+          "description": "Developing Brownian motion and random walk systems.",
+          "date": "2023.01",
+          "image": "works/6/images/6-5.png",
+          "reverse": true
+        },
+        {
+          "title": "Refinement",
+          "description": "Visual optimization and particle behavior tuning.",
+          "date": "2023.01",
+          "image": "works/6/images/6.png",
+          "reverse": false
+        }
+      ],
+      "related": ["computing-aesthetics", "smudge-of-dawn"]
+    },
+
+    {
+      "id": "computing-aesthetics",
+      "title": "Computing Aesthetics",
+      "category": "Generative Art",
+      "year": 2022,
+      "featured": false,
+      "thumbnail": "works/5/images/圖片20.png",
+      "description": "A collection of GLSL shader experiments exploring computational aesthetics through waves, Voronoi patterns, and breathing light.",
+      "tags": ["GLSL", "Shader", "Generative", "Creative Coding"],
+      "hero": {
+        "video": "",
+        "poster": "works/5/images/圖片20.png",
+        "subtitle": "Exploring computational beauty through shader programming"
+      },
+      "info": {
+        "tools": ["GLSL", "Shader Programming", "WebGL"],
+        "links": [
+          { "name": "Waves", "url": "https://youtu.be/lh4w9Uj0TJc", "icon": "link" },
+          { "name": "Uncertain", "url": "https://www.instagram.com/p/Cm4arWhSRJi/", "icon": "link" },
+          { "name": "Breathing Light", "url": "https://www.instagram.com/p/Cm4Z4UoymyO/", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "A series of computational aesthetics experiments using GLSL, exploring themes of waves, uncertainty, breathing light, and reflection.",
+        "paragraphs": [
+          "The collection includes 'Waves' featuring Voronoi patterns and metaballs inspired by ukiyo-e floating world aesthetics.",
+          "Each piece explores different aspects of procedural generation and algorithmic beauty.",
+          "Through shader programming, abstract concepts are given visual form in real-time generative systems."
+        ],
+        "highlights": [
+          {
+            "title": "Waves",
+            "description": "Voronoi patterns and metaballs with floating world aesthetics."
+          },
+          {
+            "title": "Uncertain",
+            "description": "Exploring unpredictability through generative algorithms."
+          },
+          {
+            "title": "Breathing Light",
+            "description": "Organic pulsing patterns simulating breath and life."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/5/images/圖片20.png", "caption": "Computing aesthetics collection" }
+        ],
+        "grid2": [],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/lh4w9Uj0TJc",
+          "caption": "Waves demonstration"
+        }
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Voronoi Patterns",
+          "description": "Mathematical pattern generation using Voronoi diagrams."
+        },
+        {
+          "icon": "layers",
+          "title": "Metaballs",
+          "description": "Organic blob simulation through distance field calculations."
+        },
+        {
+          "icon": "activity",
+          "title": "Procedural Animation",
+          "description": "Real-time generative animation through shader programming."
+        }
+      ],
+      "process": [
+        {
+          "title": "Experimentation",
+          "description": "Exploring various shader techniques and algorithms.",
+          "date": "2022",
+          "image": "works/5/images/圖片20.png",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Creating distinct pieces exploring different aesthetic concepts.",
+          "date": "2022",
+          "image": "works/5/images/圖片20.png",
+          "reverse": true
+        },
+        {
+          "title": "Publication",
+          "description": "Sharing works on social media and creative coding platforms.",
+          "date": "2022",
+          "image": "works/5/images/圖片20.png",
+          "reverse": false
+        }
+      ],
+      "related": ["convergence-of-longing", "smudge-of-dawn"]
+    },
+
+    {
+      "id": "ue4-workshop",
+      "title": "UE4 Workshop",
+      "category": "Workshop",
+      "year": 2023,
+      "featured": false,
+      "thumbnail": "works/4/images/1.jpg",
+      "description": "A one-month Unreal Engine 4 workshop covering landscape creation, physics, wind fields, and rendering from scratch.",
+      "tags": ["Unreal Engine", "Landscape", "Animation", "Workshop"],
+      "hero": {
+        "video": "",
+        "poster": "works/4/images/1.jpg",
+        "subtitle": "From scratch to completion—building immersive landscapes"
+      },
+      "info": {
+        "tools": ["Unreal Engine 4", "Gaea", "Landscape Design"],
+        "links": [
+          { "name": "Instagram Post 1", "url": "https://www.instagram.com/p/Cm39lniSULK/", "icon": "link" },
+          { "name": "Instagram Post 2", "url": "https://www.instagram.com/p/Cm396r5S2Lo/", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "A comprehensive one-month Unreal Engine 4 workshop covering terrain creation, atmospheric effects, physics systems, and cinematic rendering.",
+        "paragraphs": [
+          "From scratch to completion—building mountains, snowy landscapes, water bodies, sky systems, physics, wind fields, post-processing, and rendering output.",
+          "The workshop explored landscape design principles and technical implementation in Unreal Engine.",
+          "Created three themed scenes: '梓' (Tranquility and Aspiration), '霜月' (Frost Moon), and '歸' (Homecoming at Sunset)."
+        ],
+        "highlights": [
+          {
+            "title": "Comprehensive Learning",
+            "description": "Complete pipeline from terrain creation to final rendering."
+          },
+          {
+            "title": "Artistic Themes",
+            "description": "Three distinct atmospheric scenes with cultural significance."
+          },
+          {
+            "title": "Technical Skills",
+            "description": "Mastery of UE4 landscape tools, physics, and post-processing."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/4/images/1.jpg", "caption": "梓 - Tranquility scene" }
+        ],
+        "grid2": [
+          { "src": "works/4/images/2.png", "caption": "霜月 - Frost moon" },
+          { "src": "works/4/images/3.jpg", "caption": "歸 - Homecoming" }
+        ],
+        "grid3": [],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Landscape Creation",
+          "description": "Terrain sculpting using Gaea and Unreal Engine landscape tools."
+        },
+        {
+          "icon": "layers",
+          "title": "Atmospheric Effects",
+          "description": "Fog, lighting, weather systems, and time-of-day cycles."
+        },
+        {
+          "icon": "zap",
+          "title": "Physics & Wind",
+          "description": "Dynamic vegetation and environmental physics systems."
+        }
+      ],
+      "process": [
+        {
+          "title": "Workshop Training",
+          "description": "Learning UE4 fundamentals and landscape creation techniques.",
+          "date": "2023.01",
+          "image": "works/4/images/1.jpg",
+          "reverse": false
+        },
+        {
+          "title": "Scene Development",
+          "description": "Creating three distinct atmospheric landscape scenes.",
+          "date": "2023.01",
+          "image": "works/4/images/2.png",
+          "reverse": true
+        },
+        {
+          "title": "Final Rendering",
+          "description": "Post-processing and cinematic output of completed scenes.",
+          "date": "2023.01",
+          "image": "works/4/images/3.jpg",
+          "reverse": false
+        }
+      ],
+      "related": ["the-tunnel", "haru"]
+    },
+
+    {
+      "id": "smudge-of-dawn",
+      "title": "墨染熹微 | Smudge of Dawn",
+      "category": "Shader Art",
+      "year": 2022,
+      "featured": false,
+      "thumbnail": "works/3/images/3-1.png",
+      "description": "A GLSL artwork inspired by Karesansui (Japanese rock gardens), depicting dawn light diffusing over mountains through ink painting aesthetics.",
+      "tags": ["GLSL", "Shader", "Ray Marching", "Ink Painting"],
+      "hero": {
+        "video": "",
+        "poster": "works/3/images/3-1.png",
+        "subtitle": "Expressing water without water—ink painting in code"
+      },
+      "info": {
+        "tools": ["GLSL", "Ray Marching", "Shader Programming"],
+        "links": [
+          { "name": "Video", "url": "https://youtu.be/5ZsH2NQUvhM", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Created using GLSL, incorporating traditional Chinese ink painting aesthetics to depict soft morning light gently diffusing over mountains in a Karesansui-inspired composition.",
+        "paragraphs": [
+          "Karesansui uses rocks and white sand to emulate mountains and rivers, achieving 'expressing water without water.'",
+          "The 'ground' represented by white sand and water patterns is generated through trigonometric functions, forming wave-like shapes that extend and flow.",
+          "Disturbances are added to ripple surfaces for a granular, sand-like texture, with three white stones placed as mountain elements."
+        ],
+        "highlights": [
+          {
+            "title": "Cultural Fusion",
+            "description": "Combining Japanese Karesansui with Chinese ink painting traditions."
+          },
+          {
+            "title": "Technical Innovation",
+            "description": "Ray marching and procedural generation for ink-like aesthetics."
+          },
+          {
+            "title": "Mathematical Beauty",
+            "description": "Trigonometric functions creating organic, flowing water patterns."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/3/images/3-1.png", "caption": "Dawn light over mountains" }
+        ],
+        "grid2": [
+          { "src": "works/3/images/3-2.jpg", "caption": "Detail of ripple patterns" },
+          { "src": "works/3/images/3-1.png", "caption": "Complete composition" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/5ZsH2NQUvhM",
+          "caption": "Animated visualization"
+        }
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Ray Marching",
+          "description": "3D scene rendering through distance field ray marching techniques."
+        },
+        {
+          "icon": "layers",
+          "title": "Procedural Patterns",
+          "description": "Trigonometric wave generation with time-based animation."
+        },
+        {
+          "icon": "activity",
+          "title": "Ink Aesthetics",
+          "description": "Shader techniques emulating traditional ink painting textures."
+        }
+      ],
+      "process": [
+        {
+          "title": "Research",
+          "description": "Studying Karesansui principles and ink painting techniques.",
+          "date": "2022.11",
+          "image": "works/3/images/3-2.jpg",
+          "reverse": false
+        },
+        {
+          "title": "Development",
+          "description": "Implementing ray marching and procedural wave generation.",
+          "date": "2022.12",
+          "image": "works/3/images/3-1.png",
+          "reverse": true
+        },
+        {
+          "title": "Refinement",
+          "description": "Adding texture details and perfecting ink painting aesthetics.",
+          "date": "2022.12",
+          "image": "works/3/images/3-1.png",
+          "reverse": false
+        }
+      ],
+      "related": ["computing-aesthetics", "convergence-of-longing"]
+    },
+
+    {
+      "id": "time-lapse",
+      "title": "Time Lapse",
+      "category": "Audio Visual",
+      "year": 2021,
+      "featured": false,
+      "thumbnail": "works/2/images/圖片2.png",
+      "description": "A sound art piece exploring the pandemic through media transcription, modulation, and audio-visual experimentation with TouchDesigner.",
+      "tags": ["TouchDesigner", "Sound Art", "Audio Visual", "Ableton"],
+      "hero": {
+        "video": "",
+        "poster": "works/2/images/圖片2.png",
+        "subtitle": "Media transcription and audio-visual experimentation"
+      },
+      "info": {
+        "tools": ["TouchDesigner", "Ableton", "Sound Design"],
+        "links": [
+          { "name": "Video", "url": "https://youtu.be/IYBkvauOYLA", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "Exploring the pandemic's two-year journey from anxiety to acceptance, standing in solidarity with frontline workers to combat the crisis together.",
+        "paragraphs": [
+          "Incorporating news reports and various foley sounds from Freesound, using Ableton's effects for modulation techniques such as echo, layering, and repetition.",
+          "TouchDesigner generates audiovisual elements, providing viewers with a dynamic visual perception that complements the sound.",
+          "Five sections explore themes of lurking viruses, separation and fusion, struggle, public discourse, and coexistence despite societal cracks."
+        ],
+        "highlights": [
+          {
+            "title": "Social Commentary",
+            "description": "Reflecting on the pandemic's impact on society and human behavior."
+          },
+          {
+            "title": "Synesthetic Experience",
+            "description": "Audio-visual integration creating immersive emotional journey."
+          },
+          {
+            "title": "Exhibition",
+            "description": "Featured in NYCU x TNUA 'This Crazy City' Online Headphone Concert."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/2/images/圖片2.png", "caption": "Visual section 1" }
+        ],
+        "grid2": [
+          { "src": "works/2/images/圖片6.png", "caption": "Section 2" },
+          { "src": "works/2/images/圖片0.png", "caption": "Section 3" }
+        ],
+        "grid3": [
+          { "src": "works/2/images/圖片7.png", "caption": "" },
+          { "src": "works/2/images/圖片8.png", "caption": "" },
+          { "src": "works/2/images/td-technique.png", "caption": "" }
+        ],
+        "video": {
+          "url": "https://www.youtube.com/embed/IYBkvauOYLA",
+          "caption": "Time Lapse audio-visual piece"
+        }
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Sound Design",
+          "description": "Media transcription and modulation using Ableton effects."
+        },
+        {
+          "icon": "layers",
+          "title": "TouchDesigner",
+          "description": "Real-time audio-reactive visual generation and synthesis."
+        },
+        {
+          "icon": "zap",
+          "title": "Synesthetic Mapping",
+          "description": "Translating emotional journey into coordinated audio-visual experience."
+        }
+      ],
+      "process": [
+        {
+          "title": "Sound Collection",
+          "description": "Gathering news reports and foley sounds related to pandemic.",
+          "date": "2021.08",
+          "image": "works/2/images/圖片2.png",
+          "reverse": false
+        },
+        {
+          "title": "Audio Processing",
+          "description": "Modulation and effects processing in Ableton Live.",
+          "date": "2021.09",
+          "image": "works/2/images/td-technique.png",
+          "reverse": true
+        },
+        {
+          "title": "Visual Development",
+          "description": "TouchDesigner audio-reactive visual system creation.",
+          "date": "2021.09",
+          "image": "works/2/images/圖片6.png",
+          "reverse": false
+        },
+        {
+          "title": "Exhibition",
+          "description": "Presented in 'This Crazy City' online concert.",
+          "date": "2021.09",
+          "image": "works/2/images/瘋城.jpg",
+          "reverse": true
+        }
+      ],
+      "related": ["deep-in-sea", "covid-rush"]
+    },
+
+    {
+      "id": "deep-in-sea",
+      "title": "深海低吟 | Deep In Sea",
+      "category": "VR Experience",
+      "year": 2021,
+      "featured": false,
+      "thumbnail": "works/1/images/10_深海低吟_1.png",
+      "description": "A VR escape room experience with hand tracking, set in a Victorian-era ship where players unravel mysteries and free trapped souls.",
+      "tags": ["VR", "Unity", "Hand Tracking", "Escape Room"],
+      "hero": {
+        "video": "",
+        "poster": "works/1/images/10_深海低吟_1.png",
+        "subtitle": "VR escape room with hand tracking interaction"
+      },
+      "info": {
+        "tools": ["Unity", "Oculus Quest 2", "Hand Tracking", "Blender"],
+        "links": []
+      },
+      "about": {
+        "leadText": "On an unexpected archaeological journey, you step into an astonishing world aboard a ship where time has ceased, with everything from the Victorian era frozen in place.",
+        "paragraphs": [
+          "The air is filled with magic, and legends that exist only in myths come to life. Can you unravel mysteries, piece together events, and free souls trapped under ancient spells before time runs out?",
+          "After diving into the depths of the sea, you hear a hauntingly beautiful song before gradually losing consciousness. Upon waking, you find yourself inside an unfamiliar ship cabin.",
+          "Solving four intricate puzzles triggers the appearance of the captain. The story branches into two paths based on your choices: defeat the mermaid with magic, or use hidden incantations to escape."
+        ],
+        "highlights": [
+          {
+            "title": "Hand Tracking",
+            "description": "Advanced hand gesture recognition for natural VR interaction."
+          },
+          {
+            "title": "Narrative Design",
+            "description": "Branching story with multiple endings based on player choices."
+          },
+          {
+            "title": "Technical Innovation",
+            "description": "Custom Unity systems for voice recognition and hand-drawn magic circles."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/1/images/10_深海低吟_1.png", "caption": "Ship cabin interior" }
+        ],
+        "grid2": [
+          { "src": "works/1/images/10_深海低吟_2.png", "caption": "Puzzle interaction" },
+          { "src": "works/1/images/圖片3.png", "caption": "Story outline" }],
+        "grid3": [
+          { "src": "works/1/images/圖片15.png", "caption": "" },
+          { "src": "works/1/images/圖片1.png", "caption": "" },
+          { "src": "works/1/images/圖片5.png", "caption": "" }
+        ],
+        "video": null
+      },
+      "technical": [
+        {
+          "icon": "activity",
+          "title": "Hand Tracking",
+          "description": "Oculus hand skeleton detection for item pickup, gestures, and magic drawing."
+        },
+        {
+          "icon": "layers",
+          "title": "Voice Recognition",
+          "description": "Unity's Windows.Speech for keyword-based puzzle solving."
+        },
+        {
+          "icon": "zap",
+          "title": "VFX & Shaders",
+          "description": "Particle systems, PBR shaders, and custom VFX for magical atmosphere."
+        },
+        {
+          "icon": "grid",
+          "title": "Interactive Systems",
+          "description": "Lightsaber combat, backpack inventory, and magic circle drawing."
+        }
+      ],
+      "process": [
+        {
+          "title": "Story Development",
+          "description": "Creating narrative with Victorian-era ship setting and mermaid mythology.",
+          "date": "2021.05",
+          "image": "works/1/images/圖片3.png",
+          "reverse": false
+        },
+        {
+          "title": "Technical Implementation",
+          "description": "Hand tracking systems, voice recognition, and VR interaction mechanics.",
+          "date": "2021.06",
+          "image": "works/1/images/圖片15.png",
+          "reverse": true
+        },
+        {
+          "title": "Asset Creation",
+          "description": "3D modeling, character design with Vroid, and UI art design.",
+          "date": "2021.07",
+          "image": "works/1/images/圖片5.png",
+          "reverse": false
+        },
+        {
+          "title": "Testing & Polish",
+          "description": "VR interaction refinement and narrative flow optimization.",
+          "date": "2021.07",
+          "image": "works/1/images/10_深海低吟_1.png",
+          "reverse": true
+        }
+      ],
+      "related": ["covid-rush", "aquaverse"]
+    },
+
+    {
+      "id": "covid-rush",
+      "title": "COVID RUSH",
+      "category": "Game Design",
+      "year": 2021,
+      "featured": false,
+      "thumbnail": "works/0/images/0-1.png",
+      "description": "An immersive game experience combining Tag elements with environmental puzzle-solving, set during the COVID-19 pandemic.",
+      "tags": ["Unity", "Game Design", "Puzzle", "Multiplayer"],
+      "hero": {
+        "video": "",
+        "poster": "works/0/images/0-1.png",
+        "subtitle": "Survive the pandemic in this immersive Tag-style game"
+      },
+      "info": {
+        "tools": ["Unity", "C#", "Game Design", "3D Modeling"],
+        "links": [
+          { "name": "Demo Video", "url": "https://www.youtube.com/watch?v=cHLlB8ezq2A&list=PLilhVcqigCqBy6HfkwW4ZMQTFq4LX5PVR&index=1", "icon": "link" }
+        ]
+      },
+      "about": {
+        "leadText": "An immersive experience combining exploration, puzzle-solving, and survival mechanics set against the backdrop of the COVID-19 pandemic.",
+        "paragraphs": [
+          "Players navigate between safe (green) and dangerous (red) zones that change with the background music. In safe zones, collect masks and vaccines; in danger zones, escape quickly or face elimination.",
+          "The story fits current reality with plots, music, and game modes designed to give players nervous feelings and excitement, creating similar but more thrilling experiences than reality.",
+          "NPCs may interfere and take items away. Players can knock them out to gain experience, adding strategic depth to survival gameplay."
+        ],
+        "highlights": [
+          {
+            "title": "Immersive Experience",
+            "description": "Realistic pandemic scenario with emotional engagement and social commentary."
+          },
+          {
+            "title": "New Game Mode",
+            "description": "Tag-style mechanics combined with environmental puzzle-solving and resource collection."
+          },
+          {
+            "title": "Dynamic Environment",
+            "description": "Music-synced terrain changes create constantly shifting safe and danger zones."
+          }
+        ]
+      },
+      "gallery": {
+        "full": [
+          { "src": "works/0/images/0-1.png", "caption": "Game environment" }
+        ],
+        "grid2": [
+          { "src": "works/0/images/0-2.png", "caption": "Safe and danger zones" },
+          { "src": "works/0/images/0.png", "caption": "Game system diagram" }
+        ],
+        "grid3": [],
+        "video": {
+          "url": "https://www.youtube.com/embed/cHLlB8ezq2A",
+          "caption": "COVID RUSH gameplay demo"
+        }
+      },
+      "technical": [
+        {
+          "icon": "grid",
+          "title": "Dynamic Zones",
+          "description": "Music-synchronized terrain color changes indicating safe/danger areas."
+        },
+        {
+          "icon": "activity",
+          "title": "AI NPCs",
+          "description": "Game AI controlling infected NPCs that interfere with players."
+        },
+        {
+          "icon": "layers",
+          "title": "Item System",
+          "description": "Resource collection mechanics for masks and vaccines."
+        },
+        {
+          "icon": "zap",
+          "title": "Physics Interaction",
+          "description": "Player-NPC combat and environmental interaction systems."
+        }
+      ],
+      "process": [
+        {
+          "title": "Concept Design",
+          "description": "Developing pandemic-themed Tag game mechanics and story.",
+          "date": "2021.08",
+          "image": "works/0/images/0.png",
+          "reverse": false
+        },
+        {
+          "title": "Prototype Development",
+          "description": "Implementing core mechanics: zone changing, item collection, NPC AI.",
+          "date": "2021.09",
+          "image": "works/0/images/0-1.png",
+          "reverse": true
+        },
+        {
+          "title": "Testing & Polish",
+          "description": "Gameplay balancing and user experience refinement.",
+          "date": "2021.10",
+          "image": "works/0/images/0-2.png",
+          "reverse": false
+        }
+      ],
+      "related": ["deep-in-sea", "garbage-truck-game"]
+    }
+  ]
+}

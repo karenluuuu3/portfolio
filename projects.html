@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS | karenlu3</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <div id="loading"><div class="loader"></div></div>
+
+    <!-- Page Header -->
+    <header class="projects-header">
+        <div class="header-content">
+            <h1 class="page-title">PROJECTS</h1>
+            <p class="page-subtitle">A collection of interactive installations, creative coding experiments, and digital experiences</p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    All Projects
+                    <span class="count">12</span>
+                </button>
+                <button class="filter-btn" data-filter="interactive">
+                    Interactive
+                    <span class="count">4</span>
+                </button>
+                <button class="filter-btn" data-filter="vr">
+                    VR/AR
+                    <span class="count">3</span>
+                </button>
+                <button class="filter-btn" data-filter="creative-coding">
+                    Creative Coding
+                    <span class="count">3</span>
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    Web
+                    <span class="count">2</span>
+                </button>
+            </div>
+            
+            <!-- Sort Dropdown -->
+            <div class="sort-dropdown">
+                <button class="sort-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 6h18M7 12h10M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Sort by: Latest
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="sort-menu">
+                    <button class="sort-option active" data-sort="latest">Latest</button>
+                    <button class="sort-option" data-sort="oldest">Oldest</button>
+                    <button class="sort-option" data-sort="name">Name</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <main class="projects-main">
+        <div class="projects-grid" id="projects-container">
+            
+            <!-- Featured Project 1 - 靜態 HTML (SEO 友好) -->
+            <article class="project-card featured" data-category="interactive" data-year="2025" data-static="true">
+                <a href="project-detail.html?id=digital-crazing" class="card-link">
+                    <div class="card-image">
+                        <img src="images/featured-work.jpg" alt="Digital Crazing">
+                        <div class="card-badge">Featured</div>
+                        <div class="card-overlay">
+                            <span class="view-detail">View Details →</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-year">2025</span>
+                            <span class="card-category">Interactive Installation</span>
+                        </div>
+                        <h3 class="card-title">Digital Crazing</h3>
+                        <p class="card-description">An interactive installation exploring temporal dynamics through quadtree structures and real-time visual feedback.</p>
+                        <div class="card-tags">
+                            <span class="tag">TouchDesigner</span>
+                            <span class="tag">GLSL</span>
+                            <span class="tag">Kinect</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Featured Project 2 - 靜態 HTML -->
+            <article class="project-card" data-category="interactive" data-year="2024" data-static="true">
+                <a href="project-detail.html?id=point-cloud-workshop" class="card-link">
+                    <div class="card-image">
+                        <img src="images/work1.jpg" alt="Point Cloud Workshop">
+                        <div class="card-overlay">
+                            <span class="view-detail">View Details →</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-year">2024</span>
+                            <span class="card-category">Workshop</span>
+                        </div>
+                        <h3 class="card-title">Point Cloud Workshop</h3>
+                        <p class="card-description">Educational workshop introducing Unreal Engine and point cloud visualization techniques.</p>
+                        <div class="card-tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">Point Cloud</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Loading Indicator for Dynamic Content -->
+            <div class="projects-loading" style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
+                <div class="loader"></div>
+                <p style="margin-top: 20px; color: rgba(232, 232, 232, 0.6);">Loading more projects...</p>
+            </div>
+
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="load-more-btn" style="display: none;">
+                Load More Projects
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14m0 0l7-7m-7 7l-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+<script>
+// 只在 projects 頁面隱藏原本的 canvas
+const canvas = document.getElementById('gradient-canvas');
+if (canvas) {
+    canvas.style.display = 'none';
+}
+
+// 創建新的黑白灰漸層 canvas
+const grayscaleCanvas = document.createElement('canvas');
+grayscaleCanvas.id = 'grayscale-canvas';
+grayscaleCanvas.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+`;
+document.body.insertBefore(grayscaleCanvas, document.body.firstChild);
+
+const ctx = grayscaleCanvas.getContext('2d');
+let time = 0;
+
+function resize() {
+    grayscaleCanvas.width = window.innerWidth;
+    grayscaleCanvas.height = window.innerHeight;
+}
+
+function drawGrayscaleGradient() {
+    const w = grayscaleCanvas.width;
+    const h = grayscaleCanvas.height;
+    
+    // 創建徑向漸層
+    const gradient = ctx.createRadialGradient(
+        w / 2, h / 2, 0,
+        w / 2, h / 2, Math.max(w, h) * 0.7
+    );
+    
+    // 動態明度變化
+    const brightness1 = 15 + Math.sin(time * 0.002) * 5;
+    const brightness2 = 25 + Math.cos(time * 0.003) * 8;
+    const brightness3 = 10 + Math.sin(time * 0.0016) * 3;
+    
+    gradient.addColorStop(0, `hsl(0, 0%, ${brightness1}%)`);
+    gradient.addColorStop(0.5, `hsl(0, 0%, ${brightness2}%)`);
+    gradient.addColorStop(1, `hsl(0, 0%, ${brightness3}%)`);
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, w, h);
+    
+    // 添加第二層對角漸層
+    const gradient2 = ctx.createLinearGradient(0, 0, w, h);
+    gradient2.addColorStop(0, `hsla(0, 0%, 5%, 0.4)`);
+    gradient2.addColorStop(0.5, `hsla(0, 0%, 15%, 0.2)`);
+    gradient2.addColorStop(1, `hsla(0, 0%, 8%, 0.4)`);
+    
+    ctx.fillStyle = gradient2;
+    ctx.fillRect(0, 0, w, h);
+    
+    time++;
+    requestAnimationFrame(drawGrayscaleGradient);
+}
+
+resize();
+window.addEventListener('resize', resize);
+drawGrayscaleGradient();
+</script>
+
+<script src="js/component.js"></script>
+<script src="js/script.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Works 頁面專用樣式 */
+.works-page {
+    padding: 8rem 2rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-family: 'Noto Serif JP', serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+    color: #2c2c2c;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background: #2c2c2c;
+}
+
+/* 讓 work-card 變成可點擊的連結 */
+.work-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
