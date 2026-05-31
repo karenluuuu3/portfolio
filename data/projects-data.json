@@ -6,12 +6,12 @@
       "category": "Interactive Installation",
       "year": 2025,
       "featured": true,
-      "thumbnail": "works/15/images/15.png",
+      "thumbnail": "images/15.png",
       "description": "An interactive installation exploring species fusion and migration, interweaving human and fish silhouettes to create a symbiotic network of life.",
       "tags": ["Interactive", "Installation", "Migration", "Species Fusion"],
       "hero": {
         "video": "",
-        "poster": "works/15/images/15.png",
+        "poster": "images/15.png",
         "subtitle": "Exploring species fusion and the journey of migration and return"
       },
       "info": {
@@ -44,16 +44,16 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/15/images/15.png", "caption": "Installation view" }
+          { "src": "images/15.png", "caption": "Installation view" }
         ],
         "grid2": [
-          { "src": "works/15/images/15-5.png", "caption": "Detail view 1" },
-          { "src": "works/15/images/15-6.png", "caption": "Detail view 2" }
+          { "src": "images/15-5.png", "caption": "Detail view 1" },
+          { "src": "images/15-6.png", "caption": "Detail view 2" }
         ],
         "grid3": [
-          { "src": "works/15/images/15-7.png", "caption": "" },
-          { "src": "works/15/images/15-2.png", "caption": "" },
-          { "src": "works/15/images/15-3.png", "caption": "" }
+          { "src": "images/15-7.png", "caption": "" },
+          { "src": "images/15-2.png", "caption": "" },
+          { "src": "images/15-3.png", "caption": "" }
         ],
         "video": null
       },
@@ -79,21 +79,21 @@
           "title": "Concept Development",
           "description": "Exploring themes of species fusion and migration patterns.",
           "date": "2025.02-03",
-          "image": "works/15/images/15-4.jpg",
+          "image": "images/15-4.jpg",
           "reverse": false
         },
         {
           "title": "Visual Design",
           "description": "Creating abstract species contours and migration animations.",
           "date": "2025.04",
-          "image": "works/15/images/15-2.png",
+          "image": "images/15-2.png",
           "reverse": true
         },
         {
           "title": "Exhibition",
           "description": "Installed at The Sixth Fuel Factory Documenta 2025.",
           "date": "2025.06",
-          "image": "works/15/images/15.png",
+          "image": "images/15.png",
           "reverse": false
         }
       ],
@@ -106,12 +106,12 @@
       "category": "Digital Art",
       "year": 2024,
       "featured": false,
-      "thumbnail": "works/12/images/12-1.jpg",
+      "thumbnail": "images/12-1.jpg",
       "description": "Drawing inspiration from ceramic crazing to investigate the aesthetic interplay between temporality and human intervention through quadtree structures.",
       "tags": ["Digital Art", "Quadtree", "Generative", "GLSL"],
       "hero": {
         "video": "",
-        "poster": "works/12/images/12-1.jpg",
+        "poster": "images/12-1.jpg",
         "subtitle": "Exploring temporal dynamics through ceramic crazing patterns"
       },
       "info": {
@@ -142,16 +142,16 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/12/images/IMG_5987.jpg", "caption": "Exhibition view" }
+          { "src": "images/IMG_5987.jpg", "caption": "Exhibition view" }
         ],
         "grid2": [
-          { "src": "works/12/images/IMG_5846.jpg", "caption": "Installation detail" },
-          { "src": "works/12/images/IMG_6012.jpg", "caption": "Visitor interaction" }
+          { "src": "images/IMG_5846.jpg", "caption": "Installation detail" },
+          { "src": "images/IMG_6012.jpg", "caption": "Visitor interaction" }
         ],
         "grid3": [
-          { "src": "works/12/images/12-3.png", "caption": "" },
-          { "src": "works/12/images/12-4.png", "caption": "" },
-          { "src": "works/12/images/12-5.PNG", "caption": "" }
+          { "src": "images/12-3.png", "caption": "" },
+          { "src": "images/12-4.png", "caption": "" },
+          { "src": "images/12-5.PNG", "caption": "" }
         ],
         "video": null
       },
@@ -177,21 +177,21 @@
           "title": "Research",
           "description": "Study of ceramic crazing techniques and their cultural significance.",
           "date": "2024.01-03",
-          "image": "works/12/images/12-2.png",
+          "image": "images/12-2.png",
           "reverse": false
         },
         {
           "title": "Algorithm Development",
           "description": "Implementation of quadtree-based crack generation system.",
           "date": "2024.04-05",
-          "image": "works/12/images/12-6.png",
+          "image": "images/12-6.png",
           "reverse": true
         },
         {
           "title": "Exhibition",
           "description": "Presented at GDAP#13 LIMINAL exhibition in Taipei.",
           "date": "2024.07",
-          "image": "works/12/images/IMG_6023.JPG",
+          "image": "images/IMG_6023.JPG",
           "reverse": false
         }
       ],
@@ -205,12 +205,12 @@
       "category": "AR Game",
       "year": 2022,
       "featured": false,
-      "thumbnail": "works/14/images/14.png",
+      "thumbnail": "images/14.png",
       "description": "A home fitness AR game app using image recognition and motion sensing, designed for accessible exercise during the pandemic.",
       "tags": ["AR", "Unity", "AIoT", "Motion Sensing", "Gamification"],
       "hero": {
         "video": "",
-        "poster": "works/14/images/14.png",
+        "poster": "images/14.png",
         "subtitle": "Home fitness game combining AR and motion sensing"
       },
       "info": {
@@ -244,16 +244,16 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/14/images/14-39.jpg", "caption": "Game interface" }
+          { "src": "images/14-39.jpg", "caption": "Game interface" }
         ],
         "grid2": [
-          { "src": "works/14/images/14-1.jpg", "caption": "Project planning" },
-          { "src": "works/14/images/14-8.jpg", "caption": "Development process" }
+          { "src": "images/14-1.jpg", "caption": "Project planning" },
+          { "src": "images/14-8.jpg", "caption": "Development process" }
         ],
         "grid3": [
-          { "src": "works/14/images/14-15.jpg", "caption": "" },
-          { "src": "works/14/images/14-20.jpg", "caption": "" },
-          { "src": "works/14/images/14-25.jpg", "caption": "" }
+          { "src": "images/14-15.jpg", "caption": "" },
+          { "src": "images/14-20.jpg", "caption": "" },
+          { "src": "images/14-25.jpg", "caption": "" }
         ],
         "video": {
           "url": "https://www.youtube.com/embed/C6i9WdZ-_eE",
@@ -282,21 +282,21 @@
           "title": "Concept Development",
           "description": "Market research and gameplay design focused on accessibility.",
           "date": "2022.08-09",
-          "image": "works/14/images/14-3.jpg",
+          "image": "images/14-3.jpg",
           "reverse": false
         },
         {
           "title": "Technical Implementation",
           "description": "Integration of AR image recognition and motion sensing systems.",
           "date": "2022.10-11",
-          "image": "works/14/images/14-12.jpg",
+          "image": "images/14-12.jpg",
           "reverse": true
         },
         {
           "title": "Launch",
           "description": "OB version released and industry-school collaboration completed.",
           "date": "2022.11",
-          "image": "works/14/images/14.png",
+          "image": "images/14.png",
           "reverse": false
         }
       ],
@@ -309,12 +309,12 @@
       "category": "AR Experience",
       "year": 2022,
       "featured": false,
-      "thumbnail": "works/13/images/13.png",
+      "thumbnail": "images/13.png",
       "description": "An AR educational app allowing users to explore an underwater world and learn about different fish species through smartphone interaction.",
       "tags": ["AR", "Unity", "Education", "Mobile"],
       "hero": {
         "video": "",
-        "poster": "works/13/images/13.png",
+        "poster": "images/13.png",
         "subtitle": "Immersive AR learning experience for marine education"
       },
       "info": {
@@ -347,11 +347,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/13/images/13.png", "caption": "AR interface" }
+          { "src": "images/13.png", "caption": "AR interface" }
         ],
         "grid2": [
-          { "src": "works/13/images/13-1.png", "caption": "Fish selection" },
-          { "src": "works/13/images/13-2.png", "caption": "Information panel" }
+          { "src": "images/13-1.png", "caption": "Fish selection" },
+          { "src": "images/13-2.png", "caption": "Information panel" }
         ],
         "grid3": [],
         "video": null
@@ -378,21 +378,21 @@
           "title": "Concept & Planning",
           "description": "Research on educational AR applications and marine biology content.",
           "date": "2022.06",
-          "image": "works/13/images/13.png",
+          "image": "images/13.png",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Implementation of AR tracking and interactive information system.",
           "date": "2022.07-08",
-          "image": "works/13/images/13-1.png",
+          "image": "images/13-1.png",
           "reverse": true
         },
         {
           "title": "Testing & Launch",
           "description": "User testing and app refinement for educational use.",
           "date": "2022.08",
-          "image": "works/13/images/13-2.png",
+          "image": "images/13-2.png",
           "reverse": false
         }
       ],
@@ -405,12 +405,12 @@
       "category": "Mixed Reality Installation",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/11/images/11-7.png",
+      "thumbnail": "images/11-7.png",
       "description": "A multimedia installation exploring consciousness, energy, and existence through mixed reality and point cloud visualization.",
       "tags": ["MR", "Unreal Engine", "Arduino", "Point Cloud", "Installation"],
       "hero": {
         "video": "",
-        "poster": "works/11/images/11-7.png",
+        "poster": "images/11-7.png",
         "subtitle": "Exploring invisible existence through mixed reality"
       },
       "info": {
@@ -441,16 +441,16 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/11/images/11-7.png", "caption": "Installation view" }
+          { "src": "images/11-7.png", "caption": "Installation view" }
         ],
         "grid2": [
-          { "src": "works/11/images/11-3.jpg", "caption": "Exhibition space" },
-          { "src": "works/11/images/11-4.jpg", "caption": "Visitor interaction" }
+          { "src": "images/11-3.jpg", "caption": "Exhibition space" },
+          { "src": "images/11-4.jpg", "caption": "Visitor interaction" }
         ],
         "grid3": [
-          { "src": "works/11/images/11-5.png", "caption": "" },
-          { "src": "works/11/images/11-6.png", "caption": "" },
-          { "src": "works/11/images/11-1.jpg", "caption": "" }
+          { "src": "images/11-5.png", "caption": "" },
+          { "src": "images/11-6.png", "caption": "" },
+          { "src": "images/11-1.jpg", "caption": "" }
         ],
         "video": {
           "url": "https://www.instagram.com/p/CzGz9iTyKnR",
@@ -479,21 +479,21 @@
           "title": "Concept Development",
           "description": "Exploring themes of invisible existence and consciousness.",
           "date": "2023.08",
-          "image": "works/11/images/11-6.png",
+          "image": "images/11-6.png",
           "reverse": false
         },
         {
           "title": "Technical Development",
           "description": "Point cloud scanning and Unreal Engine implementation.",
           "date": "2023.09",
-          "image": "works/11/images/11-5.png",
+          "image": "images/11-5.png",
           "reverse": true
         },
         {
           "title": "Exhibition",
           "description": "Installed at The Pledge exhibition, NYCU.",
           "date": "2023.10",
-          "image": "works/11/images/11-3.jpg",
+          "image": "images/11-3.jpg",
           "reverse": false
         }
       ],
@@ -506,12 +506,12 @@
       "category": "Mixed Reality Installation",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/10/images/10-1.png",
+      "thumbnail": "images/10-1.png",
       "description": "A mixed reality installation visualizing brain consciousness space, connecting rational neural transmission with emotional imaginative spaces.",
       "tags": ["MR", "Unreal Engine", "Arduino", "Niagara", "Consciousness"],
       "hero": {
         "video": "",
-        "poster": "works/10/images/10-1.png",
+        "poster": "images/10-1.png",
         "subtitle": "Visualizing consciousness and emotional spaces"
       },
       "info": {
@@ -544,11 +544,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/10/images/10-1.png", "caption": "Installation view" }
+          { "src": "images/10-1.png", "caption": "Installation view" }
         ],
         "grid2": [
-          { "src": "works/10/images/10-2.png", "caption": "Consciousness visualization" },
-          { "src": "works/10/images/10-1.png", "caption": "Interactive detail" }
+          { "src": "images/10-2.png", "caption": "Consciousness visualization" },
+          { "src": "images/10-1.png", "caption": "Interactive detail" }
         ],
         "grid3": [],
         "video": {
@@ -578,21 +578,21 @@
           "title": "Concept Research",
           "description": "Exploring consciousness visualization and XR technology implications.",
           "date": "2023.04",
-          "image": "works/10/images/10-2.png",
+          "image": "images/10-2.png",
           "reverse": false
         },
         {
           "title": "Technical Development",
           "description": "Arduino-UE5 integration and Niagara particle system creation.",
           "date": "2023.05",
-          "image": "works/10/images/10-1.png",
+          "image": "images/10-1.png",
           "reverse": true
         },
         {
           "title": "Exhibition",
           "description": "Installation and testing of consciousness visualization system.",
           "date": "2023.06",
-          "image": "works/10/images/10-2.png",
+          "image": "images/10-2.png",
           "reverse": false
         }
       ],
@@ -605,12 +605,12 @@
       "category": "Interactive Game",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/9/images/9-1.png",
+      "thumbnail": "images/9-1.png",
       "description": "An immersive puzzle game combining maze exploration with environmental interaction, culminating in the birth of the World Tree.",
       "tags": ["Unreal Engine", "Game Design", "Niagara", "Procedural Generation"],
       "hero": {
         "video": "",
-        "poster": "works/9/images/9-1.png",
+        "poster": "images/9-1.png",
         "subtitle": "Puzzle exploration and World Tree growth"
       },
       "info": {
@@ -641,11 +641,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/9/images/9-1.png", "caption": "Game environment" }
+          { "src": "images/9-1.png", "caption": "Game environment" }
         ],
         "grid2": [
-          { "src": "works/9/images/9.png", "caption": "Maze exploration" },
-          { "src": "works/9/images/9-1.png", "caption": "World Tree growth" }
+          { "src": "images/9.png", "caption": "Maze exploration" },
+          { "src": "images/9-1.png", "caption": "World Tree growth" }
         ],
         "grid3": [],
         "video": null
@@ -672,21 +672,21 @@
           "title": "Game Design",
           "description": "Conceptualizing maze structure and puzzle mechanics.",
           "date": "2023.03",
-          "image": "works/9/images/9.png",
+          "image": "images/9.png",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Implementation of procedural growth and interactive systems.",
           "date": "2023.04",
-          "image": "works/9/images/9-1.png",
+          "image": "images/9-1.png",
           "reverse": true
         },
         {
           "title": "Testing",
           "description": "Gameplay testing and visual refinement.",
           "date": "2023.05",
-          "image": "works/9/images/9-1.png",
+          "image": "images/9-1.png",
           "reverse": false
         }
       ],
@@ -699,12 +699,12 @@
       "category": "Animation",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/8/images/8.jpg",
+      "thumbnail": "images/8.jpg",
       "description": "A cinematic exploration of sakura and spring, using Unreal Engine 5's Niagara system for atmospheric particle effects.",
       "tags": ["Unreal Engine", "Animation", "Niagara", "Cinematic"],
       "hero": {
         "video": "",
-        "poster": "works/8/images/8.jpg",
+        "poster": "images/8.jpg",
         "subtitle": "Through the pulse of sakura"
       },
       "info": {
@@ -737,11 +737,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/8/images/8.jpg", "caption": "Sakura scene" }
+          { "src": "images/8.jpg", "caption": "Sakura scene" }
         ],
         "grid2": [
-          { "src": "works/8/images/8-2.png", "caption": "Atmospheric detail" },
-          { "src": "works/8/images/8.jpg", "caption": "Cherry blossom particles" }
+          { "src": "images/8-2.png", "caption": "Atmospheric detail" },
+          { "src": "images/8.jpg", "caption": "Cherry blossom particles" }
         ],
         "grid3": [],
         "video": {
@@ -771,21 +771,21 @@
           "title": "Concept",
           "description": "Visual exploration of sakura and spring themes.",
           "date": "2023.02",
-          "image": "works/8/images/8.jpg",
+          "image": "images/8.jpg",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Niagara particle systems and shader implementation.",
           "date": "2023.03",
-          "image": "works/8/images/8-2.png",
+          "image": "images/8-2.png",
           "reverse": true
         },
         {
           "title": "Rendering",
           "description": "Final cinematic output and post-processing.",
           "date": "2023.03",
-          "image": "works/8/images/8.jpg",
+          "image": "images/8.jpg",
           "reverse": false
         }
       ],
@@ -798,12 +798,12 @@
       "category": "Point Cloud Animation",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/7/images/7.png",
+      "thumbnail": "images/7.png",
       "description": "A point cloud animation exploring time and space through LiDAR-scanned night market scenes with atmospheric VFX.",
       "tags": ["Unreal Engine", "Point Cloud", "LiDAR", "Animation"],
       "hero": {
         "video": "",
-        "poster": "works/7/images/7.png",
+        "poster": "images/7.png",
         "subtitle": "Vast spaces, time focused on a single day"
       },
       "info": {
@@ -837,11 +837,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/7/images/7.png", "caption": "Day scene" }
+          { "src": "images/7.png", "caption": "Day scene" }
         ],
         "grid2": [
-          { "src": "works/7/images/7-2.png", "caption": "Night scene" },
-          { "src": "works/7/images/7-3.png", "caption": "Atmospheric detail" }
+          { "src": "images/7-2.png", "caption": "Night scene" },
+          { "src": "images/7-3.png", "caption": "Atmospheric detail" }
         ],
         "grid3": [],
         "video": {
@@ -871,21 +871,21 @@
           "title": "Scanning",
           "description": "LiDAR scanning of Zhongzheng Road Night Market.",
           "date": "2022.11",
-          "image": "works/7/images/7-3.png",
+          "image": "images/7-3.png",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Point cloud processing and atmospheric effect creation.",
           "date": "2022.12",
-          "image": "works/7/images/7-2.png",
+          "image": "images/7-2.png",
           "reverse": true
         },
         {
           "title": "Exhibition",
           "description": "Presented at 2023 Open LABs exhibition.",
           "date": "2023.01",
-          "image": "works/7/images/7.png",
+          "image": "images/7.png",
           "reverse": false
         }
       ],
@@ -898,12 +898,12 @@
       "category": "Generative Art",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/6/images/6.png",
+      "thumbnail": "images/6.png",
       "description": "Using Vermeer's 'Girl with a Pearl Earring' as foundation, visualizing convergence through Brownian motion and random walk algorithms.",
       "tags": ["GLSL", "Generative Art", "Shader", "Algorithm"],
       "hero": {
         "video": "",
-        "poster": "works/6/images/6.png",
+        "poster": "images/6.png",
         "subtitle": "An irregular approach to visualizing convergence"
       },
       "info": {
@@ -936,11 +936,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/6/images/6.png", "caption": "Convergence visualization" }
+          { "src": "images/6.png", "caption": "Convergence visualization" }
         ],
         "grid2": [
-          { "src": "works/6/images/6-5.png", "caption": "Particle detail" },
-          { "src": "works/6/images/6.png", "caption": "Final composition" }
+          { "src": "images/6-5.png", "caption": "Particle detail" },
+          { "src": "images/6.png", "caption": "Final composition" }
         ],
         "grid3": [],
         "video": {
@@ -970,21 +970,21 @@
           "title": "Concept Development",
           "description": "Exploring convergence themes through Vermeer's painting.",
           "date": "2023.01",
-          "image": "works/6/images/6.png",
+          "image": "images/6.png",
           "reverse": false
         },
         {
           "title": "Algorithm Implementation",
           "description": "Developing Brownian motion and random walk systems.",
           "date": "2023.01",
-          "image": "works/6/images/6-5.png",
+          "image": "images/6-5.png",
           "reverse": true
         },
         {
           "title": "Refinement",
           "description": "Visual optimization and particle behavior tuning.",
           "date": "2023.01",
-          "image": "works/6/images/6.png",
+          "image": "images/6.png",
           "reverse": false
         }
       ],
@@ -997,12 +997,12 @@
       "category": "Generative Art",
       "year": 2022,
       "featured": false,
-      "thumbnail": "works/5/images/圖片20.png",
+      "thumbnail": "images/圖片20.png",
       "description": "A collection of GLSL shader experiments exploring computational aesthetics through waves, Voronoi patterns, and breathing light.",
       "tags": ["GLSL", "Shader", "Generative", "Creative Coding"],
       "hero": {
         "video": "",
-        "poster": "works/5/images/圖片20.png",
+        "poster": "images/圖片20.png",
         "subtitle": "Exploring computational beauty through shader programming"
       },
       "info": {
@@ -1037,7 +1037,7 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/5/images/圖片20.png", "caption": "Computing aesthetics collection" }
+          { "src": "images/圖片20.png", "caption": "Computing aesthetics collection" }
         ],
         "grid2": [],
         "grid3": [],
@@ -1068,21 +1068,21 @@
           "title": "Experimentation",
           "description": "Exploring various shader techniques and algorithms.",
           "date": "2022",
-          "image": "works/5/images/圖片20.png",
+          "image": "images/圖片20.png",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Creating distinct pieces exploring different aesthetic concepts.",
           "date": "2022",
-          "image": "works/5/images/圖片20.png",
+          "image": "images/圖片20.png",
           "reverse": true
         },
         {
           "title": "Publication",
           "description": "Sharing works on social media and creative coding platforms.",
           "date": "2022",
-          "image": "works/5/images/圖片20.png",
+          "image": "images/圖片20.png",
           "reverse": false
         }
       ],
@@ -1095,12 +1095,12 @@
       "category": "Workshop",
       "year": 2023,
       "featured": false,
-      "thumbnail": "works/4/images/1.jpg",
+      "thumbnail": "images/1.jpg",
       "description": "A one-month Unreal Engine 4 workshop covering landscape creation, physics, wind fields, and rendering from scratch.",
       "tags": ["Unreal Engine", "Landscape", "Animation", "Workshop"],
       "hero": {
         "video": "",
-        "poster": "works/4/images/1.jpg",
+        "poster": "images/1.jpg",
         "subtitle": "From scratch to completion—building immersive landscapes"
       },
       "info": {
@@ -1134,11 +1134,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/4/images/1.jpg", "caption": "梓 - Tranquility scene" }
+          { "src": "images/1.jpg", "caption": "梓 - Tranquility scene" }
         ],
         "grid2": [
-          { "src": "works/4/images/2.png", "caption": "霜月 - Frost moon" },
-          { "src": "works/4/images/3.jpg", "caption": "歸 - Homecoming" }
+          { "src": "images/2.png", "caption": "霜月 - Frost moon" },
+          { "src": "images/3.jpg", "caption": "歸 - Homecoming" }
         ],
         "grid3": [],
         "video": null
@@ -1165,21 +1165,21 @@
           "title": "Workshop Training",
           "description": "Learning UE4 fundamentals and landscape creation techniques.",
           "date": "2023.01",
-          "image": "works/4/images/1.jpg",
+          "image": "images/1.jpg",
           "reverse": false
         },
         {
           "title": "Scene Development",
           "description": "Creating three distinct atmospheric landscape scenes.",
           "date": "2023.01",
-          "image": "works/4/images/2.png",
+          "image": "images/2.png",
           "reverse": true
         },
         {
           "title": "Final Rendering",
           "description": "Post-processing and cinematic output of completed scenes.",
           "date": "2023.01",
-          "image": "works/4/images/3.jpg",
+          "image": "images/3.jpg",
           "reverse": false
         }
       ],
@@ -1192,12 +1192,12 @@
       "category": "Shader Art",
       "year": 2022,
       "featured": false,
-      "thumbnail": "works/3/images/3-1.png",
+      "thumbnail": "images/3-1.png",
       "description": "A GLSL artwork inspired by Karesansui (Japanese rock gardens), depicting dawn light diffusing over mountains through ink painting aesthetics.",
       "tags": ["GLSL", "Shader", "Ray Marching", "Ink Painting"],
       "hero": {
         "video": "",
-        "poster": "works/3/images/3-1.png",
+        "poster": "images/3-1.png",
         "subtitle": "Expressing water without water—ink painting in code"
       },
       "info": {
@@ -1230,11 +1230,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/3/images/3-1.png", "caption": "Dawn light over mountains" }
+          { "src": "images/3-1.png", "caption": "Dawn light over mountains" }
         ],
         "grid2": [
-          { "src": "works/3/images/3-2.jpg", "caption": "Detail of ripple patterns" },
-          { "src": "works/3/images/3-1.png", "caption": "Complete composition" }
+          { "src": "images/3-2.jpg", "caption": "Detail of ripple patterns" },
+          { "src": "images/3-1.png", "caption": "Complete composition" }
         ],
         "grid3": [],
         "video": {
@@ -1264,21 +1264,21 @@
           "title": "Research",
           "description": "Studying Karesansui principles and ink painting techniques.",
           "date": "2022.11",
-          "image": "works/3/images/3-2.jpg",
+          "image": "images/3-2.jpg",
           "reverse": false
         },
         {
           "title": "Development",
           "description": "Implementing ray marching and procedural wave generation.",
           "date": "2022.12",
-          "image": "works/3/images/3-1.png",
+          "image": "images/3-1.png",
           "reverse": true
         },
         {
           "title": "Refinement",
           "description": "Adding texture details and perfecting ink painting aesthetics.",
           "date": "2022.12",
-          "image": "works/3/images/3-1.png",
+          "image": "images/3-1.png",
           "reverse": false
         }
       ],
@@ -1291,12 +1291,12 @@
       "category": "Audio Visual",
       "year": 2021,
       "featured": false,
-      "thumbnail": "works/2/images/圖片2.png",
+      "thumbnail": "images/圖片2.png",
       "description": "A sound art piece exploring the pandemic through media transcription, modulation, and audio-visual experimentation with TouchDesigner.",
       "tags": ["TouchDesigner", "Sound Art", "Audio Visual", "Ableton"],
       "hero": {
         "video": "",
-        "poster": "works/2/images/圖片2.png",
+        "poster": "images/圖片2.png",
         "subtitle": "Media transcription and audio-visual experimentation"
       },
       "info": {
@@ -1329,16 +1329,16 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/2/images/圖片2.png", "caption": "Visual section 1" }
+          { "src": "images/圖片2.png", "caption": "Visual section 1" }
         ],
         "grid2": [
-          { "src": "works/2/images/圖片6.png", "caption": "Section 2" },
-          { "src": "works/2/images/圖片0.png", "caption": "Section 3" }
+          { "src": "images/圖片6.png", "caption": "Section 2" },
+          { "src": "images/圖片0.png", "caption": "Section 3" }
         ],
         "grid3": [
-          { "src": "works/2/images/圖片7.png", "caption": "" },
-          { "src": "works/2/images/圖片8.png", "caption": "" },
-          { "src": "works/2/images/td-technique.png", "caption": "" }
+          { "src": "images/圖片7.png", "caption": "" },
+          { "src": "images/圖片8.png", "caption": "" },
+          { "src": "images/td-technique.png", "caption": "" }
         ],
         "video": {
           "url": "https://www.youtube.com/embed/IYBkvauOYLA",
@@ -1367,28 +1367,28 @@
           "title": "Sound Collection",
           "description": "Gathering news reports and foley sounds related to pandemic.",
           "date": "2021.08",
-          "image": "works/2/images/圖片2.png",
+          "image": "images/圖片2.png",
           "reverse": false
         },
         {
           "title": "Audio Processing",
           "description": "Modulation and effects processing in Ableton Live.",
           "date": "2021.09",
-          "image": "works/2/images/td-technique.png",
+          "image": "images/td-technique.png",
           "reverse": true
         },
         {
           "title": "Visual Development",
           "description": "TouchDesigner audio-reactive visual system creation.",
           "date": "2021.09",
-          "image": "works/2/images/圖片6.png",
+          "image": "images/圖片6.png",
           "reverse": false
         },
         {
           "title": "Exhibition",
           "description": "Presented in 'This Crazy City' online concert.",
           "date": "2021.09",
-          "image": "works/2/images/瘋城.jpg",
+          "image": "images/瘋城.jpg",
           "reverse": true
         }
       ],
@@ -1401,12 +1401,12 @@
       "category": "VR Experience",
       "year": 2021,
       "featured": false,
-      "thumbnail": "works/1/images/10_深海低吟_1.png",
+      "thumbnail": "images/10_深海低吟_1.png",
       "description": "A VR escape room experience with hand tracking, set in a Victorian-era ship where players unravel mysteries and free trapped souls.",
       "tags": ["VR", "Unity", "Hand Tracking", "Escape Room"],
       "hero": {
         "video": "",
-        "poster": "works/1/images/10_深海低吟_1.png",
+        "poster": "images/10_深海低吟_1.png",
         "subtitle": "VR escape room with hand tracking interaction"
       },
       "info": {
@@ -1437,15 +1437,15 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/1/images/10_深海低吟_1.png", "caption": "Ship cabin interior" }
+          { "src": "images/10_深海低吟_1.png", "caption": "Ship cabin interior" }
         ],
         "grid2": [
-          { "src": "works/1/images/10_深海低吟_2.png", "caption": "Puzzle interaction" },
-          { "src": "works/1/images/圖片3.png", "caption": "Story outline" }],
+          { "src": "images/10_深海低吟_2.png", "caption": "Puzzle interaction" },
+          { "src": "images/圖片3.png", "caption": "Story outline" }],
         "grid3": [
-          { "src": "works/1/images/圖片15.png", "caption": "" },
-          { "src": "works/1/images/圖片1.png", "caption": "" },
-          { "src": "works/1/images/圖片5.png", "caption": "" }
+          { "src": "images/圖片15.png", "caption": "" },
+          { "src": "images/圖片1.png", "caption": "" },
+          { "src": "images/圖片5.png", "caption": "" }
         ],
         "video": null
       },
@@ -1476,28 +1476,28 @@
           "title": "Story Development",
           "description": "Creating narrative with Victorian-era ship setting and mermaid mythology.",
           "date": "2021.05",
-          "image": "works/1/images/圖片3.png",
+          "image": "images/圖片3.png",
           "reverse": false
         },
         {
           "title": "Technical Implementation",
           "description": "Hand tracking systems, voice recognition, and VR interaction mechanics.",
           "date": "2021.06",
-          "image": "works/1/images/圖片15.png",
+          "image": "images/圖片15.png",
           "reverse": true
         },
         {
           "title": "Asset Creation",
           "description": "3D modeling, character design with Vroid, and UI art design.",
           "date": "2021.07",
-          "image": "works/1/images/圖片5.png",
+          "image": "images/圖片5.png",
           "reverse": false
         },
         {
           "title": "Testing & Polish",
           "description": "VR interaction refinement and narrative flow optimization.",
           "date": "2021.07",
-          "image": "works/1/images/10_深海低吟_1.png",
+          "image": "images/10_深海低吟_1.png",
           "reverse": true
         }
       ],
@@ -1510,12 +1510,12 @@
       "category": "Game Design",
       "year": 2021,
       "featured": false,
-      "thumbnail": "works/0/images/0-1.png",
+      "thumbnail": "images/0-1.png",
       "description": "An immersive game experience combining Tag elements with environmental puzzle-solving, set during the COVID-19 pandemic.",
       "tags": ["Unity", "Game Design", "Puzzle", "Multiplayer"],
       "hero": {
         "video": "",
-        "poster": "works/0/images/0-1.png",
+        "poster": "images/0-1.png",
         "subtitle": "Survive the pandemic in this immersive Tag-style game"
       },
       "info": {
@@ -1548,11 +1548,11 @@
       },
       "gallery": {
         "full": [
-          { "src": "works/0/images/0-1.png", "caption": "Game environment" }
+          { "src": "images/0-1.png", "caption": "Game environment" }
         ],
         "grid2": [
-          { "src": "works/0/images/0-2.png", "caption": "Safe and danger zones" },
-          { "src": "works/0/images/0.png", "caption": "Game system diagram" }
+          { "src": "images/0-2.png", "caption": "Safe and danger zones" },
+          { "src": "images/0.png", "caption": "Game system diagram" }
         ],
         "grid3": [],
         "video": {
@@ -1587,21 +1587,21 @@
           "title": "Concept Design",
           "description": "Developing pandemic-themed Tag game mechanics and story.",
           "date": "2021.08",
-          "image": "works/0/images/0.png",
+          "image": "images/0.png",
           "reverse": false
         },
         {
           "title": "Prototype Development",
           "description": "Implementing core mechanics: zone changing, item collection, NPC AI.",
           "date": "2021.09",
-          "image": "works/0/images/0-1.png",
+          "image": "images/0-1.png",
           "reverse": true
         },
         {
           "title": "Testing & Polish",
           "description": "Gameplay balancing and user experience refinement.",
           "date": "2021.10",
-          "image": "works/0/images/0-2.png",
+          "image": "images/0-2.png",
           "reverse": false
         }
       ],
