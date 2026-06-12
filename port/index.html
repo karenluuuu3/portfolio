@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen Lu — Creative Technologist & Interactive Media Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fullscreen-menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-container">
+            <div class="menu-close-header">
+                <button class="menu-close-btn" id="closeMenuBtn">
+                    <span>CLOSE</span>
+                    <div class="close-icon">×</div>
+                </button>
+            </div>
+            <nav class="menu-navigation">
+                <ul class="menu-links">
+                    <li><a href="index.html" class="menu-item" data-num="01">Home</a></li>
+                    <li><a href="archive.html" class="menu-item" data-num="02">Projects (Archive)</a></li>
+                    <li><a href="about.html" class="menu-item" data-num="03">About</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <div class="menu-contact-info">
+                    <small>GET IN TOUCH</small>
+                    <a href="mailto:karenluuuu3@gmail.com" class="menu-email">karenluuuu3@gmail.com</a>
+                </div>
+                <div class="menu-socials">
+                    <a href="https://www.instagram.com/szuhanlu_karen/" target="_blank">Instagram</a>
+                    <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <a href="index.html" class="logo">KL</a>
+        <button class="menu-toggle" aria-label="Open Menu">
+            <span class="menu-text">MENU</span>
+            <div class="burger-icon"><span></span><span></span></div>
+        </button>
+    </header>
+
+    <main class="portfolio-container">
+        <section id="home" class="portfolio-section hero-section" style="padding-left: 80px;">
+            <div class="hero-bg">
+                <div class="video-overlay"></div>
+                <img src="images/work/bg.png" alt="Echo-me structural environment backdrop atmosphere" class="hero-img-fallback">
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Karen<br>Lu</h1>
+                <p class="hero-subtitle">Interactive Content Technologist<br>XR Developer</p>
+                <p class="hero-description">
+                Interactive Content Technologist with a background in Computer Science and expertise in real-time interactive systems, immersive experiences, and technology-driven installations. Experienced in developing interactive applications using Unreal Engine and Unity, with a strong focus on bridging creative concepts and technical implementation.                </p>
+                <a href="archive.html" class="cta-link">ENTER ARCHIVE <span class="arrow">→</span></a>
+            </div>
+
+            <div class="hero-footer">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/karenlu3.works/" target="_blank">IG</a>
+                    <a href="www.behance.net/karenlu5" target="_blank">BEHANCE</a>
+                </div>
+                <div class="scroll-indicator">
+                    <a href="archive.html">EXPLORE WORKS <span class="arrow-down">↓</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive — Karen Lu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fullscreen-menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-container">
+            <div class="menu-close-header">
+                <button class="menu-close-btn" id="closeMenuBtn">
+                    <span>CLOSE</span>
+                    <div class="close-icon">×</div>
+                </button>
+            </div>
+            <nav class="menu-navigation">
+                <ul class="menu-links">
+                    <li><a href="index.html" class="menu-item" data-num="01">Home</a></li>
+                    <li><a href="archive.html" class="menu-item" data-num="02">Projects (Archive)</a></li>
+                    <li><a href="about.html" class="menu-item" data-num="03">About</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <div class="menu-contact-info">
+                    <small>GET IN TOUCH</small>
+                    <a href="mailto:karenluuuu3@gmail.com" class="menu-email">karenluuuu3@gmail.com</a>
+                </div>
+                <div class="menu-socials">
+                    <a href="https://www.instagram.com/szuhanlu_karen/" target="_blank">Instagram</a>
+                    <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <a href="index.html" class="logo">KL</a>
+        <button class="menu-toggle" aria-label="Open Menu">
+            <span class="menu-text">MENU</span>
+            <div class="burger-icon"><span></span><span></span></div>
+        </button>
+    </header>
+
+    <main class="portfolio-container">
+        <section id="projects" class="portfolio-section archive-section" style="padding-left: 80px;">
+            
+            <div class="archive-sticky-header">
+                <div class="section-intro">
+                    <h2 class="section-title">Archive</h2>
+                    <p class="section-tagline">A collection of interactive installations and generative works exploring the relationship between humans, technology, and nature.</p>
+                </div>
+
+                <div class="archive-controls">
+                    <div class="search-wrapper">
+                        <input type="text" id="archiveSearch" placeholder="SEARCH PROJECTS OR TOOLS... (E.G. UNITY, GLSL)">
+                        <span class="search-icon">⌕</span>
+                    </div>
+                    
+                    <div class="tag-filters">
+                        <button class="filter-tag active" data-filter="all">ALL WORKS</button>
+                        <button class="filter-tag" data-filter="interactive">INTERACTIVE ART</button>
+                        <button class="filter-tag" data-filter="generative">GENERATIVE ART</button>
+                        <button class="filter-tag" data-filter="3d-game">3D & GAME DESIGN</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="archive-list" id="archiveList">
+                
+                <div class="archive-row" data-category="interactive" data-tags="echo-me species fusion interactive installation touchdesigner glsl kinect">
+                    <span class="project-num">01</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/13.png" alt="Echo-me">
+                    </div>
+                    <div class="project-info">
+                        <h3>Echo-me</h3>
+                        <p>Species Fusion Interactive Installation</p>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="interactive" data-tags="洄鄉 new media art installation physical computing">
+                    <span class="project-num">02</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/15.jpg" alt="洄鄉">
+                    </div>
+                    <div class="project-info">
+                        <h3>洄鄉</h3>
+                        <p>New Media Art Installation</p>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="generative" data-tags="垃圾車等等我 interactive application creative utility ios swift">
+                    <span class="project-num">03</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/14.png" alt="垃圾車等等我">
+                    </div>
+                    <div class="project-info">
+                        <h3>垃圾車等等我</h3>
+                        <p>Interactive Application / Creative Utility</p>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="generative" data-tags="痕跡 generative visual experience processing creative coding">
+                    <span class="project-num">04</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/12.png" alt="痕跡">
+                    </div>
+                    <div class="project-info">
+                        <h3>痕跡</h3>
+                        <p>Generative Visual Experience</p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="generative" data-tags="存在觀察 data environmental observation art creative coding">
+                    <span class="project-num">05</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/11.jpg" alt="存在觀察">
+                    </div>
+                    <div class="project-info">
+                        <h3>存在觀察</h3>
+                        <p>Data & Environmental Observation Art</p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="generative" data-tags="緒絮 generative art system processing java">
+                    <span class="project-num">06</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/10.png" alt="緒絮">
+                    </div>
+                    <div class="project-info">
+                        <h3>緒絮</h3>
+                        <p>Generative Art System • Processing</p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="generative" data-tags="computing aesthetics computational graphic design studies coding openframeworks c++">
+                    <span class="project-num">07</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/ComputingAesthetics.jpg" alt="Computing Aesthetics">
+                    </div>
+                    <div class="project-info">
+                        <h3>Computing Aesthetics</h3>
+                        <p>Computational Graphic Design Studies</p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="3d-game" data-tags="ue4 workshop environment design unreal engine technical environment art cgi 3d">
+                    <span class="project-num">08</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/2.jpg" alt="UE4 Workshop">
+                    </div>
+                    <div class="project-info">
+                        <h3>UE4 Workshop</h3>
+                        <p>Environment Design & Unreal Technical Studies</p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="interactive" data-tags="深海低吟 immersive audio synthesis interactive space touchdesigner maxmsp arduino sensors">
+                    <span class="project-num">09</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/bg.png" alt="深海低吟">
+                    </div>
+                    <div class="project-info">
+                        <h3>深海低吟</h3>
+                        <p>Immersive Audio Synthesis & Interactive Space</p>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+                <div class="archive-row" data-category="3d-game" data-tags="covid rush indie game mechanics exploration unity c# game design 3d">
+                    <span class="project-num">10</span>
+                    <div class="project-thumbnail">
+                        <img src="images/work/0.png" alt="COVID RUSH">
+                    </div>
+                    <div class="project-info">
+                        <h3>COVID RUSH</h3>
+                        <p>Indie Game Mechanics Exploration • Unity</p>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <a href="project-detail.html" class="view-project-btn"><span class="plus">+</span></a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

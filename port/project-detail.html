@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo-me — Project Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fullscreen-menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-container">
+            <div class="menu-close-header">
+                <button class="menu-close-btn" id="closeMenuBtn">
+                    <span>CLOSE</span>
+                    <div class="close-icon">×</div>
+                </button>
+            </div>
+            <nav class="menu-navigation">
+                <ul class="menu-links">
+                    <li><a href="index.html" class="menu-item" data-num="01">Home</a></li>
+                    <li><a href="archive.html" class="menu-item" data-num="02">Projects (Archive)</a></li>
+                    <li><a href="about.html" class="menu-item" data-num="03">About</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <div class="menu-contact-info">
+                    <small>GET IN TOUCH</small>
+                    <a href="mailto:karenluuuu3@gmail.com" class="menu-email">karenluuuu3@gmail.com</a>
+                </div>
+                <div class="menu-socials">
+                    <a href="https://www.instagram.com/szuhanlu_karen/" target="_blank">Instagram</a>
+                    <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <a href="index.html" class="logo">KL</a>
+        <button class="menu-toggle" aria-label="Open Menu">
+            <span class="menu-text">MENU</span>
+            <div class="burger-icon"><span></span><span></span></div>
+        </button>
+    </header>
+
+    <main class="portfolio-container">
+        <section id="detail" class="portfolio-section case-study-section" style="padding-left: 80px;">
+            
+            <div class="case-study-grid">
+                
+                <div class="case-meta-sidebar">
+                    <a href="archive.html" class="meta-label" style="text-decoration: underline; margin-bottom: 30px; display: inline-block;">
+                        ← BACK TO ARCHIVE
+                    </a>
+                    <h2 class="case-title">Echo-me</h2>
+                    <p class="case-spec">Species Fusion Interactive Installation, 2025</p>
+                    
+                    <p class="case-summary">
+                        An interactive installation that merges human silhouettes with procedural aquatic ecosystems, visualizing the cyclic patterns of migration, environmental return, and the fluid co-existence of organic life.
+                    </p>
+
+                    <div class="technical-tags" style="margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 12px; color: var(--text-muted);">TouchDesigner</span>
+                        <span style="font-size: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 12px; color: var(--text-muted);">GLSL shaders</span>
+                        <span style="font-size: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 12px; color: var(--text-muted);">Kinect Sensor</span>
+                    </div>
+
+                    <a href="https://www.behance.net/karenlu5" target="_blank" class="btn-outline">VIEW EXHIBITION Documentation <span class="arrow">→</span></a>
+
+                    <div class="media-indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="case-media-main">
+                    <div class="main-display-window">
+                        <img src="images/work/13.png" alt="Echo-me installation environment projection" class="main-showcase-media">
+                        
+                        <div class="media-nav-dots">
+                            <span class="step-node active" data-step="INTRO">INTRO</span>
+                            <span class="step-node" data-step="CONCEPT">CONCEPT</span>
+                            <span class="step-node" data-step="TECHNICAL">TECHNICAL</span>
+                            <span class="step-node" data-step="PROCESS">PROCESS</span>
+                        </div>
+                    </div>
+
+                    <div class="media-filmstrip">
+                        <div class="strip-item active">
+                            <img src="images/work/13.png" alt="Echo-me main visual scene">
+                        </div>
+                        <div class="strip-item">
+                            <img src="images/work/11.jpg" alt="Exhibition hardware projection mapping breakdown">
+                        </div>
+                        <div class="strip-item">
+                            <img src="images/work/10.png" alt="Generative particle development process">
+                        </div>
+                        <div class="strip-item asset-count-card">
+                            <span>+12</span>
+                            <p>MORE PROCESS</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-footer-nav">
+                <a href="#" class="prev-proj">← PREVIOUS WORK</a>
+                <a href="#" class="next-proj">NEXT PROJECT →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
