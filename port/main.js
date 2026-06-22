@@ -229,7 +229,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // 5. DETAIL SIDE NAV — SCROLL SPY
+    // ==========================================
+    const sideNavItems = document.querySelectorAll('.side-nav-item');
+    const detailSections = document.querySelectorAll('.detail-section[id]');
 
+    if (sideNavItems.length > 0 && detailSections.length > 0) {
+        // Smooth scroll on click
+        sideNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll spy — highlight active section
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    sideNavItems.forEach(nav => {
+                        nav.classList.remove('active');
+                        if (nav.getAttribute('href') === '#' + id) {
+                            nav.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        detailSections.forEach(section => observer.observe(section));
+    }
 
 
 
