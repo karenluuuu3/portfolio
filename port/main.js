@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // ==========================================
-    // 1. FULLSCREEN OVERLAY MENU LOGIC (保留不變)
+    // 1. FULLSCREEN OVERLAY MENU
     // ==========================================
     const menuToggleBtn = document.querySelector('.menu-toggle');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
@@ -13,54 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden';
         }
     }
-
     function closeMenu() {
         if (menuOverlay) {
             menuOverlay.classList.remove('is-open');
             document.body.style.overflow = '';
         }
     }
-
     if (menuToggleBtn) menuToggleBtn.addEventListener('click', openMenu);
     if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
-
-    const menuLinks = document.querySelectorAll('.menu-links a');
-    menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.querySelectorAll('.menu-links a').forEach(link => link.addEventListener('click', closeMenu));
 
 
     // ==========================================
-    // 2. FETCH JSON DATA & DYNAMIC ROUTING
+    // 2. FETCH JSON & ROUTE
     // ==========================================
     fetch('projects.json')
-        .then(response => response.json())
+        .then(r => r.json())
         .then(data => {
             const archiveList = document.querySelector('.archive-list');
-            const detailMain = document.querySelector('.detail-main');
+            const detailMain = document.getElementById('detailMain');
 
-            // 如果在 Archive 頁面
-            if (archiveList) {
-                renderArchive(data, archiveList);
-            }
-
-            // 如果在 Project Detail 頁面
-            if (detailMain) {
-                renderDetail(data);
-            }
+            if (archiveList) renderArchive(data, archiveList);
+            if (detailMain) renderDetail(data, detailMain);
         })
-        .catch(error => console.error('Error fetching projects.json:', error));
+        .catch(err => console.error('Error fetching projects.json:', err));
 
 
     // ==========================================
-    // 3. RENDER ARCHIVE PAGE
+    // 3. RENDER ARCHIVE
     // ==========================================
     function renderArchive(projects, container) {
         container.innerHTML = '';
 
-        // 預設依日期由新到舊排序
         const sorted = [...projects].sort((a, b) => {
-            const dateA = parseFloat(a.date) || 0;
-            const dateB = parseFloat(b.date) || 0;
-            return dateB - dateA;
+            return (parseFloat(b.date) || 0) - (parseFloat(a.date) || 0);
         });
 
         sorted.forEach(proj => {
@@ -96,41 +82,317 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 4. RENDER DETAIL PAGE
+    // 4. RENDER DETAIL PAGE (動態生成)
     // ==========================================
-    function renderDetail(projects) {
-        // 從網址取得參數，例如 project-detail.html?id=01
+    function renderDetail(projects, container) {
         const urlParams = new URLSearchParams(window.location.search);
         let projectId = urlParams.get('id');
-        
-        // 如果沒有帶 ID，預設顯示第一筆資料
-        if (!projectId) {
-            projectId = projects[0].id; 
-        }
+        if (!projectId) projectId = projects[0].id;
 
         const project = projects.find(p => p.id === projectId);
-        if (!project) return;
-
-        // 更新 Hero 區塊的文字與圖片
-        document.querySelector('.detail-project-label').textContent = `PROJECT ${project.id}`;
-        document.querySelector('.detail-project-title').textContent = project.title;
-        document.querySelector('.detail-hero-desc').textContent = project.desc;
-        
-        const metaSpans = document.querySelectorAll('.detail-hero-meta span');
-        if (metaSpans.length >= 2) metaSpans[1].textContent = project.year; // 更新年份
-        
-        const heroImg = document.querySelector('.detail-hero-media-inner img');
-        if (heroImg) {
-            heroImg.src = project.image;
-            heroImg.alt = project.title;
+        if (!project) {
+            container.innerHTML = '<section class="detail-section"><p>Project not found.</p></section>';
+            return;
         }
 
-        // 註：若你的 JSON 之後增加了 Gallery 或 Overview 的詳細內容，也可以在這裡繼續對應替換
+        // 更新頁面標題
+        document.title = `${project.title} — Project Detail`;
+
+        // 收集要渲染的 section
+        const sections = [];
+
+        // --- 01 HERO (永遠顯示) ---
+        const firstLink = project.links ? Object.values(project.links)[0] : null;
+        const docLinkHTML = firstLink
+            ? `<a href="${firstLink}" target="_blank" class="detail-doc-link">VIEW DOCUMENTATION <span class="arrow">→</span></a>`
+            : '';
+
+        sections.push({
+            id: 'detail-hero',
+            navLabel: 'HERO',
+            navSub: 'Project<br>Introduction',
+            html: `
+                <section class="detail-section detail-hero" id="detail-hero">
+                    <div class="detail-hero-grid">
+                        <div class="detail-hero-text">
+                            <span class="detail-project-label">PROJECT ${project.id}</span>
+                            <h1 class="detail-project-title">${project.title}</h1>
+                            <div class="detail-hero-meta">
+                                <span>${project.categoryLabel}</span>
+                                <span>${project.year}</span>
+                            </div>
+                            <div class="detail-hero-divider"></div>
+                            <p class="detail-hero-desc">${project.desc}</p>
+                            ${docLinkHTML}
+                        </div>
+                        <div class="detail-hero-media">
+                            <div class="detail-hero-media-inner">
+                                <img src="${project.image}" alt="${project.title}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-scroll-hint">SCROLL ↓</div>
+                </section>`
+        });
+
+        // --- 02 OVERVIEW ---
+        const toolsStr = project.tags ? project.tags.join('<br>') : '—';
+        const exhibitionName = project.exhibition ? project.exhibition.name : null;
+
+        let overviewMetaHTML = `
+            <div class="overview-meta-item">
+                <span class="meta-key">YEAR</span>
+                <span class="meta-val">${project.year}</span>
+            </div>
+            <div class="overview-meta-item">
+                <span class="meta-key">CATEGORY</span>
+                <span class="meta-val">${project.categoryLabel}</span>
+            </div>
+            <div class="overview-meta-item">
+                <span class="meta-key">TOOLS</span>
+                <span class="meta-val">${toolsStr}</span>
+            </div>`;
+
+        if (exhibitionName) {
+            overviewMetaHTML += `
+            <div class="overview-meta-item">
+                <span class="meta-key">EXHIBITION</span>
+                <span class="meta-val">${exhibitionName}</span>
+            </div>`;
+        }
+
+        sections.push({
+            id: 'detail-overview',
+            navLabel: 'OVERVIEW',
+            navSub: 'Project<br>Information',
+            html: `
+                <section class="detail-section detail-overview" id="detail-overview">
+                    <div class="detail-section-header">
+                        <h2 class="detail-section-title">Overview</h2>
+                    </div>
+                    <div class="detail-overview-grid">
+                        <div class="detail-overview-desc">
+                            <p>${project.desc}</p>
+                        </div>
+                        <div class="detail-overview-meta-grid">
+                            ${overviewMetaHTML}
+                        </div>
+                    </div>
+                </section>`
+        });
+
+        // --- 03 EXHIBITION (有展覽資料才顯示) ---
+        if (project.exhibition) {
+            const ex = project.exhibition;
+            let exDetails = '';
+            if (ex.date) exDetails += `<div class="spec-row"><span class="spec-key">DATE</span><span class="spec-val">${ex.date}</span></div>`;
+            if (ex.hours) exDetails += `<div class="spec-row"><span class="spec-key">HOURS</span><span class="spec-val">${ex.hours}</span></div>`;
+            if (ex.location) exDetails += `<div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">${ex.location}</span></div>`;
+            if (ex.event) exDetails += `<div class="spec-row"><span class="spec-key">EVENT</span><span class="spec-val">${ex.event}</span></div>`;
+            const exLink = ex.url ? `<a href="${ex.url}" target="_blank" class="detail-doc-link" style="margin-top:24px;">EVENT WEBSITE <span class="arrow">→</span></a>` : '';
+
+            sections.push({
+                id: 'detail-exhibition',
+                navLabel: 'EXHIBITION',
+                navSub: 'Venue<br>&amp; Dates',
+                html: `
+                    <section class="detail-section" id="detail-exhibition">
+                        <div class="detail-section-header">
+                            <h2 class="detail-section-title">Exhibition</h2>
+                        </div>
+                        <h3 style="font-size:1.1rem; margin-bottom:24px; color:var(--text-muted);">${ex.name}</h3>
+                        <div class="technical-specs-list">
+                            ${exDetails}
+                        </div>
+                        ${exLink}
+                    </section>`
+            });
+        }
+
+        // --- 04 GALLERY (有 gallery 才顯示) ---
+        if (project.gallery && project.gallery.length > 0) {
+            const galleryItems = project.gallery.map((img, i) => `
+                <div class="gallery-item">
+                    <div class="gallery-item-media">
+                        <img src="${img}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}">
+                    </div>
+                    <div class="gallery-item-caption">
+                        <span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span>
+                        <div class="fig-divider"></div>
+                    </div>
+                </div>`
+            ).join('');
+
+            sections.push({
+                id: 'detail-gallery',
+                navLabel: 'GALLERY',
+                navSub: 'Installation<br>&amp; Details',
+                html: `
+                    <section class="detail-section detail-gallery" id="detail-gallery">
+                        <div class="detail-section-header">
+                            <h2 class="detail-section-title">Gallery</h2>
+                        </div>
+                        <div class="detail-gallery-list">
+                            ${galleryItems}
+                        </div>
+                    </section>`
+            });
+        }
+
+        // --- 05 LINKS / DOCUMENTATION (有 links 才顯示) ---
+        if (project.links && Object.keys(project.links).length > 0) {
+            const linkEntries = Object.entries(project.links);
+
+            // 找 YouTube 影片做嵌入
+            const ytEntry = linkEntries.find(([, url]) => url.includes('youtube.com/watch') || url.includes('youtu.be'));
+            let videoEmbedHTML = '';
+            if (ytEntry) {
+                const ytId = extractYouTubeId(ytEntry[1]);
+                if (ytId) {
+                    videoEmbedHTML = `
+                        <div class="doc-video-wrapper" style="margin-bottom:40px;">
+                            <iframe
+                                src="https://www.youtube.com/embed/${ytId}"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>`;
+                }
+            }
+
+            // 其他連結列表
+            const otherLinks = linkEntries.filter(([key, url]) => {
+                if (ytEntry && url === ytEntry[1]) return false;
+                return true;
+            });
+            const linksListHTML = otherLinks.map(([key, url]) => {
+                const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                return `<a href="${url}" target="_blank" class="detail-doc-link" style="display:block; margin-bottom:12px;">${label} <span class="arrow">→</span></a>`;
+            }).join('');
+
+            sections.push({
+                id: 'detail-documentation',
+                navLabel: 'LINKS',
+                navSub: 'Video<br>&amp; Links',
+                html: `
+                    <section class="detail-section detail-documentation" id="detail-documentation">
+                        <div class="detail-section-header">
+                            <h2 class="detail-section-title">Documentation</h2>
+                        </div>
+                        ${videoEmbedHTML}
+                        ${linksListHTML}
+                    </section>`
+            });
+        }
+
+        // --- 06 CREDITS (有 credits 才顯示) ---
+        if (project.credits && Object.keys(project.credits).length > 0) {
+            const creditItems = Object.entries(project.credits).map(([role, name]) => `
+                <div class="credit-item">
+                    <span class="credit-role">${role.toUpperCase()}</span>
+                    <span class="credit-name">${name}</span>
+                </div>`
+            ).join('');
+
+            // 如果有 collaborators 也一起列出
+            let collabHTML = '';
+            if (project.collaborators && project.collaborators.length > 0) {
+                collabHTML = `
+                    <div class="credit-item" style="grid-column: 1 / -1; margin-top: 20px;">
+                        <span class="credit-role">COLLABORATORS</span>
+                        <span class="credit-name">${project.collaborators.join('、')}</span>
+                    </div>`;
+            }
+
+            sections.push({
+                id: 'detail-credits',
+                navLabel: 'CREDITS',
+                navSub: 'Team<br>&amp; Credits',
+                html: `
+                    <section class="detail-section detail-credits" id="detail-credits">
+                        <div class="detail-section-header">
+                            <h2 class="detail-section-title">Credits</h2>
+                        </div>
+                        <div class="credits-grid">
+                            ${creditItems}
+                            ${collabHTML}
+                        </div>
+                    </section>`
+            });
+        } else if (project.collaborators && project.collaborators.length > 0) {
+            // 只有 collaborators 沒有 credits
+            sections.push({
+                id: 'detail-credits',
+                navLabel: 'CREDITS',
+                navSub: 'Team<br>&amp; Credits',
+                html: `
+                    <section class="detail-section detail-credits" id="detail-credits">
+                        <div class="detail-section-header">
+                            <h2 class="detail-section-title">Credits</h2>
+                        </div>
+                        <div class="credits-grid">
+                            <div class="credit-item" style="grid-column: 1 / -1;">
+                                <span class="credit-role">COLLABORATORS</span>
+                                <span class="credit-name">${project.collaborators.join('、')}</span>
+                            </div>
+                        </div>
+                    </section>`
+            });
+        }
+
+        // --- NEXT PROJECT ---
+        const currentIdx = projects.findIndex(p => p.id === projectId);
+        const nextProject = projects[(currentIdx + 1) % projects.length];
+
+        sections.push({
+            id: null, // 不加進 side nav
+            html: `
+                <section class="detail-section detail-next-project">
+                    <span class="next-project-label">NEXT PROJECT</span>
+                    <h3 class="next-project-title">${nextProject.title}</h3>
+                    <span class="next-project-year">${nextProject.year}</span>
+                    <a href="project-detail.html?id=${nextProject.id}" class="next-project-link">VIEW PROJECT <span class="arrow">→</span></a>
+                </section>`
+        });
+
+        // --- FOOTER ---
+        sections.push({
+            id: null,
+            html: `
+                <div class="detail-footer-nav">
+                    <a href="#detail-hero" class="back-to-top">BACK TO TOP <span class="top-icon">↑</span></a>
+                </div>`
+        });
+
+        // ========== 組裝 HTML ==========
+        container.innerHTML = sections.map(s => s.html).join('');
+
+        // ========== 組裝 Side Nav ==========
+        const navTrack = document.getElementById('sideNavTrack');
+        if (navTrack) {
+            const navSections = sections.filter(s => s.id);
+            navTrack.innerHTML = navSections.map((s, i) => `
+                <a href="#${s.id}" class="side-nav-item${i === 0 ? ' active' : ''}" data-index="${String(i + 1).padStart(2, '0')}">
+                    <span class="side-nav-num">${String(i + 1).padStart(2, '0')}</span>
+                    <span class="side-nav-label">${s.navLabel}</span>
+                    <span class="side-nav-sub">${s.navSub}</span>
+                </a>
+            `).join('');
+
+            initDetailScrollSpy();
+        }
+    }
+
+    // YouTube ID 擷取
+    function extractYouTubeId(url) {
+        const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([^&?/]+)/);
+        return match ? match[1] : null;
     }
 
 
     // ==========================================
-    // 5. ARCHIVE GRID FILTER ENGINE
+    // 5. ARCHIVE FILTER
     // ==========================================
     function initArchiveLogic(totalCount) {
         const searchInput = document.getElementById('archiveSearch');
@@ -148,7 +410,6 @@ document.addEventListener('DOMContentLoaded', () => {
             archiveRows.forEach(row => {
                 const rowGroup = row.getAttribute('data-group') || '';
                 const rowTags = (row.getAttribute('data-tags') || '').toLowerCase();
-
                 const matchesCategory = (activeCategory === 'all' || rowGroup === activeCategory);
                 const matchesSearch = rowTags.includes(searchQuery);
 
@@ -159,10 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     row.classList.add('is-hidden');
                 }
             });
-
-            if (showingCountEl) {
-                showingCountEl.textContent = `SHOWING ${visibleCount} PROJECTS`;
-            }
+            if (showingCountEl) showingCountEl.textContent = `SHOWING ${visibleCount} PROJECTS`;
         }
 
         if (searchInput) {
@@ -172,120 +430,101 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if (filterTags.length > 0) {
-            filterTags.forEach(tag => {
-                tag.addEventListener('click', () => {
-                    filterTags.forEach(t => t.classList.remove('active'));
-                    tag.classList.add('active');
-
-                    activeCategory = tag.getAttribute('data-filter');
-                    applyFilters();
-                });
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                activeCategory = tag.getAttribute('data-filter');
+                applyFilters();
             });
-        }
+        });
     }
 
 
     // ==========================================
-    // 6. CUSTOM SORT DROPDOWN + SORT ENGINE
+    // 6. ARCHIVE SORT
     // ==========================================
     function initSortLogic() {
         const sortSelect = document.getElementById('sortSelect');
+        if (!sortSelect) return;
 
-        if (sortSelect) {
-            const trigger = sortSelect.querySelector('.select-trigger');
-            const valueLabel = sortSelect.querySelector('.select-value');
-            const options = sortSelect.querySelectorAll('.select-option');
-            const archiveList = document.querySelector('.archive-list');
+        const trigger = sortSelect.querySelector('.select-trigger');
+        const valueLabel = sortSelect.querySelector('.select-value');
+        const options = sortSelect.querySelectorAll('.select-option');
+        const archiveList = document.querySelector('.archive-list');
 
-            trigger.addEventListener('click', (e) => {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sortSelect.classList.toggle('is-open');
+            trigger.setAttribute('aria-expanded', sortSelect.classList.contains('is-open'));
+        });
+
+        document.addEventListener('click', () => {
+            sortSelect.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
                 e.stopPropagation();
-                sortSelect.classList.toggle('is-open');
-                trigger.setAttribute('aria-expanded', sortSelect.classList.contains('is-open'));
-            });
-
-            document.addEventListener('click', () => {
+                options.forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+                valueLabel.textContent = option.textContent;
                 sortSelect.classList.remove('is-open');
                 trigger.setAttribute('aria-expanded', 'false');
-            });
 
-            options.forEach(option => {
-                option.addEventListener('click', (e) => {
-                    e.stopPropagation();
+                const sortBy = option.getAttribute('data-value');
+                const rows = [...document.querySelectorAll('.archive-row')];
 
-                    options.forEach(o => o.classList.remove('active'));
-                    option.classList.add('active');
-                    valueLabel.textContent = option.textContent;
-
-                    sortSelect.classList.remove('is-open');
-                    trigger.setAttribute('aria-expanded', 'false');
-
-                    const sortBy = option.getAttribute('data-value');
-                    const rows = [...document.querySelectorAll('.archive-row')];
-
-                    rows.sort((a, b) => {
-                        if (sortBy === 'latest') {
-                            const yA = parseInt(a.querySelector('.row-year').textContent);
-                            const yB = parseInt(b.querySelector('.row-year').textContent);
-                            return yB - yA || a.querySelector('.row-num').textContent.localeCompare(b.querySelector('.row-num').textContent);
-                        }
-                        if (sortBy === 'oldest') {
-                            const yA = parseInt(a.querySelector('.row-year').textContent);
-                            const yB = parseInt(b.querySelector('.row-year').textContent);
-                            return yA - yB || a.querySelector('.row-num').textContent.localeCompare(b.querySelector('.row-num').textContent);
-                        }
-                        if (sortBy === 'az') {
-                            const nA = a.querySelector('.row-title').textContent.trim().toLowerCase();
-                            const nB = b.querySelector('.row-title').textContent.trim().toLowerCase();
-                            return nA.localeCompare(nB);
-                        }
-                        return 0;
-                    });
-
-                    rows.forEach(row => archiveList.appendChild(row));
+                rows.sort((a, b) => {
+                    if (sortBy === 'latest') {
+                        return parseInt(b.querySelector('.row-year').textContent) - parseInt(a.querySelector('.row-year').textContent);
+                    }
+                    if (sortBy === 'oldest') {
+                        return parseInt(a.querySelector('.row-year').textContent) - parseInt(b.querySelector('.row-year').textContent);
+                    }
+                    if (sortBy === 'az') {
+                        return a.querySelector('.row-title').textContent.trim().toLowerCase()
+                            .localeCompare(b.querySelector('.row-title').textContent.trim().toLowerCase());
+                    }
+                    return 0;
                 });
+
+                rows.forEach(row => archiveList.appendChild(row));
             });
-        }
+        });
     }
 
-    // ==========================================
-    // 7. DETAIL SIDE NAV — SCROLL SPY
-    // ==========================================
-    const sideNavItems = document.querySelectorAll('.side-nav-item');
-    const detailSections = document.querySelectorAll('.detail-section[id]');
 
-    if (sideNavItems.length > 0 && detailSections.length > 0) {
+    // ==========================================
+    // 7. DETAIL SCROLL SPY (動態初始化)
+    // ==========================================
+    function initDetailScrollSpy() {
+        const sideNavItems = document.querySelectorAll('.side-nav-item');
+        const detailSections = document.querySelectorAll('.detail-section[id]');
+
+        if (sideNavItems.length === 0 || detailSections.length === 0) return;
+
         sideNavItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetId = item.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                const target = document.querySelector(item.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '-20% 0px -60% 0px',
-            threshold: 0
-        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
                     sideNavItems.forEach(nav => {
-                        nav.classList.remove('active');
-                        if (nav.getAttribute('href') === '#' + id) {
-                            nav.classList.add('active');
-                        }
+                        nav.classList.toggle('active', nav.getAttribute('href') === '#' + id);
                     });
                 }
             });
-        }, observerOptions);
+        }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
 
         detailSections.forEach(section => observer.observe(section));
     }
+
 });
