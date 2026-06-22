@@ -153,5 +153,87 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // 4. CUSTOM SORT DROPDOWN + SORT ENGINE
+    // ==========================================
+    const sortSelect = document.getElementById('sortSelect');
+
+    if (sortSelect) {
+        const trigger = sortSelect.querySelector('.select-trigger');
+        const valueLabel = sortSelect.querySelector('.select-value');
+        const options = sortSelect.querySelectorAll('.select-option');
+        const archiveList = document.querySelector('.archive-list');
+        const rows = () => [...document.querySelectorAll('.archive-row')];
+
+        // Toggle open/close
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sortSelect.classList.toggle('is-open');
+            trigger.setAttribute('aria-expanded', sortSelect.classList.contains('is-open'));
+        });
+
+        // Close on outside click
+        document.addEventListener('click', () => {
+            sortSelect.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                sortSelect.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Option selection + sorting
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                // Update active state
+                options.forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+                valueLabel.textContent = option.textContent;
+
+                // Close dropdown
+                sortSelect.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+
+                // Sort rows
+                const sortBy = option.getAttribute('data-value');
+                const sorted = rows();
+
+                sorted.sort((a, b) => {
+                    if (sortBy === 'latest') {
+                        const yA = parseInt(a.querySelector('.row-year').textContent);
+                        const yB = parseInt(b.querySelector('.row-year').textContent);
+                        return yB - yA || a.querySelector('.row-num').textContent.localeCompare(b.querySelector('.row-num').textContent);
+                    }
+                    if (sortBy === 'oldest') {
+                        const yA = parseInt(a.querySelector('.row-year').textContent);
+                        const yB = parseInt(b.querySelector('.row-year').textContent);
+                        return yA - yB || a.querySelector('.row-num').textContent.localeCompare(b.querySelector('.row-num').textContent);
+                    }
+                    if (sortBy === 'az') {
+                        const nA = a.querySelector('.row-title').textContent.trim().toLowerCase();
+                        const nB = b.querySelector('.row-title').textContent.trim().toLowerCase();
+                        return nA.localeCompare(nB);
+                    }
+                    return 0;
+                });
+
+                // Re-append in new order
+                sorted.forEach(row => archiveList.appendChild(row));
+            });
+        });
+    }
+
+
+
+
+
+
+
   
 });

@@ -142,15 +142,13 @@ ul {
 
 /* Ensure the wrapper elements don't block button interactions */
 .menu-close-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 40px;
-    display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    width: auto;
+    padding: 0 !important;
     z-index: 250;
-    pointer-events: none; /* Allows elements behind it to receive clicks */
+    pointer-events: none;
 }
 
 .menu-close-btn {
@@ -165,7 +163,7 @@ ul {
     align-items: center;
     gap: 12px;
     padding: 10px;
-    pointer-events: auto; /* Overrides structural restriction to ensure clicks work perfectly */
+    pointer-events: auto;
 }
 
 .menu-close-btn span {
@@ -397,16 +395,15 @@ ul {
 }
 
 /* ==========================================================================
-   5. ARCHIVE VIEW WITH STICKY HEADERS (02 / PROJECTS)
+   5. ARCHIVE VIEW — EDITORIAL ROW LAYOUT (02 / PROJECTS)
    ========================================================================== */
 .archive-section {
     padding-top: 0 !important;
 }
 
+/* --- Sticky header / controls --- */
 .archive-sticky-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 10;
     background-color: var(--bg-primary);
     padding-top: 120px;
@@ -414,45 +411,50 @@ ul {
     margin-bottom: 20px;
 }
 
-.archive-sticky-header::after {
-    content: '';
+.archive-hero-visual {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 60px;
+    right: -40px;
+    width: 55%;
+    max-width: 760px;
+    pointer-events: none;
+    opacity: 0.6;
+    -webkit-mask-image: linear-gradient(to left, #000 55%, transparent 100%);
+            mask-image: linear-gradient(to left, #000 55%, transparent 100%);
+}
+
+.archive-hero-visual img {
     width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, var(--border-color), transparent);
+    height: auto;
+    display: block;
 }
 
 .section-intro {
+    position: relative;
+    z-index: 2;
     margin-bottom: 40px;
     max-width: 600px;
 }
 
 .section-title {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 400;
     margin-bottom: 15px;
+    line-height: 0.95;
 }
 
 .section-tagline {
     color: var(--text-muted);
     line-height: 1.5;
-}
-
-/* FILTER CONTROLS */
-.archive-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
+    max-width: 420px;
 }
 
 .search-wrapper {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 360px;
+    margin-bottom: 24px;
 }
 
 #archiveSearch {
@@ -464,53 +466,56 @@ ul {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     color: var(--accent-color);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.04em;
     outline: none;
     transition: var(--transition-smooth);
 }
 
-#archiveSearch:focus {
-    border-bottom-color: var(--accent-color);
-}
-
-#archiveSearch::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-}
+#archiveSearch:focus { border-bottom-color: var(--accent-color); }
+#archiveSearch::placeholder { color: rgba(255, 255, 255, 0.3); }
 
 .search-icon {
     position: absolute;
-    right: 10px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.3);
     pointer-events: none;
 }
 
-.tag-filters {
+/* --- Toolbar: filters / count / sort --- */
+.archive-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 22px;
+}
+
+.filter-pills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 .filter-tag {
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-muted);
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    padding: 8px 20px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: var(--transition-smooth);
 }
 
-.filter-tag:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
+.filter-tag sup { font-size: 0.6rem; opacity: 0.7; margin-left: 2px; }
+.filter-tag:hover { border-color: var(--accent-color); color: var(--accent-color); }
 
 .filter-tag.active {
     background: var(--accent-color);
@@ -519,32 +524,141 @@ ul {
     font-weight: 500;
 }
 
-/* --- THE ROW DATA GRID LAYOUT CONTAINER --- */
+.showing-count {
+    flex: 1;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+}
+
+/* --- Custom sort dropdown --- */
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.sort-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+}
+
+.custom-select {
+    position: relative;
+    min-width: 120px;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: var(--accent-color);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.select-trigger:hover,
+.custom-select.is-open .select-trigger {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.select-chevron {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.custom-select.is-open .select-chevron {
+    transform: rotate(180deg);
+}
+
+.select-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 100%;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 6px 0;
+    list-style: none;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                visibility 0.3s;
+}
+
+.custom-select.is-open .select-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.select-option {
+    padding: 10px 16px;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.select-option:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--accent-color);
+}
+
+.select-option.active {
+    color: var(--accent-color);
+    position: relative;
+}
+
+.select-option.active::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+/* --- Row list --- */
 .archive-list {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 70vh; /* Enforces scroll integrity when filters shorten list content */
-    position: relative;
+    min-height: 70vh;
 }
 
 .archive-row {
     display: grid;
-    /* Spatially split into 4 columns exactly like your reference snapshot layout */
-    grid-template-columns: 60px 420px 1fr 80px;
+    grid-template-columns: 70px minmax(0, 1.5fr) minmax(0, 1.3fr) 180px;
+    gap: 36px;
     align-items: center;
-    padding: 40px 0;
-    border-top: 1px solid var(--border-color);
-    position: relative;
-    will-change: transform, opacity;
-    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                background-color 0.5s ease,
-                padding 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.archive-row:last-child {
+    padding: 36px 0;
     border-bottom: 1px solid var(--border-color);
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                padding 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .archive-row.is-hidden {
@@ -555,108 +669,151 @@ ul {
     height: 0;
     padding-top: 0;
     padding-bottom: 0;
-    border-top: none;
+    border-bottom: none;
     overflow: hidden;
 }
 
-.project-num {
-    font-size: 2.5rem;
-    color: var(--text-muted);
+/* Index + year */
+.row-index { display: flex; flex-direction: column; gap: 10px; }
+.row-num {
     font-family: var(--font-serif);
-    letter-spacing: 0.05em;
-}
-
-/* CINEMATIC DATA THUMBNAIL TRACKS */
-.project-thumbnail {
-    width: 100%; 
-    max-width: 420px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 2px;
-    opacity: 0.85; /* Retains clean visibility standard */
+    font-size: 2.4rem;
+    color: var(--text-muted);
+    line-height: 1;
     transition: var(--transition-smooth);
+}
+.row-year { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-muted); }
+
+/* Feature image + play button */
+.row-feature {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 3px;
+    overflow: hidden;
     background-color: var(--bg-secondary);
 }
 
-.project-thumbnail img {
+.row-feature-link { display: block; width: 100%; height: 100%; }
+
+.row-feature img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.85;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
 }
 
-/* --- RE-ALIGN METADATA INFRASTRUCTURE VIA INTERIOR GRID MAPPINGS --- */
-.project-info {
-    padding-left: 50px; /* Offset separation spacing from the wide layout frame */
-    display: grid;
-    grid-template-areas: 
-        "title title" 
-        "desc year";
-    gap: 8px 24px;
-    justify-content: start;
+.play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(10, 10, 10, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
 }
 
-.project-info h3 {
-    grid-area: title;
+.play-icon {
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 3px;
+}
+
+.play-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #fff;
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.play-btn:hover .play-icon { border-left-color: var(--bg-primary); }
+
+/* Info column */
+.row-info { display: flex; flex-direction: column; align-items: flex-start; }
+.row-category {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+.row-title {
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 400;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 14px;
 }
-
-.project-info p {
-    grid-area: desc;
+.row-title a { transition: var(--transition-smooth); }
+.row-desc {
     font-size: 0.85rem;
+    line-height: 1.6;
     color: var(--text-muted);
-    letter-spacing: 0.02em;
-    white-space: nowrap; /* Keeps description neat on wide screens */
+    margin-bottom: 18px;
+    max-width: 460px;
 }
-
-.project-info .project-year {
-    grid-area: year;
-    font-size: 0.85rem;
+.row-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.row-tags .tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
     color: var(--text-muted);
-    letter-spacing: 0.05em;
-    position: static; /* Unhooks absolute positioning to join description line flow */
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: 12px;
 }
+.row-view {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--accent-color);
+}
+.row-view .arrow { transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
 
-/* --- SPINNING ACTION INTERACTIVE ACTION TRIGGER BUTTONS --- */
-.view-project-btn {
-    justify-self: end; /* Pins button flush to the grid column's right border edge */
-    font-size: 1.75rem; 
-    font-weight: 200;
+/* Row hover choreography */
+.archive-row:hover .row-num { color: var(--accent-color); }
+.archive-row:hover .row-feature img { transform: scale(1.04); opacity: 1; }
+.archive-row:hover .row-title a { color: #fff; }
+.archive-row:hover .row-view .arrow { transform: translateX(6px); }
+.archive-row:hover .row-thumb { opacity: 0.85; }
+
+/* --- Footer nav --- */
+.archive-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
     color: var(--text-muted);
+}
+.archive-footer-nav .scroll-hint { margin: 0 auto; }
+.back-to-top { display: inline-flex; align-items: center; gap: 12px; }
+.top-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 30px; height: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    transition: var(--transition-smooth);
 }
+.back-to-top:hover .top-icon { border-color: var(--accent-color); color: var(--accent-color); }
 
-.view-project-btn .plus {
-    display: inline-block;
-    will-change: transform;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
 
-/* HOVER REFINE EFFECTS ENGINE */
-.archive-row:hover {
-    background-color: rgba(255, 255, 255, 0.01);
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.archive-row:hover .project-thumbnail img {
-    transform: scale(1.03);
-}
-
-.archive-row:hover .view-project-btn .plus {
-    transform: rotate(90deg) scale(1.15);
-    color: var(--accent-color);
-}
 
 /* ==========================================================================
    6. CASE STUDIES COMPONENT DIRECTORY (03 / PROJECT-DETAIL)
@@ -950,10 +1107,39 @@ ul {
     margin-top: 2px;
 }
 
+.fullscreen-menu-overlay .menu-close-header {
+    position: fixed !important;
+    top: 30px !important;
+    right: 40px !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 9999 !important;     /* 確保在最上層不被覆蓋 */
+    pointer-events: none !important; /* 空白處允許滑鼠點擊穿透 */
+}
+
+/* 確保 CLOSE 按鈕本身恢復滑鼠點擊 */
+.fullscreen-menu-overlay .menu-close-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+
 /* ==========================================================================
    8. RESPONSIVE BREAKPOINTS ENGINE (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 1199px) {
+    .archive-hero-visual { opacity: 0.3; }
+    .archive-toolbar { flex-wrap: wrap; }
+    .showing-count { order: 3; flex-basis: 100%; text-align: left; }
+    .archive-row {
+        grid-template-columns: 60px 1.4fr 1.3fr;
+        gap: 28px;
+    }
     .portfolio-section {
         padding: 100px 40px 60px 40px;
     }
@@ -967,6 +1153,18 @@ ul {
 }
 
 @media (max-width: 767px) {
+    .archive-hero-visual { display: none; }
+    .archive-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 28px 0;
+    }
+    .row-index { flex-direction: row; align-items: baseline; gap: 14px; }
+    .row-num { font-size: 1.8rem; }
+    .row-title { font-size: 1.6rem; }
+    .archive-footer-nav .scroll-hint { display: none; }
+    .back-to-top { margin-left: auto; }
+
     .portfolio-section {
         padding: 110px 24px 60px 24px !important;
     }
@@ -1011,7 +1209,8 @@ ul {
         gap: 30px;
     }
     .menu-close-header {
-        padding: 24px 24px !important;
+        top: 24px;
+        right: 24px;
     }
     
     .case-study-grid {
@@ -1019,4 +1218,10 @@ ul {
         flex-direction: column-reverse; /* Put description details naturally back in order */
         gap: 35px;
     }
+
+    .fullscreen-menu-overlay .menu-close-header {
+        top: 24px !important;
+        right: 24px !important;
+    }
 }
+
