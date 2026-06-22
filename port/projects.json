@@ -1,0 +1,276 @@
+[
+  {
+    "id": "0",
+    "year": "2022",
+    "slug": "0.html",
+    "category": "game-design",
+    "categoryLabel": "Indie Game Mechanics",
+    "title": "COVID RUSH",
+    "desc": "An indie game mechanics exploration built in Unity, turning a chaotic supply run into a fast, satirical 3D dash. The avatars controlled by game AI can infect players, making the game more intense and difficult.",
+    "tags": ["Unity", "C#", "Game Design", "AI Mechanics"],
+    "image": "images/work/0.png",
+    "gallery": ["images/work/0.png"],
+    "credits": {
+      "System": "李諭樹",
+      "CG Script Music": "呂思函 Szu-Han Lu",
+      "Art": "吳岱容"
+    },
+    "links": {
+      "demo": "https://www.youtube.com/watch?v=cHLlB8ezq2A&list=PLilhVcqigCqBy6HfkwW4ZMQTFq4LX5PVR&index=1"
+    }
+  },
+  {
+    "id": "1",
+    "year": "2022",
+    "slug": "1.html",
+    "category": "3d-animation",
+    "categoryLabel": "3D Scene & Animation",
+    "title": "Unity Interactive Showcase",
+    "desc": "An interactive 3D scene and animation environment exploration built with customized character modeling and custom audio scripts.",
+    "tags": ["Unity", "Animation", "Character Modeling"],
+    "image": "images/w1.png",
+    "gallery": ["images/w1.png"],
+    "credits": {
+      "Supervisor": "林奕成",
+      "Scene Animation": "陳書玟",
+      "CG Script Music": "呂思函 Szu-Han Lu",
+      "Programming Art": "張巧如",
+      "Character Modeling": "林千慧"
+    }
+  },
+  {
+    "id": "2",
+    "year": "2022",
+    "slug": "2.html",
+    "category": "performance",
+    "categoryLabel": "Transdisciplinary Performance",
+    "title": "瘋城 (Mad City)",
+    "desc": "A major transdisciplinary interactive performance combining real-time technology, audio-visual environments, and physical performers.",
+    "tags": ["Tech-Art", "Performance", "Interdisciplinary"],
+    "image": "images/瘋城.jpg",
+    "gallery": [
+      "images/瘋城.jpg",
+      "images/8 - 呂思函.png"
+    ],
+    "collaborators": [
+      "鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸",
+      "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"
+    ],
+    "institution": "National Yang Ming Chiao Tung University (NYCU) & National Taiwan University of Arts (TNUA)"
+  },
+  {
+    "id": "3",
+    "year": "2022",
+    "slug": "3.html",
+    "category": "generative-art",
+    "categoryLabel": "Generative Math Art",
+    "title": "Trigonometric Ripple Composition",
+    "desc": "In this composition, the 'ground'—represented by white sand and water patterns—is generated through trigonometric functions applied to screen coordinates. By introducing time-based variations, ripples extend and flow like organic ink painting with granular sand textures.",
+    "tags": ["Creative Coding", "Trigonometric Functions", "Generative Textures"],
+    "image": "images/3-1.png",
+    "gallery": [
+      "images/3-1.png",
+      "images/3-2.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "year": "2022",
+    "slug": "4.html",
+    "category": "shader-art",
+    "categoryLabel": "GLSL Shader Art",
+    "title": "Shaders Trilogy: 恬 / 霽月 / 歸",
+    "desc": "A trilogy of digital scenery exploring different philosophical states. '恬' inspired by Zhuge Liang's wisdom, '霽月' projecting emotions onto environments, and '歸' exploring the concept of homecoming through sunset hues.",
+    "tags": ["GLSL", "Shader", "Digital Art", "Poetic Visuals"],
+    "image": "images/1.jpg",
+    "gallery": [
+      "images/1.jpg",
+      "images/2.png",
+      "images/3.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "year": "2022",
+    "slug": "5.html",
+    "category": "shader-art",
+    "categoryLabel": "Computing Aesthetics",
+    "title": "GLSL Shaders Collection",
+    "desc": "A collective series of graphics programming pieces exploring natural phenomena: 1. Waves (Voronoi/Metaballs/Ukiyo-e style), 2. Uncertain, 3. Breathing Light, 4. Reflection.",
+    "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
+    "image": "images/圖片20.png",
+    "gallery": ["images/圖片20.png"],
+    "links": {
+      "waves_video": "https://youtu.be/lh4w9Uj0TJc"
+    }
+  },
+  {
+    "id": "6",
+    "year": "2023",
+    "slug": "6.html",
+    "category": "shader-art",
+    "categoryLabel": "Generative Visuals",
+    "title": "Girl with a Pearl Earring — 匯聚的思念",
+    "desc": "Using Vermeer's masterpiece as a foundation, this work explores Brownian Motion and Random Walk algorithms to irregularly visualize the convergence of longing, remembrance, and digital dispersion.",
+    "tags": ["GLSL", "Shader", "Brownian Motion", "Random Walk", "Computing Aesthetics"],
+    "image": "images/6.png",
+    "gallery": [
+      "images/6.png",
+      "images/6-5.png"
+    ],
+    "links": {
+      "video": "https://www.youtube.com/watch?v=lGqnS0nqCEk"
+    }
+  },
+  {
+    "id": "7",
+    "year": "2023",
+    "slug": "7.html",
+    "category": "installation",
+    "categoryLabel": "Interactive Installation",
+    "title": "Open LABs: 續。旭。不休",
+    "desc": "Exhibited at NYCU Haoran Library 6th Floor. An atmospheric exploration contrasting environmental transitions between day and night environments.",
+    "tags": ["Interactive Art", "Exhibition", "Environment Design"],
+    "image": "images/work/15.png",
+    "gallery": ["images/work/15.png"],
+    "credits": {
+      "Day Scene Design": "呂思函 Szu-Han Lu",
+      "Night Scene Design": "何郁軒"
+    },
+    "exhibition": {
+      "name": "2023 Open LABs 續。旭。不休",
+      "date": "2023/1/11 - 2023/1/13",
+      "location": "NYCU Haoran Library 6F",
+      "url": "https://ict-openlabs-2023.act.nycu.edu.tw"
+    }
+  },
+  {
+    "id": "8",
+    "year": "2023",
+    "slug": "8.html",
+    "category": "unreal-engine",
+    "categoryLabel": "Real-time Technical Art",
+    "title": "Haru (はる / さくら)",
+    "desc": "An atmospheric exploration created in Unreal Engine 5 investigating themes of fading memory. 'Who is calling? While Haru has withered away... through the pulse of sakura.' Powered by Niagara particle systems and custom material shaders.",
+    "tags": ["Unreal Engine 5", "Niagara System", "Particle Shader", "Animation"],
+    "image": "images/8.jpg",
+    "gallery": [
+      "images/8.jpg",
+      "images/8-2.png"
+    ],
+    "links": {
+      "video": "https://youtu.be/8Ehx9uAEzy0"
+    }
+  },
+  {
+    "id": "9",
+    "year": "2024",
+    "slug": "9.html",
+    "category": "unreal-engine",
+    "categoryLabel": "3D Interactive Puzzle Game",
+    "title": "The World Tree (世界樹)",
+    "desc": "An immersive puzzle-solving application built in Unreal Engine 5. Players interact with open environments to nurture the World Tree, utilizing dynamic Niagara particle systems to symbolize environmental restoration and the continuation of life.",
+    "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics"],
+    "image": "images/work/14.png",
+    "gallery": ["images/work/14.png"]
+  },
+  {
+    "id": "10",
+    "year": "2024",
+    "slug": "10.html",
+    "category": "interactive-installation",
+    "categoryLabel": "Hardware & Interactive",
+    "title": "Brain Consciousness Space",
+    "desc": "This work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create a visual effect that models rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. It uses simple sensors as interactive devices to realize human stimuli.",
+    "tags": ["Arduino", "Unreal Engine 5", "Interactive Installation", "Sensors"],
+    "image": "images/10-2.png",
+    "gallery": ["images/10-2.png"]
+  },
+  {
+    "id": "11",
+    "year": "2023",
+    "slug": "11.html",
+    "category": "exhibition",
+    "categoryLabel": "Exhibition / Performance",
+    "title": "Zhi Xing Art Space Exhibition",
+    "desc": "Exhibition and Opening Forum at National Yang Ming Chiao Tung University (Yang Ming Campus), College of Humanities and Social Sciences, Zhi Xing Art Space. Featuring the Immaculate Dance Theater Forum.",
+    "tags": ["Exhibition", "Performance Art", "NYCU"],
+    "image": "images/11-3.jpg",
+    "gallery": [
+      "images/11-3.jpg",
+      "images/11-4.jpg",
+      "images/11-1.jpg",
+      "images/11-2.jpg",
+      "images/11-5.png",
+      "images/11-6.png"
+    ]
+  },
+  {
+    "id": "12",
+    "year": "2024",
+    "slug": "12.html",
+    "category": "generative-art",
+    "categoryLabel": "Idea Art & Programming",
+    "title": "Idea Art Exploration",
+    "desc": "A collaborative art piece blending conceptual ideation with creative programming.",
+    "tags": ["Creative Coding", "Conceptual Art", "Collaboration"],
+    "image": "images/IMG_6023.JPG",
+    "gallery": [
+      "images/IMG_6023.JPG",
+      "images/12-1.jpg",
+      "images/12-2.png",
+      "images/12-3.png",
+      "images/12-4.png",
+      "images/12-5.PNG",
+      "images/12-6.png"
+    ],
+    "credits": {
+      "Idea Art Programming": "呂思函 Szu-Han Lu",
+      "Idea Art": "周小淨 Hsiao-Ching Chou"
+    }
+  },
+  {
+    "id": "13",
+    "year": "2024",
+    "slug": "13.html",
+    "category": "mobile-interactive",
+    "categoryLabel": "Interactive Application",
+    "title": "Mobile Fish Interaction",
+    "desc": "An interactive mobile application where an introduction panel for the fish will dynamically appear on the mobile device through user interaction.",
+    "tags": ["Mobile", "Interactive", "3D Art", "Animation"],
+    "image": "images/13.gif",
+    "gallery": ["images/13.gif"],
+    "credits": {
+      "3D Art": "曹雅婷",
+      "2D Art": "劉思彤",
+      "Programming": "呂思函 Szu-Han Lu",
+      "Animation": "汪楚翊、陳柏晟、陳宏源"
+    },
+    "links": {
+      "demo": "https://youtube.com/shorts/u1-DQfZunAA?feature=share"
+    }
+  },
+  {
+    "id": "14",
+    "year": "2024",
+    "slug": "14.html",
+    "category": "interactive-media",
+    "categoryLabel": "Interactive Media",
+    "title": "Project 14 Visuals",
+    "desc": "Interactive image gallery and media showcase.",
+    "tags": ["Showcase", "Media"],
+    "image": "images/work/14.png",
+    "gallery": ["images/work/14.png"]
+  },
+  {
+    "id": "15",
+    "year": "2024", 
+    "slug": "15.html",
+    "category": "installation",
+    "categoryLabel": "Bio-Art Installation",
+    "title": "Ghost in the Soil (Sketches & Materials)",
+    "desc": "Sketches, materials and documentation for Ghost in the Soil project.",
+    "tags": ["Arduino", "Kinetic", "Bio-Art"],
+    "image": "images/15-2.png"
+  }
+]
