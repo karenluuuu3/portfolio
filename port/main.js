@@ -54,15 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. RENDER ARCHIVE PAGE
     // ==========================================
     function renderArchive(projects, container) {
-        container.innerHTML = ''; // 清空容器
-        
-        projects.forEach(proj => {
-            // 組合 Tag 供搜尋引擎比對
+        container.innerHTML = '';
+
+        // 預設依日期由新到舊排序
+        const sorted = [...projects].sort((a, b) => {
+            const dateA = parseFloat(a.date) || 0;
+            const dateB = parseFloat(b.date) || 0;
+            return dateB - dateA;
+        });
+
+        sorted.forEach(proj => {
             const searchTags = (proj.tags.join(' ') + ' ' + proj.title + ' ' + proj.year).toLowerCase();
             const tagsHTML = proj.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-            
+
             const rowHTML = `
-                <div class="archive-row" data-category="${proj.category}" data-tags="${searchTags}">
+                <div class="archive-row" data-category="${proj.category}" data-group="${proj.group}" data-tags="${searchTags}">
                     <div class="row-index">
                         <span class="row-num">${proj.id}</span>
                         <span class="row-year">${proj.year}</span>
@@ -71,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="project-detail.html?id=${proj.id}" class="row-feature-link">
                             <img src="${proj.image}" alt="${proj.title}">
                         </a>
-                        <button class="play-btn" aria-label="Play preview"><span class="play-icon"></span></button>
                     </div>
                     <div class="row-info">
                         <span class="row-category">${proj.categoryLabel}</span>
@@ -85,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.insertAdjacentHTML('beforeend', rowHTML);
         });
 
-        // 資料生成完畢後，初始化篩選與排序邏輯
-        initArchiveLogic(projects.length);
+        initArchiveLogic(sorted.length);
         initSortLogic();
     }
 
@@ -142,10 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
         function applyFilters() {
             let visibleCount = 0;
             archiveRows.forEach(row => {
-                const rowCategory = row.getAttribute('data-category') || '';
+                const rowGroup = row.getAttribute('data-group') || '';
                 const rowTags = (row.getAttribute('data-tags') || '').toLowerCase();
 
-                const matchesCategory = (activeCategory === 'all' || rowCategory === activeCategory);
+                const matchesCategory = (activeCategory === 'all' || rowGroup === activeCategory);
                 const matchesSearch = rowTags.includes(searchQuery);
 
                 if (matchesCategory && matchesSearch) {

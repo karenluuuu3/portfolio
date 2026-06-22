@@ -1,15 +1,17 @@
 [
   {
     "id": "0",
-    "year": "2022",
+    "year": "2021",
+    "date": "2021.10",
     "slug": "0.html",
     "category": "game-design",
+    "group": "engine-3d",
     "categoryLabel": "Indie Game Mechanics",
     "title": "COVID RUSH",
-    "desc": "An indie game mechanics exploration built in Unity, turning a chaotic supply run into a fast, satirical 3D dash. The avatars controlled by game AI can infect players, making the game more intense and difficult.",
+    "desc": "An indie game mechanics exploration built in Unity, turning a chaotic supply run into a fast, satirical 3D dash. Players navigate between safe (green) and epidemic (red) zones that shift with the BGM, collecting masks and vaccines while avoiding AI-controlled infected avatars.",
     "tags": ["Unity", "C#", "Game Design", "AI Mechanics"],
-    "image": "images/work/0.png",
-    "gallery": ["images/work/0.png"],
+    "image": "images/0.png",
+    "gallery": ["images/0-1.png", "images/0-2.png", "images/0.png"],
     "credits": {
       "System": "李諭樹",
       "CG Script Music": "呂思函 Szu-Han Lu",
@@ -21,15 +23,17 @@
   },
   {
     "id": "1",
-    "year": "2022",
+    "year": "2021",
+    "date": "2021.07",
     "slug": "1.html",
-    "category": "3d-animation",
-    "categoryLabel": "3D Scene & Animation",
-    "title": "Unity Interactive Showcase",
-    "desc": "An interactive 3D scene and animation environment exploration built with customized character modeling and custom audio scripts.",
-    "tags": ["Unity", "Animation", "Character Modeling"],
+    "category": "vr-escape-room",
+    "group": "engine-3d",
+    "categoryLabel": "VR x Hand Tracking x Escape Room",
+    "title": "深海低吟 | Deep In Sea",
+    "desc": "A VR escape room experience built in Unity with Oculus Quest 2 hand tracking. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles involving hand gesture recognition, magical drawing, lightsaber combat, and branching story paths to escape a mermaid's curse.",
+    "tags": ["Unity", "VR", "Hand Tracking", "Oculus Quest 2", "Escape Room", "Blender", "Vroid"],
     "image": "images/w1.png",
-    "gallery": ["images/w1.png"],
+    "gallery": ["images/10_深海低吟_1.png", "images/10_深海低吟_2.png", "images/圖片3.png", "images/圖片15.png", "images/圖片1.png", "images/圖片11.png", "images/圖片5.png", "images/logo_v3.png", "images/w1.png"],
     "credits": {
       "Supervisor": "林奕成",
       "Scene Animation": "陳書玟",
@@ -40,60 +44,69 @@
   },
   {
     "id": "2",
-    "year": "2022",
+    "year": "2021",
+    "date": "2021.09",
     "slug": "2.html",
-    "category": "performance",
-    "categoryLabel": "Transdisciplinary Performance",
-    "title": "瘋城 (Mad City)",
-    "desc": "A major transdisciplinary interactive performance combining real-time technology, audio-visual environments, and physical performers.",
-    "tags": ["Tech-Art", "Performance", "Interdisciplinary"],
+    "category": "sound-art",
+    "group": "interactive-system",
+    "categoryLabel": "Sound Art x Audio Visual",
+    "title": "Time Lapse",
+    "desc": "A sound art and audio-visual piece combining media transcription, modulation, and synesthetic experimentation. Using Ableton effects for sound modulation (echo, layering, repetition) and TouchDesigner for real-time audiovisual generation, the work reflects on the emotional arc of the pandemic—from anxiety to adaptation and coexistence.",
+    "tags": ["Sound Art", "Audio Visual", "TouchDesigner", "Ableton", "Media Transcription"],
     "image": "images/瘋城.jpg",
-    "gallery": [
-      "images/瘋城.jpg",
-      "images/8 - 呂思函.png"
-    ],
-    "collaborators": [
-      "鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸",
-      "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"
-    ],
-    "institution": "National Yang Ming Chiao Tung University (NYCU) & National Taiwan University of Arts (TNUA)"
+    "gallery": ["images/td-technique.png", "images/圖片2.png", "images/圖片6.png", "images/圖片0.png", "images/圖片7.png", "images/圖片8.png", "images/瘋城.jpg", "images/8 - 呂思函.png"],
+    "collaborators": ["鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸", "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"],
+    "exhibition": {
+      "name": "NYCU x TNUA【瘋城 This Crazy City】Online Headphone Concert",
+      "curation": "謝瀞瑩 Olifa Hsieh",
+      "institution": "National Yang Ming Chiao Tung University (NYCU) & National Taiwan University of Arts (TNUA)"
+    },
+    "links": {
+      "video": "https://youtu.be/IYBkvauOYLA"
+    }
   },
   {
     "id": "3",
     "year": "2022",
+    "date": "2022.12",
     "slug": "3.html",
     "category": "generative-art",
+    "group": "graphics-shader",
     "categoryLabel": "Generative Math Art",
-    "title": "Trigonometric Ripple Composition",
-    "desc": "In this composition, the 'ground'—represented by white sand and water patterns—is generated through trigonometric functions applied to screen coordinates. By introducing time-based variations, ripples extend and flow like organic ink painting with granular sand textures.",
-    "tags": ["Creative Coding", "Trigonometric Functions", "Generative Textures"],
+    "title": "墨染熹微 | Smudge of Dawn",
+    "desc": "A GLSL generative art piece inspired by karesansui (dry landscape gardens) and traditional Chinese ink painting. The 'ground'—represented by white sand and water patterns—is generated through trigonometric functions applied to screen coordinates. Time-based variations create ripples that extend and flow like organic ink brush strokes, with granular sand textures and three white stones guiding the composition.",
+    "tags": ["GLSL", "Shader", "Ray Marching", "Creative Coding", "Generative Textures", "Ink Painting"],
     "image": "images/3-1.png",
-    "gallery": [
-      "images/3-1.png",
-      "images/3-2.jpg"
-    ]
+    "gallery": ["images/3-1.png", "images/3-2.jpg"],
+    "links": {
+      "video": "https://youtu.be/5ZsH2NQUvhM"
+    }
   },
   {
     "id": "4",
-    "year": "2022",
+    "year": "2023",
+    "date": "2023.01",
     "slug": "4.html",
-    "category": "shader-art",
-    "categoryLabel": "GLSL Shader Art",
-    "title": "Shaders Trilogy: 恬 / 霽月 / 歸",
-    "desc": "A trilogy of digital scenery exploring different philosophical states. '恬' inspired by Zhuge Liang's wisdom, '霽月' projecting emotions onto environments, and '歸' exploring the concept of homecoming through sunset hues.",
-    "tags": ["GLSL", "Shader", "Digital Art", "Poetic Visuals"],
+    "category": "unreal-engine",
+    "group": "engine-3d",
+    "categoryLabel": "UE4 Workshop — Digital Scenery Trilogy",
+    "title": "UE4 Workshop: 恬 / 霽月 / 歸",
+    "desc": "A trilogy of digital landscapes created during a one-month UE4 workshop, building mountains, snow, water, sky, physics, wind fields, post-processing, and rendering from scratch. '恬' is inspired by Zhuge Liang's philosophy of tranquility; '霽月' projects emotions onto environments; '歸' explores homecoming through sunset hues.",
+    "tags": ["Unreal Engine 4", "Gaea", "Animation", "Landscape", "Digital Scenery"],
     "image": "images/1.jpg",
-    "gallery": [
-      "images/1.jpg",
-      "images/2.png",
-      "images/3.jpg"
-    ]
+    "gallery": ["images/1.jpg", "images/2.png", "images/3.jpg"],
+    "links": {
+      "恬_instagram": "https://www.instagram.com/p/Cm39lniSULK/?img_index=2",
+      "霽月_instagram": "https://www.instagram.com/p/Cm396r5S2Lo/?img_index=2"
+    }
   },
   {
     "id": "5",
     "year": "2022",
+    "date": "2022",
     "slug": "5.html",
     "category": "shader-art",
+    "group": "graphics-shader",
     "categoryLabel": "Computing Aesthetics",
     "title": "GLSL Shaders Collection",
     "desc": "A collective series of graphics programming pieces exploring natural phenomena: 1. Waves (Voronoi/Metaballs/Ukiyo-e style), 2. Uncertain, 3. Breathing Light, 4. Reflection.",
@@ -101,23 +114,24 @@
     "image": "images/圖片20.png",
     "gallery": ["images/圖片20.png"],
     "links": {
-      "waves_video": "https://youtu.be/lh4w9Uj0TJc"
+      "waves_video": "https://youtu.be/lh4w9Uj0TJc",
+      "uncertain_instagram": "https://www.instagram.com/p/Cm4arWhSRJi/?img_index=2",
+      "breathing_light_instagram": "https://www.instagram.com/p/Cm4Z4UoymyO/?img_index=2"
     }
   },
   {
     "id": "6",
     "year": "2023",
+    "date": "2023.01",
     "slug": "6.html",
     "category": "shader-art",
+    "group": "graphics-shader",
     "categoryLabel": "Generative Visuals",
-    "title": "Girl with a Pearl Earring — 匯聚的思念",
-    "desc": "Using Vermeer's masterpiece as a foundation, this work explores Brownian Motion and Random Walk algorithms to irregularly visualize the convergence of longing, remembrance, and digital dispersion.",
+    "title": "匯聚的思念 | The Convergence of Longing",
+    "desc": "Using Vermeer's painting 'Girl with a Pearl Earring' as the foundation, this work explores Brownian Motion and Random Walk algorithms to irregularly visualize the convergence of longing, remembrance, and digital dispersion.",
     "tags": ["GLSL", "Shader", "Brownian Motion", "Random Walk", "Computing Aesthetics"],
     "image": "images/6.png",
-    "gallery": [
-      "images/6.png",
-      "images/6-5.png"
-    ],
+    "gallery": ["images/6.png", "images/6-5.png"],
     "links": {
       "video": "https://www.youtube.com/watch?v=lGqnS0nqCEk"
     }
@@ -125,121 +139,139 @@
   {
     "id": "7",
     "year": "2023",
+    "date": "2023.01",
     "slug": "7.html",
-    "category": "installation",
-    "categoryLabel": "Interactive Installation",
-    "title": "Open LABs: 續。旭。不休",
-    "desc": "Exhibited at NYCU Haoran Library 6th Floor. An atmospheric exploration contrasting environmental transitions between day and night environments.",
-    "tags": ["Interactive Art", "Exhibition", "Environment Design"],
-    "image": "images/work/15.png",
-    "gallery": ["images/work/15.png"],
+    "category": "point-cloud",
+    "group": "interactive-system",
+    "categoryLabel": "Point Cloud Animation & Installation",
+    "title": "隧歲 | The Tunnel",
+    "desc": "A point cloud animation centered around Hsinchu's Zhongzheng Road Night Market, scanned into a point cloud model. Atmospheric animations are created separately for daytime and nighttime, incorporating mist, lighting variations, color shifts, particle dynamics, post-processing, and field-recorded sounds to convey an audiovisual experience that traverses time and space in Hsinchu's old town.",
+    "tags": ["Unreal Engine 4", "Point Cloud", "LiDAR", "VFX", "Animation"],
+    "image": "images/7.png",
+    "gallery": ["images/7.png", "images/7-2.png", "images/7-3.png"],
     "credits": {
-      "Day Scene Design": "呂思函 Szu-Han Lu",
-      "Night Scene Design": "何郁軒"
+      "Day Scene": "呂思函 Szu-Han Lu",
+      "Night Scene": "何郁軒"
     },
     "exhibition": {
       "name": "2023 Open LABs 續。旭。不休",
       "date": "2023/1/11 - 2023/1/13",
       "location": "NYCU Haoran Library 6F",
       "url": "https://ict-openlabs-2023.act.nycu.edu.tw"
+    },
+    "links": {
+      "video": "https://youtu.be/aIC0xbeB45c"
     }
   },
   {
     "id": "8",
     "year": "2023",
+    "date": "2023.03",
     "slug": "8.html",
     "category": "unreal-engine",
+    "group": "engine-3d",
     "categoryLabel": "Real-time Technical Art",
-    "title": "Haru (はる / さくら)",
+    "title": "はる | Haru",
     "desc": "An atmospheric exploration created in Unreal Engine 5 investigating themes of fading memory. 'Who is calling? While Haru has withered away... through the pulse of sakura.' Powered by Niagara particle systems and custom material shaders.",
     "tags": ["Unreal Engine 5", "Niagara System", "Particle Shader", "Animation"],
     "image": "images/8.jpg",
-    "gallery": [
-      "images/8.jpg",
-      "images/8-2.png"
-    ],
+    "gallery": ["images/8.jpg", "images/8-2.png"],
     "links": {
       "video": "https://youtu.be/8Ehx9uAEzy0"
     }
   },
   {
     "id": "9",
-    "year": "2024",
+    "year": "2023",
+    "date": "2023.05",
     "slug": "9.html",
     "category": "unreal-engine",
+    "group": "engine-3d",
     "categoryLabel": "3D Interactive Puzzle Game",
-    "title": "The World Tree (世界樹)",
-    "desc": "An immersive puzzle-solving application built in Unreal Engine 5. Players interact with open environments to nurture the World Tree, utilizing dynamic Niagara particle systems to symbolize environmental restoration and the continuation of life.",
-    "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics"],
-    "image": "images/work/14.png",
-    "gallery": ["images/work/14.png"]
+    "title": "植•栽 | Planted for Planting",
+    "desc": "An immersive puzzle-solving game built in Unreal Engine 5. Players explore a maze, solve planting puzzles (hint: related to number of leaves), and nurture the World Tree. Combines maze exploration with open environments, utilizing Niagara particle systems to symbolize environmental restoration and the continuation of life.",
+    "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics", "Escape Room"],
+    "image": "images/9-1.png",
+    "gallery": ["images/9-1.png", "images/9.png"]
   },
   {
     "id": "10",
-    "year": "2024",
+    "year": "2023",
+    "date": "2023.06",
     "slug": "10.html",
     "category": "interactive-installation",
-    "categoryLabel": "Hardware & Interactive",
-    "title": "Brain Consciousness Space",
-    "desc": "This work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create a visual effect that models rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. It uses simple sensors as interactive devices to realize human stimuli.",
-    "tags": ["Arduino", "Unreal Engine 5", "Interactive Installation", "Sensors"],
+    "group": "interactive-system",
+    "categoryLabel": "Hardware & Interactive Installation",
+    "title": "緒絮 | Threads of Thought",
+    "desc": "This work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create visuals that model rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. Simple sensors serve as interactive devices to realize human stimuli in this brain consciousness space as a medium.",
+    "tags": ["Arduino", "Unreal Engine 5", "Mixed Reality", "Niagara System", "Noise Art", "Shader", "Ultrasonic Sensor", "Interactive Installation"],
     "image": "images/10-2.png",
-    "gallery": ["images/10-2.png"]
+    "gallery": ["images/10-1.png", "images/10-2.png"],
+    "links": {
+      "video": "https://youtu.be/diqtChicvnQ"
+    }
   },
   {
     "id": "11",
     "year": "2023",
+    "date": "2023.10",
     "slug": "11.html",
-    "category": "exhibition",
-    "categoryLabel": "Exhibition / Performance",
-    "title": "Zhi Xing Art Space Exhibition",
-    "desc": "Exhibition and Opening Forum at National Yang Ming Chiao Tung University (Yang Ming Campus), College of Humanities and Social Sciences, Zhi Xing Art Space. Featuring the Immaculate Dance Theater Forum.",
-    "tags": ["Exhibition", "Performance Art", "NYCU"],
+    "category": "installation",
+    "group": "interactive-system",
+    "categoryLabel": "Multimedia Installation",
+    "title": "存在觀察 | Existence Observation",
+    "desc": "A two-device, four-stage multimedia installation. Device one uses a 'window' (door) as a symbolic visual medium, with the exhibition space recreated as a point cloud model in Unreal Engine 5. When viewers pause before it, they glimpse the invisible particles—data, consciousness, imagination—that construct human experience. Device two presents 'whispers' on the ground. Stages progress from an inviting tunnel of light, to a theatrical dawn, to energy and existence, and finally to consciousness and emotion.",
+    "tags": ["Unreal Engine 5", "Mixed Reality", "Arduino", "Niagara System", "Point Cloud", "Multimedia Installation"],
     "image": "images/11-3.jpg",
-    "gallery": [
-      "images/11-3.jpg",
-      "images/11-4.jpg",
-      "images/11-1.jpg",
-      "images/11-2.jpg",
-      "images/11-5.png",
-      "images/11-6.png"
-    ]
+    "gallery": ["images/11-7.png", "images/11-3.jpg", "images/11-4.jpg", "images/11-1.jpg", "images/11-2.jpg", "images/11-5.png", "images/11-6.png"],
+    "exhibition": {
+      "name": "虛構｜The Pledge｜L'Engagement 物質性演算美學展",
+      "date": "2023/10/6 - 2023/11/1",
+      "location": "NYCU Yang Ming Campus, College of Humanities and Social Sciences, Zhi Xing Art Space",
+      "event": "Opening and Immaculate Dance Theater Forum: 10/6 12:00-15:30"
+    },
+    "links": {
+      "instagram": "https://www.instagram.com/p/CzGz9iTyKnR/?img_index=2"
+    }
   },
   {
     "id": "12",
     "year": "2024",
+    "date": "2024",
     "slug": "12.html",
     "category": "generative-art",
+    "group": "graphics-shader",
     "categoryLabel": "Idea Art & Programming",
-    "title": "Idea Art Exploration",
-    "desc": "A collaborative art piece blending conceptual ideation with creative programming.",
-    "tags": ["Creative Coding", "Conceptual Art", "Collaboration"],
+    "title": "痕跡 | Traces",
+    "desc": "Drawing inspiration from ceramic crazing (開片) technique, this work explores the aesthetic dialogue between temporality and human intervention. Cracks are treated as tangible representations of time, simulated via Quadtree algorithms and procedural generation. The work extends crack expressions into diverse visual forms including crystal engraving, ripples, and skin meridians, liberating cracks from the traditional ceramic framework into contemporary digital art. Keywords: Digital Art, Quadtree, Crazing, Multimedia.",
+    "tags": ["Creative Coding", "Conceptual Art", "Quadtree", "Procedural Generation", "Digital Art", "Collaboration"],
     "image": "images/IMG_6023.JPG",
-    "gallery": [
-      "images/IMG_6023.JPG",
-      "images/12-1.jpg",
-      "images/12-2.png",
-      "images/12-3.png",
-      "images/12-4.png",
-      "images/12-5.PNG",
-      "images/12-6.png"
-    ],
+    "gallery": ["images/IMG_5987.jpg", "images/IMG_5846.jpg", "images/IMG_6012.jpg", "images/IMG_6023.JPG", "images/12-1.jpg", "images/12-2.png", "images/12-3.png", "images/12-4.png", "images/12-5.PNG", "images/12-6.png"],
     "credits": {
       "Idea Art Programming": "呂思函 Szu-Han Lu",
       "Idea Art": "周小淨 Hsiao-Ching Chou"
-    }
+    },
+    "exhibition": {
+      "name": "GDAP#13 閾質 (LIMINAL)",
+      "date": "2024/7/6 - 2024/7/27",
+      "hours": "12:00 - 17:30 (Closed Mon & Tue)",
+      "location": "No. 256, Section 1, Dihua Street, Datong District, Taipei City (Near Daqiaotou MRT Station)"
+    },
+    "note": "Paper submissions have not been made public yet."
   },
   {
     "id": "13",
-    "year": "2024",
+    "year": "2022",
+    "date": "2022.08",
     "slug": "13.html",
     "category": "mobile-interactive",
-    "categoryLabel": "Interactive Application",
-    "title": "Mobile Fish Interaction",
-    "desc": "An interactive mobile application where an introduction panel for the fish will dynamically appear on the mobile device through user interaction.",
-    "tags": ["Mobile", "Interactive", "3D Art", "Animation"],
+    "group": "interactive-system",
+    "categoryLabel": "Interactive AR Application",
+    "title": "水族魚生 | AquaVerse",
+    "desc": "An augmented reality mobile application where viewers use smartphones to explore an underwater world. Users interact with fish on the screen, and an introduction panel for each fish dynamically appears on the mobile device, providing knowledge about different species in an engaging and immersive way.",
+    "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
     "image": "images/13.gif",
-    "gallery": ["images/13.gif"],
+    "gallery": ["images/13.png", "images/13-1.png", "images/13-2.png", "images/13.gif"],
     "credits": {
       "3D Art": "曹雅婷",
       "2D Art": "劉思彤",
@@ -252,25 +284,46 @@
   },
   {
     "id": "14",
-    "year": "2024",
+    "year": "2022",
+    "date": "2022.12",
     "slug": "14.html",
-    "category": "interactive-media",
-    "categoryLabel": "Interactive Media",
-    "title": "Project 14 Visuals",
-    "desc": "Interactive image gallery and media showcase.",
-    "tags": ["Showcase", "Media"],
-    "image": "images/work/14.png",
-    "gallery": ["images/work/14.png"]
+    "category": "ar-fitness-game",
+    "group": "interactive-system",
+    "categoryLabel": "AR Mixed Image Recognition & AIoT Game",
+    "title": "垃圾車等等我 | Garbage Truck, Wait for Me",
+    "desc": "A home fitness game app developed through industry-school collaboration with Field Technology Ltd. and NOBOLLEL. Using AR mixed image recognition and AIoT rapid game module construction, the app uses motion sensing via smartphone cameras to detect body movements combined with gamification. Inspired by the Taiwanese cultural experience of chasing the garbage truck, the game makes fitness accessible, fun, and equipment-free for all ages.",
+    "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
+    "image": "images/14.png",
+    "gallery": ["images/14.png", "images/14-39.jpg"],
+    "links": {
+      "testing_video": "https://youtu.be/nZCknoQdh40",
+      "demo_video": "https://youtu.be/C6i9WdZ-_eE"
+    }
   },
   {
     "id": "15",
-    "year": "2024", 
+    "year": "2025",
+    "date": "2025.06",
     "slug": "15.html",
     "category": "installation",
-    "categoryLabel": "Bio-Art Installation",
-    "title": "Ghost in the Soil (Sketches & Materials)",
-    "desc": "Sketches, materials and documentation for Ghost in the Soil project.",
-    "tags": ["Arduino", "Kinetic", "Bio-Art"],
-    "image": "images/15-2.png"
+    "group": "interactive-system",
+    "categoryLabel": "Interactive Installation",
+    "title": "洄鄉 | Echo-me",
+    "desc": "An interactive installation interweaving silhouettes of humans and fish into a species fusion—'human but not human, fish but not fish.' Abstract contours depict a 'homeward migration' across urban landscapes and shimmering waters. The installation detects viewers' presence and generates new on-screen characters that join the procession, symbolizing the integration and continuity of human history with nature.",
+    "tags": ["Interactive Installation", "Species Fusion", "Migration", "Sensor", "Real-time Generation"],
+    "image": "images/15.png",
+    "gallery": ["images/15.png", "images/15-5.png", "images/15-6.png", "images/15-7.png", "images/15-4.jpg", "images/15-2.png", "images/15-3.png"],
+    "credits": {
+      "Music Production": "DC",
+      "Plant Materials": "陳以荷 Yi-He Chen",
+      "Species Materials": "abwu"
+    },
+    "exhibition": {
+      "name": "2025六燃文件展：洄游六燃。洄游頭前溪",
+      "date": "2025/6/2 - 2025/7/19",
+      "hours": "10:30 - 18:30 (Closed on Sundays)",
+      "location": "B1, Haoran Library, NYCU Hsinchu Campus",
+      "url": "https://thesixfuelfactorydocumenta2025.web.nycu.edu.tw/2025/04/26/%e9%81%8b%e7%ae%97%e6%b2%b3%e6%b5%81/"
+    }
   }
 ]

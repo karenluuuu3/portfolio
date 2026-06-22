@@ -732,44 +732,6 @@ ul {
     transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
 }
 
-.play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background: rgba(10, 10, 10, 0.25);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-}
-
-.play-icon {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 7px 0 7px 12px;
-    border-color: transparent transparent transparent #fff;
-    margin-left: 3px;
-}
-
-.play-btn:hover {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: #fff;
-    transform: translate(-50%, -50%) scale(1.08);
-}
-
-.play-btn:hover .play-icon {
-    border-left-color: var(--bg-primary);
-}
-
 .row-info {
     display: flex;
     flex-direction: column;
