@@ -796,47 +796,6 @@ ul {
 .archive-row:hover .row-title a { color: #fff; }
 .archive-row:hover .row-view .arrow { transform: translateX(6px); }
 
-/* --- Archive footer --- */
-.archive-footer-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    color: var(--text-muted);
-}
-
-.archive-footer-nav .scroll-hint {
-    margin: 0 auto;
-}
-
-.back-to-top {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.top-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    transition: var(--transition-smooth);
-}
-
-.back-to-top:hover .top-icon {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
-
-
 /* ==========================================================================
    6. PROJECT DETAIL — EDITORIAL CASE STUDY LAYOUT
    ========================================================================== */
@@ -1601,19 +1560,19 @@ body.is-leaving {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid var(--border-color);
-    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    background: rgba(10, 10, 10, 0.9);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    color: var(--text-muted);
-    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
     cursor: pointer;
     z-index: 90;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
-                border-color 0.3s ease, color 0.3s ease;
+                border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
 }
 
 .floating-top-btn.is-visible {
@@ -1625,6 +1584,7 @@ body.is-leaving {
 .floating-top-btn:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================================================
@@ -1636,7 +1596,7 @@ body.is-leaving {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 80px;
+    padding: 30px 80px 0px 80px;
     border-top: 1px solid var(--border-color);
     font-size: 0.75rem;
     letter-spacing: 0.08em;
@@ -1761,7 +1721,6 @@ body.is-leaving {
     .row-index { flex-direction: row; align-items: baseline; gap: 14px; }
     .row-num { font-size: 1.8rem; }
     .row-title { font-size: 1.6rem; }
-    .archive-footer-nav .scroll-hint { display: none; }
 
     /* About */
     .about-section { padding-left: 24px; }
