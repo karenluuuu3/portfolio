@@ -381,16 +381,6 @@ ul {
     margin-bottom: 40px;
 }
 
-.cta-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 6px;
-}
-
 
 /* ==========================================================================
    5. ARCHIVE VIEW — EDITORIAL ROW LAYOUT
@@ -1509,7 +1499,12 @@ ul {
     gap: 12px;
     font-size: 0.78rem;
     letter-spacing: 0.14em;
+    color: var(--text-muted);
     margin-top: 8px;
+}
+
+.next-project-link:hover {
+    color: var(--accent-color);
 }
 
 .next-project-link .arrow {
@@ -1798,42 +1793,7 @@ body.is-leaving {
     }
 }
 
-/* --- Link Hover Underline Animation --- */
-.cta-link,
-.row-view,
-.detail-doc-link,
-.detail-back-link,
-.next-project-link,
-.download-cv-btn {
-    position: relative;
-}
 
-.cta-link::after,
-.row-view::after,
-.detail-doc-link::after,
-.next-project-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--accent-color);
-    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.cta-link:hover::after,
-.row-view:hover::after,
-.detail-doc-link:hover::after,
-.next-project-link:hover::after {
-    width: 100%;
-}
-
-/* cta-link 已有 border-bottom，移除原本的 */
-.cta-link {
-    border-bottom: none;
-    padding-bottom: 0;
-}
 
 /* --- Tag Pill Hover Ripple --- */
 .row-tags .tag {
