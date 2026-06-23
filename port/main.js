@@ -60,13 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="row-year">${proj.year}</span>
                     </div>
                     <div class="row-feature">
-                        <a href="project-detail.html?id=${proj.id}" class="row-feature-link">
-                            <img src="${proj.image}" alt="${proj.title}">
-                        </a>
+                        <img src="${proj.image}" alt="${proj.title}">
                     </div>
                     <div class="row-info">
                         <span class="row-category">${proj.categoryLabel}</span>
-                        <h3 class="row-title"><a href="project-detail.html?id=${proj.id}">${proj.title}</a></h3>
+                        <h3 class="row-title">${proj.title}</h3>
                         <p class="row-desc">${proj.desc}</p>
                         <div class="row-tags">${tagsHTML}</div>
                         <a href="project-detail.html?id=${proj.id}" class="row-view">VIEW PROJECT <span class="arrow">→</span></a>

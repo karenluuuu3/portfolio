@@ -794,7 +794,7 @@ ul {
 .archive-row:hover .row-num { color: var(--accent-color); }
 .archive-row:hover .row-feature img { transform: scale(1.04); opacity: 1; }
 .archive-row:hover .row-title a { color: #fff; }
-.archive-row:hover .row-view .arrow { transform: translateX(6px); }
+.row-view:hover .arrow { transform: translateX(6px); }
 
 /* ==========================================================================
    6. PROJECT DETAIL — EDITORIAL CASE STUDY LAYOUT
