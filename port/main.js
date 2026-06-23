@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const rowHTML = `
                 <div class="archive-row" data-category="${proj.category}" data-group="${proj.group}" data-tags="${searchTags}">
                     <div class="row-index">
-                        <span class="row-num">${proj.id}</span>
+                        <span class="row-num"></span>
                         <span class="row-year">${proj.year}</span>
                     </div>
                     <div class="row-feature">
@@ -76,8 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
             container.insertAdjacentHTML('beforeend', rowHTML);
         });
 
+        renumberVisibleRows();
         initArchiveLogic(sorted.length);
         initSortLogic();
+    }
+
+    // ==========================================
+    // RENUMBER VISIBLE ROWS
+    // ==========================================
+    function renumberVisibleRows() {
+        const rows = document.querySelectorAll('.archive-row');
+        let count = 1;
+        rows.forEach(row => {
+            if (!row.classList.contains('is-hidden')) {
+                row.querySelector('.row-num').textContent = String(count).padStart(2, '0');
+                count++;
+            }
+        });
     }
 
 
@@ -446,6 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             if (showingCountEl) showingCountEl.textContent = `SHOWING ${visibleCount} PROJECTS`;
+            renumberVisibleRows();
         }
 
         if (searchInput) {
@@ -516,6 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 rows.forEach(row => archiveList.appendChild(row));
+                renumberVisibleRows();
             });
         });
     }
@@ -583,5 +600,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    
+
 });

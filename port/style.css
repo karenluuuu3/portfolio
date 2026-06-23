@@ -372,31 +372,6 @@ ul {
     padding-bottom: 6px;
 }
 
-.hero-footer {
-    position: relative;
-    z-index: 2;
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-top: 40px;
-}
-
-.social-links {
-    display: flex;
-    gap: 30px;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-}
-
-
-
 
 /* ==========================================================================
    5. ARCHIVE VIEW — EDITORIAL ROW LAYOUT
@@ -805,7 +780,7 @@ ul {
 /* --- Archive footer --- */
 .archive-footer-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     margin-top: 50px;
@@ -1469,6 +1444,8 @@ ul {
     font-size: 0.7rem;
     letter-spacing: 0.12em;
     color: var(--text-muted);
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -1481,9 +1458,10 @@ ul {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.5fr 0.7fr;
     gap: 80px;
     margin-bottom: 80px;
+    align-items: start;
 }
 
 .huge-title {
@@ -1517,7 +1495,9 @@ ul {
 
 .profile-frame {
     width: 100%;
+    max-width: 340px;
     aspect-ratio: 4/5;
+    margin-left: auto;
     background-color: var(--bg-secondary);
     border-radius: 6px;
     overflow: hidden;
@@ -1568,6 +1548,47 @@ ul {
     color: var(--text-muted);
     font-size: 0.8rem;
     margin-top: 2px;
+}
+
+/* ==========================================================================
+   GLOBAL SITE FOOTER
+   ========================================================================== */
+.site-footer {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.site-footer a {
+    color: var(--text-muted);
+}
+
+.site-footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* detail 頁面 footer 要配合左側 nav 的 margin */
+.detail-main + .site-footer {
+    margin-left: 80px;
 }
 
 
@@ -1656,7 +1677,6 @@ ul {
     .row-num { font-size: 1.8rem; }
     .row-title { font-size: 1.6rem; }
     .archive-footer-nav .scroll-hint { display: none; }
-    .back-to-top { margin-left: auto; }
 
     /* About */
     .about-section { padding-left: 24px; }
@@ -1681,5 +1701,16 @@ ul {
     .detail-footer-nav {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    .site-footer {
+        padding: 24px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .detail-main + .site-footer {
+        margin-left: 0;
     }
 }
