@@ -396,14 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </section>`
         });
 
-        // --- FOOTER ---
-        sections.push({
-            id: null,
-            html: `
-                <div class="detail-footer-nav">
-                    <a href="#detail-hero" class="back-to-top">BACK TO TOP <span class="top-icon">↑</span></a>
-                </div>`
-        });
+       
 
         // ========== 組裝 HTML ==========
         container.innerHTML = sections.map(s => s.html).join('');
@@ -597,8 +590,59 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(err => console.error('Error fetching about.json:', err));
     }
 
+    // ==========================================
+    // 9. PAGE TRANSITION — FADE OUT ON NAVIGATE
+    // ==========================================
+    function initPageTransitions() {
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href]');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+
+            // 跳過：外部連結、新分頁、錨點、javascript、mailto
+            if (!href) return;
+            if (link.target === '_blank') return;
+            if (href.startsWith('#')) return;
+            if (href.startsWith('mailto:')) return;
+            if (href.startsWith('javascript:')) return;
+            if (href.startsWith('http') && !href.startsWith(window.location.origin)) return;
+
+            e.preventDefault();
+            document.body.classList.add('is-leaving');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400); // 配合 fadeOut 動畫時間
+        });
+    }
+
+    initPageTransitions();
+
+    // ==========================================
+    // 10. STICKY HEADER — SCROLL BACKGROUND
+    // ==========================================
+    const mainHeader = document.querySelector('.main-header');
+    if (mainHeader) {
+        window.addEventListener('scroll', () => {
+            mainHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+        });
+    }
 
 
+    // ==========================================
+    // 11. FLOATING BACK TO TOP BUTTON
+    // ==========================================
+    const floatingTopBtn = document.getElementById('floatingTopBtn');
+    if (floatingTopBtn) {
+        window.addEventListener('scroll', () => {
+            floatingTopBtn.classList.toggle('is-visible', window.scrollY > 400);
+        });
+
+        floatingTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
 
 });
