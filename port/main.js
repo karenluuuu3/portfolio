@@ -636,16 +636,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 9. PAGE TRANSITION — FADE OUT ON NAVIGATE
+    // 9. PAGE TRANSITION — OVERLAY WIPE
     // ==========================================
     function initPageTransitions() {
+        const overlay = document.getElementById('pageTransition');
+
+        // 進場動畫
+        if (overlay) {
+            overlay.classList.add('is-loaded');
+            overlay.addEventListener('animationend', () => {
+                overlay.classList.remove('is-loaded');
+            }, { once: true });
+        }
+
+        // 離場攔截
         document.addEventListener('click', (e) => {
             const link = e.target.closest('a[href]');
             if (!link) return;
 
             const href = link.getAttribute('href');
-
-            // 跳過：外部連結、新分頁、錨點、javascript、mailto
             if (!href) return;
             if (link.target === '_blank') return;
             if (href.startsWith('#')) return;
@@ -654,11 +663,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (href.startsWith('http') && !href.startsWith(window.location.origin)) return;
 
             e.preventDefault();
-            document.body.classList.add('is-leaving');
 
-            setTimeout(() => {
+            if (overlay) {
+                overlay.classList.add('is-entering');
+                overlay.addEventListener('animationend', () => {
+                    window.location.href = href;
+                }, { once: true });
+            } else {
                 window.location.href = href;
-            }, 400); // 配合 fadeOut 動畫時間
+            }
         });
     }
 
@@ -689,5 +702,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // 12. CUSTOM CURSOR
+    // ==========================================
+    const cursor = document.getElementById('customCursor');
+    const ring = document.getElementById('cursorRing');
+
+    if (cursor && ring && window.matchMedia('(pointer: fine)').matches) {
+        let mouseX = 0, mouseY = 0;
+        let ringX = 0, ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        // ring 用 RAF 做延遲跟隨
+        function animateRing() {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            ring.style.left = ringX + 'px';
+            ring.style.top = ringY + 'px';
+            requestAnimationFrame(animateRing);
+        }
+        animateRing();
+
+        // hover 偵測
+        const hoverTargets = 'a, button, .filter-tag, .row-view, .menu-toggle, .menu-close-btn, .select-trigger, .select-option, .floating-top-btn, .row-feature';
+
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.closest(hoverTargets)) {
+                cursor.classList.add('is-hovering');
+                ring.classList.add('is-hovering');
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.target.closest(hoverTargets)) {
+                cursor.classList.remove('is-hovering');
+                ring.classList.remove('is-hovering');
+            }
+        });
+
+        // 離開視窗時隱藏
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            ring.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            ring.style.opacity = '1';
+        });
+    }
 
 });

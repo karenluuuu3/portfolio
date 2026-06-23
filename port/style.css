@@ -1701,7 +1701,7 @@ body.is-leaving {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 80px 0px 80px;
+    padding: 30px 80px;
     border-top: 1px solid var(--border-color);
     font-size: 0.75rem;
     letter-spacing: 0.08em;
@@ -1733,6 +1733,218 @@ body.is-leaving {
     margin-left: 80px;
 }
 
+/* ==========================================================================
+   MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* --- Custom Cursor --- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.3s ease,
+                opacity 0.3s ease;
+}
+
+/* Hover 狀態 */
+.custom-cursor.is-hovering {
+    width: 4px;
+    height: 4px;
+    opacity: 0.5;
+}
+
+.cursor-ring.is-hovering {
+    width: 56px;
+    height: 56px;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 隱藏預設游標（僅桌面） */
+@media (pointer: fine) {
+    * {
+        cursor: none !important;
+    }
+}
+
+/* 觸控裝置不顯示 */
+@media (pointer: coarse) {
+    .custom-cursor,
+    .cursor-ring {
+        display: none !important;
+    }
+}
+
+/* --- Link Hover Underline Animation --- */
+.cta-link,
+.row-view,
+.detail-doc-link,
+.detail-back-link,
+.next-project-link,
+.download-cv-btn {
+    position: relative;
+}
+
+.cta-link::after,
+.row-view::after,
+.detail-doc-link::after,
+.next-project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-color);
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cta-link:hover::after,
+.row-view:hover::after,
+.detail-doc-link:hover::after,
+.next-project-link:hover::after {
+    width: 100%;
+}
+
+/* cta-link 已有 border-bottom，移除原本的 */
+.cta-link {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* --- Tag Pill Hover Ripple --- */
+.row-tags .tag {
+    transition: var(--transition-smooth);
+}
+
+.row-tags .tag:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--accent-color);
+}
+
+/* --- Menu Item Slide Effect Upgrade --- */
+.menu-item {
+    transition: color 0.4s ease, padding-left 0.5s cubic-bezier(0.25, 1, 0.5, 1), letter-spacing 0.4s ease;
+}
+
+.menu-item:hover {
+    letter-spacing: 0.02em;
+}
+
+/* --- Page Transition Overlay --- */
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--bg-primary);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    pointer-events: none;
+}
+
+.page-transition-overlay.is-entering {
+    animation: transitionIn 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.page-transition-overlay.is-loaded {
+    transform: scaleY(1);
+    transform-origin: top;
+    animation: transitionOut 0.5s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+}
+
+@keyframes transitionIn {
+    0%   { transform: scaleY(0); transform-origin: bottom; }
+    100% { transform: scaleY(1); transform-origin: bottom; }
+}
+
+@keyframes transitionOut {
+    0%   { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(0); transform-origin: top; }
+}
+
+/* 移除舊的 fade 轉場（替換為 overlay） */
+body {
+    opacity: 1;
+    animation: none;
+}
+
+body.is-leaving {
+    animation: none;
+}
+
+/* 改用淡入 body content */
+.portfolio-container,
+.detail-main,
+.detail-side-nav {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: contentFadeIn 0.6s ease 0.3s forwards;
+}
+
+@keyframes contentFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Floating Button Pulse --- */
+.floating-top-btn.is-visible {
+    animation: subtlePulse 3s ease-in-out infinite;
+}
+
+.floating-top-btn:hover {
+    animation: none;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1); }
+    50%      { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+
+/* --- Header Logo Hover --- */
+.logo {
+    transition: var(--transition-smooth);
+}
+
+.logo:hover {
+    opacity: 0.6;
+    letter-spacing: 0.25em;
+}
+
+/* --- Scroll Hint Bounce (Detail Page) --- */
+.detail-scroll-hint {
+    animation: hintBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes hintBounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(6px); }
+}
 
 /* ==========================================================================
    8. RESPONSIVE BREAKPOINTS
