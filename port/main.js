@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <section class="detail-section detail-hero" id="detail-hero">
                     <div class="detail-hero-grid">
                         <div class="detail-hero-text">
+                            <a href="archive.html" class="detail-back-link">← BACK TO ARCHIVE</a>
                             <span class="detail-project-label">PROJECT ${project.id}</span>
                             <h1 class="detail-project-title">${project.title}</h1>
                             <div class="detail-hero-meta">

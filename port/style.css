@@ -954,6 +954,21 @@ ul {
     align-items: center;
 }
 
+.detail-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    transition: var(--transition-smooth);
+}
+
+.detail-back-link:hover {
+    color: var(--accent-color);
+}
+
 .detail-project-label {
     font-size: 0.7rem;
     letter-spacing: 0.15em;
