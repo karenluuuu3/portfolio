@@ -247,19 +247,65 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // --- 04 GALLERY (有 gallery 才顯示) ---
-        if (project.gallery && project.gallery.length > 0) {
-            const galleryItems = project.gallery.map((img, i) => `
-                <div class="gallery-item">
-                    <div class="gallery-item-media">
-                        <img src="${img}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}">
-                    </div>
-                    <div class="gallery-item-caption">
-                        <span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span>
-                        <div class="fig-divider"></div>
-                    </div>
-                </div>`
-            ).join('');
+        // --- 04 GALLERY ---
+        const hasLayout = project.galleryLayout && project.galleryLayout.length > 0;
+        const hasGallery = project.gallery && project.gallery.length > 0;
+
+        if (hasLayout || hasGallery) {
+            let galleryInnerHTML = '';
+
+            if (hasLayout) {
+                // ===== 舊專案：指定排版 =====
+                let figCount = 0;
+                galleryInnerHTML = project.galleryLayout.map(row => {
+                    if (row.length === 1) {
+                        figCount++;
+                        return `
+                            <div class="gallery-row gallery-row-full">
+                                <div class="gallery-item-media">
+                                    <img src="${row[0]}" alt="${project.title} — Fig.${String(figCount).padStart(2, '0')}">
+                                </div>
+                                <div class="gallery-item-caption">
+                                    <span class="fig-label">Fig.${String(figCount).padStart(2, '0')}</span>
+                                    <div class="fig-divider"></div>
+                                </div>
+                            </div>`;
+                    } else {
+                        figCount++;
+                        const fig1 = figCount;
+                        figCount++;
+                        const fig2 = figCount;
+                        return `
+                            <div class="gallery-row gallery-row-pair">
+                                <div class="gallery-pair-item">
+                                    <div class="gallery-item-media">
+                                        <img src="${row[0]}" alt="${project.title} — Fig.${String(fig1).padStart(2, '0')}">
+                                    </div>
+                                </div>
+                                <div class="gallery-pair-item">
+                                    <div class="gallery-item-media">
+                                        <img src="${row[1]}" alt="${project.title} — Fig.${String(fig2).padStart(2, '0')}">
+                                    </div>
+                                </div>
+                            </div>`;
+                    }
+                }).join('');
+            } else {
+                // ===== 新專案：自動 grid =====
+                galleryInnerHTML = project.gallery.map((img, i) => `
+                    <div class="gallery-item">
+                        <div class="gallery-item-media">
+                            <img src="${img}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}">
+                        </div>
+                        <div class="gallery-item-caption">
+                            <span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span>
+                            <div class="fig-divider"></div>
+                        </div>
+                    </div>`
+                ).join('');
+            }
+
+            const listClass = hasLayout ? 'detail-gallery-list layout-mode' : 'detail-gallery-list grid-mode';
 
             sections.push({
                 id: 'detail-gallery',
@@ -270,8 +316,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="detail-section-header">
                             <h2 class="detail-section-title">Gallery</h2>
                         </div>
-                        <div class="detail-gallery-list">
-                            ${galleryItems}
+                        <div class="${listClass}">
+                            ${galleryInnerHTML}
                         </div>
                     </section>`
             });
