@@ -181,6 +181,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 </section>`
         });
 
+        // --- CONTENT 區塊（有 content 陣列才顯示）---
+        if (project.content && project.content.length > 0) {
+            project.content.forEach((block, i) => {
+                const bodyHTML = block.body
+                    .split('\n\n')
+                    .map(para => `<p>${para.replace(/\n/g, '<br>')}</p>`)
+                    .join('');
+
+                sections.push({
+                    id: `detail-content-${i}`,
+                    navLabel: block.heading.toUpperCase().slice(0, 12),
+                    navSub: block.heading.replace(/(.{10}).+/, '$1…'),
+                    html: `
+                        <section class="detail-section" id="detail-content-${i}">
+                            <div class="detail-section-header">
+                                <h2 class="detail-section-title">${block.heading}</h2>
+                            </div>
+                            <div class="detail-concept-body">
+                                ${bodyHTML}
+                            </div>
+                        </section>`
+                });
+            });
+        }
+
         // --- 03 EXHIBITION (有展覽資料才顯示) ---
         if (project.exhibition) {
             const ex = project.exhibition;

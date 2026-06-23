@@ -1,5 +1,5 @@
 [
-  {
+{
     "id": "0",
     "year": "2021",
     "date": "2021.10",
@@ -12,6 +12,24 @@
     "tags": ["Unity", "C#", "Game Design", "AI Mechanics"],
     "image": "images/0.png",
     "gallery": ["images/0-1.png", "images/0-2.png", "images/0.png"],
+    "content": [
+      {
+        "heading": "Introduction",
+        "body": "【Immerse Experience】\nThe story fits current reality. Plots, music, and game mode will give players nervous feelings and excitement. They can easily immerse themselves in the game world, and have similar but more exciting experiences different from reality.\n\n【New Game Mode】\nPlayers can not only interact with NPCs but also collect supplies in game. There are several significant characteristics in our game, such as music switches terrains combined with Tag's elements, and getting to the safe regions to avoid infected, etc.\n\n【Fascinating Scenes】\nBecause changing terrains and safe regions is the main element in COVID RUSH. There will be several fascinating scenes switching during the game."
+      },
+      {
+        "heading": "Game Story",
+        "body": "Severe disease has stroken the world for a period of time. The governments of countries try hard to have citizens vaccinated. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou have gradually noticed the situation of spreading disease, and you also find out that some regions are severe and some are not. People tend to get rid of dangerous regions and swarm into safe regions. While they enter the safe region, they still try to grab more supplies they can.\n\nWatching those raving behavior, you are conscious of making yourself out of threat right now!"
+      },
+      {
+        "heading": "How to Play",
+        "body": "On the ground in the game scene, there will be squares colored in red or green. Red ones represent epidemic areas, and green ones are safe areas. Squares will change color with the BGM. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in green areas, he will need to collect items (masks and vaccines). If the player is in red areas, he will need to leave as soon as possible, and if he doesn't do so, the items will be eliminated, and lead to the game's ending (game over). Note that NPCs may interfere with you and take your items away."
+      },
+      {
+        "heading": "Game System",
+        "body": "1. Player avatar: Players can control the avatar by a keyboard to interact with the game objects.\n2. Squares: Different colors of squares have different effects to players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The avatars controlled by game AI can infect players, and make the game more intense and difficult."
+      }
+    ],
     "credits": {
       "System": "李諭樹",
       "CG Script Music": "呂思函 Szu-Han Lu",
@@ -22,26 +40,48 @@
     }
   },
   {
-    "id": "1",
-    "year": "2021",
-    "date": "2021.07",
-    "slug": "1.html",
-    "category": "vr-escape-room",
-    "group": "engine-3d",
-    "categoryLabel": "VR x Hand Tracking x Escape Room",
-    "title": "深海低吟 | Deep In Sea",
-    "desc": "A VR escape room experience built in Unity with Oculus Quest 2 hand tracking. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles involving hand gesture recognition, magical drawing, lightsaber combat, and branching story paths to escape a mermaid's curse.",
-    "tags": ["Unity", "VR", "Hand Tracking", "Oculus Quest 2", "Escape Room", "Blender", "Vroid"],
-    "image": "images/w1.png",
-    "gallery": ["images/10_深海低吟_1.png", "images/10_深海低吟_2.png", "images/圖片3.png", "images/圖片15.png", "images/圖片1.png", "images/圖片11.png", "images/圖片5.png", "images/logo_v3.png", "images/w1.png"],
-    "credits": {
-      "Supervisor": "林奕成",
-      "Scene Animation": "陳書玟",
-      "CG Script Music": "呂思函 Szu-Han Lu",
-      "Programming Art": "張巧如",
-      "Character Modeling": "林千慧"
-    }
-  },
+      "id": "1",
+      "year": "2021",
+      "date": "2021.07",
+      "slug": "1.html",
+      "category": "vr-escape-room",
+      "group": "engine-3d",
+      "categoryLabel": "VR x Hand Tracking x Escape Room",
+      "title": "深海低吟 | Deep In Sea",
+      "desc": "A VR escape room experience built in Unity with Oculus Quest 2 hand tracking. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles involving hand gesture recognition, magical drawing, lightsaber combat, and branching story paths to escape a mermaid's curse.",
+      "tags": ["Unity", "VR", "Hand Tracking", "Oculus Quest 2", "Escape Room", "Blender", "Vroid"],
+      "image": "images/w1.png",
+      "gallery": ["images/10_深海低吟_1.png", "images/10_深海低吟_2.png", "images/圖片3.png", "images/圖片15.png", "images/圖片1.png", "images/圖片11.png", "images/圖片5.png", "images/logo_v3.png", "images/w1.png"],
+      "content": [
+        {
+          "heading": "Story Outline",
+          "body": "After diving into the depths of the sea, the player—an archaeologist—hears a hauntingly beautiful song before gradually losing consciousness. Upon waking, they find themselves inside an unfamiliar ship cabin.\n\nSolving four intricate puzzles triggers the appearance of a figure claiming to be the captain of this ancient vessel. The captain speaks of the mermaids' wicked nature and grants the player a powerful artifact to counter them. In an instant, the once-bright room turns dark and eerie.\n\nJust then, a statue in the corner comes to life, introducing itself as a prince of the Russian Empire. He pleads with the player to help find his beloved, who was also trapped by the mermaids.\n\nFollowing the clues, the player enters a mystical mirror, where they witness the prince and princess's cherished memories. As the truth unfolds, the princess bestows a key to escape the ship's cabin. But as the player steps out from the mirror's world, a crazed mermaid suddenly appears.\n\nStory Branches:\nPath A: Draw a magic circle to defeat the mermaid.\nPath B: Use a hidden incantation found in the puzzles to immobilize the mermaid."
+        },
+        {
+          "heading": "Development Tools",
+          "body": "I. Game Engine: Unity\nII. Models and Design: Blender, Vroid, Photoshop & Illustrator\nIII. Device: Oculus Quest 2"
+        },
+        {
+          "heading": "Techniques",
+          "body": "I. Unity — Keyword Recognize: UnityEngine.Windows.Speech\nII. Hand tracking & Hand gesture recognition:\n  • Item Pickup — Using Unity's physics system for realistic physical collisions\n  • Mirror Gestures — Detecting hand skeleton positions to identify gestures\n  • Magical Drawing with a Pen — Forming a pen-holding position by touching index finger and thumb, integrated with Unity's line renderer system\n  • Lightsaber & Backpack Access — Two buttons, one on each hand, for summoning lightsaber and opening backpack panel"
+        },
+        {
+          "heading": "Visual Effects",
+          "body": "• Particles System\n• PBR Shader\n• VFX Shader"
+        },
+        {
+          "heading": "Design",
+          "body": "• Vroid: Character model design and creation\n• Photoshop & Illustrator: Game logo design, UI art used in the game"
+        }
+      ],
+      "credits": {
+        "Supervisor": "林奕成",
+        "Scene Animation": "陳書玟",
+        "CG Script Music": "呂思函 Szu-Han Lu",
+        "Programming Art": "張巧如",
+        "Character Modeling": "林千慧"
+      }
+    },
   {
     "id": "2",
     "year": "2021",
@@ -55,6 +95,20 @@
     "tags": ["Sound Art", "Audio Visual", "TouchDesigner", "Ableton", "Media Transcription"],
     "image": "images/瘋城.jpg",
     "gallery": ["images/td-technique.png", "images/圖片2.png", "images/圖片6.png", "images/圖片0.png", "images/圖片7.png", "images/圖片8.png", "images/瘋城.jpg", "images/8 - 呂思函.png"],
+    "content": [
+      {
+        "heading": "Introduction",
+        "body": "As the pandemic surged, chaos over vaccines and waves of rumors spread. Two years passed in the blink of an eye. People moved from initial anxiety and distress to a state of calm, adapting to life under self-quarantine at home, standing in solidarity with frontline medical workers and emergency responders to combat the crisis together."
+      },
+      {
+        "heading": "Techniques",
+        "body": "For the sound materials, I incorporated news reports and various foley sounds from Freesound. Using Ableton's effects, I applied modulation techniques such as echo, layering, and repetition to enhance the emotional depth. For the synesthetic experience, I utilized TouchDesigner to generate audiovisual elements, providing viewers with a dynamic visual perception."
+      },
+      {
+        "heading": "Sections",
+        "body": "1. In the darkness, ethereal and elusive lines shift unpredictably, gradually transforming in shape—like a virus lying in wait, silently lurking among the crowd.\n2. Separation, infiltration, and fusion—much like human society, viruses exhibit similar behaviors, even transcending species boundaries.\n3. A slow descent into struggle—a suffocating tug-of-war, not only against an invisible enemy but also against humanity's own interests and moral values.\n4. The confusion surrounding virus mutations and the shortage of vaccines fueled a whirlwind of public discourse.\n5. Even as cracks appear in human society, we continue to coexist."
+      }
+    ],
     "collaborators": ["鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸", "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"],
     "exhibition": {
       "name": "NYCU x TNUA【瘋城 This Crazy City】Online Headphone Concert",
@@ -78,6 +132,16 @@
     "tags": ["GLSL", "Shader", "Ray Marching", "Creative Coding", "Generative Textures", "Ink Painting"],
     "image": "images/3-1.png",
     "gallery": ["images/3-1.png", "images/3-2.jpg"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "枯山水，以山石白砂為主體，仿照自然的山海大川，從而實現「無水而喻水」的效果。本作品以GLSL為創作工具，並以傳統中國水墨畫為質地，繪製出墨色暈染山中微弱晨光的景色。\n\nKaresansui, or dry landscape gardens, use rocks and white sand to emulate vast mountains and rivers, achieving the effect of \"expressing water without water.\" This work is created using GLSL, incorporating the texture of traditional Chinese ink painting to depict a scene where soft morning light gently diffuses over the mountains."
+    },
+    {
+      "heading": "Technique",
+      "body": "畫面中，白砂水紋的「地」，是以三角函數對於畫面的座標運算出「波」的形體，並加入時間的變化，使水紋蔓延、甚至延伸至「天」，以增添畫面「生」和水墨繪製的感受，而後對水紋表面加入擾動使之有砂石的顆粒感，並在場地中融入三顆白石作為山石的導流。\n\nIn the composition, the \"ground\"—represented by the white sand and water patterns—is generated through trigonometric functions applied to the screen coordinates, forming wave-like shapes. By introducing time-based variations, the ripples extend and flow, even merging into the \"sky,\" enhancing the sense of movement and evoking the organic feel of ink painting. Disturbances are added to the ripple surfaces, imbuing them with a granular, sand-like texture. Additionally, three white stones are placed within the scene, guiding the flow and serving as mountain elements."
+    }
+  ],
     "links": {
       "video": "https://youtu.be/5ZsH2NQUvhM"
     }
@@ -95,6 +159,24 @@
     "tags": ["Unreal Engine 4", "Gaea", "Animation", "Landscape", "Digital Scenery"],
     "image": "images/1.jpg",
     "gallery": ["images/1.jpg", "images/2.png", "images/3.jpg"],
+    "content": [
+    {
+      "heading": "Workshop Overview",
+      "body": "一個月的UE4工作坊，從無到有建立山體、雪景、水體、天空、物理、風場、後期、渲染輸出。\n\nOne-month UE4 Workshop — from scratch to completion: building mountains, snowy landscapes, water bodies, sky, physics, wind fields, post-processing, and rendering output."
+    },
+    {
+      "heading": "⟪恬⟫",
+      "body": "非淡泊無以明志，非寧靜無以致遠\n－摘自 諸葛孔明《誡子書》\n\n\"Without tranquility, one cannot clarify one's purpose; without serenity, one cannot reach far.\"\n— from Zhuge Liang, Letter of Admonition to His Son"
+    },
+    {
+      "heading": "⟪霽月⟫",
+      "body": "寓情於景\n借景喻情\n\nProjecting emotions onto the environment, borrowing landscapes to convey feeling."
+    },
+    {
+      "heading": "⟪歸⟫",
+      "body": "斜陽於我，是「回家」\n\nThe setting sun, to me, means \"coming home.\""
+    }
+  ],
     "links": {
       "恬_instagram": "https://www.instagram.com/p/Cm39lniSULK/?img_index=2",
       "霽月_instagram": "https://www.instagram.com/p/Cm396r5S2Lo/?img_index=2"
@@ -113,6 +195,12 @@
     "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
     "image": "images/圖片20.png",
     "gallery": ["images/圖片20.png"],
+    "content": [
+    {
+      "heading": "Collection",
+      "body": "1. Waves — #waves #voronoi #metaballs #浮世絵\n\n2. Uncertain\n\n3. Breathing Light\n\n4. Reflection"
+    }
+  ],
     "links": {
       "waves_video": "https://youtu.be/lh4w9Uj0TJc",
       "uncertain_instagram": "https://www.instagram.com/p/Cm4arWhSRJi/?img_index=2",
@@ -132,6 +220,12 @@
     "tags": ["GLSL", "Shader", "Brownian Motion", "Random Walk", "Computing Aesthetics"],
     "image": "images/6.png",
     "gallery": ["images/6.png", "images/6-5.png"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "以維梅爾的畫作「戴珍珠耳環的少女」(Girl with a Pearl Earring)為底，嘗試以不規則的方式呈現匯聚的思念。\n\nUsing Vermeer's painting Girl with a Pearl Earring as the foundation, this work explores an irregular approach to visualizing the convergence of longing and remembrance."
+    }
+  ],
     "links": {
       "video": "https://www.youtube.com/watch?v=lGqnS0nqCEk"
     }
@@ -149,6 +243,16 @@
     "tags": ["Unreal Engine 4", "Point Cloud", "LiDAR", "VFX", "Animation"],
     "image": "images/7.png",
     "gallery": ["images/7.png", "images/7-2.png", "images/7-3.png"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "「年年歲歲花相似，歲歲年年人不同。」－摘自 劉希夷〈白頭吟〉\n\n隧，寬廣卻非無限的空間。歲，聚焦在一日的時間流動。\n\n歷史遺留在新竹的某幾個角落，舊城區依傍在新竹市區周邊，新竹第一信用合作社、影像博物館、新竹州廳、新竹美術館...\n走過繁榮與衰落，看著人群來回又離去，舊城區依舊在原地送走舊人、迎接新人，彷彿培育著、呼喚著這塊土地、這塊土地的人們。"
+    },
+    {
+      "heading": "Technique",
+      "body": "本作品以中正台夜市為主場景，將其掃描成點雲模型，分別以白天與夜晚的氛圍創作動畫特效，例如霧氣、光線、顏色變化、粒子的動態與樣式、影像後期處理等，並加入實境採樣的聲響，透過白天與夜晚的氛圍差異，賦予場域穿越時間與空間的視覺觀賞與聽覺感受。\n\nThis work centers around Zhongzheng Road Night Market, scanned into a point cloud model. Atmospheric animations and effects are created separately for daytime and nighttime, incorporating mist, lighting variations, color shifts, particle dynamics, and post-processing. Field-recorded sounds are integrated to emphasize the contrast between day and night, offering an audiovisual experience that traverses both time and space."
+    }
+  ],
     "credits": {
       "Day Scene": "呂思函 Szu-Han Lu",
       "Night Scene": "何郁軒"
@@ -176,6 +280,12 @@
     "tags": ["Unreal Engine 5", "Niagara System", "Particle Shader", "Animation"],
     "image": "images/8.jpg",
     "gallery": ["images/8.jpg", "images/8-2.png"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "who is calling?\nwhile Haru has withered away.\n\nthrough the pulse of sakura."
+    }
+  ],
     "links": {
       "video": "https://youtu.be/8Ehx9uAEzy0"
     }
@@ -192,7 +302,21 @@
     "desc": "An immersive puzzle-solving game built in Unreal Engine 5. Players explore a maze, solve planting puzzles (hint: related to number of leaves), and nurture the World Tree. Combines maze exploration with open environments, utilizing Niagara particle systems to symbolize environmental restoration and the continuation of life.",
     "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics", "Escape Room"],
     "image": "images/9-1.png",
-    "gallery": ["images/9-1.png", "images/9.png"]
+    "gallery": ["images/9-1.png", "images/9.png"],
+    "content": [
+    {
+      "heading": "Core Gameplay",
+      "body": "• Maze Exploration\nPlayers start in a complex maze and must find an exit. The maze may include mechanisms, hidden passages, or interactive environmental elements, testing the player's observation.\n\n• Puzzle-Solving & Planting\nAfter escaping the maze, players enter an open puzzle-solving area where they must locate suitable planting spots. (Hint: Related to the number of leaves)\n\n• World Tree Growth\nOnce all suitable planting areas are correctly cultivated, the player's efforts will lead to the birth of the World Tree. The tree gradually grows, symbolizing the player's exploration and puzzle-solving journey."
+    },
+    {
+      "heading": "Design Goals",
+      "body": "• Level Design — Combining maze structures with open areas to enhance spatial planning and visual storytelling.\n\n• Interaction Design — Creating engaging environmental interactions that enhance the puzzle-solving experience.\n\n• Procedural Art (Using Niagara System) — Utilizing procedural techniques to enhance visual effects, particularly in plant growth.\n\nThe ultimate goal is to solve all puzzles and successfully nurture the World Tree, symbolizing environmental restoration and the continuation of life."
+    },
+    {
+      "heading": "Art Style & Atmosphere",
+      "body": "• The maze environment features a monochromatic aesthetic, using simple lighting to create an enclosed but not oppressive space.\n• The puzzle-solving area is more open, fostering a sense of interaction with the environment.\n• During the World Tree's growth, Niagara System particle effects enhance the visual impact."
+    }
+  ]
   },
   {
     "id": "10",
@@ -207,6 +331,12 @@
     "tags": ["Arduino", "Unreal Engine 5", "Mixed Reality", "Niagara System", "Noise Art", "Shader", "Ultrasonic Sensor", "Interactive Installation"],
     "image": "images/10-2.png",
     "gallery": ["images/10-1.png", "images/10-2.png"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "With the rise of the metaverse, Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR) have emerged rapidly, applied in navigation, entertainment, virtual events, video content, educational training, language translation, sensing, tracking, and more. These technologies have even advanced into the integration of VR, AR, and MR into Extended Reality (XR).\n\nAs we actively strive to \"break\" the two-dimensional space of computer screens and attempt to integrate the two-dimensional virtual world into our three-dimensional reality, one may ask: Is it not the three-dimensional reality that is being absorbed into the two-dimensional world of computers, with human consciousness and emotional experiences gradually being influenced by this virtual two-dimensional world?\n\nThis work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create a visual effect that models rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. It also attempts to use simple sensors as interactive devices to realize human stimuli in this brain consciousness space as a medium."
+    }
+  ],
     "links": {
       "video": "https://youtu.be/diqtChicvnQ"
     }
@@ -224,6 +354,20 @@
     "tags": ["Unreal Engine 5", "Mixed Reality", "Arduino", "Niagara System", "Point Cloud", "Multimedia Installation"],
     "image": "images/11-3.jpg",
     "gallery": ["images/11-7.png", "images/11-3.jpg", "images/11-4.jpg", "images/11-1.jpg", "images/11-2.jpg", "images/11-5.png", "images/11-6.png"],
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "現實世界的物質常以粒子的形式構成，這些粒子如同光束、塵埃一般存於空間，可能緊密、可能疏離，感覺不存在於何方、卻又無所不在，這些粒子是數據、意識、想像和祈望等不可見事物，以緩慢且難以察覺的方式存在且變化著，共同建構人類的真實經驗。\n\nThe material of the real world is often composed of particles, which, like beams of light or dust, exist in space—dense or distant, seemingly nowhere yet omnipresent. They represent data, consciousness, imagination, and wishes, existing and changing in slow, imperceptible ways, together constructing the human experience of reality."
+    },
+    {
+      "heading": "Installation Structure",
+      "body": "本作品分為兩個裝置構成、四個階段的影像。\n裝置一以「窗」（門）作為一種象徵性的視覺媒介，並以展覽場地「藝空間」為點雲模型基礎，利用虛幻引擎虛構此空間，若觀者駐足停留，才能透過「窗」一窺到這些原先無法單憑肉眼察覺的存在，並與之共鳴。\n裝置二為地面的「絮語」，來自這扇「窗」（門）透露出這個空間所存在的意念。\n\nThe work consists of two devices and four stages of imagery. Device one uses the \"window\" (door) as a symbolic visual medium, with the exhibition space recreated as a point cloud model in Unreal Engine. When the observer pauses and stays, they glimpse the invisible existences through the \"window\" and resonate with them. Device two is the \"whisper\" on the ground, revealing the ideas existing in this space."
+    },
+    {
+      "heading": "Four Stages",
+      "body": "Stage Zero: When no one is present, it is a passage—light circles from near to far, drawing people in.\n\nStage One: Door (Theater Opening)\ntheater, dawn, optical light, tunnel, spotlight, fog, mist, outdoor, abstract\n\nStage Two: Energy (Sense of Existence)\nenergy, existence, voice, sound, religion, soul, fluid, abstract, cosmos, galaxy, nerve, line, smoke\n\nStage Three: Consciousness, Emotion (Composition)\nlanguage, thought, consciousness, emotion, floating, mind, line, mist, flow, desaturate, abstract"
+    }
+  ],
     "exhibition": {
       "name": "虛構｜The Pledge｜L'Engagement 物質性演算美學展",
       "date": "2023/10/6 - 2023/11/1",
@@ -251,6 +395,20 @@
       "Idea Art Programming": "呂思函 Szu-Han Lu",
       "Idea Art": "周小淨 Hsiao-Ching Chou"
     },
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "《痕跡》從陶瓷開片工藝中汲取靈感，探索時間性與人為之間的美學對話。開片裂紋自然生成於陶瓷表面，其紋理如同時間的筆觸，描繪著自然與器物間的深層互動，承載豐厚的文化與歷史意涵。透過數位化形式，作品重新詮釋開片的時間性與審美特質，聚焦時間作用與人為介入所留下的痕跡。\n\n\"Traces\" draws inspiration from the ceramic crazing technique to investigate the aesthetic interplay between temporality and human intervention. Crazing, with its naturally formed cracks on the surface of ceramics, serves as a visual manifestation of time, portraying the deep interaction between nature and objects, while carrying rich cultural and historical significance."
+    },
+    {
+      "heading": "Crack as Time",
+      "body": "《痕跡》將裂紋視為時間的具象化，模擬自然紋理隨時間累積的過程，並融入人為操作所賦予的獨特性，每一道裂紋如同風化的軌跡，記錄過往的記憶與變遷。作品以裂紋生成的動態變化為核心，展現隨時序推進的視覺演化，深刻詮釋開片工藝的邏輯與美學。\n\nThis work views cracks as a tangible representation of time, simulating the accumulation of natural patterns over time while incorporating the uniqueness introduced by human intervention. Each crack serves as a weathered trace, recording past memories and transformations."
+    },
+    {
+      "heading": "Extended Expressions",
+      "body": "作品進一步延伸裂紋的表現，創造多樣的視覺形式，包括水晶內雕、水波紋與皮膚經絡等，將裂紋從傳統陶瓷開片的框架中解放，置於多元載體之上，結合數位媒材與程序化生成的特性，拓展裂紋作為時間與文化象徵的表現可能性。\n\nThe work extends the expression of cracks by creating diverse visual forms, such as crystal engraving, ripples, and skin meridians. These cracks are liberated from the traditional ceramic framework and placed on various media, combining digital media and procedural generation to expand the expressive possibilities of cracks as symbols of time and culture.\n\n關鍵字：數位藝術、四元樹、陶瓷開片、多媒體\nKeywords: Digital Art, Quadtree, Crazing, Aesthetic, Multimedia"
+    }
+  ],
     "exhibition": {
       "name": "GDAP#13 閾質 (LIMINAL)",
       "date": "2024/7/6 - 2024/7/27",
@@ -272,6 +430,20 @@
     "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
     "image": "images/13.gif",
     "gallery": ["images/13.png", "images/13-1.png", "images/13-2.png", "images/13.gif"],
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "• Educational Significance\nGiven the observation that augmented reality can be applied to educational development, daily life assistance, and more, how to integrate technology into people's lives in a way that enhances experiences and benefits society has always been a subject of discussion and practice.\n\n• Technological Interaction\nThe dissemination of knowledge primarily relies on accessible content materials. With advancements in technologies like 5G networks and the metaverse, dynamic content such as videos and animations tend to capture viewers' attention and facilitate learning more effectively."
+    },
+    {
+      "heading": "Introduction",
+      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, gaining knowledge about different species in an engaging and immersive way."
+    },
+    {
+      "heading": "Prototype",
+      "body": "• Click on the main page and start the game\n• Select a fish in the environment (AR), and the introduction panel for the fish will appear on the mobile device"
+    }
+  ],
     "credits": {
       "3D Art": "曹雅婷",
       "2D Art": "劉思彤",
@@ -295,6 +467,20 @@
     "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
     "image": "images/14.png",
     "gallery": ["images/14.png", "images/14-39.jpg"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "由田野科技(Field Technology Ltd.)專案開發小組帶領2位研習生運用公司已建置AR混合影像辨識、AIOT快速建構遊戲模組，透過與NOBOLLEL合作共同開發自製年度遊戲雛型。目前已完成企劃2款居家健身遊戲App——【垃圾車等等我】與【打擊垃圾車】，專案開發小組已完成開發，並於2022年11月30日上架OB版。\n\nThe project development team (Field Technology Ltd.) led two interns in utilizing the company's established AR mixed image recognition and AIoT rapid game module construction, co-developing the annual game prototype in collaboration with NOBOLLEL. Two home fitness game apps have been developed: [Garbage Truck, Wait for Me] and [Smash the Garbage Truck], launched as OB version on November 30, 2022."
+    },
+    {
+      "heading": "Game Planning Conceptual Framework",
+      "body": "• Fitness and exercise have become a trend in recent years, advocated for all ages. During the pandemic, maintaining health is important, but many can't go outdoors or to the gym.\n\n• People want to maintain an exercise habit but don't want to spend a lot of money on large fitness equipment, and may not have enough space at home.\n\n• After conducting market research and discussing with the development engineering team, we used image recognition technology to detect body movements, combined with gamification, to create a home fitness game app that is easily accessible.\n\n• Initially we considered incorporating AIoT or fitness accessories, but considering the added cost and complexity, we focused on image recognition and motion sensing as the core foundation.\n\n• The game needs to be fun, involve full-body movement, and be suitable for all ages. For local Taiwanese culture, a game concept that would be quickly understood is chasing the garbage truck!"
+    },
+    {
+      "heading": "Download & Usage",
+      "body": "It is recommended that the mobile phone can project to a projector or TV for a larger screen, using the phone's rear camera for gameplay. PCs or laptops can also project to a larger screen, with the built-in or external webcam used for gameplay."
+    }
+  ],
     "links": {
       "testing_video": "https://youtu.be/nZCknoQdh40",
       "demo_video": "https://youtu.be/C6i9WdZ-_eE"
@@ -313,6 +499,16 @@
     "tags": ["Interactive Installation", "Species Fusion", "Migration", "Sensor", "Real-time Generation"],
     "image": "images/15.png",
     "gallery": ["images/15.png", "images/15-5.png", "images/15-6.png", "images/15-7.png", "images/15-4.jpg", "images/15-2.png", "images/15-3.png"],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "《洄鄉》以人與魚等物種的身影交織，牽動彼此，表現一種「是人非人，是魚亦非魚」的物種融合，彷彿一種無形的力量在所有生命中悄然流動，交錯成共生的網絡，意欲傳達洄游與回鄉的過程不僅是動植物的本能，也包含人類對源頭的回歸與尋找。\n\nEcho-me interweaves the silhouettes of humans and fish, merging them into a fusion of species that is \"human but not human, fish but not fish.\" It conveys an invisible yet powerful force that flows quietly through all of life, intricately intertwining them into a network of co-existence."
+    },
+    {
+      "heading": "Interaction",
+      "body": "本作品以抽象輪廓勾勒物種型態，並於都市之景及水光之隙緩慢行走的行列表現物種「洄鄉」，影像如水波般延展，傳遞回溯源頭的力量。當觀眾站立於作品前，他們將成為這場討論的一部分，透過裝置偵測觀眾、於畫面中生成新角色，而後與物種行列一同前行，象徵人類歷史與自然的共融與延續。\n\nUsing abstract contours to outline the forms of species, the work depicts their \"homeward migration\" as they slowly traverse the urban landscape and shimmering waters. When viewers stand before the work, they become part of this discussion—the installation detects their presence and generates new on-screen characters that join the procession, symbolizing the integration and continuity of human history with nature."
+    }
+  ],
     "credits": {
       "Music Production": "DC",
       "Plant Materials": "陳以荷 Yi-He Chen",
