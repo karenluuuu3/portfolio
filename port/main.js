@@ -552,4 +552,36 @@ document.addEventListener('DOMContentLoaded', () => {
         detailSections.forEach(section => observer.observe(section));
     }
 
+    // ==========================================
+    // 8. RENDER ABOUT PAGE RESUME GRID
+    // ==========================================
+    const resumeGrid = document.getElementById('resumeGrid');
+    if (resumeGrid) {
+        fetch('about.json')
+            .then(r => r.json())
+            .then(data => {
+                resumeGrid.innerHTML = data.resume.map(block => {
+                    const itemsHTML = block.items.map(item => `
+                        <li>
+                            <span>${item.year}</span>
+                            ${item.title}
+                            <small>${item.detail}</small>
+                        </li>
+                    `).join('');
+
+                    return `
+                        <div class="matrix-block">
+                            <h4>${block.heading}</h4>
+                            <ul>${itemsHTML}</ul>
+                        </div>
+                    `;
+                }).join('');
+            })
+            .catch(err => console.error('Error fetching about.json:', err));
+    }
+
+
+
+
+    
 });
