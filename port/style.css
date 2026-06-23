@@ -802,11 +802,15 @@ ul {
     gap: 10px;
     font-size: 0.72rem;
     letter-spacing: 0.14em;
+    color: var(--text-muted);
+}
+
+.row-view:hover {
     color: var(--accent-color);
 }
 
-.row-view .arrow {
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+.row-view:hover .arrow {
+    transform: translateX(6px);
 }
 
 /* Row hover */
@@ -817,7 +821,6 @@ ul {
     filter: saturate(1) contrast(1) brightness(1);
 }
 .archive-row:hover .row-title a { color: #fff; }
-.row-view:hover .arrow { transform: translateX(6px); }
 
 /* ==========================================================================
    6. PROJECT DETAIL — EDITORIAL CASE STUDY LAYOUT
