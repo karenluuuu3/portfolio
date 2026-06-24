@@ -410,13 +410,7 @@ section.archive-section {
     border: 1px solid var(--border-color);
     padding: 4px 12px;
     border-radius: 12px;
-    transition: var(--transition-smooth);
-}
-
-.row-tags .tag:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
-    color: var(--accent-color);
+    cursor: default;
 }
 
 .row-view {
