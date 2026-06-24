@@ -1,49 +1,6 @@
 [
-{
-    "id": "0",
-    "year": "2021",
-    "date": "2021.10",
-    "category": "game-design",
-    "group": "engine-3d",
-    "categoryLabel": "Indie Game Mechanics",
-    "title": "COVID RUSH",
-    "desc": "An experimental indie game built in Unity that turns a chaotic supply run during the pandemic into a fast-paced, satirical 3D dash. Players navigate between safe (green) and infected (red) zones that change with the background music, collecting masks and vaccines while avoiding AI-controlled infected characters.",
-    "tags": ["Unity", "Game Design", "AI Mechanics"],
-    "image": "images/work/0.png",
-    "galleryLayout": [
-      ["images/0-1.png"],
-      ["images/0-2.png"],
-      ["images/0.png"]
-    ],
-    "content": [
-      {
-        "heading": "Introduction",
-        "body": "【Immerse Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n【New Game Mode】\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-inspired system that requires players to move to safe zones to avoid infection.\n\n\n【Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
-      },
-      {
-        "heading": "Game Story",
-        "body": "A deadly disease has swept across the world for quite some time. Governments around the world are working hard to vaccinate their citizens. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou gradually become aware of the spreading disease and discover that some areas are heavily affected while others remain relatively safe. People flee dangerous areas and crowd into safer regions. Even after reaching safe zones, they continue scrambling for as many supplies as possible.\n\nWitnessing this chaotic behavior, you realize that your only priority is survival."
-      },
-      {
-        "heading": "How to Play",
-        "body": "On the ground in the game scene, there will be squares colored in red or green. Red squares represent infected areas. The colors of the squares change in sync with the background music. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in red areas, they will need to leave as soon as possible. Failing to escape in time will cause all collected items to be lost and result in a game over. Be careful—NPCs may interfere with your progress and steal your collected items."
-      },
-      {
-        "heading": "Game System",
-        "body": "1. Player character: Players can control the character by a keyboard to interact with the game objects.\n2. Squares: Different colored squares have different effects on players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The characters controlled by game AI can infect players, increasing the game's intensity and difficulty.."
-      }
-    ],
-    "credits": {
-      "System": "李諭樹",
-      "CG / Script / Music": "呂思函 KL",
-      "Art": "吳岱容"
-    },
-    "links": {
-      "demo": "https://www.youtube.com/watch?v=cHLlB8ezq2A&list=PLilhVcqigCqBy6HfkwW4ZMQTFq4LX5PVR&index=1"
-    }
-  },
   {
-      "id": "1",
+      "id": "0",
       "year": "2021",
       "date": "2021.07",
       "category": "vr-escape-room",
@@ -87,21 +44,21 @@
       ],
       "credits": {
         "Supervisor": "林奕成",
-        "Scene Animation": "陳書玟",
-        "CG Script Music": "呂思函 KL",
-        "Programming Art": "張巧如",
+        "Animation": "陳書玟",
+        "CG / Script / Music": "呂思函 KL",
+        "Programming & Art": "張巧如",
         "Character Modeling": "林千慧"
       }
     },
   {
-    "id": "2",
+    "id": "1",
     "year": "2021",
     "date": "2021.09",
     "category": "sound-art",
     "group": "interactive-system",
     "categoryLabel": "Sound Art x Audio Visual",
     "title": "Time Lapse",
-    "desc": "A sound art and audio-visual piece combining media transcription, modulation, and synesthetic experimentation. Using Ableton effects for sound modulation (echo, layering, repetition) and TouchDesigner for real-time audiovisual generation, the work reflects on the emotional arc of the pandemic—from anxiety to adaptation and coexistence.",
+    "desc": "A sound art and audiovisual work exploring media transcription, sound modulation, and synesthetic perception. Using Ableton to process sound through effects such as echo, layering, repetition, and TouchDesigner for real-time audiovisual generation, the work reflects on the emotional trajectory of the pandemic—from anxiety to adaptation and coexistence.",
     "tags": ["Sound Art", "Audio Visual", "TouchDesigner", "Ableton", "Media Transcription"],
     "image": "images/瘋城.jpg",
     "galleryLayout": [
@@ -117,20 +74,20 @@
     "content": [
       {
         "heading": "Introduction",
-        "body": "As the pandemic surged, chaos over vaccines and waves of rumors spread. Two years passed in the blink of an eye. People moved from initial anxiety and distress to a state of calm, adapting to life under self-quarantine at home, standing in solidarity with frontline medical workers and emergency responders to combat the crisis together."
+        "body": "As the pandemic escalated, waves of uncertainty, rumors, and vaccine-related panic spread across society. Within what felt like the blink of an eye, two years had passed. People gradually transitioned from anxiety and distress to a state of relative calm, adapting to life under self-quarantine at home, while standing in solidarity with frontline medical workers and emergency responders to combat the crisis together."
       },
       {
         "heading": "Techniques",
-        "body": "For the sound materials, I incorporated news reports and various foley sounds from Freesound. Using Ableton's effects, I applied modulation techniques such as echo, layering, and repetition to enhance the emotional depth. For the synesthetic experience, I utilized TouchDesigner to generate audiovisual elements, providing viewers with a dynamic visual perception."
+        "body": "The sound materials consist of news broadcasts and Foley recordings sourced from Freesound. In Ableton, I applied audio processing techniques such as echo, layering, and repetition such as echo, layering, and repetition to enhance the emotional depth. For the cross-modal audiovisual experience, I utilized TouchDesigner to generate audiovisual elements, creating a dynamic audiovisual perception for the audience."
       },
       {
         "heading": "Sections",
-        "body": "1. In the darkness, ethereal and elusive lines shift unpredictably, gradually transforming in shape—like a virus lying in wait, silently lurking among the crowd.\n2. Separation, infiltration, and fusion—much like human society, viruses exhibit similar behaviors, even transcending species boundaries.\n3. A slow descent into struggle—a suffocating tug-of-war, not only against an invisible enemy but also against humanity's own interests and moral values.\n4. The confusion surrounding virus mutations and the shortage of vaccines fueled a whirlwind of public discourse.\n5. Even as cracks appear in human society, we continue to coexist."
+        "body": "1. In darkness, ethereal lines shift unpredictably, gradually morphing—like a dormant virus silently embedded within society.\nSeparation, infiltration, and fusion mirror both viral behavior and human social dynamics, even across species boundaries.\nA gradual descent into struggle unfolds—a suffocating tension between an invisible enemy and humanity’s own ethical and systemic conflicts.\nConfusion over viral mutations and vaccine shortages fuels a surge of fragmented public discourse.\n5. Despite fractures within society, coexistence remains inevitable."
       }
     ],
-    "collaborators": ["鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸", "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"],
+    "collaborators": ["謝瀞瑩 Olifa Hsieh (curator)", "鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸", "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"],
     "exhibition": {
-      "name": "NYCU x TNUA【瘋城 This Crazy City】Online Headphone Concert",
+      "name": "NYCU x TNUA【瘋城 This Crazy City】Online Headphone Concert (immersive audio exhibition)",
       "curation": "謝瀞瑩 Olifa Hsieh",
       "institution": "National Yang Ming Chiao Tung University (NYCU) & National Taiwan University of Arts (TNUA)"
     },
@@ -139,14 +96,163 @@
     }
   },
   {
+    "id": "2",
+    "year": "2021",
+    "date": "2021.10",
+    "category": "game-design",
+    "group": "engine-3d",
+    "categoryLabel": "Indie Game Mechanics",
+    "title": "COVID RUSH",
+    "desc": "An experimental indie game built in Unity that turns a chaotic supply run during the pandemic into a fast-paced, satirical 3D dash. Players navigate between safe (green) and infected (red) zones that change with the background music, collecting masks and vaccines while avoiding AI-controlled infected characters.",
+    "tags": ["Unity", "Game Design", "AI Mechanics"],
+    "image": "images/work/0.png",
+    "galleryLayout": [
+      ["images/0-1.png"],
+      ["images/0-2.png"],
+      ["images/0.png"]
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "body": "• Immerse Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n• New Game Mode\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-inspired system that requires players to move to safe zones to avoid infection.\n\n\n• Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
+      },
+      {
+        "heading": "Game Story",
+        "body": "A deadly disease has swept across the world for quite some time. Governments around the world are working hard to vaccinate their citizens. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou gradually become aware of the spreading disease and discover that some areas are heavily affected while others remain relatively safe. People flee dangerous areas and crowd into safer regions. Even after reaching safe zones, they continue scrambling for as many supplies as possible.\n\nWitnessing this chaotic behavior, you realize that your only priority is survival."
+      },
+      {
+        "heading": "How to Play",
+        "body": "On the ground in the game scene, there will be squares colored in red or green. Red squares represent infected areas. The colors of the squares change in sync with the background music. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in red areas, they will need to leave as soon as possible. Failing to escape in time will cause all collected items to be lost and result in a game over. Be careful—NPCs may interfere with your progress and steal your collected items."
+      },
+      {
+        "heading": "Game System",
+        "body": "1. Player character: Players can control the character by a keyboard to interact with the game objects.\n2. Squares: Different colored squares have different effects on players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The characters controlled by game AI can infect players, increasing the game's intensity and difficulty.."
+      }
+    ],
+    "credits": {
+      "System": "李諭樹",
+      "CG / Script / Music": "呂思函 KL",
+      "Art": "吳岱容"
+    },
+    "links": {
+      "demo": "https://www.youtube.com/watch?v=cHLlB8ezq2A&list=PLilhVcqigCqBy6HfkwW4ZMQTFq4LX5PVR&index=1"
+    }
+  },
+  {
     "id": "3",
+    "year": "2022",
+    "date": "2022.08",
+    "category": "mobile-interactive",
+    "group": "interactive-system",
+    "categoryLabel": "Interactive AR Application",
+    "title": "水族魚生 | AquaVerse",
+    "desc": "An augmented reality mobile application that allows users to explore an underwater world through their smartphones. By interacting with virtual fish, users can access dynamic information panels that introduce different species in an engaging and immersive learning experience.",
+    "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
+    "image": "images/13.gif",
+    "galleryLayout": [
+      ["images/13.png"],
+      ["images/13-1.png"],
+      ["images/13-2.png"],
+      ["images/13.gif"]
+    ],
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "• Educational Significance\nAugmented reality has shown great potential in education, daily-life assistance, and other fields. This project explores how immersive technologies can be integrated into everyday life to enhance learning experiences and create social value.\n\n\n• Technological Interaction\nEffective knowledge sharing relies on accessible and engaging content. With the rise of technologies such as 5G and the metaverse, dynamic media—including videos, animations, and interactive experiences—have become increasingly effective in attracting attention and supporting learning."
+    },
+    {
+      "heading": "Introduction",
+      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, gaining knowledge about different species in an engaging and immersive way."
+    },
+    {
+      "heading": "Prototype",
+      "body": "• Launch the application from the home screen.\n• Select a fish in the AR environment.\n• An information panel appears, introducing the selected species."
+    }
+  ],
+    "credits": {
+      "3D Art": "曹雅婷",
+      "2D Art": "劉思彤",
+      "Programming": "呂思函 KL",
+      "Animation": "汪楚翊, 陳柏晟, 陳宏源"
+    },
+    "links": {
+      "demo": "https://youtube.com/shorts/u1-DQfZunAA?feature=share"
+    }
+  },
+  {
+    "id": "4",
+    "year": "2022",
+    "date": "2022",
+    "category": "shader-art",
+    "group": "graphics-shader",
+    "categoryLabel": "Computing Aesthetics",
+    "title": "GLSL Shaders Collection",
+    "desc": "A series of GLSL shader experiments exploring the simulation of natural phenomena, including fluid motion, optical distortion, and perceptual abstraction. The works investigate how computational systems can generate organic and expressive visual behaviors.",
+    "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
+    "image": "images/圖片20.png",
+    "galleryLayout": [
+      ["images/圖片20.png"]
+    ],
+    "content": [
+    {
+      "heading": "Collection",
+      "body": "1. Waves — A simulation of fluid dynamics using Voronoi noise, metaballs, and Ukiyo-e-inspired aesthetics, exploring the boundary between digital fluidity and traditional visual language.\n\n2. Uncertain — A procedural system driven by instability and noise, generating unpredictable visual structures that reflect ambiguity and fluctuation.\n\n3. Breathing Light — A generative shader study of rhythmic luminosity, simulating organic pulsation and subtle temporal variation.\n\n4. Reflection — An exploration of light behavior and spatial inversion through real-time rendering and surface distortion."
+    }
+  ],
+    "links": {
+      "waves_video": "https://youtu.be/lh4w9Uj0TJc",
+      "uncertain_instagram": "https://www.instagram.com/p/Cm4arWhSRJi/?img_index=2",
+      "breathing_light_instagram": "https://www.instagram.com/p/Cm4Z4UoymyO/?img_index=2"
+    }
+  },
+  
+  {
+    "id": "5",
+    "year": "2022",
+    "date": "2022.12",
+    "category": "ar-fitness-game",
+    "group": "interactive-system",
+    "categoryLabel": "AR Mixed Image Recognition & AIoT Game",
+    "title": "垃圾車等等我 | Garbage Truck, Wait for Me",
+    "desc": "A home fitness game application developed through an industry–academia collaboration with Field Technology Ltd. and NOBOLLEL. The project integrates AR-based image recognition and AIoT rapid game development modules, using smartphone camera motion tracking to detect body movements and create an accessible, equipment-free fitness experience.",
+    "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
+    "image": "images/14-header.png",
+    "galleryLayout": [
+      ["images/14.png"],
+      ["images/14-1.jpg"],
+      ["images/14-14.jpg"],
+      ["images/14-15.jpg"],
+      ["images/14-17.jpg"],
+      ["images/14-39.jpg"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "Developed by a project team at Field Technology Ltd., this initiative involved two interns working with existing AR mixed image recognition and AIoT rapid development modules. In collaboration with NOBOLLEL, the team co-developed two prototype home fitness games: Garbage Truck, Wait for Me and Smash the Garbage Truck, released as an open beta version on November 30, 2022."
+    },
+    {
+      "heading": "Game Planning Conceptual Framework",
+      "body": "• Fitness and physical well-being have become increasingly important across all age groups, especially during the pandemic when access to gyms and outdoor activities was limited.\n\n\n• Many users seek to maintain exercise habits but lack access to expensive equipment or sufficient home space.\n\n\n• Based on market research and discussions with the engineering team, we adopted image recognition as the core interaction method, combining motion sensing with gamification to create an accessible home fitness experience.\n\n\n• While AIoT devices and wearable accessories were initially considered, we prioritized camera-based interaction to reduce cost and improve accessibility.\n\n\n• The game design emphasizes full-body movement, accessibility, and intuitive engagement. To enhance cultural relatability in Taiwan, we adopted the concept of “chasing the garbage truck,” a widely recognized daily-life experience."
+    },
+    {
+      "heading": "Download & Usage",
+      "body": "For optimal gameplay experience, it is recommended to project the mobile screen to a larger display such as a TV or projector. The smartphone’s rear camera is used for motion tracking. The application also supports webcam-based interaction on PCs or laptops when connected to an external display."
+    }
+  ],
+    "links": {
+      "testing_video": "https://youtu.be/nZCknoQdh40",
+      "demo_video": "https://youtu.be/C6i9WdZ-_eE"
+    }
+  },
+    {
+    "id": "6",
     "year": "2022",
     "date": "2022.12",
     "category": "generative-art",
     "group": "graphics-shader",
     "categoryLabel": "Generative Math Art",
     "title": "墨染熹微 | Smudge of Dawn",
-    "desc": "A GLSL generative art piece inspired by karesansui (dry landscape gardens) and traditional Chinese ink painting. The 'ground'—represented by white sand and water patterns—is generated through trigonometric functions applied to screen coordinates. Time-based variations create ripples that extend and flow like organic ink brush strokes, with granular sand textures and three white stones guiding the composition.",
+    "desc": "A GLSL generative art work inspired by karesansui (Japanese dry landscape gardens) and traditional Chinese ink painting. The composition simulates ink-like diffusion and sand textures through trigonometric field functions applied to screen space coordinates.",
     "tags": ["GLSL", "Shader", "Ray Marching", "Creative Coding", "Generative Textures", "Ink Painting"],
     "image": "images/3-1.png",
     "galleryLayout": [
@@ -156,11 +262,11 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "枯山水，以山石白砂為主體，仿照自然的山海大川，從而實現「無水而喻水」的效果。本作品以GLSL為創作工具，並以傳統中國水墨畫為質地，繪製出墨色暈染山中微弱晨光的景色。\n\nKaresansui, or dry landscape gardens, use rocks and white sand to emulate vast mountains and rivers, achieving the effect of \"expressing water without water.\" This work is created using GLSL, incorporating the texture of traditional Chinese ink painting to depict a scene where soft morning light gently diffuses over the mountains."
+      "body": "枯山水，以山石白砂為主體，仿照自然的山海大川，從而實現「無水而喻水」的效果。本作品以GLSL為創作工具，並以傳統中國水墨畫為質地，繪製出墨色暈染山中微弱晨光的景色。\n\n\nKaresansui gardens use rocks and white sand to evoke vast natural landscapes, expressing water without its physical presence.\nThis work reinterprets that philosophy through GLSL, translating the aesthetics of traditional Chinese ink painting into a computational system that generates subtle gradients of morning light across an abstract mountainous field."
     },
     {
       "heading": "Technique",
-      "body": "畫面中，白砂水紋的「地」，是以三角函數對於畫面的座標運算出「波」的形體，並加入時間的變化，使水紋蔓延、甚至延伸至「天」，以增添畫面「生」和水墨繪製的感受，而後對水紋表面加入擾動使之有砂石的顆粒感，並在場地中融入三顆白石作為山石的導流。\n\nIn the composition, the \"ground\"—represented by the white sand and water patterns—is generated through trigonometric functions applied to the screen coordinates, forming wave-like shapes. By introducing time-based variations, the ripples extend and flow, even merging into the \"sky,\" enhancing the sense of movement and evoking the organic feel of ink painting. Disturbances are added to the ripple surfaces, imbuing them with a granular, sand-like texture. Additionally, three white stones are placed within the scene, guiding the flow and serving as mountain elements."
+      "body": "畫面中，白砂水紋的「地」，是以三角函數對於畫面的座標運算出「波」的形體，並加入時間的變化，使水紋蔓延、甚至延伸至「天」，以增添畫面「生」和水墨繪製的感受，而後對水紋表面加入擾動使之有砂石的顆粒感，並在場地中融入三顆白石作為山石的導流。\n\n\nThe “ground” of white sand and water ripples is generated through trigonometric field functions operating on screen space coordinates, producing wave-like structures.\nTime-dependent variation introduces temporal evolution, allowing the ripples to expand and flow across the composition, blurring the boundary between “ground” and “sky.”\n\nAdditional noise-based perturbations are applied to the surface to simulate granular sand textures. Three white stones are placed within the field as structural anchors, guiding the flow of the composition and acting as visual attractors within the system."
     }
   ],
     "links": {
@@ -168,14 +274,14 @@
     }
   },
   {
-    "id": "4",
+    "id": "7",
     "year": "2023",
     "date": "2023.01",
     "category": "unreal-engine",
     "group": "engine-3d",
     "categoryLabel": "UE4 Workshop — Digital Scenery Trilogy",
     "title": "UE4 Workshop: 恬 / 霽月 / 歸",
-    "desc": "A trilogy of digital landscapes created during a one-month UE4 workshop, building mountains, snow, water, sky, physics, wind fields, post-processing, and rendering from scratch. '恬' is inspired by Zhuge Liang's philosophy of tranquility; '霽月' projects emotions onto environments; '歸' explores homecoming through sunset hues.",
+    "desc": "A trilogy of digital landscapes created during a one-month Unreal Engine 4 workshop, covering the full environment art pipeline including terrain creation, water systems, atmospheric sky, physics simulation, wind fields, post-processing, and final rendering.\nEach scene explores a different emotional and philosophical interpretation of landscape: Tranquility, Emotional Projection, and Returning Home.",
     "tags": ["Unreal Engine 4", "Gaea", "Animation", "Landscape", "Digital Scenery"],
     "image": "images/1.jpg",
     "galleryLayout": [
@@ -186,19 +292,19 @@
     "content": [
     {
       "heading": "Workshop Overview",
-      "body": "一個月的UE4工作坊，從無到有建立山體、雪景、水體、天空、物理、風場、後期、渲染輸出。\n\nOne-month UE4 Workshop — from scratch to completion: building mountains, snowy landscapes, water bodies, sky, physics, wind fields, post-processing, and rendering output."
+      "body": "一個月的UE4工作坊，從無到有建立山體、雪景、水體、天空、物理、風場、後期、渲染輸出。\n\n\nA one-month Unreal Engine 4 workshop focused on building complete real-time environments from scratch, including terrain generation, snowy landscapes, water systems, atmospheric sky rendering, physics simulation, wind fields, and post-processing."
     },
     {
       "heading": "⟪恬⟫",
-      "body": "非淡泊無以明志，非寧靜無以致遠\n－摘自 諸葛孔明《誡子書》\n\n\"Without tranquility, one cannot clarify one's purpose; without serenity, one cannot reach far.\"\n— from Zhuge Liang, Letter of Admonition to His Son"
+      "body": "非淡泊無以明志，非寧靜無以致遠\n－摘自 諸葛孔明《誡子書》\n\n\n\"Without tranquility, one cannot clarify one’s purpose; without serenity, one cannot reach far.\"\n— Zhuge Liang, Letter of Admonition to His Son"
     },
     {
       "heading": "⟪霽月⟫",
-      "body": "寓情於景\n借景喻情\n\nProjecting emotions onto the environment, borrowing landscapes to convey feeling."
+      "body": "寓情於景\n借景喻情\n\n\nProjecting emotion onto environment, and using landscape as a medium for emotional expression."
     },
     {
       "heading": "⟪歸⟫",
-      "body": "斜陽於我，是「回家」\n\nThe setting sun, to me, means \"coming home.\""
+      "body": "斜陽於我，是「回家」\n\n\nTo me, the setting sun embodies the feeling of returning home."
     }
   ],
     "links": {
@@ -206,41 +312,16 @@
       "霽月_instagram": "https://www.instagram.com/p/Cm396r5S2Lo/?img_index=2"
     }
   },
+  
   {
-    "id": "5",
-    "year": "2022",
-    "date": "2022",
-    "category": "shader-art",
-    "group": "graphics-shader",
-    "categoryLabel": "Computing Aesthetics",
-    "title": "GLSL Shaders Collection",
-    "desc": "A collective series of graphics programming pieces exploring natural phenomena: 1. Waves (Voronoi/Metaballs/Ukiyo-e style), 2. Uncertain, 3. Breathing Light, 4. Reflection.",
-    "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
-    "image": "images/圖片20.png",
-    "galleryLayout": [
-      ["images/圖片20.png"]
-    ],
-    "content": [
-    {
-      "heading": "Collection",
-      "body": "1. Waves — #waves #voronoi #metaballs #浮世絵\n\n2. Uncertain\n\n3. Breathing Light\n\n4. Reflection"
-    }
-  ],
-    "links": {
-      "waves_video": "https://youtu.be/lh4w9Uj0TJc",
-      "uncertain_instagram": "https://www.instagram.com/p/Cm4arWhSRJi/?img_index=2",
-      "breathing_light_instagram": "https://www.instagram.com/p/Cm4Z4UoymyO/?img_index=2"
-    }
-  },
-  {
-    "id": "6",
+    "id": "8",
     "year": "2023",
     "date": "2023.01",
     "category": "shader-art",
     "group": "graphics-shader",
     "categoryLabel": "Generative Visuals",
     "title": "匯聚的思念 | The Convergence of Longing",
-    "desc": "Using Vermeer's painting 'Girl with a Pearl Earring' as the foundation, this work explores Brownian Motion and Random Walk algorithms to irregularly visualize the convergence of longing, remembrance, and digital dispersion.",
+    "desc": "Using Johannes Vermeer’s Girl with a Pearl Earring as a visual foundation, this work simulates the dispersion and convergence of memory through Brownian Motion and Random Walk algorithms. The composition transforms a static classical painting into a dynamic system of stochastic particle movement, visualizing longing as a distributed computational field.",
     "tags": ["GLSL", "Shader", "Brownian Motion", "Random Walk", "Computing Aesthetics"],
     "image": "images/6.png",
     "galleryLayout": [
@@ -250,7 +331,7 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "以維梅爾的畫作「戴珍珠耳環的少女」(Girl with a Pearl Earring)為底，嘗試以不規則的方式呈現匯聚的思念。\n\nUsing Vermeer's painting Girl with a Pearl Earring as the foundation, this work explores an irregular approach to visualizing the convergence of longing and remembrance."
+      "body": "Based on Vermeer’s Girl with a Pearl Earring, this work reinterprets a classical painting through computational processes. By applying Brownian Motion and Random Walk algorithms, the image is transformed into a dynamic system in which visual elements continuously disperse, drift, and reassemble.\n\nRather than preserving the painting as a static image, the work treats it as a field of memory particles, where longing and remembrance emerge through stochastic movement."
     }
   ],
     "links": {
@@ -258,14 +339,14 @@
     }
   },
   {
-    "id": "7",
+    "id": "9",
     "year": "2023",
     "date": "2023.01",
     "category": "point-cloud",
     "group": "interactive-system",
     "categoryLabel": "Point Cloud Animation & Installation",
     "title": "隧歲 | The Tunnel",
-    "desc": "A point cloud animation centered around Hsinchu's Zhongzheng Road Night Market, scanned into a point cloud model. Atmospheric animations are created separately for daytime and nighttime, incorporating mist, lighting variations, color shifts, particle dynamics, post-processing, and field-recorded sounds to convey an audiovisual experience that traverses time and space in Hsinchu's old town.",
+    "desc": "A point cloud-based spatial animation centered on Hsinchu’s Zhongzheng Road Night Market, reconstructed from scanned spatial data. The work explores temporal duality through separate daytime and nighttime simulations, incorporating atmospheric effects, lighting transitions, particle systems, post-processing, and field-recorded audio to construct an audiovisual experience that traverses memory, time, and urban space.",
     "tags": ["Unreal Engine 4", "Point Cloud", "LiDAR", "VFX", "Animation"],
     "image": "images/7.png",
     "galleryLayout": [
@@ -276,15 +357,15 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "「年年歲歲花相似，歲歲年年人不同。」－摘自 劉希夷〈白頭吟〉\n\n隧，寬廣卻非無限的空間。歲，聚焦在一日的時間流動。\n\n歷史遺留在新竹的某幾個角落，舊城區依傍在新竹市區周邊，新竹第一信用合作社、影像博物館、新竹州廳、新竹美術館...\n走過繁榮與衰落，看著人群來回又離去，舊城區依舊在原地送走舊人、迎接新人，彷彿培育著、呼喚著這塊土地、這塊土地的人們。"
+      "body": "「年年歲歲花相似，歲歲年年人不同。」－摘自 劉希夷〈白頭吟〉\n\n隧，寬廣卻非無限的空間。歲，聚焦在一日的時間流動。\n\n歷史遺留在新竹的某幾個角落，舊城區依傍在新竹市區周邊，新竹第一信用合作社、影像博物館、新竹州廳、新竹美術館...\n走過繁榮與衰落，看著人群來回又離去，舊城區依舊在原地送走舊人、迎接新人，彷彿培育著、呼喚著這塊土地、這塊土地的人們。\n\n\n“Year after year, blossoms resemble one another, yet year after year, people are different.”\n— Liu Xiyi, Song of White Hair\n\n\nThe tunnel is a space that is wide, yet never infinite. “Years” here refer to the continuous flow of time within a single day.\n\n\nTraces of history remain scattered across Hsinchu’s old districts. Surrounding the modern city center, landmarks such as the Hsinchu Cooperative Bank, Image Museum, City Hall, and Art Museum stand as witnesses to cycles of prosperity and decline. People come and go, while the city continues to exist—preserving memory, welcoming change, and quietly shaping its inhabitants."
     },
     {
       "heading": "Technique",
-      "body": "本作品以中正台夜市為主場景，將其掃描成點雲模型，分別以白天與夜晚的氛圍創作動畫特效，例如霧氣、光線、顏色變化、粒子的動態與樣式、影像後期處理等，並加入實境採樣的聲響，透過白天與夜晚的氛圍差異，賦予場域穿越時間與空間的視覺觀賞與聽覺感受。\n\nThis work centers around Zhongzheng Road Night Market, scanned into a point cloud model. Atmospheric animations and effects are created separately for daytime and nighttime, incorporating mist, lighting variations, color shifts, particle dynamics, and post-processing. Field-recorded sounds are integrated to emphasize the contrast between day and night, offering an audiovisual experience that traverses both time and space."
+      "body": "本作品以中正台夜市為主場景，將其掃描成點雲模型，分別以白天與夜晚的氛圍創作動畫特效，例如霧氣、光線、顏色變化、粒子的動態與樣式、影像後期處理等，並加入實境採樣的聲響，透過白天與夜晚的氛圍差異，賦予場域穿越時間與空間的視覺觀賞與聽覺感受。\n\n\nThis work reconstructs Zhongzheng Road Night Market as a point cloud-based spatial dataset, capturing its physical environment through scanned geometry.\n\n\nTwo separate simulations are created to represent daytime and nighttime states. These include atmospheric fog, dynamic lighting, color grading transitions, particle systems, and post-processing effects.\n\n\nField-recorded ambient sounds are integrated into the installation, reinforcing the sensory contrast between temporal states.\n\n\nThrough the transformation of real-world spatial data into a dynamic audiovisual system, the work constructs a temporal passage through Hsinchu’s urban memory."
     }
   ],
     "credits": {
-      "Day Scene": "呂思函 Szu-Han Lu",
+      "Day Scene": "呂思函 KL",
       "Night Scene": "何郁軒"
     },
     "exhibition": {
@@ -298,14 +379,14 @@
     }
   },
   {
-    "id": "8",
+    "id": "10",
     "year": "2023",
     "date": "2023.03",
     "category": "unreal-engine",
     "group": "engine-3d",
     "categoryLabel": "Real-time Technical Art",
     "title": "はる | Haru",
-    "desc": "An atmospheric exploration created in Unreal Engine 5 investigating themes of fading memory. 'Who is calling? While Haru has withered away... through the pulse of sakura.' Powered by Niagara particle systems and custom material shaders.",
+    "desc": "An atmospheric real-time environment created in Unreal Engine 5, exploring the theme of fading memory and ephemerality. The work combines Niagara particle systems and custom material shaders to simulate the transient motion of sakura petals, constructing a visual metaphor of disappearance and remembrance.",
     "tags": ["Unreal Engine 5", "Niagara System", "Particle Shader", "Animation"],
     "image": "images/8.jpg",
     "galleryLayout": [
@@ -315,7 +396,7 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "who is calling?\nwhile Haru has withered away.\n\nthrough the pulse of sakura."
+      "body": "“Who is calling?”\n“While Haru has withered away…”\n“Through the pulse of sakura.”\n\n\nThis work explores the fragile boundary between presence and disappearance, using seasonal imagery as a metaphor for fading memory."
     }
   ],
     "links": {
@@ -323,7 +404,7 @@
     }
   },
   {
-    "id": "9",
+    "id": "11",
     "year": "2023",
     "date": "2023.05",
     "category": "unreal-engine",
@@ -332,7 +413,7 @@
     "title": "植•栽 | Planted for Planting",
     "desc": "An immersive puzzle-solving game built in Unreal Engine 5. Players explore a maze, solve planting puzzles (hint: related to number of leaves), and nurture the World Tree. Combines maze exploration with open environments, utilizing Niagara particle systems to symbolize environmental restoration and the continuation of life.",
     "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics", "Escape Room"],
-    "image": "images/9-1.png",
+    "image": "images/9.png",
     "galleryLayout": [
       ["images/9-1.png"],
       ["images/9.png"]
@@ -353,7 +434,7 @@
   ]
   },
   {
-    "id": "10",
+    "id": "12",
     "year": "2023",
     "date": "2023.06",
     "category": "interactive-installation",
@@ -378,7 +459,7 @@
     }
   },
   {
-    "id": "11",
+    "id": "13",
     "year": "2023",
     "date": "2023.10",
     "category": "installation",
@@ -420,7 +501,7 @@
     }
   },
   {
-    "id": "12",
+    "id": "14",
     "year": "2024",
     "date": "2024",
     "category": "generative-art",
@@ -464,81 +545,6 @@
       "location": "No. 256, Section 1, Dihua Street, Datong District, Taipei City (Near Daqiaotou MRT Station)"
     },
     "note": "Paper submissions have not been made public yet."
-  },
-  {
-    "id": "13",
-    "year": "2022",
-    "date": "2022.08",
-    "category": "mobile-interactive",
-    "group": "interactive-system",
-    "categoryLabel": "Interactive AR Application",
-    "title": "水族魚生 | AquaVerse",
-    "desc": "An augmented reality mobile application where viewers use smartphones to explore an underwater world. Users interact with fish on the screen, and an introduction panel for each fish dynamically appears on the mobile device, providing knowledge about different species in an engaging and immersive way.",
-    "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
-    "image": "images/13.gif",
-    "galleryLayout": [
-      ["images/13.png"],
-      ["images/13-1.png"],
-      ["images/13-2.png"],
-      ["images/13.gif"]
-    ],
-    "content": [
-    {
-      "heading": "Concept",
-      "body": "• Educational Significance\nGiven the observation that augmented reality can be applied to educational development, daily life assistance, and more, how to integrate technology into people's lives in a way that enhances experiences and benefits society has always been a subject of discussion and practice.\n\n• Technological Interaction\nThe dissemination of knowledge primarily relies on accessible content materials. With advancements in technologies like 5G networks and the metaverse, dynamic content such as videos and animations tend to capture viewers' attention and facilitate learning more effectively."
-    },
-    {
-      "heading": "Introduction",
-      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, gaining knowledge about different species in an engaging and immersive way."
-    },
-    {
-      "heading": "Prototype",
-      "body": "• Click on the main page and start the game\n• Select a fish in the environment (AR), and the introduction panel for the fish will appear on the mobile device"
-    }
-  ],
-    "credits": {
-      "3D Art": "曹雅婷",
-      "2D Art": "劉思彤",
-      "Programming": "呂思函 Szu-Han Lu",
-      "Animation": "汪楚翊、陳柏晟、陳宏源"
-    },
-    "links": {
-      "demo": "https://youtube.com/shorts/u1-DQfZunAA?feature=share"
-    }
-  },
-  {
-    "id": "14",
-    "year": "2022",
-    "date": "2022.12",
-    "category": "ar-fitness-game",
-    "group": "interactive-system",
-    "categoryLabel": "AR Mixed Image Recognition & AIoT Game",
-    "title": "垃圾車等等我 | Garbage Truck, Wait for Me",
-    "desc": "A home fitness game app developed through industry-school collaboration with Field Technology Ltd. and NOBOLLEL. Using AR mixed image recognition and AIoT rapid game module construction, the app uses motion sensing via smartphone cameras to detect body movements combined with gamification. Inspired by the Taiwanese cultural experience of chasing the garbage truck, the game makes fitness accessible, fun, and equipment-free for all ages.",
-    "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
-    "image": "images/14.png",
-    "galleryLayout": [
-      ["images/14.png"],
-      ["images/14-39.jpg"]
-    ],
-    "content": [
-    {
-      "heading": "Introduction",
-      "body": "由田野科技(Field Technology Ltd.)專案開發小組帶領2位研習生運用公司已建置AR混合影像辨識、AIOT快速建構遊戲模組，透過與NOBOLLEL合作共同開發自製年度遊戲雛型。目前已完成企劃2款居家健身遊戲App——【垃圾車等等我】與【打擊垃圾車】，專案開發小組已完成開發，並於2022年11月30日上架OB版。\n\nThe project development team (Field Technology Ltd.) led two interns in utilizing the company's established AR mixed image recognition and AIoT rapid game module construction, co-developing the annual game prototype in collaboration with NOBOLLEL. Two home fitness game apps have been developed: [Garbage Truck, Wait for Me] and [Smash the Garbage Truck], launched as OB version on November 30, 2022."
-    },
-    {
-      "heading": "Game Planning Conceptual Framework",
-      "body": "• Fitness and exercise have become a trend in recent years, advocated for all ages. During the pandemic, maintaining health is important, but many can't go outdoors or to the gym.\n\n• People want to maintain an exercise habit but don't want to spend a lot of money on large fitness equipment, and may not have enough space at home.\n\n• After conducting market research and discussing with the development engineering team, we used image recognition technology to detect body movements, combined with gamification, to create a home fitness game app that is easily accessible.\n\n• Initially we considered incorporating AIoT or fitness accessories, but considering the added cost and complexity, we focused on image recognition and motion sensing as the core foundation.\n\n• The game needs to be fun, involve full-body movement, and be suitable for all ages. For local Taiwanese culture, a game concept that would be quickly understood is chasing the garbage truck!"
-    },
-    {
-      "heading": "Download & Usage",
-      "body": "It is recommended that the mobile phone can project to a projector or TV for a larger screen, using the phone's rear camera for gameplay. PCs or laptops can also project to a larger screen, with the built-in or external webcam used for gameplay."
-    }
-  ],
-    "links": {
-      "testing_video": "https://youtu.be/nZCknoQdh40",
-      "demo_video": "https://youtu.be/C6i9WdZ-_eE"
-    }
   },
   {
     "id": "15",
