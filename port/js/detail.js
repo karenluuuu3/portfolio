@@ -1,3 +1,14 @@
+function externalLink(href, text, extraClass = '') {
+    const cls = extraClass ? ` class="${extraClass}"` : '';
+    return `<a href="${href}" target="_blank" rel="noopener noreferrer"${cls}>${text}</a>`;
+}
+
+function escapeHTML(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 export function initDetailPage() {
     const detailMain = document.getElementById('detailMain');
     if (!detailMain) return;
@@ -79,7 +90,7 @@ function renderDetail(projects, container) {
 function buildHeroSection(project) {
     const firstLink = project.links ? Object.values(project.links)[0] : null;
     const docLinkHTML = firstLink
-        ? `<a href="${firstLink}" target="_blank" class="detail-doc-link">VIEW DOCUMENTATION <span class="arrow">→</span></a>`
+        ? externalLink(firstLink, 'VIEW DOCUMENTATION <span class="arrow">→</span>', 'detail-doc-link')
         : '';
 
     return {
@@ -91,13 +102,13 @@ function buildHeroSection(project) {
                 <div class="detail-hero-grid">
                     <div class="detail-hero-text">
                         <span class="detail-project-label">PROJECT ${project.id}</span>
-                        <h1 class="detail-project-title">${project.title}</h1>
+                        <h1 class="detail-project-title">${escapeHTML(project.title)}</h1>
                         <div class="detail-hero-meta">
                             <span>${project.categoryLabel}</span>
                             <span>${project.year}</span>
                         </div>
                         <div class="detail-hero-divider"></div>
-                        <p class="detail-hero-desc">${project.desc}</p>
+                        <p class="detail-hero-desc">${escapeHTML(project.desc)}</p>
                         ${docLinkHTML}
                     </div>
                     <div class="detail-hero-media">
@@ -167,7 +178,7 @@ function buildExhibitionSection(project) {
     if (ex.location) exDetails += `<div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">${ex.location}</span></div>`;
     if (ex.event) exDetails += `<div class="spec-row"><span class="spec-key">EVENT</span><span class="spec-val">${ex.event}</span></div>`;
     const exLink = ex.url
-    ? `<a href="${ex.url}" target="_blank" rel="noopener noreferrer" class="detail-doc-link detail-mt-24">EVENT WEBSITE <span class="arrow">→</span></a>`
+    ? externalLink(ex.url, 'EVENT WEBSITE <span class="arrow">→</span>', 'detail-doc-link detail-mt-24')
     : '';
 
     return {
@@ -262,17 +273,7 @@ function buildLinksSection(project) {
         return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="detail-doc-link detail-block-link">${label} <span class="arrow">→</span></a>`;
     }).join('');
 
-    return {
-        id: 'detail-documentation',
-        navLabel: 'LINKS',
-        navSub: 'Video<br>&amp; Links',
-        html: `
-            <section class="detail-section detail-documentation" id="detail-documentation">
-                <div class="detail-section-header"><h2 class="detail-section-title">Documentation</h2></div>
-                ${videoEmbedHTML}
-                ${linksListHTML}
-            </section>`
-    };
+    return externalLink(url, `${label} <span class="arrow">→</span>`, 'detail-doc-link detail-block-link');
 }
 
 function buildCreditsSection(project) {
@@ -284,7 +285,7 @@ function buildCreditsSection(project) {
     let creditItems = '';
     if (hasCredits) {
         creditItems = Object.entries(project.credits).map(([role, name]) => `
-            <div class="credit-item"><span class="credit-role">${role.toUpperCase()}</span><span class="credit-name">${name}</span></div>`
+            <div class="credit-item"><span class="credit-role">${role.toUpperCase()}</span><span class="credit-name">${escapeHTML(name)}</span></div>`
         ).join('');
     }
 

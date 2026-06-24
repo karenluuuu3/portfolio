@@ -7,6 +7,8 @@ export function initMenu() {
 
     function openMenu() {
         menuOverlay.classList.add('is-open');
+        menuOverlay.removeAttribute('aria-hidden');
+        menuToggleBtn?.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
         closeMenuBtn?.focus();
         document.addEventListener('keydown', trapFocus);
@@ -15,6 +17,8 @@ export function initMenu() {
 
     function closeMenu() {
         menuOverlay.classList.remove('is-open');
+        menuOverlay.setAttribute('aria-hidden', 'true');
+        menuToggleBtn?.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
         document.removeEventListener('keydown', trapFocus);
         document.removeEventListener('keydown', handleEsc);

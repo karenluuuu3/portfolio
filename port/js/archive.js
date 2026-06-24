@@ -110,44 +110,115 @@ function initSort() {
     const options = sortSelect.querySelectorAll('.select-option');
     const archiveList = document.querySelector('.archive-list');
 
+    function openDropdown() {
+        sortSelect.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+        // 聚焦到目前 active 的選項
+        const active = sortSelect.querySelector('.select-option.active');
+        active?.focus();
+    }
+
+    function closeDropdown() {
+        sortSelect.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+    }
+
+    function selectOption(option) {
+        options.forEach(o => o.classList.remove('active'));
+        option.classList.add('active');
+        valueLabel.textContent = option.textContent;
+        closeDropdown();
+        applySorting(option.getAttribute('data-value'), archiveList);
+    }
+
+    // 開關 dropdown
     trigger.addEventListener('click', (e) => {
         e.stopPropagation();
-        sortSelect.classList.toggle('is-open');
+        if (sortSelect.classList.contains('is-open')) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
     });
 
-    document.addEventListener('click', () => sortSelect.classList.remove('is-open'));
+    // trigger 上的鍵盤：Enter/Space 開啟, ArrowDown 開啟並聚焦第一個
+    trigger.addEventListener('keydown', (e) => {
+        if (['Enter', ' ', 'ArrowDown'].includes(e.key)) {
+            e.preventDefault();
+            openDropdown();
+        }
+    });
 
+    // 選項的點擊
     options.forEach(option => {
+        // 讓每個 option 可以被 focus
+        option.setAttribute('tabindex', '-1');
+
         option.addEventListener('click', (e) => {
             e.stopPropagation();
-            options.forEach(o => o.classList.remove('active'));
-            option.classList.add('active');
-            valueLabel.textContent = option.textContent;
-            sortSelect.classList.remove('is-open');
+            selectOption(option);
+        });
 
-            const sortBy = option.getAttribute('data-value');
-            const rows = [...document.querySelectorAll('.archive-row')];
+        // 選項上的鍵盤導航
+        option.addEventListener('keydown', (e) => {
+            const optionArr = [...options];
+            const currentIdx = optionArr.indexOf(option);
 
-            rows.sort((a, b) => {
-                const yearA = parseInt(a.querySelector('.row-year').textContent);
-                const yearB = parseInt(b.querySelector('.row-year').textContent);
-                if (sortBy === 'latest') return yearB - yearA;
-                if (sortBy === 'oldest') return yearA - yearB;
-                if (sortBy === 'az') {
-                    return a.querySelector('.row-title').textContent.trim()
-                        .localeCompare(b.querySelector('.row-title').textContent.trim());
-                }
-                return 0;
-            });
-
-            // 用 DocumentFragment 批次操作，只觸發一次 reflow
-            const fragment = document.createDocumentFragment();
-            rows.forEach(row => fragment.appendChild(row));
-            archiveList.appendChild(fragment);
-
-            renumberVisibleRows();
+            switch (e.key) {
+                case 'ArrowDown':
+                    e.preventDefault();
+                    optionArr[(currentIdx + 1) % optionArr.length]?.focus();
+                    break;
+                case 'ArrowUp':
+                    e.preventDefault();
+                    optionArr[(currentIdx - 1 + optionArr.length) % optionArr.length]?.focus();
+                    break;
+                case 'Enter':
+                case ' ':
+                    e.preventDefault();
+                    selectOption(option);
+                    break;
+                case 'Escape':
+                    e.preventDefault();
+                    closeDropdown();
+                    break;
+                case 'Tab':
+                    closeDropdown();
+                    break;
+            }
         });
     });
+
+    // 點擊外部關閉
+    document.addEventListener('click', () => {
+        if (sortSelect.classList.contains('is-open')) {
+            closeDropdown();
+        }
+    });
+}
+
+// 把排序邏輯抽出來共用
+function applySorting(sortBy, archiveList) {
+    const rows = [...document.querySelectorAll('.archive-row')];
+
+    rows.sort((a, b) => {
+        const yearA = parseInt(a.querySelector('.row-year').textContent);
+        const yearB = parseInt(b.querySelector('.row-year').textContent);
+        if (sortBy === 'latest') return yearB - yearA;
+        if (sortBy === 'oldest') return yearA - yearB;
+        if (sortBy === 'az') {
+            return a.querySelector('.row-title').textContent.trim()
+                .localeCompare(b.querySelector('.row-title').textContent.trim());
+        }
+        return 0;
+    });
+
+    const fragment = document.createDocumentFragment();
+    rows.forEach(row => fragment.appendChild(row));
+    archiveList.appendChild(fragment);
+
+    renumberVisibleRows();
 }
 
 function initArchiveScrollReveal() {

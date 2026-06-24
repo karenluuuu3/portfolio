@@ -2,13 +2,13 @@
 <div class="cursor-ring" id="cursorRing"></div>
 <div class="page-transition-overlay" id="pageTransition"></div>
 
-<div class="fullscreen-menu-overlay" id="menuOverlay">
+<div class="fullscreen-menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
     <div class="menu-overlay-bg"></div>
     <div class="menu-container">
         <div class="menu-close-header">
-            <button class="menu-close-btn" id="closeMenuBtn">
+            <button class="menu-close-btn" id="closeMenuBtn" aria-label="Close menu">
                 <span>CLOSE</span>
-                <div class="close-icon">×</div>
+                <div class="close-icon" aria-hidden="true">×</div>
             </button>
         </div>
         <nav class="menu-navigation">
@@ -24,8 +24,8 @@
                 <a href="mailto:karenluuuu3@gmail.com" class="menu-email">karenluuuu3@gmail.com</a>
             </div>
             <div class="menu-socials">
-                <a href="https://www.instagram.com/karenlu3.works/" target="_blank">Instagram</a>
-                <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
+                <a href="https://www.instagram.com/karenlu3.works/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.behance.net/karenlu5" target="_blank" rel="noopener noreferrer">Behance</a>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
 
 <header class="main-header">
     <a href="index.html" class="logo">KL</a>
-    <button class="menu-toggle" aria-label="Open Menu">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay">
         <span class="menu-text">MENU</span>
         <div class="burger-icon"><span></span><span></span></div>
     </button>

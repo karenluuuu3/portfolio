@@ -26,8 +26,9 @@
                 </div>
 
                 <div class="search-wrapper">
-                    <input type="text" id="archiveSearch" placeholder="Search projects or tools... (e.g. Unity, GLSL)">
-                    <span class="search-icon">⌕</span>
+                    <label for="archiveSearch" class="sr-only">Search projects</label>
+                    <input type="text" id="archiveSearch" placeholder="Search projects or tools... (e.g. Unity, GLSL)" aria-label="Search projects by name or tool">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
                 </div>
 
                 <div class="archive-toolbar">
