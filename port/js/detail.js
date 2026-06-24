@@ -111,10 +111,7 @@ function renderDetail(projects, container) {
 
 function buildHeroSection(project) {
     const firstLink = project.links ? Object.values(project.links)[0] : null;
-    const docLinkHTML = firstLink
-        ? externalLink(firstLink, 'VIEW DOCUMENTATION <span class="arrow">→</span>', 'detail-doc-link')
-        : '';
-
+   
     return {
         id: 'detail-hero',
         navLabel: 'HERO',
@@ -128,10 +125,7 @@ function buildHeroSection(project) {
                         <div class="detail-hero-meta">
                             <span>${project.categoryLabel}</span>
                             <span>${project.year}</span>
-                        </div>
-                        <div class="detail-hero-divider"></div>
-                        <p class="detail-hero-desc">${escapeHTML(project.desc)}</p>
-                        ${docLinkHTML}
+                        </div>                        
                     </div>
                     <div class="detail-hero-media">
                         <div class="detail-hero-media-inner">

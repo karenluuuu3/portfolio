@@ -3,14 +3,13 @@
     "id": "0",
     "year": "2021",
     "date": "2021.10",
-    "slug": "0.html",
     "category": "game-design",
     "group": "engine-3d",
     "categoryLabel": "Indie Game Mechanics",
     "title": "COVID RUSH",
-    "desc": "An indie game mechanics exploration built in Unity, turning a chaotic supply run into a fast, satirical 3D dash. Players navigate between safe (green) and epidemic (red) zones that shift with the BGM, collecting masks and vaccines while avoiding AI-controlled infected avatars.",
-    "tags": ["Unity", "C#", "Game Design", "AI Mechanics"],
-    "image": "images/0.png",
+    "desc": "An experimental indie game built in Unity that turns a chaotic supply run during the pandemic into a fast-paced, satirical 3D dash. Players navigate between safe (green) and infected (red) zones that change with the background music, collecting masks and vaccines while avoiding AI-controlled infected characters.",
+    "tags": ["Unity", "Game Design", "AI Mechanics"],
+    "image": "images/work/0.png",
     "galleryLayout": [
       ["images/0-1.png"],
       ["images/0-2.png"],
@@ -19,24 +18,24 @@
     "content": [
       {
         "heading": "Introduction",
-        "body": "【Immerse Experience】\nThe story fits current reality. Plots, music, and game mode will give players nervous feelings and excitement. They can easily immerse themselves in the game world, and have similar but more exciting experiences different from reality.\n\n【New Game Mode】\nPlayers can not only interact with NPCs but also collect supplies in game. There are several significant characteristics in our game, such as music switches terrains combined with Tag's elements, and getting to the safe regions to avoid infected, etc.\n\n【Fascinating Scenes】\nBecause changing terrains and safe regions is the main element in COVID RUSH. There will be several fascinating scenes switching during the game."
+        "body": "【Immerse Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n【New Game Mode】\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-inspired system that requires players to move to safe zones to avoid infection.\n\n\n【Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
       },
       {
         "heading": "Game Story",
-        "body": "Severe disease has stroken the world for a period of time. The governments of countries try hard to have citizens vaccinated. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou have gradually noticed the situation of spreading disease, and you also find out that some regions are severe and some are not. People tend to get rid of dangerous regions and swarm into safe regions. While they enter the safe region, they still try to grab more supplies they can.\n\nWatching those raving behavior, you are conscious of making yourself out of threat right now!"
+        "body": "A deadly disease has swept across the world for quite some time. Governments around the world are working hard to vaccinate their citizens. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou gradually become aware of the spreading disease and discover that some areas are heavily affected while others remain relatively safe. People flee dangerous areas and crowd into safer regions. Even after reaching safe zones, they continue scrambling for as many supplies as possible.\n\nWitnessing this chaotic behavior, you realize that your only priority is survival."
       },
       {
         "heading": "How to Play",
-        "body": "On the ground in the game scene, there will be squares colored in red or green. Red ones represent epidemic areas, and green ones are safe areas. Squares will change color with the BGM. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in green areas, he will need to collect items (masks and vaccines). If the player is in red areas, he will need to leave as soon as possible, and if he doesn't do so, the items will be eliminated, and lead to the game's ending (game over). Note that NPCs may interfere with you and take your items away."
+        "body": "On the ground in the game scene, there will be squares colored in red or green. Red squares represent infected areas. The colors of the squares change in sync with the background music. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in red areas, they will need to leave as soon as possible. Failing to escape in time will cause all collected items to be lost and result in a game over. Be careful—NPCs may interfere with your progress and steal your collected items."
       },
       {
         "heading": "Game System",
-        "body": "1. Player avatar: Players can control the avatar by a keyboard to interact with the game objects.\n2. Squares: Different colors of squares have different effects to players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The avatars controlled by game AI can infect players, and make the game more intense and difficult."
+        "body": "1. Player character: Players can control the character by a keyboard to interact with the game objects.\n2. Squares: Different colored squares have different effects on players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The characters controlled by game AI can infect players, increasing the game's intensity and difficulty.."
       }
     ],
     "credits": {
       "System": "李諭樹",
-      "CG Script Music": "呂思函 Szu-Han Lu",
+      "CG / Script / Music": "呂思函 KL",
       "Art": "吳岱容"
     },
     "links": {
@@ -47,49 +46,49 @@
       "id": "1",
       "year": "2021",
       "date": "2021.07",
-      "slug": "1.html",
       "category": "vr-escape-room",
       "group": "engine-3d",
       "categoryLabel": "VR x Hand Tracking x Escape Room",
       "title": "深海低吟 | Deep In Sea",
-      "desc": "A VR escape room experience built in Unity with Oculus Quest 2 hand tracking. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles involving hand gesture recognition, magical drawing, lightsaber combat, and branching story paths to escape a mermaid's curse.",
+      "desc": "A VR escape room experience built in Unity for Oculus Quest 2 with hand tracking support. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles based on gesture recognition, magical drawing, lightsaber combat, and branching narrative paths to break a mermaid’s curse.",
       "tags": ["Unity", "VR", "Hand Tracking", "Oculus Quest 2", "Escape Room", "Blender", "Vroid"],
-      "image": "images/w1.png",
+      "image": "images/work/bg.png",
       "galleryLayout": [
-        ["images/10_深海低吟_1.png", "images/10_深海低吟_2.png"],
+        ["images/10_深海低吟_1.png"],
+        ["images/10_深海低吟_2.png"],
         ["images/圖片3.png"],
         ["images/圖片15.png"],
         ["images/圖片1.png"],
         ["images/圖片11.png"],
         ["images/圖片5.png"],
-        ["images/logo_v3.png", "images/w1.png"]
+        ["images/w1.png"]
       ],
       "content": [
         {
           "heading": "Story Outline",
-          "body": "After diving into the depths of the sea, the player—an archaeologist—hears a hauntingly beautiful song before gradually losing consciousness. Upon waking, they find themselves inside an unfamiliar ship cabin.\n\nSolving four intricate puzzles triggers the appearance of a figure claiming to be the captain of this ancient vessel. The captain speaks of the mermaids' wicked nature and grants the player a powerful artifact to counter them. In an instant, the once-bright room turns dark and eerie.\n\nJust then, a statue in the corner comes to life, introducing itself as a prince of the Russian Empire. He pleads with the player to help find his beloved, who was also trapped by the mermaids.\n\nFollowing the clues, the player enters a mystical mirror, where they witness the prince and princess's cherished memories. As the truth unfolds, the princess bestows a key to escape the ship's cabin. But as the player steps out from the mirror's world, a crazed mermaid suddenly appears.\n\nStory Branches:\nPath A: Draw a magic circle to defeat the mermaid.\nPath B: Use a hidden incantation found in the puzzles to immobilize the mermaid."
+          "body": "After diving into the deep sea, the player—an archaeologist—hears a hauntingly beautiful song before gradually losing consciousness. When they awaken, they find themselves inside an unfamiliar ship cabin.\n\n\nSolving four intricate puzzles triggers the appearance of a figure claiming to be the captain of the ancient vessel. The captain warns of the mermaids’ wicked nature and grants the player a powerful artifact to combat them. In an instant, the once-bright room turns dark and eerie.\n\n\nA statue in the corner then comes to life, introducing itself as a prince of the Russian Empire. He pleads for help in finding his beloved, who was also trapped by the mermaids.\n\n\nFollowing the clues, the player enters a mystical mirror and witnesses memories shared between the prince and princess. As the truth unfolds, the princess grants a key to escape the cabin. However, as the player exits the mirror world, a crazed mermaid suddenly appears."
         },
         {
           "heading": "Development Tools",
-          "body": "I. Game Engine: Unity\nII. Models and Design: Blender, Vroid, Photoshop & Illustrator\nIII. Device: Oculus Quest 2"
+          "body": "I. Engine: Unity\nII. 3D Assets & Design: Blender, Vroid, Photoshop & Illustrator\nIII. Target Device: Oculus Quest 2: Oculus Quest 2"
         },
         {
           "heading": "Techniques",
-          "body": "I. Unity — Keyword Recognize: UnityEngine.Windows.Speech\nII. Hand tracking & Hand gesture recognition:\n  • Item Pickup — Using Unity's physics system for realistic physical collisions\n  • Mirror Gestures — Detecting hand skeleton positions to identify gestures\n  • Magical Drawing with a Pen — Forming a pen-holding position by touching index finger and thumb, integrated with Unity's line renderer system\n  • Lightsaber & Backpack Access — Two buttons, one on each hand, for summoning lightsaber and opening backpack panel"
+          "body": "Unity Speech Recognition: UnityEngine.Windows.Speech for keyword detection\n\n\nHand Tracking & Gesture Recognition:\n• Item Pickup — Physics-based interaction using Unity’s collision system\n• Mirror Gestures — Detecting hand skeleton data to recognize gesture states\n• Magical Drawing (Pen System) — Pinch gesture (thumb + index finger) used to simulate pen input, implemented with Unity’s Line Renderer\n• Lightsaber & Backpack System — Dual-hand input buttons for summoning a lightsaber and opening the inventory UI"
         },
         {
           "heading": "Visual Effects",
-          "body": "• Particles System\n• PBR Shader\n• VFX Shader"
+          "body": "• Particles System\n• PBR Materials\n• VFX Shader"
         },
         {
           "heading": "Design",
-          "body": "• Vroid: Character model design and creation\n• Photoshop & Illustrator: Game logo design, UI art used in the game"
+          "body": "• Vroid — Character modeling and creation\n• Photoshop & Illustrator — Game logo and UI asset design"
         }
       ],
       "credits": {
         "Supervisor": "林奕成",
         "Scene Animation": "陳書玟",
-        "CG Script Music": "呂思函 Szu-Han Lu",
+        "CG Script Music": "呂思函 KL",
         "Programming Art": "張巧如",
         "Character Modeling": "林千慧"
       }
@@ -98,7 +97,6 @@
     "id": "2",
     "year": "2021",
     "date": "2021.09",
-    "slug": "2.html",
     "category": "sound-art",
     "group": "interactive-system",
     "categoryLabel": "Sound Art x Audio Visual",
@@ -144,7 +142,6 @@
     "id": "3",
     "year": "2022",
     "date": "2022.12",
-    "slug": "3.html",
     "category": "generative-art",
     "group": "graphics-shader",
     "categoryLabel": "Generative Math Art",
@@ -174,7 +171,6 @@
     "id": "4",
     "year": "2023",
     "date": "2023.01",
-    "slug": "4.html",
     "category": "unreal-engine",
     "group": "engine-3d",
     "categoryLabel": "UE4 Workshop — Digital Scenery Trilogy",
@@ -214,7 +210,6 @@
     "id": "5",
     "year": "2022",
     "date": "2022",
-    "slug": "5.html",
     "category": "shader-art",
     "group": "graphics-shader",
     "categoryLabel": "Computing Aesthetics",
@@ -241,7 +236,6 @@
     "id": "6",
     "year": "2023",
     "date": "2023.01",
-    "slug": "6.html",
     "category": "shader-art",
     "group": "graphics-shader",
     "categoryLabel": "Generative Visuals",
@@ -267,7 +261,6 @@
     "id": "7",
     "year": "2023",
     "date": "2023.01",
-    "slug": "7.html",
     "category": "point-cloud",
     "group": "interactive-system",
     "categoryLabel": "Point Cloud Animation & Installation",
@@ -308,7 +301,6 @@
     "id": "8",
     "year": "2023",
     "date": "2023.03",
-    "slug": "8.html",
     "category": "unreal-engine",
     "group": "engine-3d",
     "categoryLabel": "Real-time Technical Art",
@@ -334,7 +326,6 @@
     "id": "9",
     "year": "2023",
     "date": "2023.05",
-    "slug": "9.html",
     "category": "unreal-engine",
     "group": "engine-3d",
     "categoryLabel": "3D Interactive Puzzle Game",
@@ -365,7 +356,6 @@
     "id": "10",
     "year": "2023",
     "date": "2023.06",
-    "slug": "10.html",
     "category": "interactive-installation",
     "group": "interactive-system",
     "categoryLabel": "Hardware & Interactive Installation",
@@ -391,7 +381,6 @@
     "id": "11",
     "year": "2023",
     "date": "2023.10",
-    "slug": "11.html",
     "category": "installation",
     "group": "interactive-system",
     "categoryLabel": "Multimedia Installation",
@@ -434,7 +423,6 @@
     "id": "12",
     "year": "2024",
     "date": "2024",
-    "slug": "12.html",
     "category": "generative-art",
     "group": "graphics-shader",
     "categoryLabel": "Idea Art & Programming",
@@ -481,7 +469,6 @@
     "id": "13",
     "year": "2022",
     "date": "2022.08",
-    "slug": "13.html",
     "category": "mobile-interactive",
     "group": "interactive-system",
     "categoryLabel": "Interactive AR Application",
@@ -523,7 +510,6 @@
     "id": "14",
     "year": "2022",
     "date": "2022.12",
-    "slug": "14.html",
     "category": "ar-fitness-game",
     "group": "interactive-system",
     "categoryLabel": "AR Mixed Image Recognition & AIoT Game",
@@ -558,7 +544,6 @@
     "id": "15",
     "year": "2025",
     "date": "2025.06",
-    "slug": "15.html",
     "category": "installation",
     "group": "interactive-system",
     "categoryLabel": "Interactive Installation",
@@ -602,7 +587,6 @@
     "id": "16",
     "year": "2025",
     "date": "2025.08",
-    "slug": "16.html",
     "category": "research",
     "group": "graphics-shader",
     "categoryLabel": "SIGGRAPH 2025 Art Paper",
@@ -649,7 +633,6 @@
     "id": "17",
     "year": "2025",
     "date": "2025.10",
-    "slug": "17.html",
     "category": "performance-tech",
     "group": "interactive-system",
     "categoryLabel": "Performance Interface Development",
@@ -682,7 +665,6 @@
     "id": "18",
     "year": "2025",
     "date": "2025.10",
-    "slug": "18.html",
     "category": "web-development",
     "group": "interactive-system",
     "categoryLabel": "Web Design & Full-Stack Development",
@@ -720,7 +702,6 @@
     "id": "19",
     "year": "2025",
     "date": "2025.10",
-    "slug": "19.html",
     "category": "gesture-recognition",
     "group": "interactive-system",
     "categoryLabel": "Hand Gesture Recognition & Performance Interface",
@@ -752,7 +733,6 @@
     "id": "20",
     "year": "2026",
     "date": "2026.04",
-    "slug": "20.html",
     "category": "rnd",
     "group": "interactive-system",
     "categoryLabel": "R&D — Gesture Dynamics Recognition",
@@ -789,7 +769,6 @@
     "id": "21",
     "year": "2026",
     "date": "2026.04",
-    "slug": "21.html",
     "category": "3d-simulation",
     "group": "engine-3d",
     "categoryLabel": "3D Dynamic Simulation & Pre-Visualization",
