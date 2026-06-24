@@ -335,6 +335,7 @@
     will-change: transform;
 }
 
+
 .row-feature::after {
     content: '';
     position: absolute;
@@ -419,10 +420,6 @@
 
 .row-view:hover {
     color: var(--accent-color);
-}
-
-.row-view:hover .arrow {
-    transform: translateX(6px);
 }
 
 /* Row hover */

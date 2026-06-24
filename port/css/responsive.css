@@ -128,4 +128,18 @@
     .site-footer--detail {
         margin-left: 0;
     }
+
+    .detail-project-nav {
+        padding: 40px 24px 60px;
+    }
+
+    .project-nav-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-nav-next {
+        text-align: left;
+        align-items: flex-start;
+    }
 }

@@ -8,6 +8,23 @@ export function initDetailPage() {
         .catch(err => console.error('Error fetching projects.json:', err));
 }
 
+function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = docHeight > 0 ? `${(scrollTop / docHeight) * 100}%` : '0%';
+            ticking = false;
+        });
+    }, { passive: true });
+}
+
 // ==========================================
 // MAIN RENDER
 // ==========================================
@@ -52,6 +69,7 @@ function renderDetail(projects, container) {
     }
 
     initDetailAnimations();
+    initScrollProgress();
 }
 
 // ==========================================
@@ -72,7 +90,6 @@ function buildHeroSection(project) {
             <section class="detail-section detail-hero" id="detail-hero">
                 <div class="detail-hero-grid">
                     <div class="detail-hero-text">
-                        <a href="archive.html" class="detail-back-link">← BACK TO ARCHIVE</a>
                         <span class="detail-project-label">PROJECT ${project.id}</span>
                         <h1 class="detail-project-title">${project.title}</h1>
                         <div class="detail-hero-meta">
@@ -286,16 +303,26 @@ function buildCreditsSection(project) {
 
 function buildNextProjectSection(projects, currentId) {
     const currentIdx = projects.findIndex(p => p.id === currentId);
+    const prevProject = projects[(currentIdx - 1 + projects.length) % projects.length];
     const nextProject = projects[(currentIdx + 1) % projects.length];
 
     return {
         id: null,
         html: `
-            <section class="detail-section detail-next-project">
-                <span class="next-project-label">NEXT PROJECT</span>
-                <h3 class="next-project-title">${nextProject.title}</h3>
-                <span class="next-project-year">${nextProject.year}</span>
-                <a href="project-detail.html?id=${nextProject.id}" class="next-project-link">VIEW PROJECT <span class="arrow">→</span></a>
+            <section class="detail-section detail-project-nav">
+                <a href="archive.html" class="project-nav-back">← BACK TO ARCHIVE</a>
+                <div class="project-nav-grid">
+                    <a href="project-detail.html?id=${prevProject.id}" class="project-nav-item project-nav-prev">
+                        <span class="project-nav-label">← PREVIOUS PROJECT</span>
+                        <h3 class="project-nav-title">${prevProject.title}</h3>
+                        <span class="project-nav-year">${prevProject.year}</span>
+                    </a>
+                    <a href="project-detail.html?id=${nextProject.id}" class="project-nav-item project-nav-next">
+                        <span class="project-nav-label">NEXT PROJECT →</span>
+                        <h3 class="project-nav-title">${nextProject.title}</h3>
+                        <span class="project-nav-year">${nextProject.year}</span>
+                    </a>
+                </div>
             </section>`
     };
 }
@@ -382,6 +409,12 @@ function initDetailAnimations() {
     }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
 
     detailSections.forEach(section => sectionObserver.observe(section));
+
+    document.querySelectorAll('.gallery-item-media img').forEach(img => {
+        const markLoaded = () => img.closest('.gallery-item-media')?.classList.add('is-loaded');
+        if (img.complete) markLoaded();
+        else img.addEventListener('load', markLoaded, { once: true });
+    });
 
     // Image parallax
     initDetailImageParallax();

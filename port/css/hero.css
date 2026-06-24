@@ -63,3 +63,22 @@
     font-size: 0.95rem;
     margin-bottom: 40px;
 }
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    transition: color 0.4s ease, gap 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cta-link:hover {
+    color: var(--accent-color);
+    gap: 16px;
+}
+
+.cta-link:hover .arrow {
+    transform: translateX(6px);
+}

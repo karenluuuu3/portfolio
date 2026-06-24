@@ -36,11 +36,16 @@
     gap: 12px;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
-    border-bottom: 1px solid white;
     padding-bottom: 5px;
     margin-bottom: 50px;
     cursor: pointer;
+    color: var(--text-muted);
 }
+
+.download-cv-btn:hover {
+    color: var(--accent-color);
+}
+
 
 .profile-frame {
     width: 100%;

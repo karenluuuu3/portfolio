@@ -1,5 +1,3 @@
-import { initScrollReveal } from './scrollReveal.js';
-
 export function initArchivePage() {
     const archiveList = document.querySelector('.archive-list');
     if (!archiveList) return;

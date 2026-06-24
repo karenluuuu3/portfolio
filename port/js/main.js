@@ -38,6 +38,12 @@ function initHeroAnimations() {
 
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
+        // 點擊背景進入 archive
+        heroBg.style.cursor = 'pointer';
+        heroBg.addEventListener('click', () => {
+            window.location.href = 'archive.html';
+        });
+
         let ticking = false;
         window.addEventListener('scroll', () => {
             if (ticking) return;

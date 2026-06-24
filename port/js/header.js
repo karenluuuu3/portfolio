@@ -2,8 +2,14 @@ export function initStickyHeader() {
     const mainHeader = document.querySelector('.main-header');
     if (!mainHeader) return;
 
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        mainHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            mainHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+            ticking = false;
+        });
     }, { passive: true });
 }
 
