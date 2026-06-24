@@ -7,24 +7,21 @@ import { initArchivePage } from './archive.js';
 import { initDetailPage } from './detail.js';
 import { initAboutPage } from './about.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // 1. 載入共用 header / footer
-    await loadComponents();
-
-    // 2. 全域功能
-    initMenu();
-    initCursor();
+document.addEventListener('DOMContentLoaded', () => {
+    // 不依賴 header/footer 的模組，立刻啟動
     initPageTransitions();
-    initStickyHeader();
-    initBackToTop();
-
-    // 3. 頁面專屬模組（各自判斷 DOM 是否存在）
     initArchivePage();
     initDetailPage();
     initAboutPage();
-
-    // 4. 首頁 hero
     initHeroAnimations();
+
+    // header/footer 載入完成後才初始化相關功能
+    loadComponents().then(() => {
+        initMenu();
+        initCursor();
+        initStickyHeader();
+        initBackToTop();
+    });
 });
 
 function initHeroAnimations() {
@@ -38,7 +35,6 @@ function initHeroAnimations() {
 
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
-        // 點擊背景進入 archive
         heroBg.style.cursor = 'pointer';
         heroBg.addEventListener('click', () => {
             window.location.href = 'archive.html';

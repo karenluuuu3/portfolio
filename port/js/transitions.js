@@ -15,6 +15,8 @@ export function initPageTransitions() {
         const href = link.getAttribute('href');
         if (!href) return;
         if (link.target === '_blank') return;
+        if (link.hasAttribute('download')) return;
+        if (href.match(/\.(pdf|zip|rar|doc|docx|xls|xlsx)$/i)) return;
         if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
         if (href.startsWith('http') && !href.startsWith(window.location.origin)) return;
 

@@ -424,27 +424,31 @@ function initDetailImageParallax() {
     const images = document.querySelectorAll('.gallery-item-media img, .detail-hero-media-inner img');
     if (images.length === 0) return;
 
+    // 用 Set 追蹤可見圖片，避免遍歷所有圖片
+    const visibleImages = new Set();
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            entry.target._inView = entry.isIntersecting;
+            if (entry.isIntersecting) {
+                visibleImages.add(entry.target);
+            } else {
+                visibleImages.delete(entry.target);
+                entry.target.style.transform = ''; // 離開視口時重置
+            }
         });
-    }, { threshold: 0 });
+    }, { rootMargin: '50px 0px', threshold: 0 });
 
-    images.forEach(img => {
-        img._inView = false;
-        observer.observe(img);
-    });
+    images.forEach(img => observer.observe(img));
 
     let ticking = false;
     window.addEventListener('scroll', () => {
-        if (ticking) return;
+        if (ticking || visibleImages.size === 0) return;
         ticking = true;
         requestAnimationFrame(() => {
-            images.forEach(img => {
-                if (!img._inView) return;
+            const viewCenter = window.innerHeight / 2;
+            visibleImages.forEach(img => {
                 const rect = img.getBoundingClientRect();
                 const center = rect.top + rect.height / 2;
-                const viewCenter = window.innerHeight / 2;
                 const offset = (center - viewCenter) * 0.04;
                 img.style.transform = `translateY(${offset}px)`;
             });

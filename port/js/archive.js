@@ -133,11 +133,18 @@ function initSort() {
                 const yearB = parseInt(b.querySelector('.row-year').textContent);
                 if (sortBy === 'latest') return yearB - yearA;
                 if (sortBy === 'oldest') return yearA - yearB;
-                if (sortBy === 'az') return a.querySelector('.row-title').textContent.trim().localeCompare(b.querySelector('.row-title').textContent.trim());
+                if (sortBy === 'az') {
+                    return a.querySelector('.row-title').textContent.trim()
+                        .localeCompare(b.querySelector('.row-title').textContent.trim());
+                }
                 return 0;
             });
 
-            rows.forEach(row => archiveList.appendChild(row));
+            // 用 DocumentFragment 批次操作，只觸發一次 reflow
+            const fragment = document.createDocumentFragment();
+            rows.forEach(row => fragment.appendChild(row));
+            archiveList.appendChild(fragment);
+
             renumberVisibleRows();
         });
     });
