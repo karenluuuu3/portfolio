@@ -125,7 +125,7 @@
         align-items: flex-start;
     }
 
-    .detail-main + .site-footer {
+    .site-footer--detail {
         margin-left: 0;
     }
 }
