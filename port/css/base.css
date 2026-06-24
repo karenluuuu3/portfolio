@@ -79,3 +79,40 @@ ul {
     white-space: nowrap;
     border: 0;
 }
+
+/* --- Skeleton Loader --- */
+.skeleton-pulse {
+    background: linear-gradient(
+        90deg,
+        var(--bg-secondary) 25%,
+        rgba(255, 255, 255, 0.04) 50%,
+        var(--bg-secondary) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+.skeleton-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    gap: 36px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skeleton-block {
+    height: 20px;
+    width: 60%;
+}
+
+.skeleton-block--wide {
+    height: 16px;
+    width: 85%;
+    margin-top: 10px;
+}
+
+.skeleton-block--img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}

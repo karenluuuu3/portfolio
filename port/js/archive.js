@@ -2,6 +2,20 @@ export function initArchivePage() {
     const archiveList = document.querySelector('.archive-list');
     if (!archiveList) return;
 
+    // 先顯示 skeleton
+    archiveList.innerHTML = Array.from({ length: 4 }, () => `
+        <div class="skeleton-row">
+            <div>
+                <div class="skeleton-pulse skeleton-block" style="width:40px; height:32px;"></div>
+            </div>
+            <div class="skeleton-pulse skeleton-block--img"></div>
+            <div>
+                <div class="skeleton-pulse skeleton-block"></div>
+                <div class="skeleton-pulse skeleton-block--wide"></div>
+            </div>
+        </div>
+    `).join('');
+
     fetch('projects.json')
         .then(r => r.json())
         .then(data => renderArchive(data, archiveList))

@@ -1,3 +1,28 @@
+export function initDetailPage() {
+    const detailMain = document.getElementById('detailMain');
+    if (!detailMain) return;
+
+    // 先顯示 skeleton
+    detailMain.innerHTML = `
+        <section class="detail-section detail-hero" style="min-height:80vh;">
+            <div class="detail-hero-grid">
+                <div>
+                    <div class="skeleton-pulse skeleton-block" style="width:120px; height:14px; margin-bottom:20px;"></div>
+                    <div class="skeleton-pulse" style="width:70%; height:48px; margin-bottom:16px;"></div>
+                    <div class="skeleton-pulse skeleton-block--wide"></div>
+                    <div class="skeleton-pulse skeleton-block--wide" style="margin-top:8px;"></div>
+                </div>
+                <div class="skeleton-pulse skeleton-block--img"></div>
+            </div>
+        </section>`;
+
+    fetch('projects.json')
+        .then(r => r.json())
+        .then(data => renderDetail(data, detailMain))
+        .catch(err => console.error('Error fetching projects.json:', err));
+}
+
+
 function externalLink(href, text, extraClass = '') {
     const cls = extraClass ? ` class="${extraClass}"` : '';
     return `<a href="${href}" target="_blank" rel="noopener noreferrer"${cls}>${text}</a>`;
@@ -9,15 +34,6 @@ function escapeHTML(str) {
     return div.innerHTML;
 }
 
-export function initDetailPage() {
-    const detailMain = document.getElementById('detailMain');
-    if (!detailMain) return;
-
-    fetch('projects.json')
-        .then(r => r.json())
-        .then(data => renderDetail(data, detailMain))
-        .catch(err => console.error('Error fetching projects.json:', err));
-}
 
 function initScrollProgress() {
     const bar = document.getElementById('scrollProgress');
@@ -45,7 +61,12 @@ function renderDetail(projects, container) {
     const project = projects.find(p => p.id === projectId);
 
     if (!project) {
-        container.innerHTML = '<section class="detail-section"><p>Project not found.</p></section>';
+        container.innerHTML = `
+            <section class="detail-section detail-404">
+                <h1 class="detail-404-title">404</h1>
+                <p class="detail-404-desc">This project doesn't exist or has been moved.</p>
+                <a href="archive.html" class="cta-link">BACK TO ARCHIVE <span class="arrow">→</span></a>
+            </section>`;
         return;
     }
 

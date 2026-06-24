@@ -50,4 +50,33 @@ function initHeroAnimations() {
             });
         }, { passive: true });
     }
+
+    initHeroSpotlight();
+}
+
+function initHeroSpotlight() {
+    const spotlight = document.getElementById('heroSpotlight');
+    const heroSection = document.querySelector('.hero-section');
+    if (!spotlight || !heroSection) return;
+
+    // 滑鼠進入 hero 區域才啟動
+    heroSection.addEventListener('mouseenter', () => {
+        spotlight.classList.add('is-active');
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+        spotlight.classList.remove('is-active');
+    });
+
+    heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        spotlight.style.background = `radial-gradient(
+            circle 400px at ${x}px ${y}px,
+            transparent 0%,
+            rgba(10, 10, 10, 0.45) 100%
+        )`;
+    });
 }

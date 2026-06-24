@@ -84,3 +84,22 @@
 .cta-link:hover .arrow {
     transform: translateX(6px);
 }
+
+
+.hero-spotlight {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: radial-gradient(
+        circle 400px at 50% 50%,
+        transparent 0%,
+        rgba(10, 10, 10, 0.855) 100%
+    );
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.hero-spotlight.is-active {
+    opacity: 1;
+}
