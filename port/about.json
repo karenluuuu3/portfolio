@@ -4,14 +4,14 @@
       "heading": "EDUCATION",
       "items": [
         {
-          "year": "Sep. 2022 — Jun. 2025",
+          "year": "Sep. 2022 — Jul. 2025",
           "title": "National Yang Ming Chiao Tung University (NYCU)",
-          "detail": "Institute of Applied Arts — Interdisciplinary Art Group"
+          "detail": "Institute of Applied Arts — Computational Aesthetics"
         },
         {
           "year": "Sep. 2018 — Jun. 2022",
           "title": "National Yang Ming Chiao Tung University (NYCU)",
-          "detail": "Department of Computer Science — Network & Multimedia / Interdisciplinary Program of Design & Innovation Technologies"
+          "detail": "Department of Computer Science — Network & Multimedia / Design and Innovative Technology Program (DITP)"
         }
       ]
     },
@@ -41,7 +41,7 @@
         {
           "year": "Jun. — Dec. 2022",
           "title": "Field Technology Ltd. — Game Planner & Project Manager",
-          "detail": "DIGI+Talent Cross-Domain Digital Talent Acceleration Program / Ministry of Digital Affairs & Institute for Information Industry / Global Digital Rising Star Award — Honorable Mention"
+          "detail": "DIGI+Talent Cross-Domain Digital Talent Acceleration Program / Administration for Digital Industries, Ministry of Digital Affairs & Institute for Information Industry / Global Digital Rising Star Award — Honorable Mention"
         }
       ]
     },
@@ -56,7 +56,7 @@
         {
           "year": "Jul. 2024",
           "title": "GDAP#13 LIMINAL",
-          "detail": "Video works: Porcelain Shadow Fragrance, Picking Flowers, Threads"
+          "detail": "Video works: 瓷影暗香, 拾花, 粼"
         },
         {
           "year": "Dec. 2023 — Jan. 2024",
@@ -95,13 +95,13 @@
       "items": [
         {
           "year": "Programming",
-          "title": "C++ / C# / Python",
-          "detail": "OpenGL / GLSL / HLSL"
+          "title": "C# / C++ / Python / OpenGL / GLSL / HLSL / HTML / CSS / JavaScript",
+          "detail": ""
         },
         {
           "year": "Engine & Tools",
           "title": "Unreal Engine / Unity / TouchDesigner",
-          "detail": "Shader, AR/VR, Kinect, Arduino, Oculus Quest"
+          "detail": "Interactive Content, Shader, XR, Projection, Kinect, Arduino, Oculus Quest"
         }
       ]
     },
@@ -114,14 +114,14 @@
           "detail": ""
         },
         {
-          "year": "",
+          "year": "2022",
           "title": "English (TOEIC: 875)",
           "detail": ""
         },
         {
-          "year": "",
+          "year": "2023",
           "title": "Japanese (JLPT: N2)",
-          "detail": ""
+          "detail": "Exchange Student, Graduate School of Science and Engineering, Chiba University (2024)"
         }
       ]
     }
