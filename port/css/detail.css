@@ -205,10 +205,11 @@
     gap: 12px;
     font-size: 0.8rem;
     letter-spacing: 0.12em;
+    color: var(--text-muted);
 }
 
 .detail-doc-link:hover {
-    color: var(--text-muted);
+    color: var(--text-accent);
 }
 
 .detail-hero-media-inner {
