@@ -402,14 +402,20 @@ function initDetailImageParallax() {
         observer.observe(img);
     });
 
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        images.forEach(img => {
-            if (!img._inView) return;
-            const rect = img.getBoundingClientRect();
-            const center = rect.top + rect.height / 2;
-            const viewCenter = window.innerHeight / 2;
-            const offset = (center - viewCenter) * 0.04;
-            img.style.transform = `translateY(${offset}px)`;
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            images.forEach(img => {
+                if (!img._inView) return;
+                const rect = img.getBoundingClientRect();
+                const center = rect.top + rect.height / 2;
+                const viewCenter = window.innerHeight / 2;
+                const offset = (center - viewCenter) * 0.04;
+                img.style.transform = `translateY(${offset}px)`;
+            });
+            ticking = false;
         });
     }, { passive: true });
 }

@@ -110,6 +110,7 @@
 }
 
 .filter-tag {
+    font-family: var(--font-sans);
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-muted);

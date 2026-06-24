@@ -4,6 +4,9 @@ export function initCursor() {
 
     if (!cursor || !ring || !window.matchMedia('(pointer: fine)').matches) return;
 
+    document.documentElement.classList.add('custom-cursor-ready');
+
+
     let mouseX = 0, mouseY = 0;
     let ringX = 0, ringY = 0;
 

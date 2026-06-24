@@ -38,8 +38,14 @@ function initHeroAnimations() {
 
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            heroBg.style.transform = `scale(1.1) translateY(${window.scrollY * 0.35}px)`;
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                heroBg.style.transform = `scale(1.1) translateY(${window.scrollY * 0.35}px)`;
+                ticking = false;
+            });
         }, { passive: true });
     }
 }
