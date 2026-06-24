@@ -80,6 +80,7 @@ function renderDetail(projects, container) {
     }
 
     initDetailAnimations();
+    initYouTubeLazyLoad();
     initScrollProgress();
 }
 
@@ -252,28 +253,41 @@ function buildLinksSection(project) {
     if (!project.links || Object.keys(project.links).length === 0) return null;
 
     const linkEntries = Object.entries(project.links);
-    const ytEntry = linkEntries.find(([, url]) => url.includes('youtube.com/watch') || url.includes('youtu.be'));
+    const ytEntry = linkEntries.find(([key, val]) => val.includes('youtube.com/watch') || val.includes('youtu.be'));
 
     let videoEmbedHTML = '';
     if (ytEntry) {
         const ytId = extractYouTubeId(ytEntry[1]);
         if (ytId) {
-           videoEmbedHTML = `
-            <div class="doc-video-wrapper">
-                <iframe src="https://www.youtube.com/embed/${ytId}"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>`;
+            videoEmbedHTML = `
+                <div class="doc-video-wrapper" id="ytPlayer" data-yt-id="${ytId}">
+                    <img src="https://img.youtube.com/vi/${ytId}/maxresdefault.jpg"
+                         alt="Video thumbnail"
+                         class="doc-video-poster">
+                    <button class="doc-play-btn" aria-label="Play video">
+                        <span class="play-icon"></span>
+                    </button>
+                </div>`;
         }
     }
 
-    const otherLinks = linkEntries.filter(([, url]) => !(ytEntry && url === ytEntry[1]));
-    const linksListHTML = otherLinks.map(([key, url]) => {
+    const otherLinks = linkEntries.filter(([key, val]) => !(ytEntry && val === ytEntry[1]));
+    const linksListHTML = otherLinks.map(([key, val]) => {
         const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="detail-doc-link detail-block-link">${label} <span class="arrow">→</span></a>`;
+        return externalLink(val, `${label} <span class="arrow">→</span>`, 'detail-doc-link detail-block-link');
     }).join('');
 
-    return externalLink(url, `${label} <span class="arrow">→</span>`, 'detail-doc-link detail-block-link');
+    return {
+        id: 'detail-documentation',
+        navLabel: 'LINKS',
+        navSub: 'Video<br>&amp; Links',
+        html: `
+            <section class="detail-section detail-documentation" id="detail-documentation">
+                <div class="detail-section-header"><h2 class="detail-section-title">Documentation</h2></div>
+                ${videoEmbedHTML}
+                ${linksListHTML}
+            </section>`
+    };
 }
 
 function buildCreditsSection(project) {
@@ -359,15 +373,37 @@ function initDetailScrollSpy() {
         });
     });
 
+    const visibleSections = new Set();
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                sideNavItems.forEach(nav => {
-                    nav.classList.toggle('active', nav.getAttribute('href') === '#' + id);
-                });
+                visibleSections.add(entry.target);
+            } else {
+                visibleSections.delete(entry.target);
             }
         });
+
+        // 從所有可見的 section 中，找最上面的那個
+        if (visibleSections.size === 0) return;
+
+        let topSection = null;
+        let topOffset = Infinity;
+
+        visibleSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < topOffset) {
+                topOffset = rect.top;
+                topSection = section;
+            }
+        });
+
+        if (topSection) {
+            const id = topSection.getAttribute('id');
+            sideNavItems.forEach(nav => {
+                nav.classList.toggle('active', nav.getAttribute('href') === '#' + id);
+            });
+        }
     }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
 
     detailSections.forEach(section => observer.observe(section));
@@ -461,4 +497,17 @@ function initDetailImageParallax() {
             ticking = false;
         });
     }, { passive: true });
+}
+
+function initYouTubeLazyLoad() {
+    const wrapper = document.getElementById('ytPlayer');
+    if (!wrapper) return;
+
+    wrapper.addEventListener('click', () => {
+        const ytId = wrapper.dataset.ytId;
+        wrapper.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>`;
+    }, { once: true });
 }

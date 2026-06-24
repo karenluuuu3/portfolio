@@ -24,7 +24,14 @@ export function initPageTransitions() {
 
         if (overlay) {
             overlay.classList.add('is-entering');
+
+            // 防護：如果 animationend 沒觸發，600ms 後強制導航
+            const fallbackTimer = setTimeout(() => {
+                window.location.href = href;
+            }, 600);
+
             overlay.addEventListener('animationend', () => {
+                clearTimeout(fallbackTimer);
                 window.location.href = href;
             }, { once: true });
         } else {

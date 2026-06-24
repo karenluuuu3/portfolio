@@ -198,18 +198,23 @@ function initSort() {
     });
 }
 
-// 把排序邏輯抽出來共用
 function applySorting(sortBy, archiveList) {
     const rows = [...document.querySelectorAll('.archive-row')];
 
     rows.sort((a, b) => {
         const yearA = parseInt(a.querySelector('.row-year').textContent);
         const yearB = parseInt(b.querySelector('.row-year').textContent);
-        if (sortBy === 'latest') return yearB - yearA;
-        if (sortBy === 'oldest') return yearA - yearB;
+        const titleA = a.querySelector('.row-title').textContent.trim();
+        const titleB = b.querySelector('.row-title').textContent.trim();
+
+        if (sortBy === 'latest') {
+            return yearB - yearA || titleA.localeCompare(titleB);
+        }
+        if (sortBy === 'oldest') {
+            return yearA - yearB || titleA.localeCompare(titleB);
+        }
         if (sortBy === 'az') {
-            return a.querySelector('.row-title').textContent.trim()
-                .localeCompare(b.querySelector('.row-title').textContent.trim());
+            return titleA.localeCompare(titleB);
         }
         return 0;
     });
@@ -226,13 +231,13 @@ function initArchiveScrollReveal() {
     if (rows.length === 0) return;
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const visibleRows = [...document.querySelectorAll('.archive-row:not(.is-hidden):not(.is-visible)')];
-                const idx = visibleRows.indexOf(entry.target);
-                setTimeout(() => entry.target.classList.add('is-visible'), Math.max(0, idx) * 80);
-                observer.unobserve(entry.target);
-            }
+        const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        visible.forEach((entry, i) => {
+            setTimeout(() => entry.target.classList.add('is-visible'), i * 80);
+            observer.unobserve(entry.target);
         });
     }, { rootMargin: '0px 0px -60px 0px', threshold: 0.05 });
 
