@@ -1,0 +1,79 @@
+/* ==========================================================================
+   GLOBAL FOOTER & FLOATING BACK TO TOP
+   ========================================================================== */
+.site-footer {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.site-footer a {
+    color: var(--text-muted);
+}
+
+.site-footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/*
+ * Detail 頁的 footer 需要配合左側 80px side-nav
+ * 用 .site-footer--detail 處理，不依賴 adjacent sibling selector
+ */
+.site-footer--detail {
+    margin-left: 80px;
+}
+
+/* --- Floating Back to Top --- */
+.floating-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
+                border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.floating-top-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.floating-top-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
+    animation: none;
+}

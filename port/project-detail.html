@@ -10,70 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="custom-cursor" id="customCursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-    <div class="page-transition-overlay" id="pageTransition"></div>
-
-    <div class="fullscreen-menu-overlay" id="menuOverlay">
-        <div class="menu-overlay-bg"></div>
-        <div class="menu-container">
-            <div class="menu-close-header">
-                <button class="menu-close-btn" id="closeMenuBtn">
-                    <span>CLOSE</span>
-                    <div class="close-icon">×</div>
-                </button>
-            </div>
-            <nav class="menu-navigation">
-                <ul class="menu-links">
-                    <li><a href="index.html" class="menu-item" data-num="01">Home</a></li>
-                    <li><a href="archive.html" class="menu-item" data-num="02">Projects (Archive)</a></li>
-                    <li><a href="about.html" class="menu-item" data-num="03">About</a></li>
-                </ul>
-            </nav>
-            <div class="menu-footer">
-                <div class="menu-contact-info">
-                    <small>GET IN TOUCH</small>
-                    <a href="mailto:karenluuuu3@gmail.com" class="menu-email">karenluuuu3@gmail.com</a>
-                </div>
-                <div class="menu-socials">
-                    <a href="https://www.instagram.com/karenlu3.works/" target="_blank">Instagram</a>
-                    <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <header class="main-header">
-        <a href="index.html" class="logo">KL</a>
-        <button class="menu-toggle" aria-label="Open Menu">
-            <span class="menu-text">MENU</span>
-            <div class="burger-icon"><span></span><span></span></div>
-        </button>
-    </header>
+    <div id="header-slot"></div>
 
     <aside class="detail-side-nav" id="detailSideNav">
-        <div class="side-nav-track" id="sideNavTrack">
-            <!-- JS 動態生成 -->
-        </div>
+        <div class="side-nav-track" id="sideNavTrack"></div>
     </aside>
 
-    <main class="detail-main" id="detailMain">
-        <!-- JS 動態生成所有 section -->
-    </main>
+    <main class="detail-main" id="detailMain"></main>
 
     <button class="floating-top-btn" id="floatingTopBtn" aria-label="Back to top">↑</button>
 
-    <footer class="site-footer" style="margin-left: 80px;">
-        <div class="footer-left">
-            <span>© KL 2026</span>
-        </div>
-        <div class="footer-right">
-            <a href="https://www.instagram.com/karenlu3.works/" target="_blank">Instagram</a>
-            <a href="https://www.behance.net/karenlu5" target="_blank">Behance</a>
-        </div>
-    </footer>
+    <!-- 用專屬 class 取代 data-style，讓 CSS 處理 -->
+    <div class="footer-slot footer-slot--detail"></div>
 
-    <script src="main.js"></script>
-
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

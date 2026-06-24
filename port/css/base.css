@@ -1,0 +1,68 @@
+/* ==========================================================================
+   DESIGN TOKENS & RESET
+   ========================================================================== */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --accent-color: #ffffff;
+    --text-muted: #8e8e8e;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+::selection {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--bg-primary);
+}
+
+::-moz-selection {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--bg-primary);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--accent-color);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Core Containers --- */
+.portfolio-container {
+    width: 100%;
+}
+
+.portfolio-section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 120px 80px 80px 80px;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
