@@ -73,17 +73,55 @@ function initFilters(totalCount) {
 
     function applyFilters() {
         let visibleCount = 0;
+
+        // Phase 1: 標記哪些要隱藏、哪些要顯示
+        const toHide = [];
+        const toShow = [];
+
         archiveRows.forEach(row => {
             const rowGroup = row.getAttribute('data-group') || '';
             const rowTags = (row.getAttribute('data-tags') || '').toLowerCase();
             const matchesCategory = (activeCategory === 'all' || rowGroup === activeCategory);
             const matchesSearch = rowTags.includes(searchQuery);
+            const shouldShow = matchesCategory && matchesSearch;
 
-            row.classList.toggle('is-hidden', !(matchesCategory && matchesSearch));
-            if (matchesCategory && matchesSearch) visibleCount++;
+            if (shouldShow) {
+                visibleCount++;
+                if (row.classList.contains('is-hidden')) {
+                    toShow.push(row);
+                }
+            } else {
+                if (!row.classList.contains('is-hidden')) {
+                    toHide.push(row);
+                }
+            }
         });
+
         if (showingCountEl) showingCountEl.textContent = `SHOWING ${visibleCount} PROJECTS`;
-        renumberVisibleRows();
+
+        // Phase 2: 先淡出要隱藏的
+        toHide.forEach(row => row.classList.add('is-filtering-out'));
+
+        // 等淡出完成後再切換 class
+        const delay = toHide.length > 0 ? 300 : 0;
+
+        setTimeout(() => {
+            toHide.forEach(row => {
+                row.classList.add('is-hidden');
+                row.classList.remove('is-filtering-out');
+            });
+
+            // Phase 3: 顯示新的，stagger 進場
+            toShow.forEach((row, i) => {
+                row.classList.remove('is-hidden');
+                row.classList.add('is-filtering-out'); // 先隱藏
+                setTimeout(() => {
+                    row.classList.remove('is-filtering-out');
+                }, 50 + i * 60);
+            });
+
+            renumberVisibleRows();
+        }, delay);
     }
 
     searchInput?.addEventListener('input', (e) => {
@@ -248,18 +286,34 @@ function initImageTilt() {
     document.addEventListener('mousemove', (e) => {
         const feature = e.target.closest('.row-feature');
         if (!feature) return;
+
         const rect = feature.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const x = (e.clientX - rect.left) / rect.width - 0.5;   // -0.5 ~ 0.5
         const y = (e.clientY - rect.top) / rect.height - 0.5;
+
         const img = feature.querySelector('img');
-        if (img) img.style.transform = `scale(1.04) translate(${x * 8}px, ${y * 8}px)`;
+        if (img) {
+            img.style.transform = `
+                scale(1.04)
+                translate(${x * 6}px, ${y * 6}px)
+                rotateY(${x * 8}deg)
+                rotateX(${-y * 8}deg)
+            `;
+        }
     });
 
     document.addEventListener('mouseout', (e) => {
         const feature = e.target.closest('.row-feature');
         if (feature) {
             const img = feature.querySelector('img');
-            if (img) img.style.transform = '';
+            if (img) {
+                img.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+                img.style.transform = '';
+                // 動畫結束後移除 transition，避免影響 mousemove 的即時性
+                setTimeout(() => {
+                    img.style.transition = '';
+                }, 500);
+            }
         }
     });
 }

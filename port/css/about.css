@@ -55,6 +55,8 @@
     background-color: var(--bg-secondary);
     border-radius: 6px;
     overflow: hidden;
+
+    perspective: 600px;
 }
 
 .profile-frame img {
