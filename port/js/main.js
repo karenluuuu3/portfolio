@@ -8,22 +8,22 @@ import { initDetailPage } from './detail.js';
 import { initAboutPage } from './about.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. 載入共用元件
+    // 1. 載入共用 header / footer
     await loadComponents();
 
-    // 2. 初始化全域功能（每頁都需要）
+    // 2. 全域功能
     initMenu();
     initCursor();
     initPageTransitions();
     initStickyHeader();
     initBackToTop();
 
-    // 3. 根據頁面初始化對應模組
+    // 3. 頁面專屬模組（各自判斷 DOM 是否存在）
     initArchivePage();
     initDetailPage();
     initAboutPage();
 
-    // 4. 首頁 hero 動畫
+    // 4. 首頁 hero
     initHeroAnimations();
 });
 

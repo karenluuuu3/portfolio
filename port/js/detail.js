@@ -8,6 +8,9 @@ export function initDetailPage() {
         .catch(err => console.error('Error fetching projects.json:', err));
 }
 
+// ==========================================
+// MAIN RENDER
+// ==========================================
 function renderDetail(projects, container) {
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id') || projects[0].id;
@@ -20,7 +23,6 @@ function renderDetail(projects, container) {
 
     document.title = `${project.title} — Project Detail`;
 
-    // 每個 section 各自一個 builder 函式
     const sections = [
         buildHeroSection(project),
         buildOverviewSection(project),
@@ -30,15 +32,31 @@ function renderDetail(projects, container) {
         buildLinksSection(project),
         buildCreditsSection(project),
         buildNextProjectSection(projects, projectId),
-    ].filter(Boolean); // 過濾掉 null（某些 section 可能不存在）
+    ].filter(Boolean);
 
     container.innerHTML = sections.map(s => s.html).join('');
 
-    initSideNav(sections.filter(s => s.id));
+    // Side Nav
+    const navTrack = document.getElementById('sideNavTrack');
+    if (navTrack) {
+        const navSections = sections.filter(s => s.id);
+        navTrack.innerHTML = navSections.map((s, i) => `
+            <a href="#${s.id}" class="side-nav-item${i === 0 ? ' active' : ''}" data-index="${String(i + 1).padStart(2, '0')}">
+                <span class="side-nav-num">${String(i + 1).padStart(2, '0')}</span>
+                <span class="side-nav-label">${s.navLabel}</span>
+                <span class="side-nav-sub">${s.navSub}</span>
+            </a>
+        `).join('');
+
+        initDetailScrollSpy();
+    }
+
     initDetailAnimations();
 }
 
-// ---------- Section Builders ----------
+// ==========================================
+// SECTION BUILDERS
+// ==========================================
 
 function buildHeroSection(project) {
     const firstLink = project.links ? Object.values(project.links)[0] : null;
@@ -78,7 +96,7 @@ function buildHeroSection(project) {
 
 function buildOverviewSection(project) {
     const toolsStr = project.tags ? project.tags.join('<br>') : '—';
-    const exhibitionName = project.exhibition?.name;
+    const exhibitionName = project.exhibition ? project.exhibition.name : null;
 
     let metaHTML = `
         <div class="overview-meta-item"><span class="meta-key">YEAR</span><span class="meta-val">${project.year}</span></div>
@@ -104,7 +122,7 @@ function buildOverviewSection(project) {
 }
 
 function buildContentSections(project) {
-    if (!project.content?.length) return [];
+    if (!project.content || project.content.length === 0) return [];
     return project.content.map((block, i) => {
         const bodyHTML = block.body
             .split('\n\n')
@@ -126,11 +144,11 @@ function buildContentSections(project) {
 function buildExhibitionSection(project) {
     if (!project.exhibition) return null;
     const ex = project.exhibition;
-    let details = '';
-    if (ex.date) details += `<div class="spec-row"><span class="spec-key">DATE</span><span class="spec-val">${ex.date}</span></div>`;
-    if (ex.hours) details += `<div class="spec-row"><span class="spec-key">HOURS</span><span class="spec-val">${ex.hours}</span></div>`;
-    if (ex.location) details += `<div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">${ex.location}</span></div>`;
-    if (ex.event) details += `<div class="spec-row"><span class="spec-key">EVENT</span><span class="spec-val">${ex.event}</span></div>`;
+    let exDetails = '';
+    if (ex.date) exDetails += `<div class="spec-row"><span class="spec-key">DATE</span><span class="spec-val">${ex.date}</span></div>`;
+    if (ex.hours) exDetails += `<div class="spec-row"><span class="spec-key">HOURS</span><span class="spec-val">${ex.hours}</span></div>`;
+    if (ex.location) exDetails += `<div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">${ex.location}</span></div>`;
+    if (ex.event) exDetails += `<div class="spec-row"><span class="spec-key">EVENT</span><span class="spec-val">${ex.event}</span></div>`;
     const exLink = ex.url ? `<a href="${ex.url}" target="_blank" class="detail-doc-link" style="margin-top:24px;">EVENT WEBSITE <span class="arrow">→</span></a>` : '';
 
     return {
@@ -141,47 +159,257 @@ function buildExhibitionSection(project) {
             <section class="detail-section" id="detail-exhibition">
                 <div class="detail-section-header"><h2 class="detail-section-title">Exhibition</h2></div>
                 <h3 style="font-size:1.1rem; margin-bottom:24px; color:var(--text-muted);">${ex.name}</h3>
-                <div class="technical-specs-list">${details}</div>
+                <div class="technical-specs-list">${exDetails}</div>
                 ${exLink}
             </section>`
     };
 }
 
 function buildGallerySection(project) {
-    // ... 同理把原本的 gallery 邏輯搬進來
-    // 回傳 { id, navLabel, navSub, html } 或 null
-    if (!project.galleryLayout?.length && !project.gallery?.length) return null;
-    // （實作省略，結構同原本）
-    return { id: 'detail-gallery', navLabel: 'GALLERY', navSub: 'Installation<br>&amp; Details', html: '...' };
+    const hasLayout = project.galleryLayout && project.galleryLayout.length > 0;
+    const hasGallery = project.gallery && project.gallery.length > 0;
+
+    if (!hasLayout && !hasGallery) return null;
+
+    let galleryInnerHTML = '';
+
+    if (hasLayout) {
+        let figCount = 0;
+        galleryInnerHTML = project.galleryLayout.map(row => {
+            if (row.length === 1) {
+                figCount++;
+                return `
+                    <div class="gallery-row-full">
+                        <div class="gallery-item-media"><img src="${row[0]}" alt="${project.title} — Fig.${String(figCount).padStart(2, '0')}" loading="lazy"></div>
+                        <div class="gallery-item-caption"><span class="fig-label">Fig.${String(figCount).padStart(2, '0')}</span><div class="fig-divider"></div></div>
+                    </div>`;
+            } else {
+                figCount++;
+                const fig1 = figCount;
+                figCount++;
+                const fig2 = figCount;
+                return `
+                    <div class="gallery-row-pair">
+                        <div class="gallery-pair-item"><div class="gallery-item-media"><img src="${row[0]}" alt="Fig.${String(fig1).padStart(2, '0')}" loading="lazy"></div></div>
+                        <div class="gallery-pair-item"><div class="gallery-item-media"><img src="${row[1]}" alt="Fig.${String(fig2).padStart(2, '0')}" loading="lazy"></div></div>
+                    </div>`;
+            }
+        }).join('');
+    } else {
+        galleryInnerHTML = project.gallery.map((img, i) => `
+            <div class="gallery-item">
+                <div class="gallery-item-media"><img src="${img}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}" loading="lazy"></div>
+                <div class="gallery-item-caption"><span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span><div class="fig-divider"></div></div>
+            </div>`
+        ).join('');
+    }
+
+    const listClass = hasLayout ? 'detail-gallery-list layout-mode' : 'detail-gallery-list grid-mode';
+
+    return {
+        id: 'detail-gallery',
+        navLabel: 'GALLERY',
+        navSub: 'Installation<br>&amp; Details',
+        html: `
+            <section class="detail-section detail-gallery" id="detail-gallery">
+                <div class="detail-section-header"><h2 class="detail-section-title">Gallery</h2></div>
+                <div class="${listClass}">${galleryInnerHTML}</div>
+            </section>`
+    };
 }
 
 function buildLinksSection(project) {
     if (!project.links || Object.keys(project.links).length === 0) return null;
-    // （實作省略，結構同原本）
-    return { id: 'detail-documentation', navLabel: 'LINKS', navSub: 'Video<br>&amp; Links', html: '...' };
+
+    const linkEntries = Object.entries(project.links);
+    const ytEntry = linkEntries.find(([, url]) => url.includes('youtube.com/watch') || url.includes('youtu.be'));
+
+    let videoEmbedHTML = '';
+    if (ytEntry) {
+        const ytId = extractYouTubeId(ytEntry[1]);
+        if (ytId) {
+            videoEmbedHTML = `
+                <div class="doc-video-wrapper" style="margin-bottom:40px;">
+                    <iframe src="https://www.youtube.com/embed/${ytId}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>`;
+        }
+    }
+
+    const otherLinks = linkEntries.filter(([, url]) => !(ytEntry && url === ytEntry[1]));
+    const linksListHTML = otherLinks.map(([key, url]) => {
+        const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        return `<a href="${url}" target="_blank" class="detail-doc-link" style="display:block; margin-bottom:12px;">${label} <span class="arrow">→</span></a>`;
+    }).join('');
+
+    return {
+        id: 'detail-documentation',
+        navLabel: 'LINKS',
+        navSub: 'Video<br>&amp; Links',
+        html: `
+            <section class="detail-section detail-documentation" id="detail-documentation">
+                <div class="detail-section-header"><h2 class="detail-section-title">Documentation</h2></div>
+                ${videoEmbedHTML}
+                ${linksListHTML}
+            </section>`
+    };
 }
 
 function buildCreditsSection(project) {
-    if (!project.credits && !project.collaborators?.length) return null;
-    // （實作省略）
-    return { id: 'detail-credits', navLabel: 'CREDITS', navSub: 'Team<br>&amp; Credits', html: '...' };
+    const hasCredits = project.credits && Object.keys(project.credits).length > 0;
+    const hasCollaborators = project.collaborators && project.collaborators.length > 0;
+
+    if (!hasCredits && !hasCollaborators) return null;
+
+    let creditItems = '';
+    if (hasCredits) {
+        creditItems = Object.entries(project.credits).map(([role, name]) => `
+            <div class="credit-item"><span class="credit-role">${role.toUpperCase()}</span><span class="credit-name">${name}</span></div>`
+        ).join('');
+    }
+
+    let collabHTML = '';
+    if (hasCollaborators) {
+        collabHTML = `<div class="credit-item" style="grid-column: 1 / -1;${hasCredits ? ' margin-top: 20px;' : ''}"><span class="credit-role">COLLABORATORS</span><span class="credit-name">${project.collaborators.join('、')}</span></div>`;
+    }
+
+    return {
+        id: 'detail-credits',
+        navLabel: 'CREDITS',
+        navSub: 'Team<br>&amp; Credits',
+        html: `
+            <section class="detail-section detail-credits" id="detail-credits">
+                <div class="detail-section-header"><h2 class="detail-section-title">Credits</h2></div>
+                <div class="credits-grid">${creditItems}${collabHTML}</div>
+            </section>`
+    };
 }
 
 function buildNextProjectSection(projects, currentId) {
-    const idx = projects.findIndex(p => p.id === currentId);
-    const next = projects[(idx + 1) % projects.length];
+    const currentIdx = projects.findIndex(p => p.id === currentId);
+    const nextProject = projects[(currentIdx + 1) % projects.length];
+
     return {
         id: null,
         html: `
             <section class="detail-section detail-next-project">
                 <span class="next-project-label">NEXT PROJECT</span>
-                <h3 class="next-project-title">${next.title}</h3>
-                <span class="next-project-year">${next.year}</span>
-                <a href="project-detail.html?id=${next.id}" class="next-project-link">VIEW PROJECT <span class="arrow">→</span></a>
+                <h3 class="next-project-title">${nextProject.title}</h3>
+                <span class="next-project-year">${nextProject.year}</span>
+                <a href="project-detail.html?id=${nextProject.id}" class="next-project-link">VIEW PROJECT <span class="arrow">→</span></a>
             </section>`
     };
 }
 
-// ---------- Side Nav & Animations ----------
-function initSideNav(sections) { /* 同原本 scrollspy 邏輯 */ }
-function initDetailAnimations() { /* 同原本 */ }
+// ==========================================
+// UTILITIES
+// ==========================================
+
+function extractYouTubeId(url) {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([^&?/]+)/);
+    return match ? match[1] : null;
+}
+
+// ==========================================
+// SCROLL SPY
+// ==========================================
+function initDetailScrollSpy() {
+    const sideNavItems = document.querySelectorAll('.side-nav-item');
+    const detailSections = document.querySelectorAll('.detail-section[id]');
+
+    if (sideNavItems.length === 0 || detailSections.length === 0) return;
+
+    sideNavItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(item.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                sideNavItems.forEach(nav => {
+                    nav.classList.toggle('active', nav.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+    detailSections.forEach(section => observer.observe(section));
+}
+
+// ==========================================
+// ANIMATIONS
+// ==========================================
+function initDetailAnimations() {
+    // Hero cascade
+    const detailHero = document.querySelector('.detail-hero');
+    if (detailHero) {
+        setTimeout(() => {
+            detailHero.classList.add('is-animated');
+        }, 200);
+    }
+
+    // Gallery items stagger reveal
+    const galleryItems = document.querySelectorAll('.gallery-item, .gallery-row-full, .gallery-row-pair');
+    if (galleryItems.length > 0) {
+        const galleryObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    galleryObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+
+        galleryItems.forEach((item, i) => {
+            item.style.transitionDelay = `${(i % 4) * 100}ms`;
+            galleryObserver.observe(item);
+        });
+    }
+
+    // Generic detail sections reveal
+    const detailSections = document.querySelectorAll('.detail-section:not(.detail-hero)');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                sectionObserver.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+
+    detailSections.forEach(section => sectionObserver.observe(section));
+
+    // Image parallax
+    initDetailImageParallax();
+}
+
+function initDetailImageParallax() {
+    const images = document.querySelectorAll('.gallery-item-media img, .detail-hero-media-inner img');
+    if (images.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            entry.target._inView = entry.isIntersecting;
+        });
+    }, { threshold: 0 });
+
+    images.forEach(img => {
+        img._inView = false;
+        observer.observe(img);
+    });
+
+    window.addEventListener('scroll', () => {
+        images.forEach(img => {
+            if (!img._inView) return;
+            const rect = img.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const viewCenter = window.innerHeight / 2;
+            const offset = (center - viewCenter) * 0.04;
+            img.style.transform = `translateY(${offset}px)`;
+        });
+    }, { passive: true });
+}
