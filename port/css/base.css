@@ -17,11 +17,6 @@
     color: var(--bg-primary);
 }
 
-::-moz-selection {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--bg-primary);
-}
-
 * {
     box-sizing: border-box;
     margin: 0;

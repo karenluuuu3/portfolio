@@ -47,18 +47,16 @@
         font-size: 0.85rem;
     }
 
-    .portfolio-section {
-        padding: 110px 24px 60px 24px !important;
+    section.portfolio-section {
+        padding: 110px 24px 60px 24px;
     }
-
-    .main-header,
-    .menu-container {
-        padding: 24px !important;
+    body .main-header,
+    body .menu-container {
+        padding: 24px;
     }
-
     .fullscreen-menu-overlay .menu-close-header {
-        top: 24px !important;
-        right: 24px !important;
+        top: 24px;
+        right: 24px;
     }
 
     /* Hero */

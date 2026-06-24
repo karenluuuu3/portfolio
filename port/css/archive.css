@@ -1,8 +1,8 @@
 /* ==========================================================================
    ARCHIVE VIEW
    ========================================================================== */
-.archive-section {
-    padding-top: 0 !important;
+section.archive-section {
+    padding-top: 0;
 }
 
 .archive-sticky-header {

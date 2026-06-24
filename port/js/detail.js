@@ -166,7 +166,9 @@ function buildExhibitionSection(project) {
     if (ex.hours) exDetails += `<div class="spec-row"><span class="spec-key">HOURS</span><span class="spec-val">${ex.hours}</span></div>`;
     if (ex.location) exDetails += `<div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">${ex.location}</span></div>`;
     if (ex.event) exDetails += `<div class="spec-row"><span class="spec-key">EVENT</span><span class="spec-val">${ex.event}</span></div>`;
-    const exLink = ex.url ? `<a href="${ex.url}" target="_blank" class="detail-doc-link" style="margin-top:24px;">EVENT WEBSITE <span class="arrow">→</span></a>` : '';
+    const exLink = ex.url
+    ? `<a href="${ex.url}" target="_blank" rel="noopener noreferrer" class="detail-doc-link detail-mt-24">EVENT WEBSITE <span class="arrow">→</span></a>`
+    : '';
 
     return {
         id: 'detail-exhibition',
@@ -175,7 +177,7 @@ function buildExhibitionSection(project) {
         html: `
             <section class="detail-section" id="detail-exhibition">
                 <div class="detail-section-header"><h2 class="detail-section-title">Exhibition</h2></div>
-                <h3 style="font-size:1.1rem; margin-bottom:24px; color:var(--text-muted);">${ex.name}</h3>
+                <h3 class="exhibition-subtitle">${ex.name}</h3>
                 <div class="technical-specs-list">${exDetails}</div>
                 ${exLink}
             </section>`
@@ -245,17 +247,19 @@ function buildLinksSection(project) {
     if (ytEntry) {
         const ytId = extractYouTubeId(ytEntry[1]);
         if (ytId) {
-            videoEmbedHTML = `
-                <div class="doc-video-wrapper" style="margin-bottom:40px;">
-                    <iframe src="https://www.youtube.com/embed/${ytId}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>`;
+           videoEmbedHTML = `
+            <div class="doc-video-wrapper">
+                <iframe src="https://www.youtube.com/embed/${ytId}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>`;
         }
     }
 
     const otherLinks = linkEntries.filter(([, url]) => !(ytEntry && url === ytEntry[1]));
     const linksListHTML = otherLinks.map(([key, url]) => {
         const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        return `<a href="${url}" target="_blank" class="detail-doc-link" style="display:block; margin-bottom:12px;">${label} <span class="arrow">→</span></a>`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="detail-doc-link detail-block-link">${label} <span class="arrow">→</span></a>`;
     }).join('');
 
     return {
@@ -286,7 +290,8 @@ function buildCreditsSection(project) {
 
     let collabHTML = '';
     if (hasCollaborators) {
-        collabHTML = `<div class="credit-item" style="grid-column: 1 / -1;${hasCredits ? ' margin-top: 20px;' : ''}"><span class="credit-role">COLLABORATORS</span><span class="credit-name">${project.collaborators.join('、')}</span></div>`;
+        const collabClass = hasCredits ? 'credit-item credit-item--spaced' : 'credit-item credit-item--full';
+        collabHTML = `<div class="${collabClass}"><span class="credit-role">COLLABORATORS</span><span class="credit-name">${project.collaborators.join('、')}</span></div>`;
     }
 
     return {
