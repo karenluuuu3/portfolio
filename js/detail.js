@@ -101,6 +101,7 @@ function renderDetail(projects, container) {
     }
 
     initDetailAnimations();
+    initGalleryAutoLayout();
     initYouTubeLazyLoad();
     initScrollProgress();
 }
@@ -230,21 +231,23 @@ function buildGallerySection(project) {
     if (!hasLayout && !hasGallery) return null;
 
     let galleryInnerHTML = '';
+    let useAutoLayout = false;
 
     if (hasLayout) {
+        // galleryLayout：每張一行，滿版
         let figCount = 0;
-
         galleryInnerHTML = project.galleryLayout.map(row => {
-            if (row.length === 1) {
+            // 攤平成單張處理
+            return row.map(item => {
                 figCount++;
-                const img = parseImage(row[0]);
+                const img = parseImage(item);
                 const creditHTML = img.credit
                     ? `<span class="gallery-item-credit">${escapeHTML(img.credit)}</span>`
                     : '';
                 return `
                     <div class="gallery-row-full">
                         <div class="gallery-item-media">
-                            <img src="${img.src}" alt="${project.title} — Fig.${String(figCount).padStart(2, '0')}" loading="lazy">
+                            <img src="${img.src}" alt="${escapeHTML(project.title)} — Fig.${String(figCount).padStart(2, '0')}" loading="lazy">
                         </div>
                         <div class="gallery-item-caption">
                             <span class="fig-label">Fig.${String(figCount).padStart(2, '0')}</span>
@@ -252,59 +255,19 @@ function buildGallerySection(project) {
                             ${creditHTML}
                         </div>
                     </div>`;
-            } else {
-                figCount++;
-                const fig1 = figCount;
-                const img1 = parseImage(row[0]);
-                figCount++;
-                const fig2 = figCount;
-                const img2 = parseImage(row[1]);
-
-                const credit1 = img1.credit
-                    ? `<div class="gallery-item-caption"><span class="gallery-item-credit">${escapeHTML(img1.credit)}</span></div>`
-                    : '';
-                const credit2 = img2.credit
-                    ? `<div class="gallery-item-caption"><span class="gallery-item-credit">${escapeHTML(img2.credit)}</span></div>`
-                    : '';
-
-                return `
-                    <div class="gallery-row-pair">
-                        <div class="gallery-pair-item">
-                            <div class="gallery-item-media">
-                                <img src="${img1.src}" alt="Fig.${String(fig1).padStart(2, '0')}" loading="lazy">
-                            </div>
-                            ${credit1}
-                        </div>
-                        <div class="gallery-pair-item">
-                            <div class="gallery-item-media">
-                                <img src="${img2.src}" alt="Fig.${String(fig2).padStart(2, '0')}" loading="lazy">
-                            </div>
-                            ${credit2}
-                        </div>
-                    </div>`;
-            }
+            }).join('');
         }).join('');
     } else {
-        galleryInnerHTML = project.gallery.map((item, i) => {
-            const img = parseImage(item);
-            const creditHTML = img.credit
-                ? `<span class="gallery-item-credit">${escapeHTML(img.credit)}</span>`
-                : '';
-            return `
-                <div class="gallery-item">
-                    <div class="gallery-item-media">
-                        <img src="${img.src}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}" loading="lazy">
-                    </div>
-                    <div class="gallery-item-caption">
-                        <span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span>
-                        <div class="fig-divider"></div>
-                        ${creditHTML}
-                    </div>
-                </div>`;
-        }).join('');
+        // gallery：走自動排版，先放 skeleton，等圖片載入後再排
+        useAutoLayout = true;
+        const allImages = project.gallery.map(item => parseImage(item));
+        galleryInnerHTML = `
+            <div id="galleryAutoLayout"
+                 data-images='${JSON.stringify(allImages)}'
+                 data-title="${escapeHTML(project.title)}">
+                <div class="skeleton-pulse" style="width:100%;aspect-ratio:16/9;"></div>
+            </div>`;
     }
-
-    const listClass = hasLayout ? 'detail-gallery-list layout-mode' : 'detail-gallery-list grid-mode';
 
     return {
         id: 'detail-gallery',
@@ -313,9 +276,152 @@ function buildGallerySection(project) {
         html: `
             <section class="detail-section detail-gallery" id="detail-gallery">
                 <div class="detail-section-header"><h2 class="detail-section-title">Gallery</h2></div>
-                <div class="${listClass}">${galleryInnerHTML}</div>
+                <div class="detail-gallery-list">${galleryInnerHTML}</div>
             </section>`
     };
+}
+
+function initGalleryAutoLayout() {
+    const container = document.getElementById('galleryAutoLayout');
+    if (!container) return;
+
+    const images = JSON.parse(container.dataset.images);
+    const projectTitle = container.dataset.title;
+
+    const loadPromises = images.map(img => {
+        return new Promise(resolve => {
+            const el = new Image();
+            el.onload = () => resolve({
+                ...img,
+                width: el.naturalWidth,
+                height: el.naturalHeight,
+                orientation: el.naturalWidth >= el.naturalHeight ? 'landscape' : 'portrait'
+            });
+            el.onerror = () => resolve({
+                ...img,
+                width: 16,
+                height: 9,
+                orientation: 'landscape'
+            });
+            el.src = img.src;
+        });
+    });
+
+    Promise.all(loadPromises).then(loaded => {
+        const rows = buildAutoRows(loaded);
+        let figCount = 0;
+
+        container.innerHTML = rows.map(row => {
+            const figs = row.images.map(() => {
+                figCount++;
+                return figCount;
+            });
+
+            const classMap = {
+                'landscape': 'gallery-row-landscape',
+                'landscape-single': 'gallery-row-landscape-single',
+                'portrait': 'gallery-row-portrait',
+                'portrait-double': 'gallery-row-portrait-double',
+                'portrait-single': 'gallery-row-portrait-single'
+            };
+
+            return buildRowHTML(row.images, figs, projectTitle, classMap[row.type] || 'gallery-row-full');
+        }).join('');
+
+        initGalleryReveal();
+        initGalleryImageLoad();
+    });
+}
+
+function buildAutoRows(images) {
+    const rows = [];
+    let i = 0;
+
+    while (i < images.length) {
+        const orientation = images[i].orientation;
+        const group = [];
+
+        // 連續收集同方向的圖片
+        while (i < images.length && images[i].orientation === orientation) {
+            group.push(images[i]);
+            i++;
+        }
+
+        if (orientation === 'landscape') {
+            for (let j = 0; j < group.length; j += 2) {
+                if (j + 1 < group.length) {
+                    rows.push({ type: 'landscape', images: [group[j], group[j + 1]] });
+                } else {
+                    rows.push({ type: 'landscape-single', images: [group[j]] });
+                }
+            }
+        } else {
+            for (let j = 0; j < group.length; j += 3) {
+                const remaining = group.length - j;
+                if (remaining >= 3) {
+                    rows.push({ type: 'portrait', images: [group[j], group[j + 1], group[j + 2]] });
+                } else if (remaining === 2) {
+                    rows.push({ type: 'portrait-double', images: [group[j], group[j + 1]] });
+                } else {
+                    rows.push({ type: 'portrait-single', images: [group[j]] });
+                }
+            }
+        }
+    }
+
+    return rows;
+}
+
+
+function buildRowHTML(images, figs, title, rowClass) {
+    const itemsHTML = images.map((img, i) => {
+        const figNum = String(figs[i]).padStart(2, '0');
+        const creditHTML = img.credit
+            ? `<span class="gallery-item-credit">${escapeHTML(img.credit)}</span>`
+            : '';
+
+        return `
+            <div class="gallery-pair-item">
+                <div class="gallery-item-media">
+                    <img src="${img.src}" alt="${title} — Fig.${figNum}" loading="lazy">
+                </div>
+                <div class="gallery-item-caption">
+                    <span class="fig-label">Fig.${figNum}</span>
+                    <div class="fig-divider"></div>
+                    ${creditHTML}
+                </div>
+            </div>`;
+    }).join('');
+
+    return `<div class="${rowClass}">${itemsHTML}</div>`;
+}
+
+function initGalleryReveal() {
+    const items = document.querySelectorAll(
+        '.gallery-row-full, .gallery-row-landscape, .gallery-row-landscape-single, .gallery-row-portrait, .gallery-row-portrait-double, .gallery-row-portrait-single'
+    );
+    if (items.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        visible.forEach((entry, i) => {
+            setTimeout(() => entry.target.classList.add('is-visible'), i * 80);
+            observer.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+
+    items.forEach(item => observer.observe(item));
+}
+
+function initGalleryImageLoad() {
+    document.querySelectorAll('.gallery-item-media img').forEach(img => {
+        const markLoaded = () => img.closest('.gallery-item-media')?.classList.add('is-loaded');
+        if (img.complete) markLoaded();
+        else img.addEventListener('load', markLoaded, { once: true });
+    });
 }
 
 function buildLinksSection(project) {

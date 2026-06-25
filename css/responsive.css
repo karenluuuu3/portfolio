@@ -98,10 +98,15 @@
     .detail-overview-grid { grid-template-columns: 1fr; gap: 30px; }
 
     /* Gallery */
-    .gallery-row-pair { grid-template-columns: 1fr; }
-    .detail-gallery-list.grid-mode { grid-template-columns: 1fr; }
-    .grid-mode .gallery-item:first-child,
-    .grid-mode .gallery-item:nth-child(5n) { grid-column: auto; }
+    .gallery-row-landscape,
+    .gallery-row-portrait,
+    .gallery-row-portrait-double {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-row-portrait-single .gallery-pair-item {
+        width: 100%;
+    }
 
     .experience-flow { flex-wrap: wrap; gap: 20px; }
     .experience-connector { display: none; }

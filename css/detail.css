@@ -301,141 +301,123 @@
     max-width: 560px;
 }
 
-/* --- Gallery (Layout Mode) --- */
-.detail-gallery-list.layout-mode {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
 
-.gallery-row-full {
-    width: 100%;
-}
-
-.gallery-row-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.gallery-row-pair .gallery-item-media {
-    aspect-ratio: 4 / 3;
-}
-
-.gallery-row-pair .gallery-item-media img {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* --- Gallery (Grid Mode) --- */
-.detail-gallery-list.grid-mode {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.grid-mode .gallery-item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.grid-mode .gallery-item:first-child,
-.grid-mode .gallery-item:nth-child(5n) {
-    grid-column: 1 / -1;
-}
-
-.grid-mode .gallery-item-media {
-    aspect-ratio: 4 / 3;
-}
-
-.grid-mode .gallery-item:first-child .gallery-item-media,
-.grid-mode .gallery-item:nth-child(5n) .gallery-item-media {
-    aspect-ratio: 16 / 9;
-}
-
-.grid-mode .gallery-item-media img {
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* --- Gallery Shared --- */
-@keyframes shimmer {
-    to { background-position: -200% 0; }
-}
-
+/* --- Gallery: 共用基礎 --- */
 .gallery-item-media {
-    width: 100%;
-    border-radius: 4px;
     overflow: hidden;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-
-    /* shimmer placeholder */
-    background: linear-gradient(
-        90deg,
-        var(--bg-secondary) 25%,
-        rgba(255, 255, 255, 0.04) 50%,
-        var(--bg-secondary) 75%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.gallery-item-media.is-loaded {
-    animation: none;
-    background: var(--bg-secondary);
-}
-
-.gallery-item-media:hover {
-    transform: translateY(-4px);
+    border-radius: 4px;
 }
 
 .gallery-item-media img {
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0.8;
-    filter: saturate(0.4) contrast(1.05) brightness(0.95);
-    transition: opacity 0.4s ease, filter 0.6s ease;
 }
 
-.gallery-item-media:hover img {
-    opacity: 1;
-    filter: saturate(1) contrast(1) brightness(1);
+.gallery-pair-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: visible;
 }
 
 .gallery-item-caption {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-top: 8px;
+    padding-top: 10px;
+    padding-bottom: 8px;
 }
 
 .fig-label {
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--accent-color);
-}
-
-.fig-divider {
-    width: 30px;
-    height: 1px;
-    background: var(--text-muted);
-}
-
-.gallery-item-caption p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.5;
+    white-space: nowrap;
 }
 
 .gallery-item-credit {
     font-size: 0.72rem;
     color: var(--text-muted);
     letter-spacing: 0.04em;
-    padding-top: 4px;
 }
+
+/* --- Gallery: galleryLayout 模式（一張一排滿版） --- */
+.gallery-row-full {
+    width: 100%;
+}
+
+/* --- Gallery: gallery 自動排版模式 --- */
+.gallery-row-landscape {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.gallery-row-landscape .gallery-item-media {
+    aspect-ratio: 16 / 10;
+}
+
+.gallery-row-landscape .gallery-item-media img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-row-portrait {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* --- Gallery: gallery 自動排版模式 --- */
+.gallery-row-landscape .gallery-item-media,
+.gallery-row-portrait .gallery-item-media,
+.gallery-row-portrait-double .gallery-item-media {
+    position: relative;
+}
+
+.gallery-row-landscape .gallery-item-media {
+    aspect-ratio: 16 / 10;
+}
+
+.gallery-row-portrait .gallery-item-media,
+.gallery-row-portrait-double .gallery-item-media {
+    aspect-ratio: 3 / 4;
+}
+
+.gallery-row-landscape .gallery-item-media img,
+.gallery-row-portrait .gallery-item-media img,
+.gallery-row-portrait-double .gallery-item-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-row-landscape-single {
+    width: 100%;
+}
+
+.gallery-row-portrait-single {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-row-portrait-single .gallery-pair-item {
+    width: 33.33%;
+}
+
+.gallery-row-portrait-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
 
 /* --- Experience Flow --- */
 .experience-flow {

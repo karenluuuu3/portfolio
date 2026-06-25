@@ -149,12 +149,7 @@
     "desc": "An augmented reality mobile application that allows users to explore an underwater world through their smartphones. By interacting with virtual fish, users can access dynamic information panels that introduce different species in an engaging and immersive learning experience.",
     "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
     "image": "images/13.gif",
-    "galleryLayout": [
-      ["images/13.png"],
-      ["images/13-1.png"],
-      ["images/13-2.png"],
-      ["images/13.gif"]
-    ],
+    "gallery": [ "images/13.png", "images/13-1.png", "images/13-2.png", "images/13.gif"],
     "content": [
     {
       "heading": "Concept",
@@ -217,14 +212,7 @@
     "desc": "A home fitness game application developed through an industry–academia collaboration with Field Technology Ltd. and NOBOLLEL. The project integrates AR-based image recognition and AIoT rapid game development modules, using smartphone camera motion tracking to detect body movements and create an accessible, equipment-free fitness experience.",
     "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
     "image": "images/14-header.png",
-    "galleryLayout": [
-      ["images/14.png"],
-      ["images/14-1.jpg"],
-      ["images/14-14.jpg"],
-      ["images/14-15.jpg"],
-      ["images/14-17.jpg"],
-      ["images/14-39.jpg"]
-    ],
+    "gallery": ["images/14.png", "images/14-14.jpg", "images/14-15.jpg", "images/14-37.jpg", "images/14-39.jpg", "images/14-40.jpg"],
     "content": [
     {
       "heading": "Introduction",
@@ -469,13 +457,13 @@
     "desc": "A multimedia installation composed of two devices and four evolving stages. The work explores existence through particles, point clouds, and speculative consciousness. A symbolic “window” reconstructs the exhibition space as a point-cloud environment in Unreal Engine 5, allowing viewers to glimpse the invisible structures—data, memory, imagination, and consciousness—that shape human experience. A second installation manifests these hidden presences as whispers emerging from the ground.",
     "tags": ["Unreal Engine 5", "Mixed Reality", "Arduino", "Niagara System", "Point Cloud", "Multimedia Installation"],
     "image": "images/11-header.jpg",
-    "galleryLayout": [
-      ["images/11-3.jpg"],
-      ["images/11-7.png"],
-      ["images/11-1.jpg"],
-      ["images/11-2.jpg"],
-      ["images/11-5.png"],
-      ["images/11-6.png"]
+    "gallery": [
+"images/11-7.png",
+"images/11-3.jpg",
+"images/11-1.jpg",
+"images/11-2.jpg",
+"images/11-5.png",
+"images/11-6-2.png"
     ],
     "content": [
     {
@@ -512,16 +500,7 @@
     "desc": "Inspired by the ceramic craft of crazing (開片), Traces explores cracks as manifestations of time and traces of human intervention. Through procedural generation and Quadtree-based simulations, the work models the formation and accumulation of fractures, extending them into diverse visual forms such as crystal engravings, ripples, and skin meridians. By translating ceramic cracks into computational media, the project reimagines crazing as a contemporary digital language of temporality and memory.",
     "tags": ["Creative Coding", "Conceptual Art", "Quadtree", "Procedural Generation", "Digital Art", "Collaboration"],
     "image": "images/IMG_6023.JPG",
-    "galleryLayout": [
-      ["images/IMG_5987.jpg"],
-      ["images/IMG_5846.jpg"],
-      ["images/IMG_6012.jpg", "images/IMG_6023.JPG"],
-      ["images/12-1.jpg", "images/12-2.png"],
-      ["images/12-3.png"],
-      ["images/12-4.png"],
-      ["images/12-5.PNG"],
-      ["images/12-6.png"]
-    ],
+    "gallery": ["images/IMG_5987.jpg", "images/IMG_5846.jpg", "images/12-1.jpg",  "images/IMG_6023.JPG", "images/IMG_6012.jpg", "images/12-2-2.png", "images/12-3.png", "images/12-4.png", "images/12-5.PNG", "images/12-6.png"],
     "credits": {
       "Idea Art Programming": "呂思函 KL",
       "Idea Art": "周小淨"
@@ -601,7 +580,7 @@
     "desc": "A novel computational tool for generating crazing patterns that explores the relationship between temporality and human intervention. Accepted to the SIGGRAPH 2025 Art Papers Program and published in PACM-CGIT, the project employs hierarchical depth slicing to simulate the evolution of crazing, combining natural crack propagation with human-mediated transformations through an interactive shadow-based dyeing process.",
     "tags": ["SIGGRAPH 2025", "Art Paper", "Quadtree", "Procedural Generation", "Interactive Art", "Creative Coding", "Material Aesthetics"],
     "image": "images/SIGGRAPH2025/15.jpg",
-    "gallery": ["images/SIGGRAPH2025/IMG_3368.jpg","images/SIGGRAPH2025/IMG_3388.jpg", "images/SIGGRAPH2025/IMG_3373.jpg", "images/SIGGRAPH2025/IMG_3342.jpg", "images/SIGGRAPH2025/IMG_3995.jpg", "images/SIGGRAPH2025/IMG_3440.jpg", "images/SIGGRAPH2025/IMG_3996.jpg"],
+    "gallery": ["images/SIGGRAPH2025/IMG_3368.jpg","images/SIGGRAPH2025/IMG_3388.jpg", "images/SIGGRAPH2025/IMG_3373.jpg", "images/SIGGRAPH2025/IMG_3342.jpg", "images/SIGGRAPH2025/IMG_3440.jpg", "images/SIGGRAPH2025/IMG_3564.jpg", "images/SIGGRAPH2025/IMG_3995.jpg", "images/SIGGRAPH2025/IMG_3996.jpg"],
     "content": [
         {
             "heading": "Abstract",
@@ -640,7 +619,7 @@
     "desc": "Co-developed the performance interface for Rain Haze II, presented in LuxuryLogico’s solo exhibition Cosmic Sketches. The system translates image grayscale values into motor speed parameters, transforming conventional hardware control into a direct visual-to-physical mapping. By manipulating the grayscale and opacity of control points, performers generate dynamic states such as storm clouds, heavy rain, and thunder, where pixel-level changes are immediately converted into rhythmic mechanical impacts on physical objects.",
     "tags": ["Performance Interface", "Motor Control", "Grayscale Mapping", "Installation", "Hardware Integration"],
     "image": {"src": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "credit": "Photo by ANPIS FOTO王世邦" },
-    "gallery": [{"src": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/595107235_1288121530022023_723854205702592316_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/597286412_1288121503355359_7230288424891491938_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_20.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_18.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_19.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_17.jpg"],
+    "gallery": [{"src": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/595107235_1288121530022023_723854205702592316_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/597286412_1288121503355359_7230288424891491938_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_18.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_19.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_20.jpg"],
     "content": [
         {
             "heading": "Project Overview",
@@ -670,7 +649,7 @@
     "desc": "Designed and built the website for LuxuryLogico’s “Fly! No Matter What” project, presented as part of the 2025 “Cosmic Sketches” exhibition.The interface translates the concept of collective and individual flight into a digital system, allowing each artwork (“bird”) to exist independently while remaining part of a unified structure.Built from scratch within one month, including database architecture, filtering system, artwork archive management, backend CMS, and email functionality.",
     "tags": ["Web Design", "Full-Stack", "Database", "PHP", "UI/UX"],
     "image": {"src": "images/MoCA2025/583320592_1271848548315988_5376068952703928831_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},
-    "gallery": [{"src": "images/MoCA2025/584580932_1271848638315979_1181164941719459288_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/584803118_1271848744982635_170993865900499804_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/585884322_1271848424982667_1868028926366688952_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/S__545783816.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_10.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_9.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_3.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_2.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_11.jpg", "images/202509LL宇宙寫生/S__545783818.jpg"],
+    "gallery": [{"src": "images/MoCA2025/584580932_1271848638315979_1181164941719459288_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/584803118_1271848744982635_170993865900499804_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/585884322_1271848424982667_1868028926366688952_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/S__545783816.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/S__545783818.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_10.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_9.jpg", "images/202509LL宇宙寫生/S__545783817_2.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_3.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_2.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_11.jpg"],
     "content": [
         {
             "heading": "Project Overview",
@@ -736,7 +715,7 @@
     "desc": "R&D work for LuxuryLogico’s unmanned theater production “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nDesigned a gesture-based motion recognition system for LuxuryLogico’s “THE LAST QUESTION”, focusing on dual-hand tracking and real-time skeletal angle streaming into Blender for performance-driven applications.\n\n\nDue to joint occlusion issues under single-camera input, the system was not deployed in the final stage performance. However, the dual-hand tracking stress test on edge devices provided valuable insights for future development.",
     "tags": ["R&D", "Hand Tracking", "Motion Capture", "TouchDesigner", "Blender", "Theater Tech"],
     "image": "images/202604LQ/IMG_7076.JPG",
-    "gallery": ["images/202604LQ/IMG_7221.JPG", "images/202604LQ/IMG_7133.JPG", "images/202604LQ/IMG_7121.JPG"],
+    "gallery": ["images/202604LQ/IMG_7221.JPG", "images/202604LQ/IMG_7121.JPG", "images/202604LQ/IMG_7133.JPG"],
     "content": [
         {
             "heading": "Project Background",
@@ -771,7 +750,7 @@
     "desc": "Built in Unreal Engine, the system uses custom light function shaders to simulate multi-source spotlights, extracts real-time RGB data from external video feeds, and synchronizes motion assets for pre-visualization of the stage system.",
     "tags": ["Unreal Engine", "3D Simulation", "Shader", "LED Mapping", "Pre-Visualization", "LuxuryLogico", "Theater Tech"],
     "image": "images/202604LQ/S__544399370_0.jpg",
-    "gallery": ["images/202604LQ/S__544399369_0.jpg", "images/202604LQ/S__544399366_0.jpg", "images/202604LQ/S__544399371_0.jpg", "images/202604LQ/IMG_7078.jpg", "images/202604LQ/IMG_6989.jpg", "images/202604LQ/IMG_7220.jpg", "images/202604LQ/IMG_7216.jpg" , "images/202604LQ/IMG_6898.jpg" , "images/202604LQ/IMG_6928.jpg"],
+    "gallery": ["images/202604LQ/S__544399371_0.jpg", "images/202604LQ/S__544399366_0.jpg", "images/202604LQ/S__544399369_0.jpg", "images/202604LQ/IMG_7078.jpg", "images/202604LQ/IMG_7216.jpg", "images/202604LQ/IMG_7220.jpg", "images/202604LQ/IMG_6989.jpg", "images/202604LQ/IMG_6898.jpg", "images/202604LQ/IMG_6928.jpg"],    
     "content": [
         {
             "heading": "Project Overview",
