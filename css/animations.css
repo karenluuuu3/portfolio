@@ -121,8 +121,8 @@
     to { width: 50px; }
 }
 
-/* Hero bg slow zoom */
-.hero-bg img {
+
+.hero-slide.is-active {
     animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
@@ -130,6 +130,8 @@
     from { transform: scale(1); }
     to   { transform: scale(1.08); }
 }
+
+
 
 /* ==========================================================================
    ARCHIVE ROWS — STAGGERED ENTRANCE

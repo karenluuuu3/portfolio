@@ -52,6 +52,21 @@ function initHeroAnimations() {
     }
 
     initHeroSpotlight();
+    initHeroSlideshow();
+}
+
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length <= 1) return;
+
+    let current = 0;
+    const interval = 5000; // 每 5 秒切換
+
+    setInterval(() => {
+        slides[current].classList.remove('is-active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('is-active');
+    }, interval);
 }
 
 function initHeroSpotlight() {
@@ -76,7 +91,8 @@ function initHeroSpotlight() {
         spotlight.style.background = `radial-gradient(
             circle 400px at ${x}px ${y}px,
             transparent 0%,
-            rgba(10, 10, 10, 0.45) 100%
+            rgba(10, 10, 10, 0.3) 100%
         )`;
     });
 }
+
