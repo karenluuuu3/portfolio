@@ -93,7 +93,6 @@ function renderDetail(projects, container) {
             <a href="#${s.id}" class="side-nav-item${i === 0 ? ' active' : ''}" data-index="${String(i + 1).padStart(2, '0')}">
                 <span class="side-nav-num">${String(i + 1).padStart(2, '0')}</span>
                 <span class="side-nav-label">${s.navLabel}</span>
-                <span class="side-nav-sub">${s.navSub}</span>
             </a>
         `).join('');
 
