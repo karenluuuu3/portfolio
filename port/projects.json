@@ -411,7 +411,7 @@
     "group": "engine-3d",
     "categoryLabel": "3D Interactive Puzzle Game",
     "title": "植•栽 | Planted for Planting",
-    "desc": "An immersive puzzle-solving game built in Unreal Engine 5. Players explore a maze, solve planting puzzles (hint: related to number of leaves), and nurture the World Tree. Combines maze exploration with open environments, utilizing Niagara particle systems to symbolize environmental restoration and the continuation of life.",
+    "desc": "An immersive puzzle-based exploration game built in Unreal Engine 5. Players navigate a maze, solve environmental puzzles related to botanical logic (hint: leaf-based patterns), and cultivate the growth of a World Tree. The experience combines maze navigation and open-world puzzle spaces, using Niagara particle systems to visually represent ecological regeneration and the continuation of life.",
     "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics", "Escape Room"],
     "image": "images/9.png",
     "galleryLayout": [
@@ -421,15 +421,15 @@
     "content": [
     {
       "heading": "Core Gameplay",
-      "body": "• Maze Exploration\nPlayers start in a complex maze and must find an exit. The maze may include mechanisms, hidden passages, or interactive environmental elements, testing the player's observation.\n\n• Puzzle-Solving & Planting\nAfter escaping the maze, players enter an open puzzle-solving area where they must locate suitable planting spots. (Hint: Related to the number of leaves)\n\n• World Tree Growth\nOnce all suitable planting areas are correctly cultivated, the player's efforts will lead to the birth of the World Tree. The tree gradually grows, symbolizing the player's exploration and puzzle-solving journey."
+      "body": "• Maze Exploration\nPlayers begin inside a complex maze composed of branching paths, hidden routes, and interactive environmental elements. The design emphasizes spatial awareness and observational problem-solving.\n\n\n• Botanical Puzzle Solving\nAfter exiting the maze, players enter an open puzzle space where they must identify suitable planting locations. The logic of the puzzle is subtly tied to leaf-based numerical patterns.\n\n\n• World Tree Growth System\nSuccessful planting triggers the gradual growth of the World Tree. This process is visualized through Niagara particle systems, symbolizing environmental restoration and the accumulation of player actions over time."
     },
     {
       "heading": "Design Goals",
-      "body": "• Level Design — Combining maze structures with open areas to enhance spatial planning and visual storytelling.\n\n• Interaction Design — Creating engaging environmental interactions that enhance the puzzle-solving experience.\n\n• Procedural Art (Using Niagara System) — Utilizing procedural techniques to enhance visual effects, particularly in plant growth.\n\nThe ultimate goal is to solve all puzzles and successfully nurture the World Tree, symbolizing environmental restoration and the continuation of life."
+      "body": "• Level Design — The experience transitions between enclosed maze spaces and open environmental zones, creating contrast in spatial tension and exploration freedom.\n\n\n• Interaction Design — Environmental interactions are designed to encourage observation, pattern recognition, and indirect problem-solving.\n\n\n• Procedural Visual Design — Niagara particle systems are used to represent plant growth and environmental transformation as a dynamic visual system.\n\n\nThe overall design goal is to transform puzzle-solving into a metaphor for ecological regeneration, where each solved challenge contributes to the growth of a living world structure."
     },
     {
       "heading": "Art Style & Atmosphere",
-      "body": "• The maze environment features a monochromatic aesthetic, using simple lighting to create an enclosed but not oppressive space.\n• The puzzle-solving area is more open, fostering a sense of interaction with the environment.\n• During the World Tree's growth, Niagara System particle effects enhance the visual impact."
+      "body": "• The maze environment adopts a monochromatic visual language, using minimal lighting to emphasize spatial ambiguity without oppressive tension.\n\n\n• The puzzle space shifts toward a more open composition, encouraging interaction and environmental awareness.\n\n\n• The growth of the World Tree is visualized through Niagara particle effects, emphasizing organic expansion and temporal progression."
     }
   ]
   },
@@ -441,7 +441,7 @@
     "group": "interactive-system",
     "categoryLabel": "Hardware & Interactive Installation",
     "title": "緒絮 | Threads of Thought",
-    "desc": "This work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create visuals that model rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. Simple sensors serve as interactive devices to realize human stimuli in this brain consciousness space as a medium.",
+    "desc": "An interactive installation exploring the visualization of human consciousness. By connecting Arduino with Unreal Engine 5, the work creates a dual representation of the mind: one layer simulates neural transmission through particle-based molecular motion, while another manifests emotional and imaginative spaces through abstract generative visuals. Sensors act as interfaces that translate human stimuli into transformations within this consciousness space.",
     "tags": ["Arduino", "Unreal Engine 5", "Mixed Reality", "Niagara System", "Noise Art", "Shader", "Ultrasonic Sensor", "Interactive Installation"],
     "image": "images/10-2.png",
     "galleryLayout": [
@@ -451,7 +451,7 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "With the rise of the metaverse, Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR) have emerged rapidly, applied in navigation, entertainment, virtual events, video content, educational training, language translation, sensing, tracking, and more. These technologies have even advanced into the integration of VR, AR, and MR into Extended Reality (XR).\n\nAs we actively strive to \"break\" the two-dimensional space of computer screens and attempt to integrate the two-dimensional virtual world into our three-dimensional reality, one may ask: Is it not the three-dimensional reality that is being absorbed into the two-dimensional world of computers, with human consciousness and emotional experiences gradually being influenced by this virtual two-dimensional world?\n\nThis work centers around the visualization of brain consciousness space, connecting Arduino with UE5 to create a visual effect that models rational chemical molecular movements (biological neural transmission) and emotional, abstract imaginative spaces. It also attempts to use simple sensors as interactive devices to realize human stimuli in this brain consciousness space as a medium."
+      "body": "As virtual, augmented, and mixed reality technologies continue to evolve, the boundary between physical and digital space becomes increasingly blurred. While we strive to project virtual experiences into three-dimensional reality, we may also be allowing digital environments to reshape our perceptions, emotions, and consciousness.\n\n\nAs digital experiences become increasingly immersive, a question emerges: are we bringing the virtual world into reality, or are our emotions and consciousness gradually being absorbed into computational space?\n\n\nThis work visualizes an imagined space of consciousness by integrating Arduino and Unreal Engine 5. Particle systems are used to simulate neural transmission and molecular movement, while abstract visual forms represent emotional and imaginative states. Simple sensors serve as interfaces, allowing human stimuli to influence and reshape this dynamic mental landscape."
     }
   ],
     "links": {
@@ -466,28 +466,29 @@
     "group": "interactive-system",
     "categoryLabel": "Multimedia Installation",
     "title": "存在觀察 | Existence Observation",
-    "desc": "A two-device, four-stage multimedia installation. Device one uses a 'window' (door) as a symbolic visual medium, with the exhibition space recreated as a point cloud model in Unreal Engine 5. When viewers pause before it, they glimpse the invisible particles—data, consciousness, imagination—that construct human experience. Device two presents 'whispers' on the ground. Stages progress from an inviting tunnel of light, to a theatrical dawn, to energy and existence, and finally to consciousness and emotion.",
+    "desc": "A multimedia installation composed of two devices and four evolving stages. The work explores existence through particles, point clouds, and speculative consciousness. A symbolic “window” reconstructs the exhibition space as a point-cloud environment in Unreal Engine 5, allowing viewers to glimpse the invisible structures—data, memory, imagination, and consciousness—that shape human experience. A second installation manifests these hidden presences as whispers emerging from the ground.",
     "tags": ["Unreal Engine 5", "Mixed Reality", "Arduino", "Niagara System", "Point Cloud", "Multimedia Installation"],
-    "image": "images/11-3.jpg",
+    "image": "images/11-header.jpg",
     "galleryLayout": [
+      ["images/11-3.jpg"],
       ["images/11-7.png"],
-      ["images/11-3.jpg", "images/11-4.jpg"],
-      ["images/11-1.jpg", "images/11-2.jpg"],
+      ["images/11-1.jpg"],
+      ["images/11-2.jpg"],
       ["images/11-5.png"],
       ["images/11-6.png"]
     ],
     "content": [
     {
       "heading": "Concept",
-      "body": "現實世界的物質常以粒子的形式構成，這些粒子如同光束、塵埃一般存於空間，可能緊密、可能疏離，感覺不存在於何方、卻又無所不在，這些粒子是數據、意識、想像和祈望等不可見事物，以緩慢且難以察覺的方式存在且變化著，共同建構人類的真實經驗。\n\nThe material of the real world is often composed of particles, which, like beams of light or dust, exist in space—dense or distant, seemingly nowhere yet omnipresent. They represent data, consciousness, imagination, and wishes, existing and changing in slow, imperceptible ways, together constructing the human experience of reality."
+      "body": "現實世界的物質常以粒子的形式構成，這些粒子如同光束、塵埃一般存於空間，可能緊密、可能疏離，感覺不存在於何方、卻又無所不在，這些粒子是數據、意識、想像和祈望等不可見事物，以緩慢且難以察覺的方式存在且變化著，共同建構人類的真實經驗。\n\n\nThe world is composed of particles. Like beams of light or drifting dust, they inhabit space in varying densities—sometimes condensed, sometimes dispersed. They seem to exist nowhere, yet are everywhere at once.\n\n\nThese particles symbolize invisible entities: data, consciousness, imagination, memories, and desires. They evolve slowly and almost imperceptibly, collectively constructing our lived experience of reality."
     },
     {
       "heading": "Installation Structure",
-      "body": "本作品分為兩個裝置構成、四個階段的影像。\n裝置一以「窗」（門）作為一種象徵性的視覺媒介，並以展覽場地「藝空間」為點雲模型基礎，利用虛幻引擎虛構此空間，若觀者駐足停留，才能透過「窗」一窺到這些原先無法單憑肉眼察覺的存在，並與之共鳴。\n裝置二為地面的「絮語」，來自這扇「窗」（門）透露出這個空間所存在的意念。\n\nThe work consists of two devices and four stages of imagery. Device one uses the \"window\" (door) as a symbolic visual medium, with the exhibition space recreated as a point cloud model in Unreal Engine. When the observer pauses and stays, they glimpse the invisible existences through the \"window\" and resonate with them. Device two is the \"whisper\" on the ground, revealing the ideas existing in this space."
+      "body": "本作品分為兩個裝置構成、四個階段的影像。\n裝置一以「窗」（門）作為一種象徵性的視覺媒介，並以展覽場地「藝空間」為點雲模型基礎，利用虛幻引擎虛構此空間，若觀者駐足停留，才能透過「窗」一窺到這些原先無法單憑肉眼察覺的存在，並與之共鳴。\n裝置二為地面的「絮語」，來自這扇「窗」（門）透露出這個空間所存在的意念。\n\n\nThe installation consists of two devices and four stages of moving imagery.\n\n\nDevice One employs a symbolic “window” (or door) as a visual interface. Using a point cloud reconstruction of the exhibition venue, the work creates a fictionalized version of the space within Unreal Engine 5. Only by pausing and lingering can viewers glimpse these otherwise imperceptible forms of existence and resonate with them.\n\n\nDevice Two manifests as “whispers” spread across the ground—fragments of thought and traces of presence that escape from the window and permeate the surrounding space."
     },
     {
       "heading": "Four Stages",
-      "body": "Stage Zero: When no one is present, it is a passage—light circles from near to far, drawing people in.\n\nStage One: Door (Theater Opening)\ntheater, dawn, optical light, tunnel, spotlight, fog, mist, outdoor, abstract\n\nStage Two: Energy (Sense of Existence)\nenergy, existence, voice, sound, religion, soul, fluid, abstract, cosmos, galaxy, nerve, line, smoke\n\nStage Three: Consciousness, Emotion (Composition)\nlanguage, thought, consciousness, emotion, floating, mind, line, mist, flow, desaturate, abstract"
+      "body": "Stage Zero\nIn the absence of viewers, the installation becomes a passage of light. Concentric circles recede into the distance, quietly inviting entry.\n\n\nStage One — Door\nA theatrical awakening: dawn, tunnels of light, mist, and distant illumination mark the threshold between the visible and the unseen.\n\n\nStage Two — Energy\nFluids, voices, and cosmic forms emerge as metaphors for vitality, spirituality, and the invisible forces that sustain existence.\n\n\nStage Three — Consciousness\nLines, drifting forms, and desaturated atmospheres compose an abstract landscape of language, memory, emotion, and thought."
     }
   ],
     "exhibition": {
@@ -508,11 +509,12 @@
     "group": "graphics-shader",
     "categoryLabel": "Idea Art & Programming",
     "title": "痕跡 | Traces",
-    "desc": "Drawing inspiration from ceramic crazing (開片) technique, this work explores the aesthetic dialogue between temporality and human intervention. Cracks are treated as tangible representations of time, simulated via Quadtree algorithms and procedural generation. The work extends crack expressions into diverse visual forms including crystal engraving, ripples, and skin meridians, liberating cracks from the traditional ceramic framework into contemporary digital art. Keywords: Digital Art, Quadtree, Crazing, Multimedia.",
+    "desc": "Inspired by the ceramic craft of crazing (開片), Traces explores cracks as manifestations of time and traces of human intervention. Through procedural generation and Quadtree-based simulations, the work models the formation and accumulation of fractures, extending them into diverse visual forms such as crystal engravings, ripples, and skin meridians. By translating ceramic cracks into computational media, the project reimagines crazing as a contemporary digital language of temporality and memory.",
     "tags": ["Creative Coding", "Conceptual Art", "Quadtree", "Procedural Generation", "Digital Art", "Collaboration"],
     "image": "images/IMG_6023.JPG",
     "galleryLayout": [
-      ["images/IMG_5987.jpg", "images/IMG_5846.jpg"],
+      ["images/IMG_5987.jpg"],
+      ["images/IMG_5846.jpg"],
       ["images/IMG_6012.jpg", "images/IMG_6023.JPG"],
       ["images/12-1.jpg", "images/12-2.png"],
       ["images/12-3.png"],
@@ -521,21 +523,21 @@
       ["images/12-6.png"]
     ],
     "credits": {
-      "Idea Art Programming": "呂思函 Szu-Han Lu",
-      "Idea Art": "周小淨 Hsiao-Ching Chou"
+      "Idea Art Programming": "呂思函 KL",
+      "Idea Art": "周小淨"
     },
     "content": [
     {
       "heading": "Concept",
-      "body": "《痕跡》從陶瓷開片工藝中汲取靈感，探索時間性與人為之間的美學對話。開片裂紋自然生成於陶瓷表面，其紋理如同時間的筆觸，描繪著自然與器物間的深層互動，承載豐厚的文化與歷史意涵。透過數位化形式，作品重新詮釋開片的時間性與審美特質，聚焦時間作用與人為介入所留下的痕跡。\n\n\"Traces\" draws inspiration from the ceramic crazing technique to investigate the aesthetic interplay between temporality and human intervention. Crazing, with its naturally formed cracks on the surface of ceramics, serves as a visual manifestation of time, portraying the deep interaction between nature and objects, while carrying rich cultural and historical significance."
+      "body": "《痕跡》從陶瓷開片工藝中汲取靈感，探索時間性與人為之間的美學對話。開片裂紋自然生成於陶瓷表面，其紋理如同時間的筆觸，描繪著自然與器物間的深層互動，承載豐厚的文化與歷史意涵。透過數位化形式，作品重新詮釋開片的時間性與審美特質，聚焦時間作用與人為介入所留下的痕跡。\n\n\nTraces draws inspiration from the ceramic technique of crazing to explore the relationship between temporality and human intervention. Naturally formed cracks emerge on ceramic surfaces like the brushstrokes of time, revealing the deep interactions between material, environment, and human craftsmanship while carrying rich cultural and historical significance.\n\n\nThrough computational media, the work reinterprets the temporal and aesthetic qualities of crazing, focusing on the traces left by the passage of time and acts of intervention."
     },
     {
       "heading": "Crack as Time",
-      "body": "《痕跡》將裂紋視為時間的具象化，模擬自然紋理隨時間累積的過程，並融入人為操作所賦予的獨特性，每一道裂紋如同風化的軌跡，記錄過往的記憶與變遷。作品以裂紋生成的動態變化為核心，展現隨時序推進的視覺演化，深刻詮釋開片工藝的邏輯與美學。\n\nThis work views cracks as a tangible representation of time, simulating the accumulation of natural patterns over time while incorporating the uniqueness introduced by human intervention. Each crack serves as a weathered trace, recording past memories and transformations."
+      "body": "《痕跡》將裂紋視為時間的具象化，模擬自然紋理隨時間累積的過程，並融入人為操作所賦予的獨特性，每一道裂紋如同風化的軌跡，記錄過往的記憶與變遷。作品以裂紋生成的動態變化為核心，展現隨時序推進的視覺演化，深刻詮釋開片工藝的邏輯與美學。\n\n\nThe work treats cracks as tangible manifestations of time, simulating the gradual accumulation of natural patterns while incorporating the singularity introduced by human intervention. Each fracture becomes a weathered trace—a record of memory, transformation, and temporal passage.\n\n\nBy centering on the dynamic evolution of crack formation, the work reinterprets the logic and aesthetics of ceramic crazing through computational processes."
     },
     {
       "heading": "Extended Expressions",
-      "body": "作品進一步延伸裂紋的表現，創造多樣的視覺形式，包括水晶內雕、水波紋與皮膚經絡等，將裂紋從傳統陶瓷開片的框架中解放，置於多元載體之上，結合數位媒材與程序化生成的特性，拓展裂紋作為時間與文化象徵的表現可能性。\n\nThe work extends the expression of cracks by creating diverse visual forms, such as crystal engraving, ripples, and skin meridians. These cracks are liberated from the traditional ceramic framework and placed on various media, combining digital media and procedural generation to expand the expressive possibilities of cracks as symbols of time and culture.\n\n關鍵字：數位藝術、四元樹、陶瓷開片、多媒體\nKeywords: Digital Art, Quadtree, Crazing, Aesthetic, Multimedia"
+      "body": "作品進一步延伸裂紋的表現，創造多樣的視覺形式，包括水晶內雕、水波紋與皮膚經絡等，將裂紋從傳統陶瓷開片的框架中解放，置於多元載體之上，結合數位媒材與程序化生成的特性，拓展裂紋作為時間與文化象徵的表現可能性。\n\n\nThe work further extends the expression of cracks into diverse visual forms, including crystal engravings, ripples, and skin meridians. Removed from their traditional ceramic context, these fractures are translated onto multiple media and reconstructed through procedural generation.\n\n\nBy combining digital media with computational processes, the project expands the expressive possibilities of cracks as symbols of time, memory, and cultural continuity."
     }
   ],
     "exhibition": {
@@ -543,8 +545,7 @@
       "date": "2024/7/6 - 2024/7/27",
       "hours": "12:00 - 17:30 (Closed Mon & Tue)",
       "location": "No. 256, Section 1, Dihua Street, Datong District, Taipei City (Near Daqiaotou MRT Station)"
-    },
-    "note": "Paper submissions have not been made public yet."
+    }
   },
   {
     "id": "15",
@@ -554,9 +555,9 @@
     "group": "interactive-system",
     "categoryLabel": "Interactive Installation",
     "title": "洄鄉 | Echo-me",
-    "desc": "An interactive installation interweaving silhouettes of humans and fish into a species fusion—'human but not human, fish but not fish.' Abstract contours depict a 'homeward migration' across urban landscapes and shimmering waters. The installation detects viewers' presence and generates new on-screen characters that join the procession, symbolizing the integration and continuity of human history with nature.",
+    "desc": "An interactive installation that intertwines the silhouettes of humans and fish into hybrid beings—“human, yet not human; fish, yet not fish.” Through abstract forms moving across urban landscapes and shimmering waters, the work reflects on migration, homecoming, and the interconnectedness of life. By detecting viewers' presence, the installation generates new on-screen figures that join the procession, symbolizing humanity's continuous entanglement with nature and collective memory.",
     "tags": ["Interactive Installation", "Species Fusion", "Migration", "Sensor", "Real-time Generation"],
-    "image": "images/15.png",
+    "image": "images/15.jpg",
     "galleryLayout": [
       ["images/15.png"],
       ["images/15-5.png"],
@@ -569,20 +570,20 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "《洄鄉》以人與魚等物種的身影交織，牽動彼此，表現一種「是人非人，是魚亦非魚」的物種融合，彷彿一種無形的力量在所有生命中悄然流動，交錯成共生的網絡，意欲傳達洄游與回鄉的過程不僅是動植物的本能，也包含人類對源頭的回歸與尋找。\n\nEcho-me interweaves the silhouettes of humans and fish, merging them into a fusion of species that is \"human but not human, fish but not fish.\" It conveys an invisible yet powerful force that flows quietly through all of life, intricately intertwining them into a network of co-existence."
+      "body": "《洄鄉》以人與魚等物種的身影交織，牽動彼此，表現一種「是人非人，是魚亦非魚」的物種融合，彷彿一種無形的力量在所有生命中悄然流動，交錯成共生的網絡，意欲傳達洄游與回鄉的過程不僅是動植物的本能，也包含人類對源頭的回歸與尋找。\n\n\n"
     },
     {
       "heading": "Interaction",
-      "body": "本作品以抽象輪廓勾勒物種型態，並於都市之景及水光之隙緩慢行走的行列表現物種「洄鄉」，影像如水波般延展，傳遞回溯源頭的力量。當觀眾站立於作品前，他們將成為這場討論的一部分，透過裝置偵測觀眾、於畫面中生成新角色，而後與物種行列一同前行，象徵人類歷史與自然的共融與延續。\n\nUsing abstract contours to outline the forms of species, the work depicts their \"homeward migration\" as they slowly traverse the urban landscape and shimmering waters. When viewers stand before the work, they become part of this discussion—the installation detects their presence and generates new on-screen characters that join the procession, symbolizing the integration and continuity of human history with nature."
+      "body": "本作品以抽象輪廓勾勒物種型態，並於都市之景及水光之隙緩慢行走的行列表現物種「洄鄉」，影像如水波般延展，傳遞回溯源頭的力量。當觀眾站立於作品前，他們將成為這場討論的一部分，透過裝置偵測觀眾、於畫面中生成新角色，而後與物種行列一同前行，象徵人類歷史與自然的共融與延續。\n\n\nUsing abstract contours to depict hybrid species, the work presents a slow-moving procession traversing urban landscapes and shimmering waters. The imagery expands like ripples, evoking the force that draws all life back toward its source.\n\n\nWhen viewers stand before the installation, they become participants in this migration. Their presence is detected by the system, generating new on-screen figures that join the procession and continue moving forward together. In doing so, the work reflects on the intertwined histories of humanity and nature and the enduring cycle of return."
     }
   ],
     "credits": {
       "Music Production": "DC",
-      "Plant Materials": "陳以荷 Yi-He Chen",
+      "Plant Materials": "陳以荷",
       "Species Materials": "abwu"
     },
     "exhibition": {
-      "name": "2025六燃文件展：洄游六燃。洄游頭前溪",
+      "name": "2025六燃文件展：洄游六燃。洄游頭前溪 (The Sixth Fuel Factory Documenta 2025: Tracing the Origin of the Sixth Fuel Factory along the Touqian River)",
       "date": "2025/6/2 - 2025/7/19",
       "hours": "10:30 - 18:30 (Closed on Sundays)",
       "location": "B1, Haoran Library, NYCU Hsinchu Campus",
@@ -596,40 +597,33 @@
     "category": "research",
     "group": "graphics-shader",
     "categoryLabel": "SIGGRAPH 2025 Art Paper",
-    "title": "Digital Crazing: Exploring the Application of Quadtree Structure in Time and User Intervention",
-    "desc": "A novel tool for generating crazing patterns that explores the relationship between time and user intervention. Accepted to the SIGGRAPH 2025 Art Papers Program and published in the PACM-CGIT Journal. The tool employs hierarchical depth slicing to simulate crazing evolution, combining natural crack progression with human-shaped patterns through interactive shadow-based dye simulation.",
+    "title": "Digital Crazing: Applying Quadtree Structures to Simulate Time and Human Intervention",
+    "desc": "A novel computational tool for generating crazing patterns that explores the relationship between temporality and human intervention. Accepted to the SIGGRAPH 2025 Art Papers Program and published in PACM-CGIT, the project employs hierarchical depth slicing to simulate the evolution of crazing, combining natural crack propagation with human-mediated transformations through an interactive shadow-based dyeing process.",
     "tags": ["SIGGRAPH 2025", "Art Paper", "Quadtree", "Procedural Generation", "Interactive Art", "Creative Coding", "Material Aesthetics"],
-    "image": "images/IMG_6023.JPG",
-    "gallery": ["images/IMG_5987.jpg", "images/IMG_5846.jpg", "images/IMG_6012.jpg", "images/IMG_6023.JPG", "images/12-3.png", "images/12-4.png", "images/12-5.PNG"],
-    "galleryLayout": [
-        ["images/IMG_5987.jpg", "images/IMG_5846.jpg"],
-        ["images/IMG_6012.jpg", "images/IMG_6023.JPG"],
-        ["images/12-3.png"],
-        ["images/12-4.png"],
-        ["images/12-5.PNG"]
-    ],
+    "image": "images/SIGGRAPH2025/15.jpg",
+    "gallery": ["images/SIGGRAPH2025/IMG_3368.jpg","images/SIGGRAPH2025/IMG_3388.jpg", "images/SIGGRAPH2025/IMG_3373.jpg", "images/SIGGRAPH2025/IMG_3342.jpg", "images/SIGGRAPH2025/IMG_3995.jpg", "images/SIGGRAPH2025/IMG_3440.jpg", "images/SIGGRAPH2025/IMG_3996.jpg"],
     "content": [
         {
             "heading": "Abstract",
-            "body": "We present a novel tool for generating crazing patterns that explores the relationship between time and user intervention. Inspired by the formation of crazing during firing, this tool reinterprets this phenomenon, which has evolved into a culturally significant aesthetic.\n\nThe tool employs a hierarchical depth slicing technique to simulate the evolution of crazing, showcasing the transition from prominent fissures to intricate patterns. It combines the natural progression of cracks over time with those shaped by human intervention, capturing the underlying logic of crazing formation."
+            "body": "We present Digital Crazing, a computational framework for generating ceramic crazing patterns that investigates the relationship between temporality and human intervention. Inspired by the natural formation of crazing during ceramic firing, the system reinterprets this material phenomenon as a dynamic process that encodes both environmental conditions and user-driven influence, reframing crazing as a culturally and aesthetically significant expression of time.\n\n\nThe framework employs a hierarchical Quadtree-based depth slicing technique to simulate the evolution of crack formation across multiple spatial and temporal scales. This approach enables the transition from coarse fractures to intricate crack networks, capturing the progressive nature of material aging and structural transformation.\n\n\nTo incorporate human participation, the system introduces an interactive shadow-based dyeing mechanism, in which the presence and duration of the observer’s shadow directly influence the propagation and coloration of cracks. Coarse fractures are more receptive to dye absorption, while finer cracks resist coloration, reflecting the physical logic of material behavior in traditional crazing processes. In this model, the observer’s shadow functions as a temporal agent, mediating between natural emergence and human intervention.\n\n\nThrough the integration of procedural generation, material logic, and interactive input, Digital Crazing constructs a hybrid system in which cracks are not treated as defects, but as computational inscriptions of time, memory, and intervention. The work ultimately explores how digital systems can reinterpret material aesthetics and reveal the entangled relationship between natural processes and human agency."
         },
         {
             "heading": "Interactive Mechanism",
-            "body": "Our interactive work exploits the user intervention characteristics, where the crazing changes in response to the duration of the observer's shadow. This simulation highlights how coarse cracks are more prone to absorb dye, while fine cracks resist coloration.\n\nThe observer's shadow is conceptualized as the \"dye,\" emphasizing the contrast between human and natural influences over time. This design amplifies the relationship between temporality and human intervention, offering viewers a novel aesthetic experience."
+            "body": "The interactive system responds to the duration of an observer's shadow, allowing crazing patterns to evolve through user participation.\n\n\nIn the simulation, coarse cracks are more likely to absorb dye, while finer cracks resist coloration, mirroring the material behavior of traditional crazing.\n\n\nThe observer's shadow functions as a metaphorical dye, emphasizing the interplay between natural processes and human intervention over time and offering viewers a novel aesthetic experience."
         },
         {
             "heading": "Contribution & Future Work",
-            "body": "This work integrates cultural context and artistic theory, digitizes the logic behind crazing formation, and explores the aesthetic significance of material transformation. The tool framework dynamically presents the interaction between time and human influence by simulating dye deposition, temporal progression, and crazing formation.\n\nIn future work, we aim to enhance the tool performance by developing plugins for relevant design software, expanding applications in interactive design and digital creation, opening new possibilities for digital material generation techniques."
+            "body": "This work integrates cultural context, material aesthetics, and computational methods to digitize the logic underlying crazing formation. By simulating temporal progression, dye deposition, and crack evolution, the framework reveals the dynamic relationship between time and human intervention.\n\n\nFuture work will focus on improving performance and integrating the framework into digital content creation pipelines through software plugins and creative tools. We also aim to expand its applications in interactive design, digital fabrication, and computational material generation."
         }
     ],
     "credits": {
-        "Author": "呂思函 Szu-Han Lu",
-        "Co-Author": "周小淨 Hsiao-Ching Chou"
+        "Author": "呂思函 KL",
+        "Co-Author": "周小淨"
     },
     "exhibition": {
-        "name": "SIGGRAPH 2025 Art Papers Program",
-        "date": "2025",
-        "location": "SIGGRAPH 2025 Conference"
+        "name": "SIGGRAPH 2025",
+        "date": "2025/8/10 - 2025/8/14",
+        "location": "Vancouver Convention Centre"
     },
     "links": {
         "paper": "https://dl.acm.org/doi/10.1145/3736786"
@@ -643,26 +637,24 @@
     "group": "interactive-system",
     "categoryLabel": "Performance Interface Development",
     "title": "雨霾 II | Rain Haze II",
-    "desc": "Co-developed the performance interface for Rain Haze II at LuxuryLogico's solo exhibition 'Cosmic Sketches.' The core concept maps image grayscale values directly to motor speeds, turning rigid hardware control into intuitive visual-to-tactile manipulation. Adjusting grayscale and opacity of control points simulates storm clouds, heavy rain, and deep thunder—pixels on screen instantly translate into the rhythmic striking of marine debris.",
-    "tags": ["Performance Interface", "Motor Control", "Grayscale Mapping", "LuxuryLogico", "Installation", "Hardware Integration"],
-    "image": "",
-    "gallery": [],
+    "desc": "Co-developed the performance interface for Rain Haze II, presented in LuxuryLogico’s solo exhibition Cosmic Sketches. The system translates image grayscale values into motor speed parameters, transforming conventional hardware control into a direct visual-to-physical mapping. By manipulating the grayscale and opacity of control points, performers generate dynamic states such as storm clouds, heavy rain, and thunder, where pixel-level changes are immediately converted into rhythmic mechanical impacts on physical objects.",
+    "tags": ["Performance Interface", "Motor Control", "Grayscale Mapping", "Installation", "Hardware Integration"],
+    "image": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg",
+    "gallery": ["images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "images/MoCA2025/595107235_1288121530022023_723854205702592316_n.jpg", "images/MoCA2025/597286412_1288121503355359_7230288424891491938_n.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_20.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_18.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_19.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_17.jpg"],
     "content": [
         {
             "heading": "Project Overview",
-            "body": "Rain Haze II is part of LuxuryLogico's solo exhibition「宇宙寫生 Cosmic Sketches」, running from 2025/10/04 to 2026/01/11.\n\nI co-developed the performance interface with motion designer Yi CHEN. The core of this project was turning rigid hardware control into something intuitive: mapping image grayscale values directly to motor speeds."
+            "body": "Rain Haze II is a performance interface co-developed for LuxuryLogico’s solo exhibition Cosmic Sketches (2025–2026). I collaborated with motion designer Yi CHEN to design a system that translates image-based grayscale data into motor speed control, rethinking hardware interaction through visual parameters."
         },
         {
             "heading": "Technical Approach",
-            "body": "While the technical logic is straightforward, the visual-to-tactile control is remarkably direct. By adjusting the grayscale and opacity of control points, I can simulate the sensation of storm clouds, heavy rain, and even the deep rumble of thunder.\n\nWatching the pixels on the screen instantly translate into the rhythmic striking of marine debris was a unique experience. This \"image-as-power\" synchronization felt incredibly fresh—definitely a standout highlight of the whole production."
+            "body": "The system enables real-time control of physical actuators through image parameter manipulation. By adjusting grayscale intensity and opacity values of control points, performers can generate dynamic states corresponding to environmental conditions such as storm clouds, rainfall, and thunder. These visual variations are directly mapped to motor speed outputs, producing synchronized physical impacts that respond to digital image changes in real time."
         }
     ],
     "credits": {
-        "Performance Interface": "呂思函 Szu-Han Lu",
-        "Motion Design": "Yi CHEN"
     },
     "exhibition": {
-        "name": "宇宙寫生 Cosmic Sketches — 豪華朗機工個展 The LuxuryLogico Exhibition",
+        "name": "宇宙寫生—豪華朗機工個展 (COSMIC SKETCHES - The LuxuryLogico EXIBITION)",
         "date": "2025/10/04 - 2026/01/11"
     },
     "links": {}
@@ -675,29 +667,28 @@
     "group": "interactive-system",
     "categoryLabel": "Web Design & Full-Stack Development",
     "title": "天氣好不好我們都要飛 | Fly! No Matter What",
-    "desc": "Designed and built the website for LuxuryLogico's 'Fly! No Matter What' project—a 15-year dream reaching its latest chapter in the 2025 'Cosmic Sketches' exhibition. The interface captures the shift from 'power of the flock' to 'individual skies,' letting every bird fly solo in its own space while also soaring together. Built from scratch in one month: database, filters, artwork archives, backend management, and email functions.",
-    "tags": ["Web Design", "Full-Stack", "Database", "PHP", "LuxuryLogico", "UI/UX"],
-    "image": "",
-    "gallery": [],
+    "desc": "Designed and built the website for LuxuryLogico’s “Fly! No Matter What” project, presented as part of the 2025 “Cosmic Sketches” exhibition.The interface translates the concept of collective and individual flight into a digital system, allowing each artwork (“bird”) to exist independently while remaining part of a unified structure.Built from scratch within one month, including database architecture, filtering system, artwork archive management, backend CMS, and email functionality.",
+    "tags": ["Web Design", "Full-Stack", "Database", "PHP", "UI/UX"],
+    "image": "images/MoCA2025/583320592_1271848548315988_5376068952703928831_n.jpg",
+    "gallery": ["images/MoCA2025/584580932_1271848638315979_1181164941719459288_n.jpg", "images/MoCA2025/584803118_1271848744982635_170993865900499804_n.jpg", "images/MoCA2025/585884322_1271848424982667_1868028926366688952_n.jpg", "images/202509LL宇宙寫生/S__545783816.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_10.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_9.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_3.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_2.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_11.jpg", "images/202509LL宇宙寫生/S__545783818.jpg"],
     "content": [
         {
             "heading": "Project Overview",
-            "body": "The story of \"Fly! No Matter What\" started 15 years ago, and the 2025 \"Cosmic Sketches\" is the latest chapter of that dream. Working on the website design and construction, my goal was to build a digital space that could hold all the vibrant dreams and memories of every newly drawn bird."
+            "body": "“Fly! No Matter What” is a long-term creative project initiated over 15 years ago. The 2025 “Cosmic Sketches” exhibition marks its latest development. The website was designed as a digital archive to organize and present each artwork as an individual entity while maintaining a cohesive visual system."
         },
         {
             "heading": "Interface Design",
-            "body": "For the interface, I wanted to capture the shift from the \"power of the flock\" to \"individual skies.\" I focused on making sure every bird could fly solo in its own pure space, but also join the others to soar together across different skies."
+            "body": "The interface design explores the transition from collective representation to individual presentation. Each artwork is designed to function as an independent “flight space,” while still being visually and structurally connected within the overall system."
         },
         {
             "heading": "Development",
-            "body": "This was my first time diving into a full-system build from scratch—handling the database, filters, and email functions—all within a one-month deadline. Even though there's still room for improvement, building this from the ground up, from the artwork archives to the backend management, was a challenging and rewarding experience."
+            "body": "This project involved building a full-stack system from scratch, including database structure, filtering logic, email functionality, and backend content management, completed within a one-month timeframe. The system integrates artwork archiving and administrative tools into a unified platform, covering both frontend and backend development."
         }
     ],
     "credits": {
-        "Web Design & Development": "呂思函 Szu-Han Lu"
     },
     "exhibition": {
-        "name": "宇宙寫生 Cosmic Sketches — 豪華朗機工個展 The LuxuryLogico Exhibition",
+        "name": "宇宙寫生—豪華朗機工個展 (COSMIC SKETCHES - The LuxuryLogico EXIBITION)",
         "date": "2025/10/04 - 2026/01/11"
     },
     "links": {
@@ -711,23 +702,22 @@
     "category": "gesture-recognition",
     "group": "interactive-system",
     "categoryLabel": "Hand Gesture Recognition & Performance Interface",
-    "title": "手識 | Hand Knowledge",
-    "desc": "Developed the gesture recognition system for '手識,' where gestures serve as a bridge between consciousness and the digital environment. Using TouchDesigner MediaPipe for real-time hand skeleton tracking, skeletal angles are calculated and streamed via UDP to drive Blender model deformations, then handed off to 3D animators for final refinement.",
-    "tags": ["TouchDesigner", "MediaPipe", "Hand Tracking", "UDP", "Blender", "LuxuryLogico", "Performance Interface"],
-    "image": "",
-    "gallery": [],
+    "title": "手識",
+    "desc": "Developed a gesture recognition system for “手識,” where hand gestures act as a bridge between human consciousness and the digital environment.\n\n\nUsing TouchDesigner and MediaPipe for real-time hand skeleton tracking, skeletal angles are computed and streamed via UDP to drive Blender-based model deformations, which are then refined by 3D animators in the final stage.",
+    "tags": ["TouchDesigner", "MediaPipe", "Hand Tracking", "UDP", "Blender", "Performance Interface"],
+    "image": "images/MoCA2025/606547999_1303158061851703_2230385389575658698_n.jpg",
+    "gallery": ["images/MoCA2025/605314380_1298742282293281_3236151951238034565_n.jpg", "images/MoCA2025/608433519_1303158068518369_5107433993951771760_n.jpg", "images/MoCA2025/612066790_1309924914508351_5309031495370856498_n.jpg", "images/MoCA2025/612044530_1309924971175012_6568721391844205059_n.jpg", "images/202509LL宇宙寫生/IMG_6239.jpg"],
     "content": [
         {
             "heading": "Concept",
-            "body": "In the work《手識》, gestures are explored as a bridge between consciousness and the digital environment. I was responsible for developing the gesture recognition system."
+            "body": "In “手識,” gestures are explored as a medium connecting human consciousness and digital space. I was responsible for developing the gesture recognition system."
         },
         {
             "heading": "Technical Workflow",
-            "body": "I used TouchDesigner MediaPipe to achieve real-time hand skeleton tracking. After aligning the bone with a Blender model, calculated skeletal angles are streamed via UDP protocol to drive the model's deformation, then handed off to 3D animators for final refinement."
+            "body": "I used TouchDesigner and MediaPipe for real-time hand skeleton tracking. After mapping the hand skeleton to a Blender rig, skeletal joint angles are calculated and streamed via UDP, driving real-time model deformation.The output is then passed to 3D artists for final refinement."
         }
     ],
     "credits": {
-        "Gesture Recognition System": "呂思函 Szu-Han Lu"
     },
     "exhibition": {
         "name": "宇宙寫生 Cosmic Sketches — 豪華朗機工個展 The LuxuryLogico Exhibition",
@@ -743,26 +733,25 @@
     "group": "interactive-system",
     "categoryLabel": "R&D — Gesture Dynamics Recognition",
     "title": "最後一問 | THE LAST QUESTION",
-    "desc": "R&D for LuxuryLogico's unmanned theater production 'THE LAST QUESTION' at 2026 NTT Arts NOVA. Responsible for designing the gesture dynamics recognition system, focusing on dual-hand motion capture with real-time skeletal angle streaming into Blender. Although joint occlusion from single-webcam input prevented final-show deployment, the stress testing of dual-hand recognition on edge devices remains a solid technical milestone.",
-    "tags": ["R&D", "Hand Tracking", "Motion Capture", "TouchDesigner", "Blender", "LuxuryLogico", "Theater Tech"],
-    "image": "",
-    "gallery": [],
+    "desc": "R&D work for LuxuryLogico’s unmanned theater production “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nResponsible for designing a gesture-based motion dynamics recognition system, focusing on dual-hand tracking and real-time skeletal angle streaming into Blender for performance-driven applications.\n\n\nDue to joint occlusion issues under single-camera input, the system was not deployed in the final stage performance. However, the dual-hand tracking stress test on edge devices provided valuable insights for future development.",
+    "tags": ["R&D", "Hand Tracking", "Motion Capture", "TouchDesigner", "Blender", "Theater Tech"],
+    "image": "images/202604LQ/IMG_7076.JPG",
+    "gallery": ["images/202604LQ/IMG_7221.JPG", "images/202604LQ/IMG_7133.JPG", "images/202604LQ/IMG_7121.JPG"],
     "content": [
         {
             "heading": "Project Background",
-            "body": "During the R&D process for LuxuryLogico's unmanned theater production, THE LAST QUESTION, presented at 2026 NTT Arts NOVA (2026/04/15 – 2026/04/19), I was primarily responsible for the design of the gesture dynamics recognition system."
+            "body": "During the R&D phase of LuxuryLogico’s “THE LAST QUESTION” (NTT Arts NOVA 2026), I was responsible for developing the gesture-based motion recognition system."
         },
         {
             "heading": "Technical Approach",
-            "body": "Building upon previous hand-tracking research, the technical focus this time was on dual-hand motion capture, with the original plan being to recognize skeletal angles and stream them into Blender in real-time for dynamic application."
+            "body": "Building upon prior hand-tracking research, this phase focused on dual-hand motion capture. The system was designed to extract skeletal joint angles and stream them in real time to Blender for dynamic performance integration."
         },
         {
             "heading": "Findings & Outcome",
-            "body": "During the preliminary research phase, the use of a single webcam as the primary sensor meant that joint occlusion led to skeletal data that deviated too significantly from actual movements, failing to provide the intended efficiency for the production workflow. After evaluation, it was decided to keep this functionality in the pre-development stage rather than implementing it in the final show.\n\nAlthough it didn't make it to the live environment, the stress testing of dual-hand recognition on edge devices remains a solid technical milestone."
+            "body": "During testing, single-camera input introduced significant joint occlusion, resulting in unstable skeletal estimation that was insufficient for live performance deployment.\n\n\n After evaluation, the feature was excluded from the final stage implementation and retained as a pre-production research prototype.\n\n\nDespite this, stress testing on edge devices provided valuable technical insights for future multi-camera gesture tracking systems."
         }
     ],
     "credits": {
-        "Gesture Recognition R&D": "呂思函 Szu-Han Lu"
     },
     "exhibition": {
         "name": "2026 NTT Arts NOVA — 豪華朗機工《最後一問》THE LAST QUESTION",
@@ -778,27 +767,26 @@
     "category": "3d-simulation",
     "group": "engine-3d",
     "categoryLabel": "3D Dynamic Simulation & Pre-Visualization",
-    "title": "最後一問：光球模擬 | THE LAST QUESTION: Light Sphere Simulation",
-    "desc": "Developed the 3D dynamic simulation system of the light sphere for LuxuryLogico's 'THE LAST QUESTION' at 2026 NTT Arts NOVA. Built on Unreal Engine with custom light function shaders to simulate multi-directional spotlights, real-time RGB extraction from external video mapped to physical LED nodes, and multi-source motion asset integration for synchronized lighting and mechanical displacement pre-visualization.",
+    "title": "最後一問 | THE LAST QUESTION",
+    "desc": "Developed a 3D real-time simulation system for the light sphere in LuxuryLogico’s “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nBuilt in Unreal Engine, the system integrates custom light function shaders for multi-source spotlight simulation, real-time RGB data extraction from external video feeds, and synchronized motion asset integration.\n\n\nThe pipeline enables coordinated simulation between lighting behavior, LED node mapping, and mechanical displacement for pre-visualization of the stage system.",
     "tags": ["Unreal Engine", "3D Simulation", "Shader", "LED Mapping", "Pre-Visualization", "LuxuryLogico", "Theater Tech"],
-    "image": "",
-    "gallery": [],
+    "image": "images/202604LQ/S__544399370_0.jpg",
+    "gallery": ["images/202604LQ/S__544399369_0.jpg", "images/202604LQ/S__544399366_0.jpg", "images/202604LQ/S__544399371_0.jpg", "images/202604LQ/IMG_7078.jpg", "images/202604LQ/IMG_6989.jpg", "images/202604LQ/IMG_7220.jpg", "images/202604LQ/IMG_7216.jpg" , "images/202604LQ/IMG_6898.jpg" , "images/202604LQ/IMG_6928.jpg"],
     "content": [
         {
             "heading": "Project Overview",
-            "body": "In the development of THE LAST QUESTION for LuxuryLogico, presented at 2026 NTT Arts NOVA (2026/04/15 – 2026/04/19), I was responsible for the 3D dynamic simulation system of the light sphere, focusing on the integration of dynamic simulation and data output."
+            "body": "In the development of “THE LAST QUESTION” for LuxuryLogico (NTT Arts NOVA 2026), I was responsible for building the 3D simulation system of the light sphere."
         },
         {
             "heading": "Technical Pipeline",
-            "body": "The development pipeline was built on Unreal Engine, utilizing custom light function shaders to simulate multi-directional spotlights with projection properties for the production's lighting design. The system is also capable of extracting real-time RGB data from external video sources, precisely mapping virtual materials to the physical LED nodes on the sphere's surface.\n\nAdditionally, I managed the integration of multi-source motion assets, ensuring that lighting effects and mechanical displacements reached synchronized, high-precision simulation within the digital environment."
+            "body": "The system was developed in Unreal Engine using custom light function shaders to simulate dynamic multi-directional lighting behavior for stage pre-visualization.\n\n\nIt also supports real-time RGB data extraction from external video sources, which is mapped to LED node control parameters on the physical light sphere.\n\n\nIn addition, motion assets from multiple sources are synchronized within the simulation to align lighting response with mechanical movement."
         },
         {
             "heading": "Impact",
-            "body": "This pre-visualization system allowed the team to verify lighting and spatial aesthetics in a virtual space prior to physical deployment, significantly enhancing the precision and efficiency of the final lighting execution."
+            "body": "The system provides a pre-visualization environment for testing lighting and spatial behavior before physical deployment, allowing the production team to evaluate synchronization between lighting, motion, and mechanical systems in real time."
         }
     ],
     "credits": {
-        "3D Dynamic Simulation": "呂思函 Szu-Han Lu"
     },
     "exhibition": {
         "name": "2026 NTT Arts NOVA — 豪華朗機工《最後一問》THE LAST QUESTION",
