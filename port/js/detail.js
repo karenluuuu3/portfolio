@@ -110,8 +110,16 @@ function renderDetail(projects, container) {
 // ==========================================
 
 function buildHeroSection(project) {
+    const heroImg = parseImage(project.image);
     const firstLink = project.links ? Object.values(project.links)[0] : null;
-   
+    const docLinkHTML = firstLink
+        ? externalLink(firstLink, 'VIEW DOCUMENTATION <span class="arrow">→</span>', 'detail-doc-link')
+        : '';
+
+    const heroCreditHTML = heroImg.credit
+        ? `<span class="gallery-item-credit">${escapeHTML(heroImg.credit)}</span>`
+        : '';
+
     return {
         id: 'detail-hero',
         navLabel: 'HERO',
@@ -125,12 +133,16 @@ function buildHeroSection(project) {
                         <div class="detail-hero-meta">
                             <span>${project.categoryLabel}</span>
                             <span>${project.year}</span>
-                        </div>                        
+                        </div>
+                        <div class="detail-hero-divider"></div>
+                        <p class="detail-hero-desc">${escapeHTML(project.desc)}</p>
+                        ${docLinkHTML}
                     </div>
                     <div class="detail-hero-media">
                         <div class="detail-hero-media-inner">
-                            <img src="${project.image}" alt="${project.title}" loading="lazy">
+                            <img src="${heroImg.src}" alt="${escapeHTML(project.title)}" loading="lazy">
                         </div>
+                        ${heroCreditHTML}
                     </div>
                 </div>
                 <div class="detail-scroll-hint">SCROLL ↓</div>
@@ -221,33 +233,75 @@ function buildGallerySection(project) {
 
     if (hasLayout) {
         let figCount = 0;
+
         galleryInnerHTML = project.galleryLayout.map(row => {
             if (row.length === 1) {
                 figCount++;
+                const img = parseImage(row[0]);
+                const creditHTML = img.credit
+                    ? `<span class="gallery-item-credit">${escapeHTML(img.credit)}</span>`
+                    : '';
                 return `
                     <div class="gallery-row-full">
-                        <div class="gallery-item-media"><img src="${row[0]}" alt="${project.title} — Fig.${String(figCount).padStart(2, '0')}" loading="lazy"></div>
-                        <div class="gallery-item-caption"><span class="fig-label">Fig.${String(figCount).padStart(2, '0')}</span><div class="fig-divider"></div></div>
+                        <div class="gallery-item-media">
+                            <img src="${img.src}" alt="${project.title} — Fig.${String(figCount).padStart(2, '0')}" loading="lazy">
+                        </div>
+                        <div class="gallery-item-caption">
+                            <span class="fig-label">Fig.${String(figCount).padStart(2, '0')}</span>
+                            <div class="fig-divider"></div>
+                            ${creditHTML}
+                        </div>
                     </div>`;
             } else {
                 figCount++;
                 const fig1 = figCount;
+                const img1 = parseImage(row[0]);
                 figCount++;
                 const fig2 = figCount;
+                const img2 = parseImage(row[1]);
+
+                const credit1 = img1.credit
+                    ? `<div class="gallery-item-caption"><span class="gallery-item-credit">${escapeHTML(img1.credit)}</span></div>`
+                    : '';
+                const credit2 = img2.credit
+                    ? `<div class="gallery-item-caption"><span class="gallery-item-credit">${escapeHTML(img2.credit)}</span></div>`
+                    : '';
+
                 return `
                     <div class="gallery-row-pair">
-                        <div class="gallery-pair-item"><div class="gallery-item-media"><img src="${row[0]}" alt="Fig.${String(fig1).padStart(2, '0')}" loading="lazy"></div></div>
-                        <div class="gallery-pair-item"><div class="gallery-item-media"><img src="${row[1]}" alt="Fig.${String(fig2).padStart(2, '0')}" loading="lazy"></div></div>
+                        <div class="gallery-pair-item">
+                            <div class="gallery-item-media">
+                                <img src="${img1.src}" alt="Fig.${String(fig1).padStart(2, '0')}" loading="lazy">
+                            </div>
+                            ${credit1}
+                        </div>
+                        <div class="gallery-pair-item">
+                            <div class="gallery-item-media">
+                                <img src="${img2.src}" alt="Fig.${String(fig2).padStart(2, '0')}" loading="lazy">
+                            </div>
+                            ${credit2}
+                        </div>
                     </div>`;
             }
         }).join('');
     } else {
-        galleryInnerHTML = project.gallery.map((img, i) => `
-            <div class="gallery-item">
-                <div class="gallery-item-media"><img src="${img}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}" loading="lazy"></div>
-                <div class="gallery-item-caption"><span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span><div class="fig-divider"></div></div>
-            </div>`
-        ).join('');
+        galleryInnerHTML = project.gallery.map((item, i) => {
+            const img = parseImage(item);
+            const creditHTML = img.credit
+                ? `<span class="gallery-item-credit">${escapeHTML(img.credit)}</span>`
+                : '';
+            return `
+                <div class="gallery-item">
+                    <div class="gallery-item-media">
+                        <img src="${img.src}" alt="${project.title} — Fig.${String(i + 1).padStart(2, '0')}" loading="lazy">
+                    </div>
+                    <div class="gallery-item-caption">
+                        <span class="fig-label">Fig.${String(i + 1).padStart(2, '0')}</span>
+                        <div class="fig-divider"></div>
+                        ${creditHTML}
+                    </div>
+                </div>`;
+        }).join('');
     }
 
     const listClass = hasLayout ? 'detail-gallery-list layout-mode' : 'detail-gallery-list grid-mode';
@@ -512,6 +566,13 @@ function initDetailImageParallax() {
             ticking = false;
         });
     }, { passive: true });
+}
+
+function parseImage(item) {
+    if (typeof item === 'string') {
+        return { src: item, credit: null };
+    }
+    return { src: item.src, credit: item.credit || null };
 }
 
 function initYouTubeLazyLoad() {

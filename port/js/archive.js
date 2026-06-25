@@ -30,6 +30,10 @@ function renderArchive(projects, container) {
     );
 
     sorted.forEach(proj => {
+        const img = typeof proj.image === 'string'
+            ? proj.image
+            : (proj.image?.src || '');
+
         const searchTags = (proj.tags.join(' ') + ' ' + proj.title + ' ' + proj.year).toLowerCase();
         const tagsHTML = proj.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
@@ -41,7 +45,7 @@ function renderArchive(projects, container) {
                 </div>
                 <div class="row-feature">
                     <a href="project-detail.html?id=${proj.id}" class="row-feature-link">
-                        <img src="${proj.image}" alt="${proj.title}" loading="lazy">
+                        <img src="${img}" alt="${proj.title}" loading="lazy">
                     </a>
                 </div>
                 <div class="row-info">
