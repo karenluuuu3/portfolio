@@ -157,13 +157,13 @@
    ========================================================================== */
 
 /* Hero text cascade */
-.detail-back-link,
-.detail-project-label,
-.detail-project-title,
-.detail-hero-meta,
-.detail-hero-divider,
-.detail-hero-desc,
-.detail-doc-link {
+.detail-hero .detail-back-link,
+.detail-hero .detail-project-label,
+.detail-hero .detail-project-title,
+.detail-hero .detail-hero-meta,
+.detail-hero .detail-hero-divider,
+.detail-hero .detail-hero-desc,
+.detail-hero .detail-doc-link {
     opacity: 0;
     transform: translateY(24px);
 }

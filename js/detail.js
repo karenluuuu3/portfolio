@@ -112,10 +112,6 @@ function renderDetail(projects, container) {
 
 function buildHeroSection(project) {
     const heroImg = parseImage(project.image);
-    const firstLink = project.links ? Object.values(project.links)[0] : null;
-    const docLinkHTML = firstLink
-        ? externalLink(firstLink, 'VIEW DOCUMENTATION <span class="arrow">→</span>', 'detail-doc-link')
-        : '';
 
     const heroCreditHTML = heroImg.credit
         ? `<span class="gallery-item-credit">${escapeHTML(heroImg.credit)}</span>`
@@ -137,7 +133,6 @@ function buildHeroSection(project) {
                         </div>
                         <div class="detail-hero-divider"></div>
                         <p class="detail-hero-desc">${escapeHTML(project.desc)}</p>
-                        ${docLinkHTML}
                     </div>
                     <div class="detail-hero-media">
                         <div class="detail-hero-media-inner">
@@ -428,11 +423,18 @@ function buildLinksSection(project) {
     if (!project.links || Object.keys(project.links).length === 0) return null;
 
     const linkEntries = Object.entries(project.links);
-    const ytEntry = linkEntries.find(([key, val]) => val.includes('youtube.com/watch') || val.includes('youtu.be'));
 
+    // 找所有 YouTube 連結（可能有多個）
+    const ytEntries = linkEntries.filter(([key, val]) =>
+        val.includes('youtube.com/watch') ||
+        val.includes('youtu.be') ||
+        val.includes('youtube.com/shorts')
+    );
+
+    // 嵌入第一個 YT 影片
     let videoEmbedHTML = '';
-    if (ytEntry) {
-        const ytId = extractYouTubeId(ytEntry[1]);
+    if (ytEntries.length > 0) {
+        const ytId = extractYouTubeId(ytEntries[0][1]);
         if (ytId) {
             videoEmbedHTML = `
                 <div class="doc-video-wrapper" id="ytPlayer" data-yt-id="${ytId}">
@@ -446,11 +448,21 @@ function buildLinksSection(project) {
         }
     }
 
-    const otherLinks = linkEntries.filter(([key, val]) => !(ytEntry && val === ytEntry[1]));
-    const linksListHTML = otherLinks.map(([key, val]) => {
-        const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        return externalLink(val, `${label} <span class="arrow">→</span>`, 'detail-doc-link detail-block-link');
-    }).join('');
+    // 非第一個 YT 的所有連結都列出來
+    const firstYtUrl = ytEntries.length > 0 ? ytEntries[0][1] : null;
+    const otherLinks = linkEntries.filter(([key, val]) => val !== firstYtUrl);
+
+    const linksListHTML = otherLinks.length > 0
+        ? `<div class="detail-doc-link-list">
+            ${otherLinks.map(([key, val]) => {
+                const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                return externalLink(val, `${label} <span class="arrow">→</span>`, 'detail-doc-link');
+            }).join('')}
+        </div>`
+        : '';
+
+    // 如果沒有影片也沒有其他連結，不顯示這個區塊
+    if (!videoEmbedHTML && !linksListHTML) return null;
 
     return {
         id: 'detail-documentation',

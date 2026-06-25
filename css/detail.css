@@ -209,7 +209,7 @@
 }
 
 .detail-doc-link:hover {
-    color: var(--text-accent);
+    color: var(--accent-color);
 }
 
 .detail-hero-media-inner {
@@ -773,9 +773,23 @@
     margin-bottom: 12px;
 }
 
-.detail-block-link {
-    display: block;
-    margin-bottom: 12px;
+/* Documentation 連結列表 */
+.detail-doc-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 8px;
+}
+
+.detail-doc-link-list .detail-doc-link {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 14px 0;
+}
+
+.detail-doc-link-list .detail-doc-link:hover {
+    color: var(--accent-color);
 }
 
 .exhibition-subtitle {
