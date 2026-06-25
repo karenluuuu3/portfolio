@@ -1,0 +1,129 @@
+{
+  "resume": [
+    {
+      "heading": "EDUCATION",
+      "items": [
+        {
+          "year": "Sep. 2022 — Jul. 2025",
+          "title": "National Yang Ming Chiao Tung University (NYCU)",
+          "detail": "Institute of Applied Arts — Computational Aesthetics"
+        },
+        {
+          "year": "Sep. 2018 — Jun. 2022",
+          "title": "National Yang Ming Chiao Tung University (NYCU)",
+          "detail": "Department of Computer Science — Network & Multimedia / Design and Innovative Technology Program (DITP)"
+        }
+      ]
+    },
+    {
+      "heading": "WORK EXPERIENCE",
+      "items": [
+        {
+          "year": "Sep. 2025 — NOW",
+          "title": "LuxuryLogico — Full-time XR Developer",
+          "detail": "Project production & on-site exhibition deployment"
+        },
+        {
+          "year": "Nov. 2024",
+          "title": "Lextribe — Part-time Interactive Engineer",
+          "detail": "Remote project development"
+        },
+        {
+          "year": "Sep. — Nov. 2023",
+          "title": "Bito — Intern, Unreal Engine Designer",
+          "detail": "Project production & on-site exhibition deployment"
+        },
+        {
+          "year": "Jul. — Aug. 2023",
+          "title": "Peppercorns Media Art — Intern, Unity Engineer",
+          "detail": "Project production & on-site exhibition deployment"
+        },
+        {
+          "year": "Jun. — Dec. 2022",
+          "title": "Field Technology Ltd. — Game Planner & Project Manager",
+          "detail": "DIGI+Talent Cross-Domain Digital Talent Acceleration Program / Administration for Digital Industries, Ministry of Digital Affairs & Institute for Information Industry / Global Digital Rising Star Award — Honorable Mention"
+        }
+      ]
+    },
+    {
+      "heading": "EXHIBITIONS",
+      "items": [
+        {
+          "year": "Jun. 2025",
+          "title": "The Sixth Fuel Factory Documenta 2025: Tracing the Origin of the Sixth Fuel Factory along the Touqian River",
+          "detail": "Kinect interactive installation: Echo-me"
+        },
+        {
+          "year": "Jul. 2024",
+          "title": "GDAP#13 閾質 (LIMINAL)",
+          "detail": "Video works: 瓷影暗香, 拾花, 粼"
+        },
+        {
+          "year": "Dec. 2023 — Jan. 2024",
+          "title": "邊界之間 (In Between Boundaries)",
+          "detail": "Point cloud video work: The Tunnel"
+        },
+        {
+          "year": "Dec. 2023",
+          "title": "光嶼(Island of Light)",
+          "detail": "Mushroom Forest: Woodcraft landscape installation"
+        },
+        {
+          "year": "Oct. — Nov. 2023",
+          "title": "虛構｜The Pledge｜L'Engagement 物質性演算美學展(Materiality Algorithmic Aesthetics Exhibition)",
+          "detail": "Point cloud interactive work: Existence Observation"
+        }
+      ]
+    },
+    {
+      "heading": "AWARDS",
+      "items": [
+        {
+          "year": "2025",
+          "title": "Digital Crazing: Applying Quadtree Structures to Simulate Time and Human Intervention",
+          "detail": "Accepted by 2025 SIGGRAPH Art Paper"
+        },
+        {
+          "year": "2021",
+          "title": "Deep In Sea — VR Escape Room Game",
+          "detail": "National Taiwan Ocean University CGW 2021 VR Battle — Best Narrative Award"
+        }
+      ]
+    },
+    {
+      "heading": "SKILLS",
+      "items": [
+        {
+          "year": "Programming",
+          "title": "C# / C++ / Python / OpenGL / GLSL / HLSL / HTML / CSS / JavaScript",
+          "detail": ""
+        },
+        {
+          "year": "Engine & Tools",
+          "title": "Unreal Engine / Unity / TouchDesigner",
+          "detail": "Interactive Content, Shader, XR, Projection, Kinect, Arduino, Oculus Quest"
+        }
+      ]
+    },
+    {
+      "heading": "LANGUAGES",
+      "items": [
+        {
+          "year": "",
+          "title": "Mandarin (Native)",
+          "detail": ""
+        },
+        {
+          "year": "2022",
+          "title": "English (TOEIC: 875)",
+          "detail": ""
+        },
+        {
+          "year": "2023",
+          "title": "Japanese (JLPT: N2)",
+          "detail": "Exchange Student, Graduate School of Science and Engineering, Chiba University (2024)"
+        }
+      ]
+    }
+  ]
+}

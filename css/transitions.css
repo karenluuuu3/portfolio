@@ -1,0 +1,48 @@
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--bg-primary);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    pointer-events: none;
+}
+
+.page-transition-overlay.is-entering {
+    animation: transitionIn 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.page-transition-overlay.is-loaded {
+    transform: scaleY(1);
+    transform-origin: top;
+    animation: transitionOut 0.5s cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+}
+
+@keyframes transitionIn {
+    0%   { transform: scaleY(0); transform-origin: bottom; }
+    100% { transform: scaleY(1); transform-origin: bottom; }
+}
+
+@keyframes transitionOut {
+    0%   { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(0); transform-origin: top; }
+}
+
+/* 進場動畫結束後清除 transform，避免影響子元素的 fixed 定位 */
+.portfolio-container,
+.detail-main,
+.detail-side-nav {
+    opacity: 0;
+    animation: contentFadeIn 0.6s ease 0.3s forwards;
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;   /* 用 none 而非 translateY(0) */
+    }
+}

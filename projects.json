@@ -1,0 +1,798 @@
+[
+  {
+      "id": "0",
+      "year": "2021",
+      "date": "2021.07",
+      "category": "vr-escape-room",
+      "group": "engine-3d",
+      "categoryLabel": "VR x Hand Tracking x Escape Room",
+      "title": "深海低吟 | Deep In Sea",
+      "desc": "A VR escape room experience built in Unity for Oculus Quest 2 with hand tracking support. Players take on the role of an archaeologist who awakens inside a mysterious Victorian-era ship, solving four puzzles based on gesture recognition, magical drawing, lightsaber combat, and branching narrative paths to break a mermaid’s curse.",
+      "tags": ["Unity", "VR", "Hand Tracking", "Oculus Quest 2", "Escape Room", "Blender", "Vroid"],
+      "image": "images/work/bg.png",
+      "galleryLayout": [
+        ["images/10_深海低吟_1.png"],
+        ["images/10_深海低吟_2.png"],
+        ["images/圖片3.png"],
+        ["images/圖片15.png"],
+        ["images/圖片1.png"],
+        ["images/圖片11.png"],
+        ["images/圖片5.png"],
+        ["images/w1.png"]
+      ],
+      "content": [
+        {
+          "heading": "Story Outline",
+          "body": "The player assumes the role of an archaeologist who awakens inside a mysterious Victorian-era ship after diving into the deep sea. A haunting melody signals the beginning of a fragmented experience, where perception becomes unstable and the environment shifts between illusion and narrative reconstruction.\n\nAs the player progresses through a series of a series of interconnected environmental puzzles, the environment shifts between illusion and truth. Encounters with the ship’s captain and other spectral figures gradually reveal a layered narrative involving curses, lost royalty, and submerged memories.\n\nThe experience culminates in a mirror-based sequence that reconstructs hidden memories, before collapsing into a final confrontation with a mermaid entity, blurring the boundary between escape and entrapment."
+        },
+        {
+          "heading": "Development Tools",
+          "body": "Built with Unity for Oculus Quest 2, the project integrates VR interaction design with hand tracking input. The development pipeline includes 3D asset creation (Blender, Vroid) and visual design tools (Photoshop, Illustrator), focusing on immersive narrative gameplay and interactive spatial design."
+        },
+        {
+          "heading": "Techniques",
+          "body": "The system combines voice recognition and hand-tracking interaction to enable multi-modal VR gameplay.\n\nCore interaction design includes physics-based object manipulation, gesture recognition using hand skeleton data, and pinch-based drawing mechanics for magic casting systems.\n\nAdditional mechanics such as dual-hand input for weapon summoning and inventory control are designed to reinforce embodied interaction within the VR environment, creating a cohesive gesture-driven gameplay system."
+        },
+        {
+          "heading": "Visual Effects",
+          "body": "Particle systems, physically based rendering (PBR) materials, and custom VFX shaders are used to enhance environmental atmosphere and narrative transitions within the VR space."
+        },
+        {
+          "heading": "Design",
+          "body": "• Vroid — Character modeling and creation\n• Photoshop & Illustrator — Game logo and UI asset design"
+        }
+      ],
+      "credits": {
+        "Supervisor": "林奕成",
+        "Animation": "陳書玟",
+        "CG / Script / Music": "呂思函 KL",
+        "Programming & Art": "張巧如",
+        "Character Modeling": "林千慧"
+      }
+    },
+  {
+    "id": "1",
+    "year": "2021",
+    "date": "2021.09",
+    "category": "sound-art",
+    "group": "interactive-system",
+    "categoryLabel": "Sound Art x Audio Visual",
+    "title": "Time Lapse",
+    "desc": "A sound art and audiovisual work exploring media transcription, sound modulation, and synesthetic perception. Using Ableton to process sound through effects such as echo, layering, and repetition in Ableton, the work reflects on the emotional trajectory of the pandemic—from anxiety to adaptation and coexistence.",
+    "tags": ["Sound Art", "Audio Visual", "TouchDesigner", "Ableton", "Media Transcription"],
+    "image": "images/瘋城.jpg",
+    "galleryLayout": [
+      ["images/td-technique.png"],
+      ["images/圖片2.png"],
+      ["images/圖片6.png"],
+      ["images/圖片0.png"],
+      ["images/圖片7.png"],
+      ["images/圖片8.png"],
+      ["images/瘋城.jpg"],
+      ["images/8 - 呂思函.png"]
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "body": "As the pandemic escalated, waves of uncertainty, rumors, and vaccine-related panic spread across society. Within what felt like the blink of an eye, two years had passed. People gradually transitioned from anxiety and distress to a state of relative calm, adapting to life under self-quarantine at home, while standing in solidarity with frontline medical workers and emergency responders to combat the crisis together."
+      },
+      {
+        "heading": "Techniques",
+        "body": "The sound materials consist of news broadcasts and Foley recordings sourced from Freesound. In Ableton, I applied audio processing techniques such as echo, layering, and repetition to enhance emotional depth to enhance the emotional depth. For the cross-modal audiovisual experience, I utilized TouchDesigner to generate audiovisual elements, creating a dynamic cross-modal experience that integrates sound and visual perception"
+      },
+      {
+        "heading": "Sections",
+        "body": "1. In darkness, ethereal lines shift unpredictably, gradually morphing—like a dormant virus silently embedded within society.\nSeparation, infiltration, and fusion mirror both viral behavior and human social dynamics, even across species boundaries.\nA gradual descent into struggle unfolds—a suffocating tension between an invisible enemy and humanity’s own ethical and systemic conflicts.\nConfusion over viral mutations and vaccine shortages fuels a surge of fragmented public discourse.\n5. Despite fractures within society, coexistence remains inevitable."
+      }
+    ],
+    "collaborators": ["謝瀞瑩 Olifa Hsieh (curator)", "鄧心瑀", "莊慶怡", "卓珮萱", "黃睿緯", "趙元韻", "簡志瑋", "黃家逸", "邱映均", "李文仁", "黃姿瑀", "邱晨珊", "梁惠宣", "王子柔", "唐薇瑄", "成文瑄"],
+    "exhibition": {
+      "name": "NYCU x TNUA【瘋城 This Crazy City】Online Headphone Concert (immersive audio exhibition)",
+      "curation": "謝瀞瑩 Olifa Hsieh",
+      "institution": "National Yang Ming Chiao Tung University (NYCU) & National Taiwan University of Arts (TNUA)"
+    },
+    "links": {
+      "video": "https://youtu.be/IYBkvauOYLA"
+    }
+  },
+  {
+    "id": "2",
+    "year": "2021",
+    "date": "2021.10",
+    "category": "game-design",
+    "group": "engine-3d",
+    "categoryLabel": "Indie Game Mechanics",
+    "title": "COVID RUSH",
+    "desc": "An experimental indie game built in Unity that turns a chaotic supply run during the pandemic into a fast-paced, satirical 3D dash. Players navigate between safe (green) and infected (red) zones that change with the background music, collecting masks and vaccines while avoiding AI-controlled infected characters.",
+    "tags": ["Unity", "Game Design", "AI Mechanics"],
+    "image": "images/work/0.png",
+    "galleryLayout": [
+      ["images/0-1.png"],
+      ["images/0-2.png"],
+      ["images/0.png"]
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "body": "• Immersive Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n• New Game Mode\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-like mechanic inspired by traditional playground “tag” rules that requires players to move to safe zones to avoid infection.\n\n\n• Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
+      },
+      {
+        "heading": "Game Story",
+        "body": "A deadly disease has swept across the world for quite some time. Governments around the world are working hard to vaccinate their citizens. They also strongly appeal to their citizens to wear masks in order to protect themselves and others.\n\nYou gradually become aware of the spreading disease and discover that some areas are heavily affected while others remain relatively safe. People flee dangerous areas and crowd into safer regions. Even after reaching safe zones, they continue scrambling for as many supplies as possible.\n\nWitnessing this chaotic behavior, you realize that your only priority is survival."
+      },
+      {
+        "heading": "How to Play",
+        "body": "On the ground in the game scene, there will be squares colored in red or green. Red squares represent infected areas. The colors of the squares change in sync with the background music. Players will use a keyboard (WASD or arrow keys) to control the characters to move. If the player is in red areas, they will need to leave as soon as possible. Failing to escape in time will cause all collected items to be lost and result in a game over. Be careful—NPCs may interfere with your progress and steal your collected items."
+      },
+      {
+        "heading": "Game System",
+        "body": "1. Player character: Players can control the character by a keyboard to interact with the game objects.\n2. Squares: Different colored squares have different effects on players, and it will change colors along with music.\n3. Item: Items will be randomly generated in green squares, and players need to interact with them.\n4. Game AI: The characters controlled by game AI can infect players, increasing the game's intensity and difficulty.."
+      }
+    ],
+    "credits": {
+      "System": "李諭樹",
+      "CG / Script / Music": "呂思函 KL",
+      "Art": "吳岱容"
+    },
+    "links": {
+      "demo": "https://www.youtube.com/watch?v=cHLlB8ezq2A&list=PLilhVcqigCqBy6HfkwW4ZMQTFq4LX5PVR&index=1"
+    }
+  },
+  {
+    "id": "3",
+    "year": "2022",
+    "date": "2022.08",
+    "category": "mobile-interactive",
+    "group": "interactive-system",
+    "categoryLabel": "Interactive AR Application",
+    "title": "水族魚生 | AquaVerse",
+    "desc": "An augmented reality mobile application that allows users to explore an underwater world through their smartphones. By interacting with virtual fish, users can access dynamic information panels that introduce different species in an engaging and immersive learning experience.",
+    "tags": ["AR", "Mobile", "Interactive", "3D Art", "Animation", "Education"],
+    "image": "images/13.gif",
+    "galleryLayout": [
+      ["images/13.png"],
+      ["images/13-1.png"],
+      ["images/13-2.png"],
+      ["images/13.gif"]
+    ],
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "• Educational Significance\nAugmented reality has shown great potential in education, daily-life assistance, and other fields. This project explores how immersive technologies can be integrated into everyday life to enhance learning experiences and create social value.\n\n\n• Technological Interaction\nEffective knowledge sharing relies on accessible and engaging content. With the rise of technologies such as 5G and the metaverse, dynamic media—including videos, animations, and interactive experiences—have become increasingly effective in attracting attention and supporting learning."
+    },
+    {
+      "heading": "Introduction",
+      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, earning about different species through interaction in an engaging and immersive way."
+    },
+    {
+      "heading": "Prototype",
+      "body": "• Launch the application from the home screen.\n• Select a fish in the AR environment.\n• An information panel appears, introducing the selected species."
+    }
+  ],
+    "credits": {
+      "3D Art": "曹雅婷",
+      "2D Art": "劉思彤",
+      "Programming": "呂思函 KL",
+      "Animation": "汪楚翊, 陳柏晟, 陳宏源"
+    },
+    "links": {
+      "demo": "https://youtube.com/shorts/u1-DQfZunAA?feature=share"
+    }
+  },
+  {
+    "id": "4",
+    "year": "2022",
+    "date": "2022",
+    "category": "shader-art",
+    "group": "graphics-shader",
+    "categoryLabel": "Computing Aesthetics",
+    "title": "GLSL Shaders Collection",
+    "desc": "A series of GLSL shader experiments exploring the simulation of natural phenomena, including fluid dynamics, optical distortion, and perceptual abstraction. The works investigate how computational systems can generate organic and expressive visual behaviors.",
+    "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
+    "image": "images/圖片20.png",
+    "galleryLayout": [
+      ["images/圖片20.png"]
+    ],
+    "content": [
+    {
+      "heading": "Collection",
+      "body": "1. Waves — A simulation of fluid dynamics using Voronoi noise, metaballs, and Ukiyo-e-inspired aesthetics, exploring the boundary between digital fluidity and traditional visual language.\n\n2. Uncertain — A procedural system driven by instability and noise, generating unpredictable visual structures that reflect ambiguity and fluctuation.\n\n3. Breathing Light — A generative shader study of rhythmic luminosity, simulating organic pulsation and subtle temporal variation.\n\n4. Reflection — An exploration of light behavior and spatial inversion through real-time rendering and surface distortion."
+    }
+  ],
+    "links": {
+      "waves_video": "https://youtu.be/lh4w9Uj0TJc",
+      "uncertain_instagram": "https://www.instagram.com/p/Cm4arWhSRJi/?img_index=2",
+      "breathing_light_instagram": "https://www.instagram.com/p/Cm4Z4UoymyO/?img_index=2"
+    }
+  },
+  
+  {
+    "id": "5",
+    "year": "2022",
+    "date": "2022.12",
+    "category": "ar-fitness-game",
+    "group": "interactive-system",
+    "categoryLabel": "AR Mixed Image Recognition & AIoT Game",
+    "title": "垃圾車等等我 | Garbage Truck, Wait for Me",
+    "desc": "A home fitness game application developed through an industry–academia collaboration with Field Technology Ltd. and NOBOLLEL. The project integrates AR-based image recognition and AIoT rapid game development modules, using smartphone camera motion tracking to detect body movements and create an accessible, equipment-free fitness experience.",
+    "tags": ["AR", "AIoT", "Image Recognition", "Motion Sensing", "Fitness Game", "Mobile App"],
+    "image": "images/14-header.png",
+    "galleryLayout": [
+      ["images/14.png"],
+      ["images/14-1.jpg"],
+      ["images/14-14.jpg"],
+      ["images/14-15.jpg"],
+      ["images/14-17.jpg"],
+      ["images/14-39.jpg"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "Developed by a project team at Field Technology Ltd., this initiative involved two interns working with existing AR mixed image recognition and AIoT rapid development modules. In collaboration with NOBOLLEL, the team co-developed two prototype home fitness games: Garbage Truck, Wait for Me and Smash the Garbage Truck, released as an open beta version on November 30, 2022."
+    },
+    {
+      "heading": "Game Planning Conceptual Framework",
+      "body": "• Fitness and physical well-being have become increasingly important across all age groups, especially during the pandemic when access to gyms and outdoor activities was limited.\n\n\n• Many users seek to maintain exercise habits but lack access to expensive equipment or sufficient home space.\n\n\n• Based on market research and discussions with the engineering team, we adopted image recognition as the core interaction method, combining motion sensing with gamification to create an accessible home fitness experience.\n\n\n• While AIoT devices and wearable accessories were initially considered, we prioritized camera-based interaction to reduce cost and improve accessibility.\n\n\n• The game design emphasizes full-body movement, accessibility, and intuitive engagement. To enhance cultural relatability in Taiwan, we adopted the concept of “chasing the garbage truck,” a widely recognized daily-life experience."
+    },
+    {
+      "heading": "Download & Usage",
+      "body": "For optimal gameplay experience, it is recommended to project the mobile screen to a larger display such as a TV or projector. The smartphone’s rear camera is used for motion tracking. The application also supports webcam-based interaction on PCs or laptops when connected to an external display."
+    }
+  ],
+    "links": {
+      "testing_video": "https://youtu.be/nZCknoQdh40",
+      "demo_video": "https://youtu.be/C6i9WdZ-_eE"
+    }
+  },
+    {
+    "id": "6",
+    "year": "2022",
+    "date": "2022.12",
+    "category": "generative-art",
+    "group": "graphics-shader",
+    "categoryLabel": "Generative Math Art",
+    "title": "墨染熹微 | Smudge of Dawn",
+    "desc": "A GLSL generative art work inspired by karesansui (Japanese dry landscape gardens) and traditional Chinese ink painting. The composition simulates ink-like diffusion and sand textures through trigonometric field functions applied to screen space coordinates.",
+    "tags": ["GLSL", "Shader", "Ray Marching", "Creative Coding", "Generative Textures", "Ink Painting"],
+    "image": "images/3-1.png",
+    "galleryLayout": [
+      ["images/3-1.png"],
+      ["images/3-2.jpg"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "枯山水，以山石白砂為主體，仿照自然的山海大川，從而實現「無水而喻水」的效果。本作品以GLSL為創作工具，並以傳統中國水墨畫為質地，繪製出墨色暈染山中微弱晨光的景色。\n\n\nKaresansui gardens use rocks and white sand to evoke vast natural landscapes, expressing water without its physical presence.\nThis work reinterprets that philosophy through GLSL, translating the aesthetics of traditional Chinese ink painting into a computational system that generates subtle gradients of morning light across an abstract mountainous field."
+    },
+    {
+      "heading": "Technique",
+      "body": "畫面中，白砂水紋的「地」，是以三角函數對於畫面的座標運算出「波」的形體，並加入時間的變化，使水紋蔓延、甚至延伸至「天」，以增添畫面「生」和水墨繪製的感受，而後對水紋表面加入擾動使之有砂石的顆粒感，並在場地中融入三顆白石作為山石的導流。\n\n\nThe “ground” of white sand and water ripples is generated through trigonometric field functions operating on screen space coordinates, producing wave-like structures.\nTime-dependent variation introduces temporal evolution, allowing the ripples to expand and flow across the composition, blurring the boundary between “ground” and “sky.”\n\nAdditional noise-based perturbations are applied to the surface to simulate granular sand textures. Three white stones are placed within the field as structural anchors, guiding the flow of the composition and acting as visual attractors within the system."
+    }
+  ],
+    "links": {
+      "video": "https://youtu.be/5ZsH2NQUvhM"
+    }
+  },
+  {
+    "id": "7",
+    "year": "2023",
+    "date": "2023.01",
+    "category": "unreal-engine",
+    "group": "engine-3d",
+    "categoryLabel": "UE4 Workshop — Digital Scenery Trilogy",
+    "title": "UE4 Workshop: 恬 / 霽月 / 歸",
+    "desc": "A trilogy of digital landscapes created during a one-month Unreal Engine 4 workshop, covering the full environment art pipeline including terrain creation, water systems, atmospheric sky, physics simulation, wind fields, post-processing, and final rendering.\nEach scene explores a different emotional and philosophical interpretation of landscape: Tranquility, Emotional Projection, and Returning Home.",
+    "tags": ["Unreal Engine 4", "Gaea", "Animation", "Landscape", "Digital Scenery"],
+    "image": "images/1.jpg",
+    "galleryLayout": [
+      ["images/1.jpg"],
+      ["images/2.png"],
+      ["images/3.jpg"]
+    ],
+    "content": [
+    {
+      "heading": "Workshop Overview",
+      "body": "一個月的UE4工作坊，從無到有建立山體、雪景、水體、天空、物理、風場、後期、渲染輸出。\n\n\nA one-month Unreal Engine 4 workshop focused on building complete real-time environments from scratch, including terrain generation, snowy landscapes, water systems, atmospheric sky rendering, physics simulation, wind fields, and post-processing."
+    },
+    {
+      "heading": "⟪恬⟫",
+      "body": "非淡泊無以明志，非寧靜無以致遠\n－摘自 諸葛孔明《誡子書》\n\n\n\"Without tranquility, one cannot clarify one’s purpose; without serenity, one cannot reach far.\"\n— Zhuge Liang, Letter of Admonition to His Son"
+    },
+    {
+      "heading": "⟪霽月⟫",
+      "body": "寓情於景\n借景喻情\n\n\nProjecting emotion onto environment, and using landscape as a medium for emotional expression."
+    },
+    {
+      "heading": "⟪歸⟫",
+      "body": "斜陽於我，是「回家」\n\n\nTo me, the setting sun embodies the feeling of returning home."
+    }
+  ],
+    "links": {
+      "恬_instagram": "https://www.instagram.com/p/Cm39lniSULK/?img_index=2",
+      "霽月_instagram": "https://www.instagram.com/p/Cm396r5S2Lo/?img_index=2"
+    }
+  },
+  
+  {
+    "id": "8",
+    "year": "2023",
+    "date": "2023.01",
+    "category": "shader-art",
+    "group": "graphics-shader",
+    "categoryLabel": "Generative Visuals",
+    "title": "匯聚的思念 | The Convergence of Longing",
+    "desc": "Using Johannes Vermeer’s Girl with a Pearl Earring as a visual foundation, this work simulates the dispersion and convergence of memory through Brownian Motion and Random Walk algorithms. The composition transforms a static classical painting into a dynamic system of stochastic particle movement, visualizing longing as a distributed computational field.",
+    "tags": ["GLSL", "Shader", "Brownian Motion", "Random Walk", "Computing Aesthetics"],
+    "image": "images/6.png",
+    "galleryLayout": [
+      ["images/6.png"],
+      ["images/6-5.png"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "Based on Vermeer’s Girl with a Pearl Earring, this work reinterprets a classical painting through computational processes. By applying Brownian Motion and Random Walk algorithms, the image is transformed into a dynamic system in which visual elements continuously disperse, drift, and reassemble.\n\nRather than preserving the painting as a static image, the work treats it as a field of memory particles, where longing and remembrance emerge through stochastic movement."
+    }
+  ],
+    "links": {
+      "video": "https://www.youtube.com/watch?v=lGqnS0nqCEk"
+    }
+  },
+  {
+    "id": "9",
+    "year": "2023",
+    "date": "2023.01",
+    "category": "point-cloud",
+    "group": "interactive-system",
+    "categoryLabel": "Point Cloud Animation & Installation",
+    "title": "隧歲 | The Tunnel",
+    "desc": "A point cloud-based spatial animation centered on Hsinchu’s Zhongzheng Road Night Market, reconstructed from scanned spatial data. The work explores temporal duality through separate daytime and nighttime simulations, incorporating atmospheric effects, lighting transitions, particle systems, post-processing, and field-recorded audio to construct an audiovisual experience that traverses memory, time, and urban space.",
+    "tags": ["Unreal Engine 4", "Point Cloud", "LiDAR", "VFX", "Animation"],
+    "image": "images/7.png",
+    "galleryLayout": [
+      ["images/7.png"],
+      ["images/7-2.png"],
+      ["images/7-3.png"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "「年年歲歲花相似，歲歲年年人不同。」－摘自 劉希夷〈白頭吟〉\n\n隧，寬廣卻非無限的空間。歲，聚焦在一日的時間流動。\n\n歷史遺留在新竹的某幾個角落，舊城區依傍在新竹市區周邊，新竹第一信用合作社、影像博物館、新竹州廳、新竹美術館...\n走過繁榮與衰落，看著人群來回又離去，舊城區依舊在原地送走舊人、迎接新人，彷彿培育著、呼喚著這塊土地、這塊土地的人們。\n\n\n“Year after year, blossoms resemble one another, yet year after year, people are different.”\n— Liu Xiyi, Song of White Hair\n\n\nThe tunnel is a space that is wide, yet never infinite. “Years” here refer to the continuous flow of time within a single day.\n\n\nTraces of history remain scattered across Hsinchu’s old districts. Surrounding the modern city center, landmarks such as the Hsinchu Cooperative Bank, Image Museum, City Hall, and Art Museum stand as witnesses to cycles of prosperity and decline. People come and go, while the city continues to exist—preserving memory, welcoming change, and quietly shaping its inhabitants."
+    },
+    {
+      "heading": "Technique",
+      "body": "本作品以中正台夜市為主場景，將其掃描成點雲模型，分別以白天與夜晚的氛圍創作動畫特效，例如霧氣、光線、顏色變化、粒子的動態與樣式、影像後期處理等，並加入實境採樣的聲響，透過白天與夜晚的氛圍差異，賦予場域穿越時間與空間的視覺觀賞與聽覺感受。\n\n\nThis work reconstructs Zhongzheng Road Night Market as a point cloud-based spatial dataset, capturing its physical environment through scanned geometry.\n\n\nTwo separate simulations are created to represent daytime and nighttime states. These include atmospheric fog, dynamic lighting, color grading transitions, particle systems, and post-processing effects.\n\n\nField-recorded ambient sounds are integrated into the installation, reinforcing the sensory contrast between temporal states.\n\n\nThrough the transformation of real-world spatial data into a dynamic audiovisual system, the work constructs a temporal passage through Hsinchu’s urban memory."
+    }
+  ],
+    "credits": {
+      "Day Scene": "呂思函 KL",
+      "Night Scene": "何郁軒"
+    },
+    "exhibition": {
+      "name": "2023 Open LABs 續。旭。不休",
+      "date": "2023/1/11 - 2023/1/13",
+      "location": "NYCU Haoran Library 6F",
+      "url": "https://ict-openlabs-2023.act.nycu.edu.tw"
+    },
+    "links": {
+      "video": "https://youtu.be/aIC0xbeB45c"
+    }
+  },
+  {
+    "id": "10",
+    "year": "2023",
+    "date": "2023.03",
+    "category": "unreal-engine",
+    "group": "engine-3d",
+    "categoryLabel": "Real-time Technical Art",
+    "title": "はる | Haru",
+    "desc": "An atmospheric real-time environment created in Unreal Engine 5, exploring the theme of fading memory and ephemerality. The work combines Niagara particle systems and custom material shaders to simulate the transient motion of sakura petals, constructing a visual metaphor of disappearance and remembrance.",
+    "tags": ["Unreal Engine 5", "Niagara System", "Particle Shader", "Animation"],
+    "image": "images/8.jpg",
+    "galleryLayout": [
+      ["images/8.jpg"],
+      ["images/8-2.png"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "“Who is calling?”\n“While Haru has withered away…”\n“Through the pulse of sakura.”\n\n\nThis work explores the fragile boundary between presence and disappearance, using seasonal imagery as a metaphor for fading memory."
+    }
+  ],
+    "links": {
+      "video": "https://youtu.be/8Ehx9uAEzy0"
+    }
+  },
+  {
+    "id": "11",
+    "year": "2023",
+    "date": "2023.05",
+    "category": "unreal-engine",
+    "group": "engine-3d",
+    "categoryLabel": "3D Interactive Puzzle Game",
+    "title": "植•栽 | Planted for Planting",
+    "desc": "An immersive puzzle-based exploration game built in Unreal Engine 5. Players navigate a maze, solve environmental puzzles related to botanical logic (hint: leaf-based patterns), and cultivate the growth of a World Tree. The experience combines maze navigation and open-world puzzle spaces, using Niagara particle systems to visually represent ecological regeneration and the continuation of life.",
+    "tags": ["Unreal Engine 5", "Niagara System", "Game Design", "Puzzle Mechanics", "Escape Room"],
+    "image": "images/9.png",
+    "galleryLayout": [
+      ["images/9-1.png"],
+      ["images/9.png"]
+    ],
+    "content": [
+    {
+      "heading": "Core Gameplay",
+      "body": "• Maze Exploration\nPlayers begin inside a complex maze composed of branching paths, hidden routes, and interactive environmental elements. The design emphasizes spatial awareness and observational problem-solving.\n\n\n• Botanical Puzzle Solving\nAfter exiting the maze, players enter an open puzzle space where they must identify suitable planting locations. The logic of the puzzle is subtly tied to leaf-based numerical patterns.\n\n\n• World Tree Growth System\nSuccessful planting triggers the gradual growth of the World Tree. This process is visualized through Niagara particle systems, symbolizing environmental restoration and the accumulation of player actions over time."
+    },
+    {
+      "heading": "Design Goals",
+      "body": "• Level Design — The experience transitions between enclosed maze spaces and open environmental zones, creating contrast in spatial tension and exploration freedom.\n\n\n• Interaction Design — Environmental interactions are designed to encourage observation, pattern recognition, and indirect problem-solving.\n\n\n• Procedural Visual Design — Niagara particle systems are used to represent plant growth and environmental transformation as a dynamic visual system.\n\n\nThe overall design goal is to transform puzzle-solving into a metaphor for ecological regeneration, where each solved challenge contributes to the growth of a living world structure."
+    },
+    {
+      "heading": "Art Style & Atmosphere",
+      "body": "• The maze environment adopts a monochromatic visual language, using minimal lighting to emphasize spatial ambiguity without oppressive tension.\n\n\n• The puzzle space shifts toward a more open composition, encouraging interaction and environmental awareness.\n\n\n• The growth of the World Tree is visualized through Niagara particle effects, emphasizing organic expansion and temporal progression."
+    }
+  ]
+  },
+  {
+    "id": "12",
+    "year": "2023",
+    "date": "2023.06",
+    "category": "interactive-installation",
+    "group": "interactive-system",
+    "categoryLabel": "Hardware & Interactive Installation",
+    "title": "緒絮 | Threads of Thought",
+    "desc": "An interactive installation exploring the visualization of human consciousness. By connecting Arduino with Unreal Engine 5, the work creates a dual representation of the mind: one layer simulates neural transmission through particle-based molecular motion, while another manifests emotional and imaginative spaces through abstract generative visuals. Sensors act as interfaces that translate human stimuli into transformations within this consciousness space.",
+    "tags": ["Arduino", "Unreal Engine 5", "Mixed Reality", "Niagara System", "Noise Art", "Shader", "Ultrasonic Sensor", "Interactive Installation"],
+    "image": "images/10-2.png",
+    "galleryLayout": [
+      ["images/10-1.png"],
+      ["images/10-2.png"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "As virtual, augmented, and mixed reality technologies continue to evolve, the boundary between physical and digital space becomes increasingly blurred. While we strive to project virtual experiences into three-dimensional reality, we may also be allowing digital environments to reshape our perceptions, emotions, and consciousness.\n\n\nAs digital experiences become increasingly immersive, a question emerges: are we bringing the virtual world into reality, or are our emotions and consciousness gradually being absorbed into computational space?\n\n\nThis work visualizes an imagined space of consciousness by integrating Arduino and Unreal Engine 5. Particle systems are used to simulate neural transmission and molecular movement, while abstract visual forms represent emotional and imaginative states. Simple sensors serve as interfaces, allowing human stimuli to influence and reshape this dynamic mental landscape."
+    }
+  ],
+    "links": {
+      "video": "https://youtu.be/diqtChicvnQ"
+    }
+  },
+  {
+    "id": "13",
+    "year": "2023",
+    "date": "2023.10",
+    "category": "installation",
+    "group": "interactive-system",
+    "categoryLabel": "Multimedia Installation",
+    "title": "存在觀察 | Existence Observation",
+    "desc": "A multimedia installation composed of two devices and four evolving stages. The work explores existence through particles, point clouds, and speculative consciousness. A symbolic “window” reconstructs the exhibition space as a point-cloud environment in Unreal Engine 5, allowing viewers to glimpse the invisible structures—data, memory, imagination, and consciousness—that shape human experience. A second installation manifests these hidden presences as whispers emerging from the ground.",
+    "tags": ["Unreal Engine 5", "Mixed Reality", "Arduino", "Niagara System", "Point Cloud", "Multimedia Installation"],
+    "image": "images/11-header.jpg",
+    "galleryLayout": [
+      ["images/11-3.jpg"],
+      ["images/11-7.png"],
+      ["images/11-1.jpg"],
+      ["images/11-2.jpg"],
+      ["images/11-5.png"],
+      ["images/11-6.png"]
+    ],
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "現實世界的物質常以粒子的形式構成，這些粒子如同光束、塵埃一般存於空間，可能緊密、可能疏離，感覺不存在於何方、卻又無所不在，這些粒子是數據、意識、想像和祈望等不可見事物，以緩慢且難以察覺的方式存在且變化著，共同建構人類的真實經驗。\n\n\nThe world is composed of particles. Like beams of light or drifting dust, they inhabit space in varying densities—sometimes condensed, sometimes dispersed. They seem to exist nowhere, yet are everywhere at once.\n\n\nThese particles symbolize invisible entities: data, consciousness, imagination, memories, and desires. They evolve slowly and almost imperceptibly, collectively constructing our lived experience of reality."
+    },
+    {
+      "heading": "Installation Structure",
+      "body": "本作品分為兩個裝置構成、四個階段的影像。\n裝置一以「窗」（門）作為一種象徵性的視覺媒介，並以展覽場地「藝空間」為點雲模型基礎，利用虛幻引擎虛構此空間，若觀者駐足停留，才能透過「窗」一窺到這些原先無法單憑肉眼察覺的存在，並與之共鳴。\n裝置二為地面的「絮語」，來自這扇「窗」（門）透露出這個空間所存在的意念。\n\n\nThe installation consists of two devices and four stages of moving imagery.\n\n\nDevice One employs a symbolic “window” (or door) as a visual interface. Using a point cloud reconstruction of the exhibition venue, the work creates a fictionalized version of the space within Unreal Engine 5. Only by pausing and lingering can viewers glimpse these otherwise imperceptible forms of existence and resonate with them.\n\n\nDevice Two manifests as “whispers” spread across the ground—fragments of thought and traces of presence that escape from the window and permeate the surrounding space."
+    },
+    {
+      "heading": "Four Stages",
+      "body": "Stage Zero\nIn the absence of viewers, the installation becomes a passage of light. Concentric circles recede into the distance, quietly inviting entry.\n\n\nStage One — Door\nA theatrical awakening: dawn, tunnels of light, mist, and distant illumination mark the threshold between the visible and the unseen.\n\n\nStage Two — Energy\nFluids, voices, and cosmic forms emerge as metaphors for vitality, spirituality, and the invisible forces that sustain existence.\n\n\nStage Three — Consciousness\nLines, drifting forms, and desaturated atmospheres compose an abstract landscape of language, memory, emotion, and thought."
+    }
+  ],
+    "exhibition": {
+      "name": "虛構｜The Pledge｜L'Engagement 物質性演算美學展",
+      "date": "2023/10/6 - 2023/11/1",
+      "location": "NYCU Yang Ming Campus, College of Humanities and Social Sciences, Zhi Xing Art Space",
+      "event": "Opening and Immaculate Dance Theater Forum: 10/6 12:00-15:30"
+    },
+    "links": {
+      "instagram": "https://www.instagram.com/p/CzGz9iTyKnR/?img_index=2"
+    }
+  },
+  {
+    "id": "14",
+    "year": "2024",
+    "date": "2024",
+    "category": "generative-art",
+    "group": "graphics-shader",
+    "categoryLabel": "Idea Art & Programming",
+    "title": "痕跡 | Traces",
+    "desc": "Inspired by the ceramic craft of crazing (開片), Traces explores cracks as manifestations of time and traces of human intervention. Through procedural generation and Quadtree-based simulations, the work models the formation and accumulation of fractures, extending them into diverse visual forms such as crystal engravings, ripples, and skin meridians. By translating ceramic cracks into computational media, the project reimagines crazing as a contemporary digital language of temporality and memory.",
+    "tags": ["Creative Coding", "Conceptual Art", "Quadtree", "Procedural Generation", "Digital Art", "Collaboration"],
+    "image": "images/IMG_6023.JPG",
+    "galleryLayout": [
+      ["images/IMG_5987.jpg"],
+      ["images/IMG_5846.jpg"],
+      ["images/IMG_6012.jpg", "images/IMG_6023.JPG"],
+      ["images/12-1.jpg", "images/12-2.png"],
+      ["images/12-3.png"],
+      ["images/12-4.png"],
+      ["images/12-5.PNG"],
+      ["images/12-6.png"]
+    ],
+    "credits": {
+      "Idea Art Programming": "呂思函 KL",
+      "Idea Art": "周小淨"
+    },
+    "content": [
+    {
+      "heading": "Concept",
+      "body": "《痕跡》從陶瓷開片工藝中汲取靈感，探索時間性與人為之間的美學對話。開片裂紋自然生成於陶瓷表面，其紋理如同時間的筆觸，描繪著自然與器物間的深層互動，承載豐厚的文化與歷史意涵。透過數位化形式，作品重新詮釋開片的時間性與審美特質，聚焦時間作用與人為介入所留下的痕跡。\n\n\nTraces draws inspiration from the ceramic technique of crazing to explore the relationship between temporality and human intervention. Naturally formed cracks emerge on ceramic surfaces like the brushstrokes of time, revealing the deep interactions between material, environment, and human craftsmanship while carrying rich cultural and historical significance.\n\n\nThrough computational media, the work reinterprets the temporal and aesthetic qualities of crazing, focusing on the traces left by the passage of time and acts of intervention."
+    },
+    {
+      "heading": "Crack as Time",
+      "body": "《痕跡》將裂紋視為時間的具象化，模擬自然紋理隨時間累積的過程，並融入人為操作所賦予的獨特性，每一道裂紋如同風化的軌跡，記錄過往的記憶與變遷。作品以裂紋生成的動態變化為核心，展現隨時序推進的視覺演化，深刻詮釋開片工藝的邏輯與美學。\n\n\nThe work treats cracks as tangible manifestations of time, simulating the gradual accumulation of natural patterns while incorporating the singularity introduced by human intervention. Each fracture becomes a weathered trace—a record of memory, transformation, and temporal passage.\n\n\nBy centering on the dynamic evolution of crack formation, the work reinterprets the logic and aesthetics of ceramic crazing through computational processes."
+    },
+    {
+      "heading": "Extended Expressions",
+      "body": "作品進一步延伸裂紋的表現，創造多樣的視覺形式，包括水晶內雕、水波紋與皮膚經絡等，將裂紋從傳統陶瓷開片的框架中解放，置於多元載體之上，結合數位媒材與程序化生成的特性，拓展裂紋作為時間與文化象徵的表現可能性。\n\n\nThe work further extends the expression of cracks into diverse visual forms, including crystal engravings, ripples, and skin meridians. Removed from their traditional ceramic context, these fractures are translated onto multiple media and reconstructed through procedural generation.\n\n\nBy combining digital media with computational processes, the project expands the expressive possibilities of cracks as symbols of time, memory, and cultural continuity."
+    }
+  ],
+    "exhibition": {
+      "name": "GDAP#13 閾質 (LIMINAL)",
+      "date": "2024/7/6 - 2024/7/27",
+      "hours": "12:00 - 17:30 (Closed Mon & Tue)",
+      "location": "No. 256, Section 1, Dihua Street, Datong District, Taipei City (Near Daqiaotou MRT Station)"
+    }
+  },
+  {
+    "id": "15",
+    "year": "2025",
+    "date": "2025.06",
+    "category": "installation",
+    "group": "interactive-system",
+    "categoryLabel": "Interactive Installation",
+    "title": "洄鄉 | Echo-me",
+    "desc": "An interactive installation that generates hybrid human–fish entities in response to viewer presence. The work constructs a continuously evolving procession of forms across urban and aquatic environments.",
+    "tags": ["Interactive Installation", "Species Fusion", "Migration", "Sensor", "Real-time Generation"],
+    "image": "images/15.jpg",
+    "galleryLayout": [
+      ["images/15.png"],
+      ["images/15-5.png"],
+      ["images/15-6.png"],
+      ["images/15-7.png"],
+      ["images/15-4.jpg"],
+      ["images/15-2.png"],
+      ["images/15-3.png"]
+    ],
+    "content": [
+    {
+      "heading": "Introduction",
+      "body": "《洄鄉》以人與魚的形象交織，構成一種介於兩者之間的混種存在。「是人非人，是魚亦非魚」的狀態象徵生命邊界的消融，並透過流動的影像語言，呈現一種持續生成的共生網絡。作品試圖將「洄游／回鄉」從生物本能延伸至更廣義的生命循環：不僅是物種的遷徙，也隱含人類對起源與歸屬的追尋。\n\n\nEcho-me interweaves human and fish silhouettes into hybrid forms that exist in-between species boundaries. The state of “neither fully human nor fish” reflects the dissolution of biological identity, expressed through a fluid visual system of continuous becoming.\n\nThe work extends the concept of migration and return beyond biological instinct into a broader cycle of existence—encompassing not only species movement, but also the human search for origin and belonging."
+    },
+    {
+      "heading": "Interaction",
+      "body": "作品以抽象輪廓描繪人與魚的混合形體，使其在城市與水域之間緩慢行進，形成一種持續流動的視覺隊列。影像如水波般擴散，象徵回歸源頭的力量。\n\n當觀眾靠近裝置時，系統會偵測其存在並生成新的角色，使其加入行列之中，共同構成不斷延續的流動場景。此互動機制將觀眾納入作品的循環結構，強化人與自然之間的連動關係。\n\n\nHuman and fish silhouettes are interwoven into hybrid forms that exist between species boundaries. The work visualizes a fluid state of becoming, where identity is continuously reconfigured within a shifting ecological network.\n\nThrough slow-moving processions across urban and aquatic landscapes, the installation reflects the notion of return—not only as biological migration, but as a broader cycle of origin, memory, and belonging.\n\nWhen viewers approach the work, their presence is detected and translated into new figures that join the ongoing flow, extending the system through interaction."
+    }
+  ],
+    "credits": {
+      "Music Production": "DC",
+      "Plant Materials": "陳以荷",
+      "Species Materials": "abwu"
+    },
+    "exhibition": {
+      "name": "2025六燃文件展：洄游六燃。洄游頭前溪 (The Sixth Fuel Factory Documenta 2025: Tracing the Origin of the Sixth Fuel Factory along the Touqian River)",
+      "date": "2025/6/2 - 2025/7/19",
+      "hours": "10:30 - 18:30 (Closed on Sundays)",
+      "location": "B1, Haoran Library, NYCU Hsinchu Campus",
+      "url": "https://thesixfuelfactorydocumenta2025.web.nycu.edu.tw/2025/04/26/%e9%81%8b%e7%ae%97%e6%b2%b3%e6%b5%81/"
+    }
+  },
+  {
+    "id": "16",
+    "year": "2025",
+    "date": "2025.08",
+    "category": "research",
+    "group": "graphics-shader",
+    "categoryLabel": "SIGGRAPH 2025 Art Paper",
+    "title": "Digital Crazing: Applying Quadtree Structures to Simulate Time and Human Intervention",
+    "desc": "A novel computational tool for generating crazing patterns that explores the relationship between temporality and human intervention. Accepted to the SIGGRAPH 2025 Art Papers Program and published in PACM-CGIT, the project employs hierarchical depth slicing to simulate the evolution of crazing, combining natural crack propagation with human-mediated transformations through an interactive shadow-based dyeing process.",
+    "tags": ["SIGGRAPH 2025", "Art Paper", "Quadtree", "Procedural Generation", "Interactive Art", "Creative Coding", "Material Aesthetics"],
+    "image": "images/SIGGRAPH2025/15.jpg",
+    "gallery": ["images/SIGGRAPH2025/IMG_3368.jpg","images/SIGGRAPH2025/IMG_3388.jpg", "images/SIGGRAPH2025/IMG_3373.jpg", "images/SIGGRAPH2025/IMG_3342.jpg", "images/SIGGRAPH2025/IMG_3995.jpg", "images/SIGGRAPH2025/IMG_3440.jpg", "images/SIGGRAPH2025/IMG_3996.jpg"],
+    "content": [
+        {
+            "heading": "Abstract",
+            "body": "We present Digital Crazing, a computational framework for generating ceramic crazing patterns that investigates the relationship between temporality and human intervention. Inspired by the natural formation of crazing during ceramic firing, the system reinterprets this material phenomenon as a dynamic process that encodes both environmental conditions and user-driven influence, reframing crazing as a culturally and aesthetically significant expression of time.\n\n\nThe framework employs a hierarchical Quadtree-based depth slicing technique to simulate the evolution of crack formation across multiple spatial and temporal scales. This approach enables the transition from coarse fractures to intricate crack networks, capturing the progressive nature of material aging and structural transformation.\n\n\nTo incorporate human participation, the system introduces an interactive shadow-based dyeing mechanism, in which the presence and duration of the observer’s shadow directly influence the propagation and coloration of cracks. Coarse fractures are more receptive to dye absorption, while finer cracks resist coloration, reflecting the physical logic of material behavior in traditional crazing processes. In this model, the observer’s shadow functions as a temporal agent, mediating between natural emergence and human intervention.\n\n\nThe work combines procedural generation, material logic, and interactive input, Digital Crazing constructs a hybrid system in which cracks are not treated as defects, but as computational inscriptions of time, memory, and intervention. The work ultimately explores how digital systems can reinterpret material aesthetics and reveal the entangled relationship between natural processes and human agency."
+        },
+        {
+            "heading": "Interactive Mechanism",
+            "body": "The interactive system responds to the duration of an observer's shadow, allowing crazing patterns to evolve through user participation.\n\n\nIn the simulation, coarse cracks are more likely to absorb dye, while finer cracks resist coloration, mirroring the material behavior of traditional crazing.\n\n\nThe observer's shadow functions as a metaphorical dye, emphasizing the interplay between natural processes and human intervention over time and offering viewers a novel aesthetic experience."
+        },
+        {
+            "heading": "Contribution & Future Work",
+            "body": "This work integrates cultural context, material aesthetics, and computational methods to digitize the logic underlying crazing formation. By simulating temporal progression, dye deposition, and crack evolution, the framework reveals the dynamic relationship between time and human intervention.\n\n\nFuture work will focus on improving performance and integrating the framework into digital content creation pipelines through software plugins and creative tools. We also aim to expand its applications in interactive design, digital fabrication, and computational material generation."
+        }
+    ],
+    "credits": {
+        "Author": "呂思函 KL",
+        "Co-Author": "周小淨"
+    },
+    "exhibition": {
+        "name": "SIGGRAPH 2025",
+        "date": "2025/8/10 - 2025/8/14",
+        "location": "Vancouver Convention Centre"
+    },
+    "links": {
+        "paper": "https://dl.acm.org/doi/10.1145/3736786"
+    }
+  },
+  {
+    "id": "17",
+    "year": "2025",
+    "date": "2025.10",
+    "category": "performance-tech",
+    "group": "interactive-system",
+    "categoryLabel": "Performance Interface Development",
+    "title": "雨霾 II | Rain Haze II",
+    "desc": "Co-developed the performance interface for Rain Haze II, presented in LuxuryLogico’s solo exhibition Cosmic Sketches. The system translates image grayscale values into motor speed parameters, transforming conventional hardware control into a direct visual-to-physical mapping. By manipulating the grayscale and opacity of control points, performers generate dynamic states such as storm clouds, heavy rain, and thunder, where pixel-level changes are immediately converted into rhythmic mechanical impacts on physical objects.",
+    "tags": ["Performance Interface", "Motor Control", "Grayscale Mapping", "Installation", "Hardware Integration"],
+    "image": {"src": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "credit": "Photo by ANPIS FOTO王世邦" },
+    "gallery": [{"src": "images/MoCA2025/595551583_1288121500022026_7163698738510713865_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/595107235_1288121530022023_723854205702592316_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},{"src": "images/MoCA2025/597286412_1288121503355359_7230288424891491938_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_20.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_18.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_19.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_17.jpg"],
+    "content": [
+        {
+            "heading": "Project Overview",
+            "body": "Rain Haze II is a performance interface co-developed for LuxuryLogico’s solo exhibition Cosmic Sketches (2025–2026). I collaborated with motion designer Yi CHEN to design a system that translates image-based grayscale data into motor speed control, rethinking hardware interaction through visual parameters."
+        },
+        {
+            "heading": "Technical Approach",
+            "body": "The system enables real-time control of physical actuators through image parameter manipulation. By adjusting grayscale intensity and opacity values of control points, performers can generate dynamic states corresponding to environmental conditions such as storm clouds, rainfall, and thunder. These visual variations are directly mapped to motor speed outputs, producing synchronized physical impacts that respond to digital image changes in real time."
+        }
+    ],
+    "credits": {
+    },
+    "exhibition": {
+        "name": "宇宙寫生—豪華朗機工個展 (COSMIC SKETCHES - The LuxuryLogico EXIBITION)",
+        "date": "2025/10/04 - 2026/01/11"
+    },
+    "links": {}
+  },
+  {
+    "id": "18",
+    "year": "2025",
+    "date": "2025.10",
+    "category": "web-development",
+    "group": "interactive-system",
+    "categoryLabel": "Web Design & Full-Stack Development",
+    "title": "天氣好不好我們都要飛 | Fly! No Matter What",
+    "desc": "Designed and built the website for LuxuryLogico’s “Fly! No Matter What” project, presented as part of the 2025 “Cosmic Sketches” exhibition.The interface translates the concept of collective and individual flight into a digital system, allowing each artwork (“bird”) to exist independently while remaining part of a unified structure.Built from scratch within one month, including database architecture, filtering system, artwork archive management, backend CMS, and email functionality.",
+    "tags": ["Web Design", "Full-Stack", "Database", "PHP", "UI/UX"],
+    "image": {"src": "images/MoCA2025/583320592_1271848548315988_5376068952703928831_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},
+    "gallery": [{"src": "images/MoCA2025/584580932_1271848638315979_1181164941719459288_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/584803118_1271848744982635_170993865900499804_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/585884322_1271848424982667_1868028926366688952_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/S__545783816.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_10.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_9.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/S__545783817.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_3.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_2.jpg", "images/202509LL宇宙寫生/LINE_ALBUM_宇宙寫生_260421_11.jpg", "images/202509LL宇宙寫生/S__545783818.jpg"],
+    "content": [
+        {
+            "heading": "Project Overview",
+            "body": "“Fly! No Matter What” is a long-term creative project initiated over 15 years ago. The 2025 “Cosmic Sketches” exhibition marks its latest development. The website was designed as a digital archive to organize and present each artwork as an individual entity while maintaining a cohesive visual system."
+        },
+        {
+            "heading": "Interface Design",
+            "body": "The interface design explores the transition from collective representation to individual presentation. Each artwork is designed to function as an independent “flight space,” while still being visually and structurally connected within the overall system."
+        },
+        {
+            "heading": "Development",
+            "body": "This project involved building a full-stack system from scratch, including database structure, filtering logic, email functionality, and backend content management, completed within a one-month timeframe. The system integrates artwork archiving and administrative tools into a unified platform, covering both frontend and backend development."
+        }
+    ],
+    "credits": {
+    },
+    "exhibition": {
+        "name": "宇宙寫生—豪華朗機工個展 (COSMIC SKETCHES - The LuxuryLogico EXIBITION)",
+        "date": "2025/10/04 - 2026/01/11"
+    },
+    "links": {
+        "website": "https://www.luxurylogico.com/flynomatterwhat/index.php"
+    }
+  },
+  {
+    "id": "19",
+    "year": "2025",
+    "date": "2025.10",
+    "category": "gesture-recognition",
+    "group": "interactive-system",
+    "categoryLabel": "Hand Gesture Recognition & Performance Interface",
+    "title": "手識",
+    "desc": "Developed a gesture recognition system for “手識,” where hand gestures act as a bridge between human consciousness and the digital environment.\n\n\nUsing TouchDesigner and MediaPipe for real-time hand skeleton tracking, skeletal angles are computed and streamed via UDP to drive Blender-based model deformations, which are then refined by 3D animators in the final stage.",
+    "tags": ["TouchDesigner", "MediaPipe", "Hand Tracking", "UDP", "Blender", "Performance Interface"],
+    "image": {"src": "images/MoCA2025/606547999_1303158061851703_2230385389575658698_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"},
+    "gallery": [{"src": "images/MoCA2025/605314380_1298742282293281_3236151951238034565_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/608433519_1303158068518369_5107433993951771760_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/612066790_1309924914508351_5309031495370856498_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, {"src": "images/MoCA2025/612044530_1309924971175012_6568721391844205059_n.jpg", "credit": "Photo by ANPIS FOTO王世邦"}, "images/202509LL宇宙寫生/IMG_6239.jpg"],
+    "content": [
+        {
+            "heading": "Concept",
+            "body": "In “手識,” gestures are explored as a medium connecting human consciousness and digital space. I was responsible for developing the gesture recognition system."
+        },
+        {
+            "heading": "Technical Workflow",
+            "body": "I used TouchDesigner and MediaPipe for real-time hand skeleton tracking. After mapping the hand skeleton to a Blender rig, skeletal joint angles are calculated and streamed via UDP, driving real-time model deformation. The output is then refined by 3D artists for final production."
+        }
+    ],
+    "credits": {
+    },
+    "exhibition": {
+        "name": "宇宙寫生 Cosmic Sketches — 豪華朗機工個展 The LuxuryLogico Exhibition",
+        "date": "2025/10/04 - 2026/01/11"
+    },
+    "links": {}
+  },
+  {
+    "id": "20",
+    "year": "2026",
+    "date": "2026.04",
+    "category": "rnd",
+    "group": "interactive-system",
+    "categoryLabel": "R&D — Gesture Dynamics Recognition",
+    "title": "最後一問 | THE LAST QUESTION",
+    "desc": "R&D work for LuxuryLogico’s unmanned theater production “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nDesigned a gesture-based motion recognition system for LuxuryLogico’s “THE LAST QUESTION”, focusing on dual-hand tracking and real-time skeletal angle streaming into Blender for performance-driven applications.\n\n\nDue to joint occlusion issues under single-camera input, the system was not deployed in the final stage performance. However, the dual-hand tracking stress test on edge devices provided valuable insights for future development.",
+    "tags": ["R&D", "Hand Tracking", "Motion Capture", "TouchDesigner", "Blender", "Theater Tech"],
+    "image": "images/202604LQ/IMG_7076.JPG",
+    "gallery": ["images/202604LQ/IMG_7221.JPG", "images/202604LQ/IMG_7133.JPG", "images/202604LQ/IMG_7121.JPG"],
+    "content": [
+        {
+            "heading": "Project Background",
+            "body": "During the R&D phase of LuxuryLogico’s “THE LAST QUESTION” (NTT Arts NOVA 2026), I was responsible for developing the gesture-based motion recognition system."
+        },
+        {
+            "heading": "Technical Approach",
+            "body": "Building upon prior hand-tracking research, this phase focused on dual-hand motion capture. The system was designed to extract skeletal joint angles and stream them in real time to Blender for dynamic performance integration."
+        },
+        {
+            "heading": "Findings & Outcome",
+            "body": "During testing, single-camera input introduced significant joint occlusion, resulting in unstable skeletal estimation that was insufficient for live performance deployment.\n\n\n After evaluation, the feature was excluded from the final stage implementation and retained as a pre-production research prototype.\n\n\nDespite this, stress testing on edge devices provided valuable technical insights for future multi-camera gesture tracking systems."
+        }
+    ],
+    "credits": {
+    },
+    "exhibition": {
+        "name": "2026 NTT Arts NOVA — 豪華朗機工《最後一問》THE LAST QUESTION",
+        "date": "2026/04/15 - 2026/04/19",
+        "location": "National Taichung Theater (NTT)"
+    },
+    "links": {}
+  },
+  {
+    "id": "21",
+    "year": "2026",
+    "date": "2026.04",
+    "category": "3d-simulation",
+    "group": "engine-3d",
+    "categoryLabel": "3D Dynamic Simulation & Pre-Visualization",
+    "title": "最後一問 | THE LAST QUESTION",
+    "desc": "Built in Unreal Engine, the system uses custom light function shaders to simulate multi-source spotlights, extracts real-time RGB data from external video feeds, and synchronizes motion assets for pre-visualization of the stage system.",
+    "tags": ["Unreal Engine", "3D Simulation", "Shader", "LED Mapping", "Pre-Visualization", "LuxuryLogico", "Theater Tech"],
+    "image": "images/202604LQ/S__544399370_0.jpg",
+    "gallery": ["images/202604LQ/S__544399369_0.jpg", "images/202604LQ/S__544399366_0.jpg", "images/202604LQ/S__544399371_0.jpg", "images/202604LQ/IMG_7078.jpg", "images/202604LQ/IMG_6989.jpg", "images/202604LQ/IMG_7220.jpg", "images/202604LQ/IMG_7216.jpg" , "images/202604LQ/IMG_6898.jpg" , "images/202604LQ/IMG_6928.jpg"],
+    "content": [
+        {
+            "heading": "Project Overview",
+            "body": "In the development of “THE LAST QUESTION” for LuxuryLogico (NTT Arts NOVA 2026), I was responsible for building the 3D simulation system of the light sphere."
+        },
+        {
+            "heading": "Technical Pipeline",
+            "body": "The system was developed in Unreal Engine using custom light function shaders to simulate dynamic multi-directional lighting behavior for stage pre-visualization.\n\n\nIt also supports real-time RGB data extraction from external video sources, which is mapped to LED node control parameters on the physical light sphere.\n\n\nIn addition, motion assets from multiple sources are synchronized within the simulation to align lighting response with mechanical movement."
+        },
+        {
+            "heading": "Impact",
+            "body": "The system provides a pre-visualization environment for testing lighting and spatial behavior before physical deployment, allowing the production team to evaluate synchronization between lighting, motion, and mechanical systems in real time."
+        }
+    ],
+    "credits": {
+    },
+    "exhibition": {
+        "name": "2026 NTT Arts NOVA — 豪華朗機工《最後一問》THE LAST QUESTION",
+        "date": "2026/04/15 - 2026/04/19",
+        "location": "National Taichung Theater (NTT)"
+    },
+    "links": {}
+  }
+]
