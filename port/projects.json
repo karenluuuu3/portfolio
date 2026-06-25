@@ -23,19 +23,19 @@
       "content": [
         {
           "heading": "Story Outline",
-          "body": "After diving into the deep sea, the player—an archaeologist—hears a hauntingly beautiful song before gradually losing consciousness. When they awaken, they find themselves inside an unfamiliar ship cabin.\n\n\nSolving four intricate puzzles triggers the appearance of a figure claiming to be the captain of the ancient vessel. The captain warns of the mermaids’ wicked nature and grants the player a powerful artifact to combat them. In an instant, the once-bright room turns dark and eerie.\n\n\nA statue in the corner then comes to life, introducing itself as a prince of the Russian Empire. He pleads for help in finding his beloved, who was also trapped by the mermaids.\n\n\nFollowing the clues, the player enters a mystical mirror and witnesses memories shared between the prince and princess. As the truth unfolds, the princess grants a key to escape the cabin. However, as the player exits the mirror world, a crazed mermaid suddenly appears."
+          "body": "The player assumes the role of an archaeologist who awakens inside a mysterious Victorian-era ship after diving into the deep sea. A haunting melody signals the beginning of a fragmented experience, where perception becomes unstable and the environment shifts between illusion and narrative reconstruction.\n\nAs the player progresses through a series of a series of interconnected environmental puzzles, the environment shifts between illusion and truth. Encounters with the ship’s captain and other spectral figures gradually reveal a layered narrative involving curses, lost royalty, and submerged memories.\n\nThe experience culminates in a mirror-based sequence that reconstructs hidden memories, before collapsing into a final confrontation with a mermaid entity, blurring the boundary between escape and entrapment."
         },
         {
           "heading": "Development Tools",
-          "body": "I. Engine: Unity\nII. 3D Assets & Design: Blender, Vroid, Photoshop & Illustrator\nIII. Target Device: Oculus Quest 2: Oculus Quest 2"
+          "body": "Built with Unity for Oculus Quest 2, the project integrates VR interaction design with hand tracking input. The development pipeline includes 3D asset creation (Blender, Vroid) and visual design tools (Photoshop, Illustrator), focusing on immersive narrative gameplay and interactive spatial design."
         },
         {
           "heading": "Techniques",
-          "body": "Unity Speech Recognition: UnityEngine.Windows.Speech for keyword detection\n\n\nHand Tracking & Gesture Recognition:\n• Item Pickup — Physics-based interaction using Unity’s collision system\n• Mirror Gestures — Detecting hand skeleton data to recognize gesture states\n• Magical Drawing (Pen System) — Pinch gesture (thumb + index finger) used to simulate pen input, implemented with Unity’s Line Renderer\n• Lightsaber & Backpack System — Dual-hand input buttons for summoning a lightsaber and opening the inventory UI"
+          "body": "The system combines voice recognition and hand-tracking interaction to enable multi-modal VR gameplay.\n\nCore interaction design includes physics-based object manipulation, gesture recognition using hand skeleton data, and pinch-based drawing mechanics for magic casting systems.\n\nAdditional mechanics such as dual-hand input for weapon summoning and inventory control are designed to reinforce embodied interaction within the VR environment, creating a cohesive gesture-driven gameplay system."
         },
         {
           "heading": "Visual Effects",
-          "body": "• Particles System\n• PBR Materials\n• VFX Shader"
+          "body": "Particle systems, physically based rendering (PBR) materials, and custom VFX shaders are used to enhance environmental atmosphere and narrative transitions within the VR space."
         },
         {
           "heading": "Design",
@@ -58,7 +58,7 @@
     "group": "interactive-system",
     "categoryLabel": "Sound Art x Audio Visual",
     "title": "Time Lapse",
-    "desc": "A sound art and audiovisual work exploring media transcription, sound modulation, and synesthetic perception. Using Ableton to process sound through effects such as echo, layering, repetition, and TouchDesigner for real-time audiovisual generation, the work reflects on the emotional trajectory of the pandemic—from anxiety to adaptation and coexistence.",
+    "desc": "A sound art and audiovisual work exploring media transcription, sound modulation, and synesthetic perception. Using Ableton to process sound through effects such as echo, layering, and repetition in Ableton, the work reflects on the emotional trajectory of the pandemic—from anxiety to adaptation and coexistence.",
     "tags": ["Sound Art", "Audio Visual", "TouchDesigner", "Ableton", "Media Transcription"],
     "image": "images/瘋城.jpg",
     "galleryLayout": [
@@ -78,7 +78,7 @@
       },
       {
         "heading": "Techniques",
-        "body": "The sound materials consist of news broadcasts and Foley recordings sourced from Freesound. In Ableton, I applied audio processing techniques such as echo, layering, and repetition such as echo, layering, and repetition to enhance the emotional depth. For the cross-modal audiovisual experience, I utilized TouchDesigner to generate audiovisual elements, creating a dynamic audiovisual perception for the audience."
+        "body": "The sound materials consist of news broadcasts and Foley recordings sourced from Freesound. In Ableton, I applied audio processing techniques such as echo, layering, and repetition to enhance emotional depth to enhance the emotional depth. For the cross-modal audiovisual experience, I utilized TouchDesigner to generate audiovisual elements, creating a dynamic cross-modal experience that integrates sound and visual perception"
       },
       {
         "heading": "Sections",
@@ -114,7 +114,7 @@
     "content": [
       {
         "heading": "Introduction",
-        "body": "• Immerse Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n• New Game Mode\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-inspired system that requires players to move to safe zones to avoid infection.\n\n\n• Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
+        "body": "• Immersive Experience\nThe story is inspired by real-world events. The plot, music, and gameplay create a sense of tension and excitement, allowing players to immerse themselves in a familiar yet heightened version of reality.\n\n\n• New Game Mode\nPlayers can interact with NPCs while collecting supplies throughout the game. The game features several unique mechanics, such as terrain changes synchronized with the music and a tag-like mechanic inspired by traditional playground “tag” rules that requires players to move to safe zones to avoid infection.\n\n\n• Fascinating Scenes\nDynamic terrain changes and shifting safe zones are the core elements of COVID RUSH, creating a variety of engaging scenes throughout the game."
       },
       {
         "heading": "Game Story",
@@ -162,7 +162,7 @@
     },
     {
       "heading": "Introduction",
-      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, gaining knowledge about different species in an engaging and immersive way."
+      "body": "By developing augmented reality software, viewers can use their smartphones without the need for additional equipment to explore an underwater world. Moreover, they can interact with the fish on the screen, earning about different species through interaction in an engaging and immersive way."
     },
     {
       "heading": "Prototype",
@@ -187,7 +187,7 @@
     "group": "graphics-shader",
     "categoryLabel": "Computing Aesthetics",
     "title": "GLSL Shaders Collection",
-    "desc": "A series of GLSL shader experiments exploring the simulation of natural phenomena, including fluid motion, optical distortion, and perceptual abstraction. The works investigate how computational systems can generate organic and expressive visual behaviors.",
+    "desc": "A series of GLSL shader experiments exploring the simulation of natural phenomena, including fluid dynamics, optical distortion, and perceptual abstraction. The works investigate how computational systems can generate organic and expressive visual behaviors.",
     "tags": ["GLSL", "Shader", "Computing Aesthetics", "Computer Graphics", "Digital Art"],
     "image": "images/圖片20.png",
     "galleryLayout": [
@@ -555,7 +555,7 @@
     "group": "interactive-system",
     "categoryLabel": "Interactive Installation",
     "title": "洄鄉 | Echo-me",
-    "desc": "An interactive installation that intertwines the silhouettes of humans and fish into hybrid beings—“human, yet not human; fish, yet not fish.” Through abstract forms moving across urban landscapes and shimmering waters, the work reflects on migration, homecoming, and the interconnectedness of life. By detecting viewers' presence, the installation generates new on-screen figures that join the procession, symbolizing humanity's continuous entanglement with nature and collective memory.",
+    "desc": "An interactive installation that generates hybrid human–fish entities in response to viewer presence. The work constructs a continuously evolving procession of forms across urban and aquatic environments.",
     "tags": ["Interactive Installation", "Species Fusion", "Migration", "Sensor", "Real-time Generation"],
     "image": "images/15.jpg",
     "galleryLayout": [
@@ -570,11 +570,11 @@
     "content": [
     {
       "heading": "Introduction",
-      "body": "《洄鄉》以人與魚等物種的身影交織，牽動彼此，表現一種「是人非人，是魚亦非魚」的物種融合，彷彿一種無形的力量在所有生命中悄然流動，交錯成共生的網絡，意欲傳達洄游與回鄉的過程不僅是動植物的本能，也包含人類對源頭的回歸與尋找。\n\n\n"
+      "body": "《洄鄉》以人與魚的形象交織，構成一種介於兩者之間的混種存在。「是人非人，是魚亦非魚」的狀態象徵生命邊界的消融，並透過流動的影像語言，呈現一種持續生成的共生網絡。作品試圖將「洄游／回鄉」從生物本能延伸至更廣義的生命循環：不僅是物種的遷徙，也隱含人類對起源與歸屬的追尋。\n\n\nEcho-me interweaves human and fish silhouettes into hybrid forms that exist in-between species boundaries. The state of “neither fully human nor fish” reflects the dissolution of biological identity, expressed through a fluid visual system of continuous becoming.\n\nThe work extends the concept of migration and return beyond biological instinct into a broader cycle of existence—encompassing not only species movement, but also the human search for origin and belonging."
     },
     {
       "heading": "Interaction",
-      "body": "本作品以抽象輪廓勾勒物種型態，並於都市之景及水光之隙緩慢行走的行列表現物種「洄鄉」，影像如水波般延展，傳遞回溯源頭的力量。當觀眾站立於作品前，他們將成為這場討論的一部分，透過裝置偵測觀眾、於畫面中生成新角色，而後與物種行列一同前行，象徵人類歷史與自然的共融與延續。\n\n\nUsing abstract contours to depict hybrid species, the work presents a slow-moving procession traversing urban landscapes and shimmering waters. The imagery expands like ripples, evoking the force that draws all life back toward its source.\n\n\nWhen viewers stand before the installation, they become participants in this migration. Their presence is detected by the system, generating new on-screen figures that join the procession and continue moving forward together. In doing so, the work reflects on the intertwined histories of humanity and nature and the enduring cycle of return."
+      "body": "作品以抽象輪廓描繪人與魚的混合形體，使其在城市與水域之間緩慢行進，形成一種持續流動的視覺隊列。影像如水波般擴散，象徵回歸源頭的力量。\n\n當觀眾靠近裝置時，系統會偵測其存在並生成新的角色，使其加入行列之中，共同構成不斷延續的流動場景。此互動機制將觀眾納入作品的循環結構，強化人與自然之間的連動關係。\n\n\nHuman and fish silhouettes are interwoven into hybrid forms that exist between species boundaries. The work visualizes a fluid state of becoming, where identity is continuously reconfigured within a shifting ecological network.\n\nThrough slow-moving processions across urban and aquatic landscapes, the installation reflects the notion of return—not only as biological migration, but as a broader cycle of origin, memory, and belonging.\n\nWhen viewers approach the work, their presence is detected and translated into new figures that join the ongoing flow, extending the system through interaction."
     }
   ],
     "credits": {
@@ -605,7 +605,7 @@
     "content": [
         {
             "heading": "Abstract",
-            "body": "We present Digital Crazing, a computational framework for generating ceramic crazing patterns that investigates the relationship between temporality and human intervention. Inspired by the natural formation of crazing during ceramic firing, the system reinterprets this material phenomenon as a dynamic process that encodes both environmental conditions and user-driven influence, reframing crazing as a culturally and aesthetically significant expression of time.\n\n\nThe framework employs a hierarchical Quadtree-based depth slicing technique to simulate the evolution of crack formation across multiple spatial and temporal scales. This approach enables the transition from coarse fractures to intricate crack networks, capturing the progressive nature of material aging and structural transformation.\n\n\nTo incorporate human participation, the system introduces an interactive shadow-based dyeing mechanism, in which the presence and duration of the observer’s shadow directly influence the propagation and coloration of cracks. Coarse fractures are more receptive to dye absorption, while finer cracks resist coloration, reflecting the physical logic of material behavior in traditional crazing processes. In this model, the observer’s shadow functions as a temporal agent, mediating between natural emergence and human intervention.\n\n\nThrough the integration of procedural generation, material logic, and interactive input, Digital Crazing constructs a hybrid system in which cracks are not treated as defects, but as computational inscriptions of time, memory, and intervention. The work ultimately explores how digital systems can reinterpret material aesthetics and reveal the entangled relationship between natural processes and human agency."
+            "body": "We present Digital Crazing, a computational framework for generating ceramic crazing patterns that investigates the relationship between temporality and human intervention. Inspired by the natural formation of crazing during ceramic firing, the system reinterprets this material phenomenon as a dynamic process that encodes both environmental conditions and user-driven influence, reframing crazing as a culturally and aesthetically significant expression of time.\n\n\nThe framework employs a hierarchical Quadtree-based depth slicing technique to simulate the evolution of crack formation across multiple spatial and temporal scales. This approach enables the transition from coarse fractures to intricate crack networks, capturing the progressive nature of material aging and structural transformation.\n\n\nTo incorporate human participation, the system introduces an interactive shadow-based dyeing mechanism, in which the presence and duration of the observer’s shadow directly influence the propagation and coloration of cracks. Coarse fractures are more receptive to dye absorption, while finer cracks resist coloration, reflecting the physical logic of material behavior in traditional crazing processes. In this model, the observer’s shadow functions as a temporal agent, mediating between natural emergence and human intervention.\n\n\nThe work combines procedural generation, material logic, and interactive input, Digital Crazing constructs a hybrid system in which cracks are not treated as defects, but as computational inscriptions of time, memory, and intervention. The work ultimately explores how digital systems can reinterpret material aesthetics and reveal the entangled relationship between natural processes and human agency."
         },
         {
             "heading": "Interactive Mechanism",
@@ -714,7 +714,7 @@
         },
         {
             "heading": "Technical Workflow",
-            "body": "I used TouchDesigner and MediaPipe for real-time hand skeleton tracking. After mapping the hand skeleton to a Blender rig, skeletal joint angles are calculated and streamed via UDP, driving real-time model deformation.The output is then passed to 3D artists for final refinement."
+            "body": "I used TouchDesigner and MediaPipe for real-time hand skeleton tracking. After mapping the hand skeleton to a Blender rig, skeletal joint angles are calculated and streamed via UDP, driving real-time model deformation. The output is then refined by 3D artists for final production."
         }
     ],
     "credits": {
@@ -733,7 +733,7 @@
     "group": "interactive-system",
     "categoryLabel": "R&D — Gesture Dynamics Recognition",
     "title": "最後一問 | THE LAST QUESTION",
-    "desc": "R&D work for LuxuryLogico’s unmanned theater production “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nResponsible for designing a gesture-based motion dynamics recognition system, focusing on dual-hand tracking and real-time skeletal angle streaming into Blender for performance-driven applications.\n\n\nDue to joint occlusion issues under single-camera input, the system was not deployed in the final stage performance. However, the dual-hand tracking stress test on edge devices provided valuable insights for future development.",
+    "desc": "R&D work for LuxuryLogico’s unmanned theater production “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nDesigned a gesture-based motion recognition system for LuxuryLogico’s “THE LAST QUESTION”, focusing on dual-hand tracking and real-time skeletal angle streaming into Blender for performance-driven applications.\n\n\nDue to joint occlusion issues under single-camera input, the system was not deployed in the final stage performance. However, the dual-hand tracking stress test on edge devices provided valuable insights for future development.",
     "tags": ["R&D", "Hand Tracking", "Motion Capture", "TouchDesigner", "Blender", "Theater Tech"],
     "image": "images/202604LQ/IMG_7076.JPG",
     "gallery": ["images/202604LQ/IMG_7221.JPG", "images/202604LQ/IMG_7133.JPG", "images/202604LQ/IMG_7121.JPG"],
@@ -768,7 +768,7 @@
     "group": "engine-3d",
     "categoryLabel": "3D Dynamic Simulation & Pre-Visualization",
     "title": "最後一問 | THE LAST QUESTION",
-    "desc": "Developed a 3D real-time simulation system for the light sphere in LuxuryLogico’s “THE LAST QUESTION”, presented at NTT Arts NOVA 2026.\n\n\nBuilt in Unreal Engine, the system integrates custom light function shaders for multi-source spotlight simulation, real-time RGB data extraction from external video feeds, and synchronized motion asset integration.\n\n\nThe pipeline enables coordinated simulation between lighting behavior, LED node mapping, and mechanical displacement for pre-visualization of the stage system.",
+    "desc": "Built in Unreal Engine, the system uses custom light function shaders to simulate multi-source spotlights, extracts real-time RGB data from external video feeds, and synchronizes motion assets for pre-visualization of the stage system.",
     "tags": ["Unreal Engine", "3D Simulation", "Shader", "LED Mapping", "Pre-Visualization", "LuxuryLogico", "Theater Tech"],
     "image": "images/202604LQ/S__544399370_0.jpg",
     "gallery": ["images/202604LQ/S__544399369_0.jpg", "images/202604LQ/S__544399366_0.jpg", "images/202604LQ/S__544399371_0.jpg", "images/202604LQ/IMG_7078.jpg", "images/202604LQ/IMG_6989.jpg", "images/202604LQ/IMG_7220.jpg", "images/202604LQ/IMG_7216.jpg" , "images/202604LQ/IMG_6898.jpg" , "images/202604LQ/IMG_6928.jpg"],
